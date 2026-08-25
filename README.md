@@ -37,7 +37,7 @@ That last arrow is what makes this a system rather than a feature list.
 | Milestone | State |
 |---|---|
 | **M1 — Data** | ✅ complete |
-| M2 — Diagnostic engine (headless) | not started |
+| **M2 — Diagnostic engine (headless)** | ✅ complete |
 | M3 — Retrieval + LLM verification | not started |
 | M4 — UI | not started |
 | M5 — Guided notes + write-back | not started |
@@ -58,11 +58,14 @@ lib/
   dag.ts                 graph queries: ancestors, descendants, depth derivation, validation
   chunk.ts               transcript windowing (pure, tested)
   retrieval.ts           cosine ranking, per-video diversity, span merging (pure)
+  diagnostic.ts          probe selection, propagation, root-gap detection (pure, tested)
+  simulate.ts            synthetic students + the diagnostic loop driver
 scripts/
   validate-dag.ts        structural check — run before trusting the graph
   fetch-transcripts.ts   build-time only; never runs at request time
   build-index.ts         chunk + embed → chunks.json
   query.ts               retrieval verification harness
+  diagnose.ts            diagnostic trace + convergence benchmark
 ```
 
 ### The prerequisite DAG
@@ -92,7 +95,33 @@ Mastery per node is one of `unknown | likely_known | likely_gap | confirmed_gap 
 - **Fail → the node becomes `likely_gap`, but the cause is unknown.** Descend into its prerequisites and keep probing.
 - **Root gap** = a node that failed while *all* of its prerequisites passed. That is the "here's when you started being wrong" moment, and the thing worth remediating.
 
-Probe selection is a binary search over the graph: at each step, choose the node that most evenly splits the still-unresolved set, minimising `|passSettled − failSettled|`. This converges in 6–10 questions instead of 30.
+### Probe selection
+
+A binary search over a partial order. Each candidate node is scored by what it would settle:
+
+- **pass** settles the node *and everything upstream of it* (you can't do change of basis without span)
+- **fail** settles the node *and everything downstream* (its dependents are compromised too)
+
+The probe chosen maximises **`min((1−p)·passSettled, p·failSettled)`** — the weaker of its two branches, where `p` is the node's prior probability of being a gap. Maximising the weaker branch is a minimax objective: it rewards a split that is both *even* and *large*.
+
+Scoring on `|passSettled − failSettled|` instead looks equivalent and is not. It measures only the *shape* of a split, never its size, so it rates a perfectly balanced 2-vs-2 probe above a 5-vs-5 one and spends questions on nodes whose answer barely moves the search. With `p = 0.5` the minimax form reduces to `0.5 · min(passSettled, failSettled)`, preserving the even-split intuition while staying sensitive to magnitude.
+
+**The descent follows observed failures only.** Failing a node also marks its dependents `likely_gap` by inference — but those are already explained by the observed failure. Treating them as independent leads to chase unions their ancestor sets back out to nearly the whole graph and silently defeats the narrowing, turning the backward search into a sweep.
+
+### Measured convergence
+
+`npm run diagnose -- --bench` plants every in-scope node in turn as the sole hidden gap:
+
+```
+28 single-gap students, 28-node scope
+  converged: avg 5.6 probes, worst 7
+  total:     avg 8.1 probes, worst 10
+  missed:    0
+```
+
+"Converged" is the probe at which the root gap is identified. "Total" is higher because after rooting one gap the engine keeps probing briefly, looking for a second independent gap — the product targets 2–4 findings. That speculation is capped (`stopAfterCleanStreak`) so a student with a single problem isn't asked ten questions to confirm it.
+
+Scope matters: the search only probes the frontier and its transitive prerequisites. With a frontier of `change_of_basis, eigenvectors, gaussian_elimination`, the projection branch (`dot_product → orthogonality → projection`) is unreachable and correctly never probed.
 
 ### Retrieval
 
@@ -123,6 +152,16 @@ The corpus is committed, so `fetch:transcripts` and `build:index` only need re-r
 ```bash
 npm run query -- "what does matrix multiplication mean"
 npm run query -- --node change_of_basis --mis 0 --k 12
+```
+
+Trace the diagnostic against a synthetic student — this prints the same decision data the UI's "how we got here" panel will render:
+
+```bash
+npm run diagnose -- --missing function_composition
+```
+
+```bash
+npm run diagnose -- --bench
 ```
 
 ### Environment

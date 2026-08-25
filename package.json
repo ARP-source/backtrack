@@ -8,7 +8,8 @@
     "fetch:transcripts": "tsx scripts/fetch-transcripts.ts",
     "build:index": "tsx scripts/build-index.ts",
     "query": "tsx scripts/query.ts",
-    "test": "vitest run"
+    "test": "vitest run",
+    "diagnose": "tsx scripts/diagnose.ts"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.2.0",
