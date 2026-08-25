@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { chunkCues, cosine, CHUNK_MAX_SEC, type Cue } from "./chunk.js";
+import { chunkCues, cosine, CHUNK_MAX_SEC, type Cue } from "./chunk";
 
 /** Synthetic cues: `n` cues of `dur` seconds each, back to back. */
 function cues(n: number, dur = 5, text = (i: number) => `sentence ${i}.`): Cue[] {

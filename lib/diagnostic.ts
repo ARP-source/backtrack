@@ -6,8 +6,8 @@
  * unresolved set as evenly as possible, so a handful of questions settles a graph that
  * would take 30+ to walk exhaustively.
  */
-import type { Mastery, NodeId } from "./types.js";
-import { ancestors, descendants, type DagIndex } from "./dag.js";
+import type { Mastery, NodeId } from "./types";
+import { ancestors, descendants, type DagIndex } from "./dag";
 
 export const isKnown = (m: Mastery) => m === "likely_known" || m === "confirmed_known";
 export const isGap = (m: Mastery) => m === "likely_gap" || m === "confirmed_gap";

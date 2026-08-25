@@ -2,8 +2,8 @@
  * Segment retrieval. Pure logic — no React, no network, no LLM calls.
  * Cosine over an in-memory array; at 366 chunks a vector DB would be pure overhead.
  */
-import { cosine } from "./chunk.js";
-import type { TranscriptChunk, DagNode } from "./types.js";
+import { cosine } from "./chunk";
+import type { TranscriptChunk, DagNode } from "./types";
 
 export type Scored = TranscriptChunk & { score: number };
 

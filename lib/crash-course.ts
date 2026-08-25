@@ -3,42 +3,21 @@
  * Orchestration only — the embedder is injected so this module stays free of the
  * transformers runtime and remains unit-testable.
  */
-import { rankChunks, gapQueryText, mergeAdjacent, type Scored } from "./retrieval.js";
-import { verifySegments } from "./verify.js";
-import type { LLMSource } from "./llm.js";
-import type { DagNode, TranscriptChunk, NodeId } from "./types.js";
+import { rankChunks, gapQueryText, mergeAdjacent, type Scored } from "./retrieval";
+import { verifySegments } from "./verify";
+import type { DagNode, TranscriptChunk } from "./types";
+import type { Segment, GapPlan } from "./segment";
+
+// Shapes and the embed helper live in ./segment so client components can import them
+// without dragging this module's LLM/node:fs dependencies into the browser bundle.
+export { embedUrl, timestamp } from "./segment";
+export type { Segment, GapPlan } from "./segment";
 
 /** Brevity is the product — these caps are a feature, not a limitation. */
 export const CANDIDATES_PER_GAP = 12;
 export const MAX_SEGMENTS_PER_GAP = 4;
 export const MAX_SECONDS_PER_GAP = 15 * 60;
 export const MAX_SEGMENT_SECONDS = 240;
-
-export type Segment = {
-  nodeId: NodeId;
-  videoId: string;
-  title: string;
-  channel: string;
-  start: number;
-  end: number;
-  why_this_clip: string;
-  score: number;
-};
-
-export type GapPlan = {
-  nodeId: NodeId;
-  label: string;
-  blurb: string;
-  misconception?: string;
-  segments: Segment[];
-  totalSec: number;
-  /** Whether the selection was verified live, replayed from cache, or fell back. */
-  source: LLMSource;
-  note?: string;
-  /** Candidates considered, for the "how we got here" panel. */
-  considered: number;
-  rejected: number;
-};
 
 export type VideoMetaMap = Record<string, { title: string; channel: string }>;
 export type Embedder = (text: string) => Promise<number[]>;
@@ -131,10 +110,6 @@ export async function buildCrashCourse(
   return plans;
 }
 
-/** youtube.com/embed with start/end — the player enforces the bounds. No video is touched. */
-export function embedUrl(s: Segment): string {
-  return `https://www.youtube.com/embed/${s.videoId}?start=${s.start}&end=${s.end}&rel=0`;
-}
 
 function clamp(v: number, lo: number, hi: number): number {
   return Math.max(lo, Math.min(hi, v));

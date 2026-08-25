@@ -7,12 +7,12 @@
  */
 import { readFileSync } from "node:fs";
 import { pipeline, env } from "@huggingface/transformers";
-import { indexDag } from "../lib/dag.js";
-import { runDiagnostic, syntheticStudent } from "../lib/simulate.js";
-import { rootGaps } from "../lib/diagnostic.js";
-import { buildCrashCourse, embedUrl, type VideoMetaMap } from "../lib/crash-course.js";
-import { MODEL, hasApiKey } from "../lib/llm.js";
-import type { Dag, TranscriptChunk } from "../lib/types.js";
+import { indexDag } from "../lib/dag";
+import { runDiagnostic, syntheticStudent } from "../lib/simulate";
+import { rootGaps } from "../lib/diagnostic";
+import { buildCrashCourse, embedUrl, type VideoMetaMap } from "../lib/crash-course";
+import { MODEL, hasApiKey } from "../lib/llm";
+import type { Dag, TranscriptChunk } from "../lib/types";
 
 env.cacheDir = "./.cache";
 

@@ -39,7 +39,7 @@ That last arrow is what makes this a system rather than a feature list.
 | **M1 — Data** | ✅ complete |
 | **M2 — Diagnostic engine (headless)** | ✅ complete |
 | **M3 — Retrieval + LLM verification** | ✅ complete |
-| M4 — UI | not started |
+| **M4 — UI** | ✅ complete |
 | M5 — Guided notes + write-back | not started |
 | M6 — Demo hardening | not started |
 
@@ -61,6 +61,11 @@ lib/
   diagnostic.ts          probe selection, propagation, root-gap detection (pure, tested)
   simulate.ts            synthetic students + the diagnostic loop driver
   llm.ts                 the only provider access: validate, retry, cache, fixture fallback
+  segment.ts             client-safe clip shapes + embed URL (no node: imports)
+  syllabus.ts            syllabus -> frontier mapping, with verbatim quotes
+  probes.ts              probe schema + derived fallback questions
+  layout.ts              layered graph layout (pure)
+  server-data.ts         memoised disk reads + shared embedding pipeline
   verify.ts              segment verification prompt + schemas
   crash-course.ts        gaps -> candidates -> verified -> merged -> capped clips
 scripts/
@@ -70,6 +75,14 @@ scripts/
   query.ts               retrieval verification harness
   diagnose.ts            diagnostic trace + convergence benchmark
   crash-course.ts        end-to-end: student -> diagnostic -> verified clips
+  build-probes.ts        generate + commit one probe question per node
+app/
+  page.tsx               phase orchestration; the diagnostic runs client-side
+  api/frontier           syllabus -> frontier + scoped subgraph + probes
+  api/crash-course       gaps -> verified, timestamped clips
+components/
+  DagView.tsx            the animated prerequisite graph
+  ProbeCard.tsx  SyllabusInput.tsx  Findings.tsx  CrashCourse.tsx  TracePanel.tsx
 ```
 
 ### The prerequisite DAG
@@ -169,6 +182,25 @@ Rate limits are treated as terminal rather than retried, since they will not cle
 ```bash
 npm run crash-course -- --missing function_composition --cold
 ```
+
+## The interface
+
+Four screens, one continuous state. The prerequisite graph stays on screen throughout, so the diagnostic reads as one object being progressively resolved rather than a sequence of unrelated pages.
+
+1. **Input** — paste a syllabus, or prefill the sample. A `demo mode` link runs the whole flow from committed fixtures with zero network calls.
+2. **Diagnostic** — one probe at a time beside the live graph. Nodes change colour as mastery propagates, and every changed node flashes, so a single correct answer visibly settles an entire subgraph. The current probe pulses; confirmed root gaps get a ring.
+3. **Findings** — *"You're missing 1 thing"*, each stated as the misconception itself (**"You think** reads f(g(x)) left to right and applies f first"), the week it starts to bite, and the verbatim syllabus line that makes it load-bearing.
+4. **Crash course** — clips as bounded YouTube embeds with their `why_this_clip`, plus the retrieval arithmetic (`12 candidates → 4 teach it → 3 kept · 4:44`).
+
+A **"how we got here"** panel on every screen exposes the search's own working: each probe's candidate list, `pass`/`fail`/`gain` scores, and what each answer propagated to. Judges scoring technical execution should not have to take the algorithm on faith.
+
+**The diagnostic runs entirely client-side.** `/api/frontier` returns the frontier, the scoped subgraph, and every probe for that scope in one response; scope is closed under prerequisites, so the subgraph is self-contained and the browser can run the whole search with no further round trips. Answering a question costs zero network.
+
+Probe questions are a **build artifact** (`npm run build:probes` → `data/probes.json`), generated once and committed. The running app never generates a question, so the diagnostic has no latency and asks identical questions every run.
+
+### Client/server split
+
+`lib/segment.ts` exists because a single value import of `embedUrl` from a client component pulled `lib/crash-course` → `lib/verify` → `lib/llm` → `node:fs` into the browser bundle, which Turbopack fails on. Client-safe shapes and helpers live there; anything touching the model or the filesystem stays out of reach of `"use client"`.
 
 ## Hard constraints
 

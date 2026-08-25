@@ -11,9 +11,9 @@
  * each in a vacuum.
  */
 import { z } from "zod";
-import { callLLM, type LLMResult } from "./llm.js";
-import type { DagNode } from "./types.js";
-import type { Scored } from "./retrieval.js";
+import { callLLM, type LLMResult } from "./llm";
+import type { DagNode } from "./types";
+import type { Scored } from "./retrieval";
 
 export const VerdictSchema = z.object({
   id: z.number().int(),

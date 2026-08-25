@@ -6,10 +6,10 @@
  *   npm run diagnose -- --missing span,dot_product --frontier change_of_basis,projection
  */
 import { readFileSync } from "node:fs";
-import { indexDag, ancestors } from "../lib/dag.js";
-import { runDiagnostic, syntheticStudent } from "../lib/simulate.js";
-import { rootGaps, isGap, isKnown } from "../lib/diagnostic.js";
-import type { Dag } from "../lib/types.js";
+import { indexDag, ancestors } from "../lib/dag";
+import { runDiagnostic, syntheticStudent } from "../lib/simulate";
+import { rootGaps, isGap, isKnown } from "../lib/diagnostic";
+import type { Dag } from "../lib/types";
 
 const dag = JSON.parse(readFileSync("data/dag.json", "utf8")) as Dag;
 const idx = indexDag(dag);

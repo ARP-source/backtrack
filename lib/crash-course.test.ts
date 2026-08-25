@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeAll } from "vitest";
-import { mergeAdjacent, clampSpan, rankChunks, gapQueryText } from "./retrieval.js";
-import { planForGap, embedUrl, MAX_SEGMENTS_PER_GAP, MAX_SEGMENT_SECONDS } from "./crash-course.js";
-import { fallbackVerdicts, buildVerifyPrompt } from "./verify.js";
-import type { DagNode, TranscriptChunk } from "./types.js";
+import { mergeAdjacent, clampSpan, rankChunks, gapQueryText } from "./retrieval";
+import { planForGap, embedUrl, MAX_SEGMENTS_PER_GAP, MAX_SEGMENT_SECONDS } from "./crash-course";
+import { fallbackVerdicts, buildVerifyPrompt } from "./verify";
+import type { DagNode, TranscriptChunk } from "./types";
 
 const NODE: DagNode = {
   id: "matrix_multiplication",

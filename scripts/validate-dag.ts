@@ -3,8 +3,8 @@
  * Run: npm run validate:dag
  */
 import { readFileSync } from "node:fs";
-import { indexDag, validateDag, computeDepths, ancestors } from "../lib/dag.js";
-import type { Dag } from "../lib/types.js";
+import { indexDag, validateDag, computeDepths, ancestors } from "../lib/dag";
+import type { Dag } from "../lib/types";
 
 const dag = JSON.parse(readFileSync("data/dag.json", "utf8")) as Dag;
 const problems = validateDag(dag);

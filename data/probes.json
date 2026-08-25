@@ -1,0 +1,827 @@
+{
+  "fraction_arithmetic": {
+    "nodeId": "fraction_arithmetic",
+    "question": "Which of the following operations correctly simplifies or evaluates the given fraction expression?",
+    "options": [
+      {
+        "text": "To calculate (2/3) / (4/5), rewrite it as (2/3) * (5/4).",
+        "correct": true
+      },
+      {
+        "text": "To calculate (2/3) / (4/5), rewrite it as (3/2) * (4/5).",
+        "correct": false,
+        "misconception": "inverts the wrong operand when dividing one fraction by another"
+      },
+      {
+        "text": "To simplify 1/3 + 2/5, add across to get (1+2)/(3+5) = 3/8.",
+        "correct": false,
+        "misconception": "adds numerators and denominators separately, so a/b + c/d becomes (a+c)/(b+d)"
+      },
+      {
+        "text": "To simplify (x + 4) / 4, cancel the common fours to get x.",
+        "correct": false,
+        "misconception": "cancels a term across a sum, turning (x+2)/2 into x"
+      }
+    ]
+  },
+  "negative_numbers": {
+    "nodeId": "negative_numbers",
+    "question": "Which of the following statements about signed numbers and variables is always true?",
+    "options": [
+      {
+        "text": "Subtracting -5 from a number yields a larger result than subtracting 0.",
+        "correct": true
+      },
+      {
+        "text": "Subtracting -5 from a number yields a smaller result than subtracting 0.",
+        "correct": false,
+        "misconception": "assumes subtracting a negative must make a result smaller"
+      },
+      {
+        "text": "The expression -x represents a negative number regardless of what x is.",
+        "correct": false,
+        "misconception": "reads the symbol -x as necessarily naming a negative number"
+      },
+      {
+        "text": "The expression -(x + 5) simplifies directly to -x + 5 for any value of x.",
+        "correct": false,
+        "misconception": "distributes a leading minus over only the first term, so -(a+b) becomes -a+b"
+      }
+    ]
+  },
+  "coordinate_plane": {
+    "nodeId": "coordinate_plane",
+    "question": "Which of the following is true about the point (3, 7) in the coordinate plane?",
+    "options": [
+      {
+        "text": "Its location is defined relative to chosen axes rather than a fixed spot on paper.",
+        "correct": true
+      },
+      {
+        "text": "It is located 7 units horizontally and 3 units vertically from the origin point.",
+        "correct": false,
+        "misconception": "reverses the order of the pair, plotting (x, y) at (y, x)"
+      },
+      {
+        "text": "It is a fixed physical mark on paper whose position exists without any axes.",
+        "correct": false,
+        "misconception": "thinks of a point as a dot on the page rather than a numeric readout that depends on the axes"
+      },
+      {
+        "text": "It has no defined position on a page unless gridlines are drawn to count along.",
+        "correct": false,
+        "misconception": "cannot locate a point without gridlines to count along"
+      }
+    ]
+  },
+  "variables_and_expressions": {
+    "nodeId": "variables_and_expressions",
+    "question": "Which of the following statements about variables and algebraic expressions is correct?",
+    "options": [
+      {
+        "text": "In the expression x + y, the variables x and y are allowed to represent the same numerical value.",
+        "correct": true
+      },
+      {
+        "text": "In the expression 3c, the variable c serves as an abbreviated label for the physical object cookies.",
+        "correct": false,
+        "misconception": "reads a variable as a label for a thing ('c is cookies') rather than as a quantity"
+      },
+      {
+        "text": "In the expression x + y, the variables x and y must always represent two distinct numerical values.",
+        "correct": false,
+        "misconception": "assumes different letters must stand for different values"
+      },
+      {
+        "text": "In the expression 3x + 5, the math is incomplete until an equal sign commands a final calculation.",
+        "correct": false,
+        "misconception": "treats an expression as an instruction to compute rather than an object to manipulate"
+      }
+    ]
+  },
+  "vector_arithmetic": {
+    "nodeId": "vector_arithmetic",
+    "question": "Which of the following statements about 2D vectors is correct?",
+    "options": [
+      {
+        "text": "A vector remains the exact same vector if it is shifted to a new starting location without rotation.",
+        "correct": true
+      },
+      {
+        "text": "A vector is permanently pinned to the origin and loses its identity if translated elsewhere.",
+        "correct": false,
+        "misconception": "believes a vector is pinned to the origin and cannot be translated"
+      },
+      {
+        "text": "A vector is fundamentally a single numerical value that measures total length or speed.",
+        "correct": false,
+        "misconception": "conflates a vector with its magnitude, treating it as a single number"
+      },
+      {
+        "text": "Adding the vector [1, 2] to [3, 4] produces the combined four-element vector [1, 2, 3, 4].",
+        "correct": false,
+        "misconception": "adds vectors by joining lists rather than by matching components"
+      }
+    ]
+  },
+  "function_notation": {
+    "nodeId": "function_notation",
+    "question": "Which of the following statements about functions and function notation is correct?",
+    "options": [
+      {
+        "text": "A relation mapping inputs to outputs is a function even if no single formula can describe it.",
+        "correct": true
+      },
+      {
+        "text": "The notation f(x) represents the value of variable f multiplied by the value of variable x.",
+        "correct": false,
+        "misconception": "reads f(x) as f multiplied by x"
+      },
+      {
+        "text": "The notation f(x + 2) represents taking the output f(x) and adding 2 to that output value.",
+        "correct": false,
+        "misconception": "thinks f(x + 2) means f(x) + 2"
+      },
+      {
+        "text": "A relation counts as a true function only if it can be written as a closed-form formula.",
+        "correct": false,
+        "misconception": "believes a function must have a closed-form formula to be a function"
+      }
+    ]
+  },
+  "solving_linear_equations": {
+    "nodeId": "solving_linear_equations",
+    "question": "Which statement correctly describes how to solve 2x + 5 = 11 for x?",
+    "options": [
+      {
+        "text": "Subtract 5 from both sides to preserve balance, giving 2x = 6, then divide both sides by 2 to get x = 3.",
+        "correct": true
+      },
+      {
+        "text": "Add 5 to the right side when moving it across the equals sign, giving 2x = 11 + 5 = 16, so x = 8.",
+        "correct": false,
+        "misconception": "moves a term across the equals sign without changing its sign"
+      },
+      {
+        "text": "Subtract 5 from the left side to isolate 2x while leaving the right side as 11, giving 2x = 11.",
+        "correct": false,
+        "misconception": "applies an operation to one side of the equation only"
+      },
+      {
+        "text": "Treat the equals sign as an instruction to perform 2x + 5 to produce the final output of 11.",
+        "correct": false,
+        "misconception": "reads '=' as 'and then the answer is' rather than as an assertion that two things are equal"
+      }
+    ]
+  },
+  "linear_combination": {
+    "nodeId": "linear_combination",
+    "question": "What is a linear combination of the vectors v = [1, 0] and w = [0, 1]?",
+    "options": [
+      {
+        "text": "Any vector formed by scaling v and w by real numbers and adding them, filling the continuous 2D plane.",
+        "correct": true
+      },
+      {
+        "text": "Any vector obtained by multiplying v and w by positive integers such as 1, 2, or 3 and adding them.",
+        "correct": false,
+        "misconception": "assumes the scalars must be positive, or must be whole numbers"
+      },
+      {
+        "text": "A vector of the form c*v + d*w where both coefficients c and d must be non-zero.",
+        "correct": false,
+        "misconception": "believes a combination has to use every vector in the list"
+      },
+      {
+        "text": "A single specific calculated output like 3*v + 2*w = [3, 2], rather than a region of reachable points.",
+        "correct": false,
+        "misconception": "can compute one but cannot picture sweeping the scalars to reach a whole line or plane"
+      }
+    ]
+  },
+  "dot_product": {
+    "nodeId": "dot_product",
+    "question": "What does it mean geometrically when the dot product of two non-zero vectors u and v equals zero?",
+    "options": [
+      {
+        "text": "The vectors are perpendicular, meaning the projection of u onto v has length zero.",
+        "correct": true
+      },
+      {
+        "text": "The output of the operation is the zero vector [0, 0].",
+        "correct": false,
+        "misconception": "expects the result to be a vector rather than a number"
+      },
+      {
+        "text": "The sum u1*v1 + u2*v2 evaluates to 0, which is just an algebraic calculation with no geometric link.",
+        "correct": false,
+        "misconception": "memorises the componentwise formula with no link to angle or projection"
+      },
+      {
+        "text": "At least one of the input vectors u or v must be the zero vector.",
+        "correct": false,
+        "misconception": "thinks a dot product of zero means one of the vectors must be the zero vector"
+      }
+    ]
+  },
+  "function_composition": {
+    "nodeId": "function_composition",
+    "question": "If f(x) = x + 3 and g(x) = 2x, what is the value of f(g(4))?",
+    "options": [
+      {
+        "text": "Evaluate g(4) first to get 8, then apply f to 8 to get 11.",
+        "correct": true
+      },
+      {
+        "text": "Evaluate f(4) first to get 7, then apply g to 7 to get 14.",
+        "correct": false,
+        "misconception": "reads f(g(x)) left to right and applies f first"
+      },
+      {
+        "text": "Calculate f(4) = 7 and g(4) = 8, then multiply them to get 56.",
+        "correct": false,
+        "misconception": "confuses composing functions with multiplying their outputs"
+      },
+      {
+        "text": "Evaluate g(f(4)) since f(g(x)) gives the same output as g(f(x)).",
+        "correct": false,
+        "misconception": "assumes composition commutes, so f(g(x)) equals g(f(x))"
+      }
+    ]
+  },
+  "slope_and_lines": {
+    "nodeId": "slope_and_lines",
+    "question": "What determines the slope of a line passing through the points (2, 3) and (6, 11)?",
+    "options": [
+      {
+        "text": "The ratio of vertical change to horizontal change, calculated as (11 - 3) / (6 - 2) = 2.",
+        "correct": true
+      },
+      {
+        "text": "The ratio of coordinate differences computed in reversed orders, such as (11 - 3) / (2 - 6) = -2.",
+        "correct": false,
+        "misconception": "takes the coordinate differences in opposite orders in the numerator and denominator"
+      },
+      {
+        "text": "The visual steepness of the drawn line, regardless of how the axes are scaled.",
+        "correct": false,
+        "misconception": "judges slope by how steep the drawn picture looks, ignoring the axis scale"
+      },
+      {
+        "text": "Any equation whose graph forms a straight line, including vertical lines like x = 4.",
+        "correct": false,
+        "misconception": "assumes any equation graphing as a straight line is a linear function"
+      }
+    ]
+  },
+  "span": {
+    "nodeId": "span",
+    "question": "What is the span of two non-parallel vectors v = [1, 2] and w = [3, 1] in 2D space?",
+    "options": [
+      {
+        "text": "The entire continuous 2D plane containing all possible linear combinations of v and w.",
+        "correct": true
+      },
+      {
+        "text": "The set containing only the two individual vector arrows [1, 2] and [3, 1].",
+        "correct": false,
+        "misconception": "thinks span is the set of the given vectors themselves, not everything reachable from them"
+      },
+      {
+        "text": "A 2D space simply because there are 2 vectors in the list, regardless of their direction.",
+        "correct": false,
+        "misconception": "assumes n vectors always span n dimensions"
+      },
+      {
+        "text": "A finite collection of points formed by multiplying v and w by discrete whole numbers.",
+        "correct": false,
+        "misconception": "pictures span as a finite collection of arrows rather than a continuous region"
+      }
+    ]
+  },
+  "matrix_vector_product": {
+    "nodeId": "matrix_vector_product",
+    "question": "How should the matrix-vector product A * v be interpreted, where v = [3, 5] and A has columns c1 and c2?",
+    "options": [
+      {
+        "text": "As the linear combination 3*c1 + 5*c2 of the columns of A.",
+        "correct": true
+      },
+      {
+        "text": "As a vector produced entry-by-entry by multiplying corresponding elements of v and A.",
+        "correct": false,
+        "misconception": "multiplies elementwise, pairing entry against entry"
+      },
+      {
+        "text": "As a set of dot products that outputs numbers, with no structural link to A's columns.",
+        "correct": false,
+        "misconception": "executes the row-dot-vector algorithm but cannot see the output as a combination of A's columns"
+      },
+      {
+        "text": "As a product requiring v to have 2 rows so its dimensions match A's rows rather than columns.",
+        "correct": false,
+        "misconception": "gets the shape rule backwards and pairs incompatible dimensions"
+      }
+    ]
+  },
+  "orthogonality": {
+    "nodeId": "orthogonality",
+    "question": "Which of the following statements correctly describes orthogonality for vectors u and v in any dimensional space?",
+    "options": [
+      {
+        "text": "Vectors u and v are orthogonal if and only if their dot product u dot v equals 0.",
+        "correct": true
+      },
+      {
+        "text": "Orthogonality is only meaningful in 2D geometry where vectors form a visual 90-degree angle.",
+        "correct": false,
+        "misconception": "thinks orthogonality is a 2D picture with no meaning in higher dimensions"
+      },
+      {
+        "text": "Vectors u and v are orthogonal whenever neither vector can be written as a scalar multiple of the other.",
+        "correct": false,
+        "misconception": "conflates orthogonal with linearly independent"
+      },
+      {
+        "text": "Orthogonality requires non-zero vectors, so the zero vector is not orthogonal to any vector.",
+        "correct": false,
+        "misconception": "believes the zero vector cannot be orthogonal to anything"
+      }
+    ]
+  },
+  "systems_of_equations": {
+    "nodeId": "systems_of_equations",
+    "question": "What does it geometrically mean to find all solutions to a linear system of two equations in two variables?",
+    "options": [
+      {
+        "text": "Finding all points where the geometric objects represented by the equations intersect.",
+        "correct": true
+      },
+      {
+        "text": "Finding the single unique point where the system balances, which every system must have.",
+        "correct": false,
+        "misconception": "expects every system to have exactly one solution"
+      },
+      {
+        "text": "Concluding that the solution set is the origin [0, 0] whenever the equations contradict each other.",
+        "correct": false,
+        "misconception": "reads 'no solution' as 'the solution is zero'"
+      },
+      {
+        "text": "Applying row reduction steps to isolate variables, which is a purely algebraic exercise.",
+        "correct": false,
+        "misconception": "solves algebraically without connecting the answer to intersecting lines or planes"
+      }
+    ]
+  },
+  "linearity_property": {
+    "nodeId": "linearity_property",
+    "question": "Which test strictly determines whether a mathematical function f is a linear transformation?",
+    "options": [
+      {
+        "text": "Checking if f(u + v) = f(u) + f(v) and f(c*v) = c*f(v) hold for all vectors u, v and scalars c.",
+        "correct": true
+      },
+      {
+        "text": "Checking if the plot of f is a straight geometric line, such as f(x) = 2x + 3.",
+        "correct": false,
+        "misconception": "thinks 'linear' means 'graphs as a straight line', so f(x) = 2x + 3 counts"
+      },
+      {
+        "text": "Checking if the algebraic formula for f contains no exponents or non-linear functions.",
+        "correct": false,
+        "misconception": "thinks any formula without exponents is linear"
+      },
+      {
+        "text": "Checking only if f(u + v) = f(u) + f(v), because vector addition automatically preserves scaling.",
+        "correct": false,
+        "misconception": "checks additivity but never scaling, or checks scaling but never additivity"
+      }
+    ]
+  },
+  "linear_independence": {
+    "nodeId": "linear_independence",
+    "question": "What does it mean for a set of vectors {v1, v2, v3} to be linearly independent?",
+    "options": [
+      {
+        "text": "No vector in the set can be written as a linear combination of the other vectors.",
+        "correct": true
+      },
+      {
+        "text": "No two vectors in the set are parallel to each other.",
+        "correct": false,
+        "misconception": "checks only pairs for being parallel, missing three-vector dependence"
+      },
+      {
+        "text": "Every pair of vectors in the set meets at a 90-degree angle.",
+        "correct": false,
+        "misconception": "conflates independent with orthogonal"
+      },
+      {
+        "text": "The set can contain the zero vector as long as the non-zero vectors are not combinations of each other.",
+        "correct": false,
+        "misconception": "thinks a set containing the zero vector can still be independent"
+      }
+    ]
+  },
+  "projection": {
+    "nodeId": "projection",
+    "question": "When projecting a vector v onto a subspace S to obtain the projection p, which property must hold for the residual vector r = v - p?",
+    "options": [
+      {
+        "text": "The residual vector r is orthogonal to every vector in the subspace S.",
+        "correct": true
+      },
+      {
+        "text": "The residual vector r is formed by setting the coordinates outside of S to zero.",
+        "correct": false,
+        "misconception": "thinks projecting means deleting a coordinate"
+      },
+      {
+        "text": "The projection p equals (v dot u) * u for any direction vector u in S, doubling if u doubles.",
+        "correct": false,
+        "misconception": "omits the normalisation, so the answer scales with the length of the target vector"
+      },
+      {
+        "text": "The residual vector r points in the same direction as S to ensure p reaches v.",
+        "correct": false,
+        "misconception": "does not see the residual as orthogonal to the thing projected onto"
+      }
+    ]
+  },
+  "gaussian_elimination": {
+    "nodeId": "gaussian_elimination",
+    "question": "Which of the following describes a valid row operation step during Gaussian elimination on an augmented matrix?",
+    "options": [
+      {
+        "text": "Adding a scalar multiple of one row to another row, because it is reversible and preserves the system solution set.",
+        "correct": true
+      },
+      {
+        "text": "Multiplying an entire row by zero to eliminate all variable coefficients in an unwanted equation at once.",
+        "correct": false,
+        "misconception": "uses operations that are not reversible, such as scaling a row by zero"
+      },
+      {
+        "text": "Swapping two columns of the augmented matrix to place a larger numerical coefficient into the pivot position.",
+        "correct": false,
+        "misconception": "operates on columns as though they were rows"
+      },
+      {
+        "text": "Stopping when a row reaches [0 0 | 5] and concluding that the linear system has infinitely many solutions.",
+        "correct": false,
+        "misconception": "reaches echelon form but cannot tell unique, absent, and infinite solution sets apart"
+      }
+    ]
+  },
+  "linear_transformations": {
+    "nodeId": "linear_transformations",
+    "question": "Which of the following best describes how a linear transformation T behaves on 2D vector space?",
+    "options": [
+      {
+        "text": "It transforms the entire space at once while leaving the origin fixed and keeping grid lines straight and parallel.",
+        "correct": true
+      },
+      {
+        "text": "It is any mathematical function or rule that accepts an input vector and outputs a resulting vector.",
+        "correct": false,
+        "misconception": "thinks any function taking vectors to vectors is a linear transformation"
+      },
+      {
+        "text": "It shifts the entire coordinate grid by a constant amount, moving the origin to a location such as [2, 3].",
+        "correct": false,
+        "misconception": "believes a linear transformation can move the origin"
+      },
+      {
+        "text": "It acts on each vector independently as an isolated arrow without affecting the surrounding grid of space.",
+        "correct": false,
+        "misconception": "pictures the map acting on one vector at a time rather than on the whole space"
+      }
+    ]
+  },
+  "basis": {
+    "nodeId": "basis",
+    "question": "Which set of vectors forms a valid basis for two-dimensional space R^2?",
+    "options": [
+      {
+        "text": "Any pair of non-parallel vectors in R^2, such as [1, 1] and [1, 2].",
+        "correct": true
+      },
+      {
+        "text": "Only the single set containing the standard vectors [1, 0] and [0, 1].",
+        "correct": false,
+        "misconception": "thinks a space has one basis, the standard one"
+      },
+      {
+        "text": "Only perpendicular vectors of unit length, such as [1, 0] and [0, 1].",
+        "correct": false,
+        "misconception": "believes a basis must be orthogonal, or must consist of unit vectors"
+      },
+      {
+        "text": "Any set of three vectors, such as [1, 0], [0, 1], and [1, 1], to span better.",
+        "correct": false,
+        "misconception": "assumes adding more vectors gives a better basis"
+      }
+    ]
+  },
+  "matrix_as_transformation": {
+    "nodeId": "matrix_as_transformation",
+    "question": "What do the columns of a 2x2 matrix A represent geometrically when viewed as a transformation?",
+    "options": [
+      {
+        "text": "The landing spots of the standard basis vectors [1, 0] and [0, 1] after transformation.",
+        "correct": true
+      },
+      {
+        "text": "A static rectangular arrangement of numbers that stores data values without geometric action.",
+        "correct": false,
+        "misconception": "sees a matrix as a static grid of numbers rather than an encoding of where space goes"
+      },
+      {
+        "text": "The algebraic slopes and intercepts of the linear equations represented by the matrix rows.",
+        "correct": false,
+        "misconception": "does not know the columns are the images of the basis vectors"
+      },
+      {
+        "text": "Specific transformation rules that apply only to vectors written directly next to the matrix.",
+        "correct": false,
+        "misconception": "thinks the matrix acts only on vectors written next to it, not on all of space"
+      }
+    ]
+  },
+  "null_space": {
+    "nodeId": "null_space",
+    "question": "If a linear transformation T on 3D space has a non-trivial null space containing non-zero vectors, what does this reveal about T?",
+    "options": [
+      {
+        "text": "T collapses at least one dimension of space to zero, reducing the output space's dimension.",
+        "correct": true
+      },
+      {
+        "text": "The null space contains no vectors at all when the transformation squashes vectors to zero.",
+        "correct": false,
+        "misconception": "calls the null space empty when the only solution is the zero vector"
+      },
+      {
+        "text": "The transformation matrix T must be composed entirely of zero entries in every position.",
+        "correct": false,
+        "misconception": "confuses the null space with the zero matrix"
+      },
+      {
+        "text": "T preserves the full 3D volume of space while sending non-zero vectors to new locations.",
+        "correct": false,
+        "misconception": "cannot connect a nontrivial null space to the transformation collapsing space"
+      }
+    ]
+  },
+  "coordinates_in_a_basis": {
+    "nodeId": "coordinates_in_a_basis",
+    "question": "A vector v has coordinate list [2, 3] relative to the non-standard basis B = {[1, 0], [1, 1]}. What does [2, 3] mean?",
+    "options": [
+      {
+        "text": "The vector v is obtained by taking 2 times [1, 0] plus 3 times [1, 1].",
+        "correct": true
+      },
+      {
+        "text": "The vector v is intrinsically fixed at position x=2, y=3 regardless of basis.",
+        "correct": false,
+        "misconception": "thinks a vector's coordinates are intrinsic to it rather than relative to a chosen basis"
+      },
+      {
+        "text": "The vector v lies 2 units along the standard x-axis and 3 units along the y-axis.",
+        "correct": false,
+        "misconception": "reads entries given in a new basis as if they were still standard-basis components"
+      },
+      {
+        "text": "The coordinates are invalid because only standard basis vectors produce coordinates.",
+        "correct": false,
+        "misconception": "believes only the standard basis produces valid coordinates"
+      }
+    ]
+  },
+  "matrix_multiplication": {
+    "nodeId": "matrix_multiplication",
+    "question": "Which of the following statements best describes what the matrix product C = A B represents for a vector x?",
+    "options": [
+      {
+        "text": "Applying linear transformation B to x first, and then applying transformation A to that result.",
+        "correct": true
+      },
+      {
+        "text": "Multiplying each individual entry of matrix A by the entry in the same position of matrix B.",
+        "correct": false,
+        "misconception": "believes it is elementwise, like addition"
+      },
+      {
+        "text": "Applying linear transformation A to x first and then B, which gives the exact same result as B then A.",
+        "correct": false,
+        "misconception": "assumes AB equals BA because multiplication of numbers commutes"
+      },
+      {
+        "text": "Performing row-by-column numeric multiplications, which is just an abstract algorithm with no geometric meaning.",
+        "correct": false,
+        "misconception": "executes the row-times-column algorithm but cannot say what the product represents"
+      }
+    ]
+  },
+  "determinant_2x2": {
+    "nodeId": "determinant_2x2",
+    "question": "If a 2x2 matrix has a determinant of -3, what does this tell us about the geometric transformation it performs?",
+    "options": [
+      {
+        "text": "It scales the area of any region by a factor of 3 while reversing its orientation.",
+        "correct": true
+      },
+      {
+        "text": "It indicates that the off-diagonal product was subtracted from the main diagonal product in reverse order.",
+        "correct": false,
+        "misconception": "recalls the formula with the two products subtracted in the wrong order"
+      },
+      {
+        "text": "It is strictly a numerical outcome of ad - bc that carries no geometric meaning about area.",
+        "correct": false,
+        "misconception": "computes it with no notion that it measures area scaling"
+      },
+      {
+        "text": "It signals a calculation error, because a transformation cannot scale an area by a negative number.",
+        "correct": false,
+        "misconception": "treats a negative determinant as an arithmetic error rather than a flip in orientation"
+      }
+    ]
+  },
+  "column_space_rank": {
+    "nodeId": "column_space_rank",
+    "question": "For a matrix with 3 rows and 5 columns, what are its column space and maximum possible rank?",
+    "options": [
+      {
+        "text": "The column space is a subspace of R^3 (the output space), and the maximum rank is 3.",
+        "correct": true
+      },
+      {
+        "text": "The column space is a subspace of R^3 (the output space), and the rank is fixed at 5.",
+        "correct": false,
+        "misconception": "counts rank as the number of columns rather than the number of independent ones"
+      },
+      {
+        "text": "The column space is a subspace of R^5 (the input space), and the maximum rank is 3.",
+        "correct": false,
+        "misconception": "places the column space in the domain rather than the codomain"
+      },
+      {
+        "text": "The column space is a subspace of R^3 (the output space), and the maximum rank is 5.",
+        "correct": false,
+        "misconception": "believes rank can exceed the smaller of the two dimensions"
+      }
+    ]
+  },
+  "determinant_general": {
+    "nodeId": "determinant_general",
+    "question": "What does it mean geometrically if a 3x3 matrix has a determinant equal to 0?",
+    "options": [
+      {
+        "text": "The transformation collapses 3D space into a lower dimension, making the output volume zero.",
+        "correct": true
+      },
+      {
+        "text": "The cofactor expansion formula evaluated to zero, which is an algebraic result with no volume meaning.",
+        "correct": false,
+        "misconception": "treats it as a formula to grind, with no notion of signed volume scaling"
+      },
+      {
+        "text": "The matrix itself is completely zero or empty, containing no non-zero entries in any position.",
+        "correct": false,
+        "misconception": "reads det = 0 as the matrix being empty or zero rather than collapsing a dimension"
+      },
+      {
+        "text": "The cofactor expansion yielded zero because all terms were added together without alternating signs.",
+        "correct": false,
+        "misconception": "drops the alternating signs during cofactor expansion"
+      }
+    ]
+  },
+  "invertibility": {
+    "nodeId": "invertibility",
+    "question": "Why does a square matrix with a determinant of 0 fail to have an inverse?",
+    "options": [
+      {
+        "text": "It collapses space into a lower dimension, so multiple inputs land on the same output and cannot be uniquely undone.",
+        "correct": true
+      },
+      {
+        "text": "It fails because computing the inverse by taking reciprocals of entries creates division by zero.",
+        "correct": false,
+        "misconception": "thinks the inverse is found by taking reciprocals of the entries"
+      },
+      {
+        "text": "The premise is incorrect because every square matrix possesses a valid inverse regardless of its determinant.",
+        "correct": false,
+        "misconception": "believes every square matrix has an inverse"
+      },
+      {
+        "text": "By rule det = 0 means singular, which is simply a memorized definition rather than a statement about space.",
+        "correct": false,
+        "misconception": "recites that det = 0 means singular but cannot say why collapsing space makes undoing impossible"
+      }
+    ]
+  },
+  "eigenvectors": {
+    "nodeId": "eigenvectors",
+    "question": "What does it mean for a non-zero vector v to be an eigenvector of matrix A with eigenvalue 3?",
+    "options": [
+      {
+        "text": "Applying matrix A to v keeps it on its original line, scaling its magnitude by a factor of 3.",
+        "correct": true
+      },
+      {
+        "text": "Applying matrix A to v leaves vector v completely unchanged in both its direction and magnitude.",
+        "correct": false,
+        "misconception": "thinks an eigenvector is left completely unchanged rather than kept on its own line"
+      },
+      {
+        "text": "Vector v is the single, unique vector satisfying the equation, so scaling v does not yield an eigenvector.",
+        "correct": false,
+        "misconception": "treats the eigenvector as a single vector instead of an entire line of solutions"
+      },
+      {
+        "text": "The number 3 is a root of the characteristic equation det(A - lambda I) = 0, which carries no geometric meaning.",
+        "correct": false,
+        "misconception": "solves the characteristic polynomial but cannot say what the eigenvalue measures"
+      }
+    ]
+  },
+  "change_of_basis": {
+    "nodeId": "change_of_basis",
+    "question": "A vector v in R^2 has standard coordinates [v]_std and coordinates [v]_B in a new basis B. If matrix P has the B-basis vectors as its columns in standard coordinates, which statement is true?",
+    "options": [
+      {
+        "text": "The physical vector v remains fixed; matrix P maps coordinates via P [v]_B = [v]_std to translate from basis B to standard.",
+        "correct": true
+      },
+      {
+        "text": "The physical vector v remains fixed; matrix P maps coordinates via P [v]_std = [v]_B to translate from standard to basis B.",
+        "correct": false,
+        "misconception": "applies the change-of-basis matrix in the wrong direction"
+      },
+      {
+        "text": "The physical vector v rotates and stretches in space when multiplied by P to match the orientation of the new basis.",
+        "correct": false,
+        "misconception": "thinks the vector itself changes rather than its coordinate readout"
+      },
+      {
+        "text": "The matrix P is constructed by expressing the vectors of basis B in basis B coordinates, making P equal to the identity matrix.",
+        "correct": false,
+        "misconception": "builds the matrix from the new basis vectors written in the new basis, which is always the identity"
+      }
+    ]
+  },
+  "similarity": {
+    "nodeId": "similarity",
+    "question": "Matrix B is related to matrix A by B = P^(-1) A P. Which statement best describes what this relationship means?",
+    "options": [
+      {
+        "text": "A and B represent the exact same linear transformation, expressed under two different coordinate bases.",
+        "correct": true
+      },
+      {
+        "text": "A and B are matrices that share a visually similar layout and pattern of non-zero entries.",
+        "correct": false,
+        "misconception": "thinks similar matrices are ones that merely look alike"
+      },
+      {
+        "text": "P^(-1) A P represents three separate spatial transformations performed in sequence on a vector.",
+        "correct": false,
+        "misconception": "cannot read the sandwich as 'translate, act, translate back'"
+      },
+      {
+        "text": "A and B must share the exact same numerical entries across their rows, differing only by a overall scalar factor.",
+        "correct": false,
+        "misconception": "expects similar matrices to share visible entries"
+      }
+    ]
+  },
+  "diagonalization": {
+    "nodeId": "diagonalization",
+    "question": "What is the core geometric meaning of diagonalizing a matrix A into A = P D P^(-1)?",
+    "options": [
+      {
+        "text": "Choosing an eigenbasis in which the transformation acts purely as independent scaling along the coordinate axes.",
+        "correct": true
+      },
+      {
+        "text": "Applying an algebraic procedure that allows any square matrix to be decomposed into pure axis scalings.",
+        "correct": false,
+        "misconception": "assumes every matrix is diagonalizable"
+      },
+      {
+        "text": "Placing eigenvalues in D in sorted numerical order while placing eigenvectors into the columns of P in any order.",
+        "correct": false,
+        "misconception": "orders the eigenvalues in D without matching the eigenvector order in P"
+      },
+      {
+        "text": "Using an algebraic trick to make matrix powers easier to calculate without changing the underlying basis.",
+        "correct": false,
+        "misconception": "sees it as a computational trick rather than as choosing the basis where the map is just scaling"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+MATH 2270 — LINEAR ALGEBRA
+Fall Semester · 4 credit hours · MWF 10:00–10:50, Wilson Hall 214
+
+INSTRUCTOR
+Dr. A. Reyes · office hours Tue/Thu 2–4pm
+
+COURSE DESCRIPTION
+An introduction to vector spaces, linear transformations, and matrix theory. The course
+develops the algebra of matrices alongside its geometric interpretation, culminating in
+eigenvalue problems and diagonalization.
+
+PREREQUISITES
+MATH 1210 (Calculus I) or equivalent. Students are expected to be comfortable with high
+school algebra: manipulating symbolic expressions, solving linear equations, working with
+fractions and signed quantities, and reading function notation such as f(x) and f(g(x)).
+Familiarity with plotting points and lines in the coordinate plane is assumed. No prior
+exposure to matrices is required.
+
+WEEKLY SCHEDULE
+
+Week 1  — Systems of linear equations. Geometric view: intersecting lines and planes.
+          Row operations. We assume you can already solve a linear equation and read a
+          slope from an equation of a line.
+Week 2  — Gaussian elimination and row echelon form. Existence and uniqueness of
+          solutions. Consistent and inconsistent systems.
+Week 3  — Vectors in R^n. Vector addition and scalar multiplication. Linear combinations.
+          Assumes fluency with signed arithmetic and coordinates.
+Week 4  — Span and linear independence. The geometry of spanning sets.
+Week 5  — Linear transformations. The matrix of a transformation; columns as images of
+          the basis vectors. Assumes you know what it means for a map to be linear, and
+          are comfortable composing functions.
+Week 6  — Matrix algebra. Matrix multiplication as composition of transformations.
+          MIDTERM EXAM 1 (Friday, covers Weeks 1–5)
+Week 7  — Inverse matrices. Invertibility criteria. Elementary matrices.
+Week 8  — Determinants. 2x2 and general case. Determinant as signed volume scaling.
+Week 9  — Vector spaces and subspaces. Column space and null space.
+Week 10 — Basis and dimension. Rank–nullity.
+Week 11 — Coordinates relative to a basis. Change of basis.
+          MIDTERM EXAM 2 (Friday, covers Weeks 6–10)
+Week 12 — Similarity of matrices. Similar matrices as one map seen from two bases.
+Week 13 — Eigenvalues and eigenvectors. The characteristic polynomial.
+Week 14 — Diagonalization and its applications.
+Week 15 — Inner products, orthogonality, and projections. Least squares.
+Week 16 — Review. FINAL EXAM.
+
+ASSESSMENT
+Problem sets 20% · Midterm 1 20% · Midterm 2 20% · Final 40%
+
+TEXT
+Lay, Linear Algebra and Its Applications, 5th ed.

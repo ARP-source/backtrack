@@ -9,7 +9,7 @@ import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 // @huggingface/transformers, not @xenova — the latter pulls sharp@0.32, which has no
 // prebuilt win32-arm64 binary and fails node-gyp on Snapdragon/Windows-on-ARM machines.
 import { pipeline, env } from "@huggingface/transformers";
-import { chunkCues, type Cue, type Chunk } from "../lib/chunk.js";
+import { chunkCues, type Cue, type Chunk } from "../lib/chunk";
 
 env.cacheDir = "./.cache";
 
@@ -42,7 +42,7 @@ for (const f of files) {
 
 console.log(`\n${all.length} chunks total. Loading embedding model...`);
 
-const extract = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2", { quantized: true });
+const extract = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2");
 
 const BATCH = 32;
 const embeddings: number[][] = [];

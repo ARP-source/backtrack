@@ -1,9 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
-import { indexDag, ancestors } from "./dag.js";
-import { runDiagnostic, syntheticStudent, perfectStudent } from "./simulate.js";
-import { isGap, isKnown, rootGaps, createState, applyAnswer, selectProbe, DEFAULT_OPTIONS } from "./diagnostic.js";
-import type { Dag } from "./types.js";
+import { indexDag, ancestors } from "./dag";
+import { runDiagnostic, syntheticStudent, perfectStudent } from "./simulate";
+import { isGap, isKnown, rootGaps, createState, applyAnswer, selectProbe, DEFAULT_OPTIONS } from "./diagnostic";
+import type { Dag } from "./types";
 
 // Tests run against the real shipped graph, not a toy one — a DAG change that breaks
 // convergence should fail the build.

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #07080c;
+  --color-panel: #0e1017;
+  --color-line: #1c2030;
+  --color-muted: #6f7891;
+  --color-body: #aab3c8;
+  --color-bright: #e8ecf5;
+  --color-accent: #5eead4;
+  --color-accent-dim: #134e4a;
+  --color-gap: #fb7185;
+  --color-known: #38bdf8;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-body);
+  font-feature-settings: "ss01", "cv01";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mastery propagating outward through the graph — the moment worth watching. */
+@keyframes pulse-known {
+  0% { r: 7; opacity: 1; }
+  60% { r: 15; opacity: 0.18; }
+  100% { r: 7; opacity: 0; }
+}
+
+@keyframes settle {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.32); }
+  100% { transform: scale(1); }
+}
+
+.node-settling {
+  animation: settle 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .node-settling,
+  .fade-up {
+    animation: none;
+  }
+}

@@ -32,8 +32,12 @@ export type LLMCall<T> = {
   prompt: string;
   /** Gemini responseSchema (JSON Schema subset) — constrains generation. */
   responseSchema: Record<string, unknown>;
-  /** The trust boundary. The API's schema promise is not a guarantee. */
-  schema: z.ZodType<T>;
+  /**
+   * The trust boundary. The API's schema promise is not a guarantee.
+   * Input type is left open so schemas using .default()/.transform() — where the parsed
+   * output differs from the accepted input — still infer T from the OUTPUT side.
+   */
+  schema: z.ZodType<T, z.ZodTypeDef, any>;
   /** Used whenever a live call cannot produce valid output. */
   fixture: T;
 };
@@ -45,7 +49,7 @@ function cachePath(namespace: string, prompt: string): string {
   return join(CACHE_DIR, `${namespace}-${hash}.json`);
 }
 
-function readCache<T>(path: string, schema: z.ZodType<T>): T | null {
+function readCache<T>(path: string, schema: z.ZodType<T, z.ZodTypeDef, any>): T | null {
   if (!existsSync(path)) return null;
   try {
     const parsed = schema.safeParse(JSON.parse(readFileSync(path, "utf8")));

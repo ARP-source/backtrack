@@ -2,8 +2,8 @@
  * Driving the diagnostic loop, and synthetic students to drive it with.
  * Pure logic. Used by the unit tests and by seeded demo mode.
  */
-import type { NodeId } from "./types.js";
-import { ancestors, type DagIndex } from "./dag.js";
+import type { NodeId } from "./types";
+import { ancestors, type DagIndex } from "./dag";
 import {
   applyAnswer,
   createState,
@@ -12,7 +12,7 @@ import {
   DEFAULT_OPTIONS,
   type DiagnosticOptions,
   type DiagnosticState,
-} from "./diagnostic.js";
+} from "./diagnostic";
 
 export type Oracle = (nodeId: NodeId) => { correct: boolean; misconception?: string };
 

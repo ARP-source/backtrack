@@ -9,9 +9,9 @@
  */
 import { readFileSync } from "node:fs";
 import { pipeline, env } from "@huggingface/transformers";
-import { rankChunks, gapQueryText } from "../lib/retrieval.js";
-import { indexDag } from "../lib/dag.js";
-import type { Dag, TranscriptChunk } from "../lib/types.js";
+import { rankChunks, gapQueryText } from "../lib/retrieval";
+import { indexDag } from "../lib/dag";
+import type { Dag, TranscriptChunk } from "../lib/types";
 
 env.cacheDir = "./.cache";
 

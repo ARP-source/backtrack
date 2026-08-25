@@ -1,7 +1,7 @@
 /**
  * DAG loading and graph queries. Pure logic — unit-testable, no React, no network.
  */
-import type { Dag, DagNode, NodeId } from "./types.js";
+import type { Dag, DagNode, NodeId } from "./types";
 
 export type DagIndex = {
   dag: Dag;
