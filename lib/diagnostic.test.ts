@@ -156,6 +156,34 @@ describe("search behaviour", () => {
     expect([...ancestors(idx, "change_of_basis")]).toContain(next);
   });
 
+  it("never asks the same question twice", () => {
+    // Regression: an inferred likely_gap that is also a direct prereq of an open failure
+    // stayed a candidate after being probed, so the search re-asked it until the budget
+    // drained. It looked like a convergence failure; it was an infinite loop.
+    for (const missing of ["negative_numbers", "fraction_arithmetic", "function_composition"]) {
+      const state = runDiagnostic(idx, FRONTIER, syntheticStudent(idx, [missing]));
+      const asked = state.steps.map((s) => s.chosen);
+      expect(new Set(asked).size).toBe(asked.length);
+    }
+  });
+
+  it("bottoms out one failure before exploring another branch", () => {
+    // Regression: unioning the direct prereqs of every open failure let an unrelated branch
+    // outrank the last prereq needed to root the current one, and the search wandered off
+    // a single probe short of the answer.
+    const state = runDiagnostic(idx, FRONTIER, syntheticStudent(idx, ["fraction_arithmetic"]));
+    expect(rootGaps(state, idx)).toContain("fraction_arithmetic");
+  });
+
+  it("finds the root at every depth in the graph", () => {
+    // The headline claim: whatever the student is missing, we name the root, not a symptom.
+    const inScope = [...createState(idx, FRONTIER).scope];
+    for (const missing of inScope) {
+      const state = runDiagnostic(idx, FRONTIER, syntheticStudent(idx, [missing]));
+      expect(rootGaps(state, idx), `failed to isolate ${missing}`).toContain(missing);
+    }
+  });
+
   it("records an inspectable trace for every probe", () => {
     const state = runDiagnostic(idx, FRONTIER, syntheticStudent(idx, ["span"]));
     for (const step of state.steps) {

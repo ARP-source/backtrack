@@ -58,7 +58,7 @@ export type DiagnosticOptions = {
   stopAfterCleanStreak: number;
 };
 
-export const DEFAULT_OPTIONS: DiagnosticOptions = { budget: 10, maxRootGaps: 3, stopAfterCleanStreak: 2 };
+export const DEFAULT_OPTIONS: DiagnosticOptions = { budget: 10, maxRootGaps: 3, stopAfterCleanStreak: 3 };
 
 export function createState(idx: DagIndex, frontier: NodeId[]): DiagnosticState {
   const scope = new Set<NodeId>();
@@ -106,8 +106,12 @@ export function rootGaps(state: DiagnosticState, idx: DagIndex): NodeId[] {
  * back out to nearly the whole graph and defeat the narrowing entirely.
  */
 function openGaps(state: DiagnosticState, idx: DagIndex): NodeId[] {
-  const observed = state.steps.filter((s) => !s.correct).map((s) => s.chosen);
-  return [...new Set(observed)].filter((id) => !isRootGap(state, idx, id));
+  const observed = [...new Set(state.steps.filter((s) => !s.correct).map((s) => s.chosen))];
+  return observed.filter((id) => {
+    if (isRootGap(state, idx, id)) return false;
+    // Already explained by a deeper confirmed gap — no need to keep tracing this one.
+    return !(idx.prereqs.get(id) ?? []).some((p) => at(state, p) === "confirmed_gap");
+  });
 }
 
 /**
@@ -116,21 +120,56 @@ function openGaps(state: DiagnosticState, idx: DagIndex): NodeId[] {
  * than a sweep of the whole graph.
  */
 export function candidates(state: DiagnosticState, idx: DagIndex): NodeId[] {
-  const unresolved = (id: NodeId) => !isResolved(at(state, id));
+  // Never ask the same question twice. An inferred likely_gap stays a legitimate candidate
+  // until probed, but once probed the answer cannot change — without this guard the search
+  // re-asks a node that is already an observed failure and spins until the budget is gone.
+  const asked = new Set(state.steps.map((s) => s.chosen));
   const open = openGaps(state, idx);
   if (open.length > 0) {
-    const region = new Set<NodeId>();
-    for (const g of open) for (const a of ancestors(idx, g)) if (state.scope.has(a)) region.add(a);
-    const narrowed = [...region].filter(unresolved);
-    if (narrowed.length > 0) return narrowed.sort();
+    // Descend exactly one level: the DIRECT prerequisites of a failure.
+    //
+    // Widening this to all transitive ancestors is the intuitive move and it is much
+    // worse. Blame lives adjacent to the failure, so a direct prereq is far more
+    // informative than a distant one; and since a correct answer only clears a node plus
+    // its own ancestors, searching a wide shallow ancestor set degenerates into a linear
+    // scan. One level down turns "which of 10?" into "which of 3?", and recursion handles
+    // the rest.
+    // Finish one descent before starting another. Unioning the prereqs of every open
+    // failure lets a half-traced branch compete with unrelated ones on raw gain, and the
+    // search wanders off one probe short of a root. Shallowest open failure first: it is
+    // nearest the bottom, so it is nearest to being rooted.
+    const byDepth = [...open].sort(
+      (a, b) => (idx.byId.get(a)?.depth ?? 0) - (idx.byId.get(b)?.depth ?? 0) || a.localeCompare(b)
+    );
+    for (const g of byDepth) {
+      const next = (idx.prereqs.get(g) ?? []).filter((p) => {
+        const m = at(state, p);
+        // Skip what is settled; an inferred likely_gap still needs direct evidence.
+        return state.scope.has(p) && !asked.has(p) && !isKnown(m) && m !== "confirmed_gap";
+      });
+      if (next.length > 0) return [...next].sort();
+    }
   }
-  return [...state.scope].filter(unresolved).sort();
+  return [...state.scope].filter((id) => !asked.has(id) && !isResolved(at(state, id))).sort();
 }
 
-export function scoreCandidate(state: DiagnosticState, idx: DagIndex, id: NodeId): CandidateScore {
+/**
+ * @param region The nodes currently in play. Once the search narrows to the prerequisites
+ *   of a failure, progress must be measured against *that* set, not the whole scope:
+ *   scoring a candidate by dependents it has outside the region credits it for settling
+ *   nodes the search is no longer asking about, which picks poor probes during the descent
+ *   — exactly where question budget is scarcest.
+ */
+export function scoreCandidate(
+  state: DiagnosticState,
+  idx: DagIndex,
+  id: NodeId,
+  region?: Set<NodeId>
+): CandidateScore {
+  const inPlay = (x: NodeId) => (region ? region.has(x) : state.scope.has(x));
   const unresolvedIn = (ids: Iterable<NodeId>) => {
     let n = 0;
-    for (const x of ids) if (state.scope.has(x) && !isResolved(at(state, x))) n++;
+    for (const x of ids) if (inPlay(x) && !isResolved(at(state, x))) n++;
     return n;
   };
   // Pass settles this node and everything upstream of it; fail settles it and everything
@@ -152,8 +191,9 @@ export function scoreCandidate(state: DiagnosticState, idx: DagIndex, id: NodeId
 
 /** The probe that most evenly splits what is still unresolved. Deterministic. */
 export function selectProbe(state: DiagnosticState, idx: DagIndex): { chosen: NodeId | null; scored: CandidateScore[] } {
-  const scored = candidates(state, idx)
-    .map((id) => scoreCandidate(state, idx, id))
+  const region = new Set(candidates(state, idx));
+  const scored = [...region]
+    .map((id) => scoreCandidate(state, idx, id, region))
     .sort(
       (a, b) =>
         b.gain - a.gain ||

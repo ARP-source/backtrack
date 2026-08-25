@@ -38,7 +38,7 @@ That last arrow is what makes this a system rather than a feature list.
 |---|---|
 | **M1 — Data** | ✅ complete |
 | **M2 — Diagnostic engine (headless)** | ✅ complete |
-| M3 — Retrieval + LLM verification | not started |
+| **M3 — Retrieval + LLM verification** | ✅ complete |
 | M4 — UI | not started |
 | M5 — Guided notes + write-back | not started |
 | M6 — Demo hardening | not started |
@@ -60,12 +60,16 @@ lib/
   retrieval.ts           cosine ranking, per-video diversity, span merging (pure)
   diagnostic.ts          probe selection, propagation, root-gap detection (pure, tested)
   simulate.ts            synthetic students + the diagnostic loop driver
+  llm.ts                 the only provider access: validate, retry, cache, fixture fallback
+  verify.ts              segment verification prompt + schemas
+  crash-course.ts        gaps -> candidates -> verified -> merged -> capped clips
 scripts/
   validate-dag.ts        structural check — run before trusting the graph
   fetch-transcripts.ts   build-time only; never runs at request time
   build-index.ts         chunk + embed → chunks.json
   query.ts               retrieval verification harness
   diagnose.ts            diagnostic trace + convergence benchmark
+  crash-course.ts        end-to-end: student -> diagnostic -> verified clips
 ```
 
 ### The prerequisite DAG
@@ -114,10 +118,14 @@ Scoring on `|passSettled − failSettled|` instead looks equivalent and is not. 
 
 ```
 28 single-gap students, 28-node scope
-  converged: avg 5.6 probes, worst 7
-  total:     avg 8.1 probes, worst 10
+  converged: avg 5.2 probes, worst 7
+  total:     avg 7.6 probes, worst 10
   missed:    0
 ```
+
+Whatever the student is missing — depth 0 or depth 10 — the search names the root, not the symptom. A test asserts this for every node in scope, so a DAG edit that breaks convergence fails the build.
+
+**The descent goes one level at a time, into direct prerequisites only.** Widening it to all transitive ancestors is the intuitive move and is markedly worse: blame lives adjacent to a failure, and since a correct answer clears only a node plus its own ancestors, searching a wide shallow ancestor set degenerates into a linear scan. One level down turns "which of 10?" into "which of 3?". The search also finishes tracing one failure before starting another — unioning the prereqs of every open failure lets an unrelated branch outrank the last probe needed to root the current one, and the search wanders off one question short of the answer.
 
 "Converged" is the probe at which the root gap is identified. "Total" is higher because after rooting one gap the engine keeps probing briefly, looking for a second independent gap — the product targets 2–4 findings. That speculation is capped (`stopAfterCleanStreak`) so a student with a single problem isn't asked ten questions to confirm it.
 
@@ -129,7 +137,38 @@ Embeddings are local (`all-MiniLM-L6-v2` via `@huggingface/transformers`) — no
 
 Ranking caps chunks per video (default 3). Without the cap the corpus votes by volume — the three 47-minute MIT lectures are ~43% of all chunks and monopolise every top-K, burying shorter videos that explain the concept better. The cap also guarantees the candidate pool spans multiple channels, which is what makes "here's a different explanation" possible when a node reopens.
 
-Embeddings are the **recall** stage. The LLM verification pass (M3) is the **precision** stage: it reads the top 12 and drops segments that merely *mention* the concept rather than teach it.
+Embeddings are the **recall** stage. LLM verification is the **precision** stage.
+
+### Verification
+
+For each root gap, all 12 candidates go to the model in **one** call, which classifies each as `teaches` / `mentions` / `unrelated`, writes a one-sentence `why_this_clip` addressed to the student, and may tighten the bounds. Batching is not only a rate-limit concession — the model sees the candidates side by side and ranks them against each other instead of judging each in a vacuum.
+
+Kept segments are merged where they overlap, capped at 4 per gap and 15 minutes total. Refined timestamps are clamped inside the original chunk, so a hallucinated bound cannot escape the span.
+
+A real result, for a student whose wrong answer revealed *"reads f(g(x)) left to right"*:
+
+```
+GAP: Function composition
+     12 candidates -> 4 teach it -> 3 clips, 4:44 total
+
+  2:53–5:04  3Blue1Brown — Matrix multiplication as composition | Chapter 4
+     why: This clip directly addresses reading f(g(x)) right-to-left by explaining
+          that functions act on inputs placed to their right.
+```
+
+That third clip is from a video about *matrix multiplication*, selected for a *function composition* gap, because that is where the ordering is explained. Similarity alone would never justify it; the misconception in the query is what earns it.
+
+### Every model call
+
+One module (`lib/llm.ts`) owns all provider access. Each call gets zod validation, one retry, a disk cache keyed by input hash, and a deterministic fixture fallback. Missing key, thrown error, 429, or output that fails validation twice all resolve to the fixture and keep rendering — no call site needs a `try`/`catch`, and none knows which provider this is.
+
+Rate limits are treated as terminal rather than retried, since they will not clear on an immediate second attempt. The model is pinned (`gemini-3.6-flash`), not a floating alias: `gemini-flash-latest` returned `503 high demand` during testing, which is exactly the failure a demo cannot absorb.
+
+`--cold` forces the true fallback path — no key *and* no cache — because a warm cache otherwise masks it and "survives a dead network" stays an untested claim:
+
+```bash
+npm run crash-course -- --missing function_composition --cold
+```
 
 ## Hard constraints
 
@@ -162,6 +201,12 @@ npm run diagnose -- --missing function_composition
 
 ```bash
 npm run diagnose -- --bench
+```
+
+Run the whole pipeline headless — diagnostic through to timestamped clips:
+
+```bash
+npm run crash-course -- --missing function_composition,slope_and_lines
 ```
 
 ### Environment
