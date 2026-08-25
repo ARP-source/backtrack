@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { timestamp as ts, type Segment } from "@/lib/segment";
+import { BLUR1 } from "@/lib/palette";
 
-type Blank = { id: string; timestamp: number; answer: string; acceptable: string[]; nodeId: string };
+type Blank = { id: string; timestamp: number; answer: string; acceptable: string[]; nodeId: string; tag?: string };
 type Note = { lines: string[]; blanks: Blank[] };
 type Graded = { blankId: string; verdict: "correct" | "wrong" | "near" | "empty"; input: string };
 export type Outcome = { nodeId: string; total: number; correct: number; missed: number; reopen: boolean };
@@ -25,6 +26,9 @@ export default function GuidedNotes({ segment, misconception, onOutcome }: Props
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
+    setNote(null);
+    setGraded(null);
+    setAnswers({});
     fetch("/api/notes", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -62,96 +66,91 @@ export default function GuidedNotes({ segment, misconception, onOutcome }: Props
     }
   }
 
-  if (loading) {
-    return <Shell><p className="text-[12.5px] text-muted">Writing your notes for this clip…</p></Shell>;
-  }
-  if (failed || !note) {
-    return <Shell><p className="text-[12.5px] text-muted">Notes unavailable for this clip.</p></Shell>;
-  }
-
   const verdictOf = (id: string) => graded?.find((g) => g.blankId === id)?.verdict;
   const done = graded !== null;
+  const filled = note ? note.blanks.filter((b) => (answers[b.id] ?? "").trim().length > 0).length : 0;
   const correctCount = graded?.filter((g) => g.verdict === "correct").length ?? 0;
 
   return (
-    <Shell>
-      <div className="flex items-baseline justify-between">
-        <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent">Fill these in as you watch</p>
-        {done && (
-          <span className="text-[11px] tabular-nums text-muted">
-            {correctCount}/{note.blanks.length}
-          </span>
-        )}
-      </div>
-
-      <div className="mt-3 flex flex-col gap-2.5">
-        {note.lines.map((line, li) => (
-          <p key={li} className="text-[13.5px] leading-[1.9] text-body">
-            {renderLine(line, note.blanks, answers, setAnswers, verdictOf, done)}
-          </p>
-        ))}
-      </div>
-
-      {!done ? (
-        <button
-          onClick={check}
-          disabled={checking}
-          className="mt-4 rounded-lg border border-accent/50 px-3.5 py-2 text-[12.5px] font-medium text-accent transition hover:bg-accent/10 disabled:opacity-50"
+    <div className="glass1" style={{ ...BLUR1, padding: 24 }}>
+      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", flexWrap: "wrap", gap: "6px 14px", marginBottom: 22 }}>
+        <span className="serif" style={{ fontSize: 20, letterSpacing: "-.02em", whiteSpace: "nowrap" }}>
+          Guided notes
+        </span>
+        <span
+          className="mono"
+          style={{ fontSize: 9.5, letterSpacing: ".12em", color: "var(--faint)", textTransform: "uppercase", fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}
         >
-          {checking ? "Checking…" : "Check my answers"}
-        </button>
-      ) : (
-        <div className="mt-4 flex flex-col gap-1.5">
-          {note.blanks
-            .filter((b) => verdictOf(b.id) !== "correct")
-            .map((b) => (
-              <p key={b.id} className="text-[12px] leading-relaxed text-muted">
-                <span className="text-gap">✗</span> expected{" "}
-                <span className="text-bright">{b.answer}</span>
-                <span className="ml-1.5 font-mono text-[10.5px]">revealed at {ts(b.timestamp)}</span>
-              </p>
-            ))}
-        </div>
+          {loading ? "writing…" : done ? `${correctCount} of ${note?.blanks.length} right` : `${filled} of ${note?.blanks.length ?? 0} filled`}
+        </span>
+      </div>
+
+      {loading && <p style={{ margin: 0, fontSize: 13, color: "var(--mute)" }}>Reading the clip and writing your notes…</p>}
+      {!loading && (failed || !note) && <p style={{ margin: 0, fontSize: 13, color: "var(--mute)" }}>Notes unavailable for this clip.</p>}
+
+      {note && (
+        <>
+          <div style={{ display: "flex", flexDirection: "column", gap: 21 }}>
+            {note.blanks.map((b) => {
+              const v = verdictOf(b.id);
+              const line = note.lines.find((l) => l.includes(`{{${b.id}}}`)) ?? "";
+              const prompt = line.replace(/\{\{\w+\}\}/g, "__________").trim();
+              const border = v === "correct" ? "rgba(92,201,180,.55)" : v ? "rgba(152,166,255,.55)" : "var(--line)";
+              return (
+                <div key={b.id}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 9, flexWrap: "wrap" }}>
+                    <span
+                      className="mono"
+                      style={{
+                        padding: "3px 7px",
+                        background: "var(--g3)",
+                        border: "1px solid var(--g3l)",
+                        borderRadius: 5,
+                        fontSize: 10,
+                        color: "var(--teal)",
+                        fontVariantNumeric: "tabular-nums",
+                      }}
+                    >
+                      {ts(b.timestamp)}
+                    </span>
+                    <span className="mono" style={{ fontSize: 9, letterSpacing: ".12em", color: "var(--faint)", textTransform: "uppercase" }}>
+                      {b.tag ?? "note"}
+                    </span>
+                  </div>
+                  <p style={{ fontSize: 14, lineHeight: 1.6, margin: "0 0 10px", textWrap: "pretty" }}>{prompt}</p>
+                  <input
+                    type="text"
+                    value={answers[b.id] ?? ""}
+                    onChange={(e) => setAnswers((a) => ({ ...a, [b.id]: e.target.value }))}
+                    disabled={done}
+                    spellCheck={false}
+                    placeholder={done ? "" : "your answer"}
+                    className="field"
+                    style={{ width: "100%", padding: "11px 13px", fontFamily: "var(--font-sans), sans-serif", fontSize: 13.5, borderColor: border }}
+                  />
+                  {done && v !== "correct" && (
+                    <p className="mono" style={{ margin: "7px 0 0", fontSize: 10.5, color: "var(--faint)" }}>
+                      expected <span style={{ color: "var(--peri)" }}>{b.answer}</span>
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {!done && (
+            <button
+              type="button"
+              onClick={check}
+              disabled={checking}
+              className="btn-teal"
+              style={{ marginTop: 22, width: "100%", padding: 13, fontSize: 13.5, fontWeight: 500 }}
+            >
+              {checking ? "Checking…" : "Check my answers"}
+            </button>
+          )}
+        </>
       )}
-    </Shell>
+    </div>
   );
-}
-
-function Shell({ children }: { children: React.ReactNode }) {
-  return <div className="rounded-xl border border-line bg-panel/70 p-4">{children}</div>;
-}
-
-function renderLine(
-  line: string,
-  blanks: Blank[],
-  answers: Record<string, string>,
-  setAnswers: (fn: (a: Record<string, string>) => Record<string, string>) => void,
-  verdictOf: (id: string) => string | undefined,
-  locked: boolean
-) {
-  const parts = line.split(/(\{\{\w+\}\})/g);
-  return parts.map((part, i) => {
-    const m = part.match(/^\{\{(\w+)\}\}$/);
-    if (!m) return <span key={i}>{part}</span>;
-
-    const blank = blanks.find((b) => b.id === m[1]);
-    if (!blank) return <span key={i}>…</span>;
-
-    const v = verdictOf(blank.id);
-    const border =
-      v === "correct" ? "border-known text-known" : v ? "border-gap text-gap" : "border-muted/60 text-bright";
-
-    return (
-      <input
-        key={i}
-        value={answers[blank.id] ?? ""}
-        onChange={(e) => setAnswers((a) => ({ ...a, [blank.id]: e.target.value }))}
-        disabled={locked}
-        spellCheck={false}
-        aria-label={`Blank, answer revealed at ${ts(blank.timestamp)}`}
-        title={`revealed at ${ts(blank.timestamp)}`}
-        className={`mx-1 w-32 border-b bg-transparent px-1 pb-0.5 text-center text-[13px] outline-none transition focus:border-accent ${border}`}
-      />
-    );
-  });
 }

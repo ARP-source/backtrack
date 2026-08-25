@@ -1,60 +1,260 @@
 @import "tailwindcss";
 
-@theme {
-  --color-ink: #07080c;
-  --color-panel: #0e1017;
-  --color-line: #1c2030;
-  --color-muted: #6f7891;
-  --color-body: #aab3c8;
-  --color-bright: #e8ecf5;
-  --color-accent: #5eead4;
-  --color-accent-dim: #134e4a;
-  --color-gap: #fb7185;
-  --color-known: #38bdf8;
+/* Design tokens imported from the Claude Design project "Backtrack.dc.html". */
+:root {
+  --bg: #0a0e14;
+  --bg2: #121924;
+  --paper: #e8ebef;
+  --mute: #8792a3;
+  --faint: #5a6675;
+  --teal: #5cc9b4;
+  --teal-d: #3f8e86;
+  --peri: #98a6ff;
+  --g1: rgba(24, 33, 46, 0.62);
+  --g1l: rgba(255, 255, 255, 0.12);
+  --g1hi: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  --g2: rgba(17, 24, 35, 0.44);
+  --g2l: rgba(255, 255, 255, 0.07);
+  --g2hi: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  --g3: rgba(255, 255, 255, 0.045);
+  --g3l: rgba(255, 255, 255, 0.055);
+  --s1: 0 18px 40px -12px rgba(3, 6, 11, 0.78);
+  --s2: 0 10px 24px -14px rgba(3, 6, 11, 0.6);
+  --line: rgba(255, 255, 255, 0.075);
+  --field: rgba(255, 255, 255, 0.03);
+  --spine: rgba(160, 176, 200, 0.22);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-m: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Held in custom properties: Lightning CSS strips a literal backdrop-filter
+     declaration during the Tailwind v4 build, but cannot analyse a var() away. */
+  --blur1: blur(16px) saturate(1.2);
+  --blur2: blur(9px) saturate(1.1);
+  --lum-a: rgba(92, 201, 180, 0.1);
+  --lum-b: rgba(152, 166, 255, 0.09);
 }
 
-html {
-  color-scheme: dark;
+[data-theme="light"] {
+  --bg: #e9edf2;
+  --bg2: #fafbfc;
+  --paper: #141a22;
+  --mute: #5c6675;
+  --faint: #616b79;
+  --teal: #17756a;
+  --teal-d: #2e8478;
+  --peri: #3f4cb0;
+  --g1: rgba(255, 255, 255, 0.72);
+  --g1l: rgba(255, 255, 255, 0.95);
+  --g1hi: inset 0 1px 0 rgba(255, 255, 255, 1), inset 0 -1px 0 rgba(20, 30, 45, 0.07);
+  --g2: rgba(255, 255, 255, 0.5);
+  --g2l: rgba(20, 30, 45, 0.08);
+  --g2hi: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --g3: rgba(20, 30, 45, 0.04);
+  --g3l: rgba(20, 30, 45, 0.1);
+  --s1: 0 18px 34px -16px rgba(20, 32, 48, 0.3), 0 2px 6px -2px rgba(20, 32, 48, 0.1);
+  --s2: 0 8px 18px -10px rgba(20, 32, 48, 0.2);
+  --line: rgba(20, 30, 45, 0.1);
+  --field: rgba(255, 255, 255, 0.7);
+  --spine: rgba(30, 44, 64, 0.28);
+  --lum-a: rgba(23, 117, 106, 0.09);
+  --lum-b: rgba(63, 76, 176, 0.08);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--color-ink);
-  color: var(--color-body);
-  font-feature-settings: "ss01", "cv01";
+  margin: 0;
+  /* No transition here. A colour whose value comes from a custom property does not
+     reliably re-trigger a CSS transition in Chromium: the var updates, the transition
+     never fires, and the element keeps painting the previous theme's colour. Panels and
+     graph nodes still animate — they transition properties that are set directly. */
+  background-color: var(--bg);
+  color: var(--paper);
+  font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Mastery propagating outward through the graph — the moment worth watching. */
-@keyframes pulse-known {
-  0% { r: 7; opacity: 1; }
-  60% { r: 15; opacity: 0.18; }
-  100% { r: 7; opacity: 0; }
+a {
+  color: var(--teal);
+  text-decoration: none;
+}
+a:hover {
+  color: #8fe0d1;
 }
 
-@keyframes settle {
-  0% { transform: scale(1); }
-  45% { transform: scale(1.32); }
-  100% { transform: scale(1); }
+.serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+.mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
 }
 
-.node-settling {
-  animation: settle 520ms cubic-bezier(0.22, 1, 0.36, 1);
-  transform-box: fill-box;
-  transform-origin: center;
+/* Uppercase mono eyebrow used throughout the design. */
+.eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  color: var(--faint);
+  text-transform: uppercase;
 }
 
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+.glass1 {
+  background: var(--g1);
+  backdrop-filter: var(--blur1);
+  -webkit-backdrop-filter: var(--blur1);
+  border: 1px solid var(--g1l);
+  border-radius: 16px;
+  box-shadow: var(--g1hi), var(--s1);
 }
 
-.fade-up {
-  animation: fade-up 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+.glass2 {
+  background: var(--g2);
+  backdrop-filter: var(--blur2);
+  -webkit-backdrop-filter: var(--blur2);
+  border: 1px solid var(--g2l);
+  border-radius: 14px;
+  box-shadow: var(--g2hi), var(--s2);
+}
+
+.btn-teal {
+  background: linear-gradient(180deg, rgba(92, 201, 180, 0.24), rgba(92, 201, 180, 0.1));
+  border: 1px solid rgba(92, 201, 180, 0.44);
+  border-radius: 11px;
+  color: var(--paper);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  transition: all 300ms var(--ease);
+  cursor: pointer;
+}
+.btn-teal:hover:not(:disabled) {
+  background: linear-gradient(180deg, rgba(92, 201, 180, 0.34), rgba(92, 201, 180, 0.16));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32), 0 10px 30px -12px rgba(92, 201, 180, 0.6);
+}
+.btn-peri {
+  background: linear-gradient(180deg, rgba(152, 166, 255, 0.26), rgba(152, 166, 255, 0.1));
+  border: 1px solid rgba(152, 166, 255, 0.46);
+  border-radius: 11px;
+  color: var(--paper);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  transition: all 300ms var(--ease);
+  cursor: pointer;
+}
+.btn-peri:hover:not(:disabled) {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32), 0 10px 30px -12px rgba(152, 166, 255, 0.6);
+}
+.btn-teal:disabled,
+.btn-peri:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+:where(button, a, input, textarea):focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--teal), 0 0 18px -4px var(--teal);
+}
+
+.field {
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--paper);
+  transition: box-shadow 200ms var(--ease-m), border-color 200ms var(--ease-m);
+}
+.field:focus {
+  outline: none;
+  border-color: var(--teal-d);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 2px var(--teal), 0 0 22px -6px var(--teal);
+}
+
+@keyframes bt-breathe {
+  0% {
+    transform: translate3d(-4%, -3%, 0) scale(1.04);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(5%, 4%, 0) scale(1.2);
+    opacity: 1;
+  }
+}
+@keyframes bt-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes bt-pop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bt-in {
+  animation: bt-in 640ms var(--ease) both;
+}
+.bt-pop {
+  animation: bt-pop 420ms var(--ease) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .node-settling,
-  .fade-up {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .bt-split {
+    grid-template-columns: 1fr !important;
+  }
+  .bt-h1 {
+    font-size: 28px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .bt-courses {
+    display: none !important;
+  }
+  .bt-toggle {
+    margin: 0 0 0 18px !important;
+    writing-mode: horizontal-tb !important;
+  }
+  .bt-spine {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 56px !important;
+    top: auto !important;
+    bottom: 0 !important;
+    padding: 0 18px !important;
+  }
+  .bt-spine-rule {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, rgba(160, 176, 200, 0.05), rgba(160, 176, 200, 0.22), rgba(160, 176, 200, 0.05)) !important;
+  }
+  .bt-notches {
+    flex-direction: row !important;
+    gap: 22px !important;
+    margin-top: 0 !important;
+  }
+  .bt-root {
+    padding-left: 0 !important;
+    padding-bottom: 60px !important;
   }
 }

@@ -188,6 +188,10 @@ npm run crash-course -- --missing function_composition --cold
 
 ## The interface
 
+Implemented from the Claude Design project **"Diagnostic Graph UI Mockups"** (`Backtrack.dc.html`), imported via the design MCP. The mockup's five mastery palettes (`unk`/`lk`/`ck`/`lg`/`cg`) map one-to-one onto the engine's five `Mastery` values, so the visual language needed no translation layer.
+
+Bodoni Moda for display, Instrument Sans for body, IBM Plex Mono for every label and counter. Dark and light themes off one token block. Glass panels over a slow breathing luminance wash. A fixed 78px spine carries saved classes, the four stage notches, and the theme toggle.
+
 Four screens, one continuous state. The prerequisite graph stays on screen throughout, so the diagnostic reads as one object being progressively resolved rather than a sequence of unrelated pages.
 
 1. **Input** — paste a syllabus, or prefill the sample. A `demo mode` link runs the whole flow from committed fixtures with zero network calls.
@@ -200,6 +204,13 @@ A **"how we got here"** panel on every screen exposes the search's own working: 
 **The diagnostic runs entirely client-side.** `/api/frontier` returns the frontier, the scoped subgraph, and every probe for that scope in one response; scope is closed under prerequisites, so the subgraph is self-contained and the browser can run the whole search with no further round trips. Answering a question costs zero network.
 
 Probe questions are a **build artifact** (`npm run build:probes` → `data/probes.json`), generated once and committed. The running app never generates a question, so the diagnostic has no latency and asks identical questions every run.
+
+### Notes from implementing the design
+
+- **`backdrop-filter` cannot live in the stylesheet.** Lightning CSS (Tailwind v4's compiler) strips it from the built CSS — as a literal, through a `var()`, and regardless of browserslist targets. Every other declaration in the same rule survives. The glass blur is the design's entire surface treatment, so it is applied as an inline style (`BLUR1`/`BLUR2` in `lib/palette.ts`).
+- **The theme attribute belongs on `<html>`.** Custom properties cascade downward, so setting `data-theme` on an inner wrapper leaves `<body>` — the element painting the page background — still reading `:root`.
+- **No CSS transition on a themed colour.** A colour whose value comes from a custom property does not reliably re-trigger a transition in Chromium: the variable updates, the transition never fires, and the element keeps painting the previous theme. Panels and graph nodes still animate, because they transition properties set directly rather than through a swapped token.
+- **The graph runs top-to-bottom**, foundations at the top, matching the mockup's flow. Nodes are 154×34 labelled boxes rather than dots, so every concept is readable without hovering.
 
 ### Client/server split
 

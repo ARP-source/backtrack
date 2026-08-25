@@ -8,7 +8,9 @@ export type Finding = {
   /** The week of the course where not knowing this starts to hurt. */
   week: number | null;
   /** What that week covers — why the gap bites there. */
-  bitesAt?: string;
+  topic?: string;
+  /** Which probes established it, e.g. "q3 wrong · q5 wrong". */
+  evidence: string;
 };
 
 type Props = {
@@ -20,76 +22,149 @@ type Props = {
 
 export default function Findings({ findings, probeCount, onContinue, busy }: Props) {
   const n = findings.length;
+  const word = ["No", "One", "Two", "Three", "Four"][n] ?? String(n);
 
   return (
-    <div className="fade-up">
-      <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-accent">
-        {probeCount} questions later
-      </p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-bright">
-        {n === 0
-          ? "No prerequisite gaps found."
-          : `You're missing ${n} thing${n === 1 ? "" : "s"}.`}
-      </h2>
+    <div style={{ position: "relative", zIndex: 1, padding: "74px 26px 90px" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto" }}>
+        <div className="eyebrow bt-in" style={{ marginBottom: 28 }}>03 — Findings</div>
 
-      {n === 0 ? (
-        <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-body">
-          Everything this course assumes came back solid. That is a real result — you can
-          start the course without backfilling anything.
-        </p>
-      ) : (
-        <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-body">
-          Not the topics you got wrong — the place the trouble <em className="text-bright not-italic">starts</em>.
-          Each of these came back broken while everything underneath it came back fine.
-        </p>
-      )}
-
-      <div className="mt-8 flex flex-col gap-3">
-        {findings.map((f, i) => (
-          <div
-            key={f.node.id}
-            className="fade-up rounded-xl border border-gap/30 bg-gap/[0.055] p-5"
-            style={{ animationDelay: `${i * 90}ms` }}
-          >
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h3 className="text-[17px] font-medium text-bright">{f.node.label}</h3>
-              {f.week !== null && (
-                <span className="rounded-full border border-line px-2.5 py-0.5 text-[11px] text-body">
-                  bites in week {f.week}
-                </span>
-              )}
-            </div>
-
-            {f.misconception && (
-              <p className="mt-3 text-[14px] leading-relaxed text-body">
-                <span className="text-muted">You think </span>
-                {f.misconception}.
-              </p>
-            )}
-
-            <p className="mt-2 text-[13.5px] leading-relaxed text-muted">
-              Mastery here means: {f.node.blurb.charAt(0).toLowerCase() + f.node.blurb.slice(1)}
-            </p>
-
-            {f.bitesAt && (
-              <p className="mt-3 border-t border-line/70 pt-3 text-[12.5px] leading-relaxed text-muted">
-                <span className="text-body">Why it matters: </span>
-                {f.bitesAt}
-              </p>
-            )}
-          </div>
-        ))}
-      </div>
-
-      {n > 0 && (
-        <button
-          onClick={onContinue}
-          disabled={busy}
-          className="mt-8 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-accent/90 disabled:cursor-not-allowed disabled:bg-line disabled:text-muted"
+        <h1
+          className="serif bt-in"
+          style={{
+            fontWeight: 400,
+            fontSize: "clamp(38px,4.8vw,66px)",
+            lineHeight: 1.02,
+            letterSpacing: "-.03em",
+            margin: "0 0 20px",
+            animationDelay: "60ms",
+            textWrap: "pretty",
+          }}
         >
-          {busy ? "Finding the clips that fix this…" : "Build my crash course"}
-        </button>
-      )}
+          {n === 0
+            ? "Nothing upstream is broken."
+            : `${word} gap${n === 1 ? "" : "s"}, ${n === 1 ? "and it sits" : "all"} upstream of this course.`}
+        </h1>
+
+        <p
+          className="bt-in"
+          style={{
+            maxWidth: "52ch",
+            fontSize: 15,
+            lineHeight: 1.66,
+            color: "var(--mute)",
+            margin: "0 0 62px",
+            animationDelay: "120ms",
+            textWrap: "pretty",
+          }}
+        >
+          {n === 0
+            ? "Everything this course assumes came back solid. That is a real result — you can start without backfilling anything."
+            : `${n === 1 ? "It" : "None of these"} will not be taught again here. ${n === 1 ? "It was" : "Each was"} assumed before week one, and ${n === 1 ? "it surfaces" : "each surfaces"} on a date we can name.`}
+        </p>
+
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          {findings.map((f, i) => (
+            <div
+              key={f.node.id}
+              className="bt-in"
+              style={{
+                padding: "32px 0",
+                borderTop: "1px solid var(--line)",
+                display: "grid",
+                gridTemplateColumns: "46px minmax(0,1fr) auto",
+                gap: "24px 30px",
+                alignItems: "start",
+                animationDelay: `${180 + i * 90}ms`,
+              }}
+            >
+              <div
+                className="mono"
+                style={{ fontSize: 11, color: "var(--peri)", fontVariantNumeric: "tabular-nums", paddingTop: 6 }}
+              >
+                {String(i + 1).padStart(2, "0")}
+              </div>
+
+              <div>
+                <p style={{ fontSize: 20.5, lineHeight: 1.44, margin: "0 0 14px", letterSpacing: "-.01em", textWrap: "pretty" }}>
+                  {f.misconception ? (
+                    <>
+                      The error sits here: {f.misconception} — so everything built on{" "}
+                      {f.node.label.toLowerCase()} inherits it.
+                    </>
+                  ) : (
+                    <>
+                      {f.node.label} came back broken while everything underneath it came back fine.
+                    </>
+                  )}
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  <Chip>node · {f.node.label.toLowerCase()}</Chip>
+                  <Chip>{f.evidence}</Chip>
+                </div>
+              </div>
+
+              <div style={{ textAlign: "right" }}>
+                <div
+                  className="serif"
+                  style={{ fontSize: 33, letterSpacing: "-.02em", lineHeight: 1, color: "var(--peri)", fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}
+                >
+                  {f.week !== null ? `Wk ${f.week}` : "—"}
+                </div>
+                {f.topic && (
+                  <div
+                    className="mono"
+                    style={{ fontSize: 9, letterSpacing: ".14em", color: "var(--faint)", textTransform: "uppercase", marginTop: 7, maxWidth: 140 }}
+                  >
+                    {f.topic}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {n > 0 && (
+          <div style={{ marginTop: 52, display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
+            <button
+              type="button"
+              onClick={onContinue}
+              disabled={busy}
+              className="btn-teal"
+              style={{ padding: "15px 26px", fontSize: 14, fontWeight: 500 }}
+            >
+              {busy ? "Finding the clips that fix this…" : "Assemble the crash course"}
+            </button>
+            <span
+              className="mono"
+              style={{ fontSize: 10, letterSpacing: ".1em", color: "var(--faint)", textTransform: "uppercase", fontVariantNumeric: "tabular-nums" }}
+            >
+              {probeCount} questions · {n} root gap{n === 1 ? "" : "s"}
+            </span>
+          </div>
+        )}
+      </div>
     </div>
+  );
+}
+
+function Chip({ children }: { children: React.ReactNode }) {
+  return (
+    <span
+      className="mono"
+      style={{
+        padding: "5px 10px",
+        background: "var(--g3)",
+        border: "1px solid var(--g3l)",
+        borderRadius: 6,
+        fontSize: 9.5,
+        letterSpacing: ".1em",
+        color: "var(--mute)",
+        textTransform: "uppercase",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {children}
+    </span>
   );
 }

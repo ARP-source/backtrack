@@ -16,6 +16,8 @@ export const BlankSchema = z.object({
   answer: z.string().min(1),
   acceptable: z.array(z.string()).default([]),
   nodeId: z.string().min(1),
+  /** One-word kind of note this is — the design shows it as a label above the prompt. */
+  tag: z.string().default("note"),
 });
 
 export const NoteSchema = z.object({
@@ -41,8 +43,9 @@ const RESPONSE_SCHEMA: Record<string, unknown> = {
           answer: { type: "string" },
           acceptable: { type: "array", items: { type: "string" } },
           nodeId: { type: "string" },
+          tag: { type: "string" },
         },
-        required: ["id", "timestamp", "answer", "acceptable", "nodeId"],
+        required: ["id", "timestamp", "answer", "acceptable", "nodeId", "tag"],
       },
     },
   },
@@ -74,6 +77,7 @@ Rules for the blanks — these matter more than anything else here:
 - "timestamp" is the second within the clip's range where the answer is revealed. It must lie between ${Math.floor(clip.start)} and ${Math.ceil(clip.end)}.
 - "nodeId" must be exactly "${node.id}" for every blank.
 - Blank ids are "b1", "b2", … and each id must appear EXACTLY ONCE across all lines, written as {{b1}}.
+- "tag" is ONE lowercase word naming what the blank is doing: definition, contrast, convention, order, apply, or similar.
 
 Rules for the lines:
 - Plain text. No markdown, no LaTeX. Write vectors like [1, 2] and matrices like [[1, 2], [3, 4]].
@@ -132,6 +136,7 @@ export function fallbackNote(node: DagNode): GuidedNote {
         answer: node.label.toLowerCase(),
         acceptable: [node.label.toLowerCase(), node.blurb.toLowerCase().slice(0, 40)],
         nodeId: node.id,
+        tag: "definition",
       },
     ],
   };

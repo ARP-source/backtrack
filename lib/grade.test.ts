@@ -135,8 +135,8 @@ describe("sanitizeNote", () => {
       {
         lines: ["reachable points form the {{b1}}"],
         blanks: [
-          { id: "b1", timestamp: 10, answer: "span", acceptable: [], nodeId: "span" },
-          { id: "b2", timestamp: 10, answer: "orphan", acceptable: [], nodeId: "span" },
+          { id: "b1", timestamp: 10, answer: "span", acceptable: [], nodeId: "span", tag: "definition" },
+          { id: "b2", timestamp: 10, answer: "orphan", acceptable: [], nodeId: "span", tag: "definition" },
         ],
       },
       node,
@@ -148,7 +148,7 @@ describe("sanitizeNote", () => {
 
   it("never leaves a raw placeholder with no matching blank", () => {
     const out = sanitizeNote(
-      { lines: ["a {{b1}} and a {{bZ}}"], blanks: [{ id: "b1", timestamp: 5, answer: "x", acceptable: [], nodeId: "span" }] },
+      { lines: ["a {{b1}} and a {{bZ}}"], blanks: [{ id: "b1", timestamp: 5, answer: "x", acceptable: [], nodeId: "span", tag: "definition" }] },
       node,
       0,
       100
@@ -159,7 +159,7 @@ describe("sanitizeNote", () => {
 
   it("clamps a timestamp into the clip's own range", () => {
     const out = sanitizeNote(
-      { lines: ["{{b1}}"], blanks: [{ id: "b1", timestamp: 9999, answer: "x", acceptable: [], nodeId: "span" }] },
+      { lines: ["{{b1}}"], blanks: [{ id: "b1", timestamp: 9999, answer: "x", acceptable: [], nodeId: "span", tag: "definition" }] },
       node,
       120,
       200
@@ -169,7 +169,7 @@ describe("sanitizeNote", () => {
 
   it("forces every blank onto the node being remediated", () => {
     const out = sanitizeNote(
-      { lines: ["{{b1}}"], blanks: [{ id: "b1", timestamp: 5, answer: "x", acceptable: [], nodeId: "wrong_node" }] },
+      { lines: ["{{b1}}"], blanks: [{ id: "b1", timestamp: 5, answer: "x", acceptable: [], nodeId: "wrong_node", tag: "definition" }] },
       node,
       0,
       100

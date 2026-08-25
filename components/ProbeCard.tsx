@@ -2,77 +2,109 @@
 
 import { useState } from "react";
 import type { Probe } from "@/lib/probes";
+import { BLUR1 } from "@/lib/palette";
+
+const KEYS = ["A", "B", "C", "D", "E"];
 
 type Props = {
   probe: Probe;
+  label: string;
   index: number;
   budget: number;
   onAnswer: (correct: boolean, misconception?: string) => void;
 };
 
-export default function ProbeCard({ probe, index, budget, onAnswer }: Props) {
+export default function ProbeCard({ probe, label, index, budget, onAnswer }: Props) {
   const [picked, setPicked] = useState<number | null>(null);
 
   function choose(i: number) {
     if (picked !== null) return;
     setPicked(i);
     const opt = probe.options[i];
-    // Brief pause so the propagation animation is legible rather than instantaneous.
+    // Hold briefly so the propagation animation on the graph is legible.
     setTimeout(() => {
       setPicked(null);
       onAnswer(opt.correct, opt.misconception ?? undefined);
-    }, 620);
+    }, 900);
   }
 
   return (
-    <div key={probe.nodeId} className="fade-up">
-      <div className="flex items-baseline justify-between">
-        <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted">
-          Question {index + 1}
-        </span>
-        <span className="text-[11px] tabular-nums text-muted">
-          {index + 1} / {budget} max
+    <div className="glass1" style={{ ...BLUR1, padding: 30 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 20 }}>
+        <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--teal)" }} />
+        <span
+          className="mono"
+          style={{ fontSize: 9.5, letterSpacing: ".14em", color: "var(--mute)", textTransform: "uppercase" }}
+        >
+          Probing · {label}
         </span>
       </div>
 
-      <h2 className="mt-3 text-pretty text-[19px] font-medium leading-snug text-bright">
+      <h2
+        key={probe.nodeId}
+        className="serif bt-in"
+        style={{ fontWeight: 400, fontSize: 29, lineHeight: 1.18, letterSpacing: "-.02em", margin: "0 0 26px", textWrap: "pretty" }}
+      >
         {probe.question}
       </h2>
 
-      <div className="mt-5 flex flex-col gap-2">
+      <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
         {probe.options.map((o, i) => {
           const isPicked = picked === i;
-          const state =
-            picked === null
-              ? "idle"
-              : isPicked
-                ? o.correct
-                  ? "right"
-                  : "wrong"
-                : "dim";
+          const settled = picked !== null;
+          const bg = isPicked
+            ? o.correct
+              ? "rgba(92,201,180,.16)"
+              : "rgba(152,166,255,.18)"
+            : settled
+              ? "transparent"
+              : "var(--g3)";
+          const bd = isPicked
+            ? o.correct
+              ? "rgba(92,201,180,.5)"
+              : "rgba(152,166,255,.55)"
+            : settled
+              ? "var(--line)"
+              : "var(--g3l)";
           return (
             <button
               key={i}
+              type="button"
               onClick={() => choose(i)}
-              disabled={picked !== null}
-              className={[
-                "rounded-lg border px-4 py-3 text-left text-[13.5px] leading-relaxed transition",
-                state === "idle" && "border-line bg-panel text-body hover:border-accent/45 hover:text-bright",
-                state === "right" && "border-known bg-known/10 text-bright",
-                state === "wrong" && "border-gap bg-gap/10 text-bright",
-                state === "dim" && "border-line/60 bg-panel/40 text-muted",
-              ]
-                .filter(Boolean)
-                .join(" ")}
+              disabled={settled}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 14,
+                width: "100%",
+                padding: "15px 17px",
+                textAlign: "left",
+                background: bg,
+                border: `1px solid ${bd}`,
+                borderRadius: 11,
+                cursor: settled ? "default" : "pointer",
+                fontFamily: "var(--font-sans), sans-serif",
+                fontSize: 14.5,
+                lineHeight: 1.45,
+                color: settled && !isPicked ? "var(--faint)" : "var(--paper)",
+                boxShadow: isPicked ? "inset 0 1px 0 rgba(255,255,255,.18)" : "none",
+                transition: "all 280ms var(--ease)",
+              }}
             >
+              <span className="mono" style={{ fontSize: 10, opacity: 0.6, width: 11, flex: "0 0 auto" }}>
+                {KEYS[i]}
+              </span>
               {o.text}
             </button>
           );
         })}
       </div>
 
-      <p className="mt-4 text-[11px] text-muted">
-        Answer honestly — guessing right hides the gap this is built to find.
+      <p
+        className="mono"
+        style={{ marginTop: 18, marginBottom: 0, fontSize: 9, letterSpacing: ".12em", color: "var(--faint)", textTransform: "uppercase" }}
+      >
+        Answer honestly · guessing hides the gap · {index + 1} of {budget} max
       </p>
     </div>
   );
