@@ -26,6 +26,8 @@ export type GapPlan = {
   blurb: string;
   misconception?: string;
   segments: Segment[];
+  /** Verified as teaching this concept but not selected — the pool a reopened node draws from. */
+  alternates: Segment[];
   totalSec: number;
   /** Whether the selection was verified live, replayed from cache, or fell back. */
   source: PlanSource;

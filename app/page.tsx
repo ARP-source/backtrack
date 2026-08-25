@@ -159,6 +159,18 @@ export default function Page() {
     }
   }
 
+  /**
+   * The write-back. Missed blanks are a second, independent measurement of a node we just
+   * remediated — so a failure here returns it to a gap in the same mastery state the
+   * diagnostic built, and the graph above updates live.
+   */
+  function reopen(nodeId: NodeId) {
+    const state = stateRef.current;
+    if (!state) return;
+    state.mastery.set(nodeId, "likely_gap");
+    setVersion((v) => v + 1);
+  }
+
   function restart() {
     stateRef.current = null;
     setData(null);
@@ -232,7 +244,7 @@ export default function Page() {
           </>
         )}
 
-        {phase === "course" && <CrashCourse plans={plans} onRestart={restart} />}
+        {phase === "course" && <CrashCourse plans={plans} onRestart={restart} onReopen={reopen} />}
       </div>
 
       {error && <ErrorBar message={error} />}

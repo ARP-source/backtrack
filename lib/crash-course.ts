@@ -81,12 +81,40 @@ export async function planForGap(
     total += dur;
   }
 
+  // Hold back a second explanation for when the guided notes show this did not land.
+  //
+  // Whatever survives verification but misses the cut becomes the reserve. If everything
+  // fit, deliberately withhold one anyway — preferring a DIFFERENT CHANNEL, since replaying
+  // the same teacher saying the same thing is precisely what already failed. A crash course
+  // that spends its whole corpus up front has nothing to say when it turns out to be wrong.
+  const key = (s: Segment) => `${s.videoId}:${s.start}`;
+
+  if (segments.length === merged.length && segments.length >= 2) {
+    const firstChannel = segments[0].channel;
+    let reserveIdx = segments.findIndex((s, i) => i > 0 && s.channel !== firstChannel);
+    if (reserveIdx === -1) reserveIdx = segments.length - 1;
+    const [reserved] = segments.splice(reserveIdx, 1);
+    total -= reserved.end - reserved.start;
+  }
+
+  const chosen = new Set(segments.map(key));
+  const usedChannels = new Set(segments.map((s) => s.channel));
+  const alternates = merged
+    .filter((s) => !chosen.has(key(s)))
+    .sort((a, b) => {
+      const aSeen = usedChannels.has(a.channel) ? 1 : 0;
+      const bSeen = usedChannels.has(b.channel) ? 1 : 0;
+      return aSeen - bSeen || b.score - a.score;
+    })
+    .slice(0, 3);
+
   return {
     nodeId: node.id,
     label: node.label,
     blurb: node.blurb,
     misconception,
     segments,
+    alternates,
     totalSec: total,
     source: verified.source,
     note: verified.note,

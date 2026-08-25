@@ -40,7 +40,7 @@ That last arrow is what makes this a system rather than a feature list.
 | **M2 — Diagnostic engine (headless)** | ✅ complete |
 | **M3 — Retrieval + LLM verification** | ✅ complete |
 | **M4 — UI** | ✅ complete |
-| M5 — Guided notes + write-back | not started |
+| **M5 — Guided notes + write-back** | ✅ complete |
 | M6 — Demo hardening | not started |
 
 ## Architecture
@@ -65,6 +65,9 @@ lib/
   syllabus.ts            syllabus -> frontier mapping, with verbatim quotes
   probes.ts              probe schema + derived fallback questions
   layout.ts              layered graph layout (pure)
+  notes.ts               guided-note generation + sanitisation
+  grade.ts               fuzzy cloze grading + the reopen decision (pure, tested)
+  adjudicate.ts          batched near-miss adjudication
   server-data.ts         memoised disk reads + shared embedding pipeline
   verify.ts              segment verification prompt + schemas
   crash-course.ts        gaps -> candidates -> verified -> merged -> capped clips
@@ -201,6 +204,43 @@ Probe questions are a **build artifact** (`npm run build:probes` → `data/probe
 ### Client/server split
 
 `lib/segment.ts` exists because a single value import of `embedUrl` from a client component pulled `lib/crash-course` → `lib/verify` → `lib/llm` → `node:fs` into the browser bundle, which Turbopack fails on. Client-safe shapes and helpers live there; anything touching the model or the filesystem stays out of reach of `"use client"`.
+
+## Guided notes and the write-back
+
+Each clip carries a short note with 2–4 cloze blanks, generated from that clip's own transcript. Blanks go where the answer **is** the idea — for a student who reads `f(g(x))` left to right, the blanks land on *which function takes the input first*, not on an arbitrary noun.
+
+Every blank is tagged with the DAG node it tests. That is what closes the loop: filling them in is a second, independent measurement of the same node the diagnostic flagged.
+
+### Grading
+
+Fuzzy match first, model second. `similarity()` normalises case, punctuation and leading articles, then scores by edit distance with a containment allowance:
+
+| student typed | expected | verdict |
+|---|---|---|
+| `colums` | `columns` | correct — a typo is not a misconception |
+| `the columns of the matrix` | `columns` | correct — right idea, extra words |
+| `column vectors` | `columns` | correct — listed alternative |
+| `determinant` | `columns` | wrong |
+
+Only answers landing between the thresholds are escalated, in **one batched call** per submission. A typo never costs an API call, and the adjudicator is told to mark incorrect when genuinely torn — this feeds a decision about re-teaching, and wrongly waving someone through leaves the real gap in place.
+
+### The reopen
+
+A node reopens when **half or more** of its blanks come back wrong. One slip on a four-blank note is not evidence of a persistent gap; half of them is. Skipped blanks count as missed — not answering is not passing.
+
+When it fires, the node returns to `likely_gap` in the same mastery state the diagnostic built, the graph above updates live, and the student is offered a different explanation:
+
+```
+REOPENED
+You missed 3 of 3 blanks on function composition, so it went back to being a gap.
+Here is a different explanation — different teacher, different angle.
+
+  2:53–5:04   3BLUE1BROWN · 131s
+```
+
+**A reserve is held back deliberately.** Whatever survives verification but misses the cut becomes the alternate pool — and if everything fit, one segment is withheld anyway, preferring a channel not yet used. Replaying the same teacher saying the same thing is precisely what already failed, and a crash course that spends its whole corpus up front has nothing to say when it turns out to be wrong. In the run above, two Khan Academy clips are shown and the 3Blue1Brown one is held in reserve.
+
+When the reserve is genuinely empty, the app says so rather than repeating itself: *"that is a gap in the library, not a verdict on you."*
 
 ## Hard constraints
 
