@@ -1,0 +1,31 @@
+{
+  "note": "Every videoId verified against YouTube oEmbed at authoring time. `covers` is an authoring hint used only for corpus coverage checks — retrieval itself is embedding-driven and never reads this field.",
+  "videos": [
+    { "videoId": "fNk_zzaMoSs", "title": "Vectors | Chapter 1, Essence of linear algebra", "channel": "3Blue1Brown", "covers": ["coordinate_plane", "vector_arithmetic"] },
+    { "videoId": "k7RM-ot2NWY", "title": "Linear combinations, span, and basis vectors | Chapter 2", "channel": "3Blue1Brown", "covers": ["linear_combination", "span", "basis", "linear_independence"] },
+    { "videoId": "kYB8IZa5AuE", "title": "Linear transformations and matrices | Chapter 3", "channel": "3Blue1Brown", "covers": ["linearity_property", "linear_transformations", "matrix_as_transformation", "matrix_vector_product"] },
+    { "videoId": "XkY2DOUCWMU", "title": "Matrix multiplication as composition | Chapter 4", "channel": "3Blue1Brown", "covers": ["matrix_multiplication", "function_composition"] },
+    { "videoId": "rHLEWRxRGiM", "title": "Three-dimensional linear transformations | Chapter 5", "channel": "3Blue1Brown", "covers": ["matrix_as_transformation", "linear_transformations"] },
+    { "videoId": "Ip3X9LOh2dk", "title": "The determinant | Chapter 6", "channel": "3Blue1Brown", "covers": ["determinant_2x2", "determinant_general"] },
+    { "videoId": "uQhTuRlWMxw", "title": "Inverse matrices, column space and null space | Chapter 7", "channel": "3Blue1Brown", "covers": ["invertibility", "column_space_rank", "null_space", "gaussian_elimination"] },
+    { "videoId": "v8VSDg_WQlA", "title": "Nonsquare matrices as transformations between dimensions | Chapter 8", "channel": "3Blue1Brown", "covers": ["column_space_rank", "matrix_as_transformation"] },
+    { "videoId": "LyGKycYT2v0", "title": "Dot products and duality | Chapter 9", "channel": "3Blue1Brown", "covers": ["dot_product", "orthogonality", "projection"] },
+    { "videoId": "P2LTAUO1TdA", "title": "Change of basis | Chapter 13", "channel": "3Blue1Brown", "covers": ["change_of_basis", "coordinates_in_a_basis", "similarity", "basis"] },
+    { "videoId": "PFDu9oVAE-g", "title": "Eigenvectors and eigenvalues | Chapter 14", "channel": "3Blue1Brown", "covers": ["eigenvectors", "diagonalization", "similarity"] },
+
+    { "videoId": "ZK3O402wf1c", "title": "Lecture 1: The Geometry of Linear Equations (18.06)", "channel": "MIT OpenCourseWare", "covers": ["systems_of_equations", "matrix_vector_product", "linear_combination"] },
+    { "videoId": "QVKj3LADCnA", "title": "Lecture 2: Elimination with Matrices (18.06)", "channel": "MIT OpenCourseWare", "covers": ["gaussian_elimination", "systems_of_equations"] },
+    { "videoId": "FX4C-JpTFgY", "title": "Lecture 3: Multiplication and Inverse Matrices (18.06)", "channel": "MIT OpenCourseWare", "covers": ["matrix_multiplication", "invertibility"] },
+
+    { "videoId": "wUNWjd4bMmw", "title": "Introduction to function composition", "channel": "Khan Academy", "covers": ["function_composition", "function_notation"] },
+    { "videoId": "kvGsIo1TmsM", "title": "What is a function?", "channel": "Khan Academy", "covers": ["function_notation"] },
+    { "videoId": "OVMceVL_CEQ", "title": "How to add fractions that have different denominators", "channel": "Khan Academy", "covers": ["fraction_arithmetic"] },
+    { "videoId": "zkJ1gOrYhEg", "title": "Adding fractions with unlike denominators introduction", "channel": "Khan Academy", "covers": ["fraction_arithmetic"] },
+    { "videoId": "NQSN00zL5gg", "title": "Adding and subtracting negative numbers", "channel": "Khan Academy", "covers": ["negative_numbers"] },
+    { "videoId": "MeU-KzdCBps", "title": "Introduction to slope", "channel": "Khan Academy", "covers": ["slope_and_lines", "coordinate_plane"] },
+    { "videoId": "vDqOoI-4Z6M", "title": "What are variables, expressions, and equations?", "channel": "Khan Academy", "covers": ["variables_and_expressions"] },
+    { "videoId": "jWpiMu5LNdg", "title": "How to solve one-step equations", "channel": "Khan Academy", "covers": ["solving_linear_equations"] },
+    { "videoId": "f15zA0PhSek", "title": "Introduction to solving an equation with variables on both sides", "channel": "Khan Academy", "covers": ["solving_linear_equations"] },
+    { "videoId": "N4nrdf0yYfM", "title": "Introduction to the coordinate plane", "channel": "Khan Academy", "covers": ["coordinate_plane"] }
+  ]
+}

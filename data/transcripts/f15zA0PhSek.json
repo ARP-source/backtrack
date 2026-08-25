@@ -1,0 +1,1132 @@
+{
+  "videoId": "f15zA0PhSek",
+  "title": "Introduction to solving an equation with variables on both sides",
+  "channel": "Khan Academy",
+  "covers": [
+    "solving_linear_equations"
+  ],
+  "punctuated": true,
+  "durationSec": 532,
+  "cues": [
+    {
+      "text": "Let's try to solve a more involved equation.",
+      "start": 0.58,
+      "end": 3.81
+    },
+    {
+      "text": "So, let's say that we have 2x plus 3, 2x plus 3 is equal",
+      "start": 3.81,
+      "end": 15.19
+    },
+    {
+      "text": "to is equal to 5x minus 2.",
+      "start": 15.19,
+      "end": 23.04
+    },
+    {
+      "text": "So this might look a little daunting at first.",
+      "start": 23.04,
+      "end": 25.12
+    },
+    {
+      "text": "We have x's on both sides of the equation.",
+      "start": 25.12,
+      "end": 27.22
+    },
+    {
+      "text": "We're adding and subtracting numbers.",
+      "start": 27.22,
+      "end": 28.98
+    },
+    {
+      "text": "How do you solve it?",
+      "start": 28.98,
+      "end": 30.5
+    },
+    {
+      "text": "And we'll do it in a couple of different ways.",
+      "start": 30.5,
+      "end": 32
+    },
+    {
+      "text": "The the important thing to remember is, we just",
+      "start": 32,
+      "end": 33.95
+    },
+    {
+      "text": "want to isolate an x.",
+      "start": 33.95,
+      "end": 35.26
+    },
+    {
+      "text": "Once you've isolated an x, you have x equals something.",
+      "start": 35.26,
+      "end": 37.75
+    },
+    {
+      "text": "Or x equals something.",
+      "start": 37.75,
+      "end": 39.9
+    },
+    {
+      "text": "You're done, you've solved the equation.",
+      "start": 39.9,
+      "end": 41.64
+    },
+    {
+      "text": "You can actually go back and check whether that works, So",
+      "start": 41.64,
+      "end": 44.05
+    },
+    {
+      "text": "what we're going to do is just do a bunch of operations on",
+      "start": 44.05,
+      "end": 46.4
+    },
+    {
+      "text": "both sides of the equation, to eventually isolate the x.",
+      "start": 46.4,
+      "end": 49.375
+    },
+    {
+      "text": "But while we do those, I actually want to visualize",
+      "start": 49.375,
+      "end": 51.59
+    },
+    {
+      "text": "what's occurring.",
+      "start": 51.59,
+      "end": 52.14
+    },
+    {
+      "text": "Because I don't want you just say, oh what are the rules or",
+      "start": 52.14,
+      "end": 54.67
+    },
+    {
+      "text": "the steps of solving equations.",
+      "start": 54.67,
+      "end": 56.24
+    },
+    {
+      "text": "And I forgot whether this is a allowed or that isn't allowed.",
+      "start": 56.24,
+      "end": 58.92
+    },
+    {
+      "text": "If you visualize what's happening, it'll actually be",
+      "start": 58.92,
+      "end": 61.09
+    },
+    {
+      "text": "common sense what's allowed.",
+      "start": 61.09,
+      "end": 62.78
+    },
+    {
+      "text": "So let's visualize it.",
+      "start": 62.78,
+      "end": 63.88
+    },
+    {
+      "text": "So we have 2x right here on the left-hand side.",
+      "start": 63.88,
+      "end": 66.89
+    },
+    {
+      "text": "So that's literally, that's x plus x.",
+      "start": 66.89,
+      "end": 70.43
+    },
+    {
+      "text": "And then you have plus 3.",
+      "start": 70.43,
+      "end": 72.85
+    },
+    {
+      "text": "Plus 3, I'll do it like this.",
+      "start": 72.85,
+      "end": 74.48
+    },
+    {
+      "text": "So that's equal to plus 1, plus 1, plus 1.",
+      "start": 74.48,
+      "end": 78.48
+    },
+    {
+      "text": "That's the same thing as 3.",
+      "start": 78.48,
+      "end": 79.91
+    },
+    {
+      "text": "I could've drawn 3 circles here as well.",
+      "start": 79.91,
+      "end": 82.26
+    },
+    {
+      "text": "Let do the same color.",
+      "start": 82.26,
+      "end": 83.8
+    },
+    {
+      "text": "Plus 3.",
+      "start": 83.8,
+      "end": 85.04
+    },
+    {
+      "text": "And then that is equal to 5 x's.",
+      "start": 85.04,
+      "end": 88.67
+    },
+    {
+      "text": "Do that in blue.",
+      "start": 88.67,
+      "end": 90.2
+    },
+    {
+      "text": "That is equal to 5 x's.",
+      "start": 90.2,
+      "end": 92.45
+    },
+    {
+      "text": "So, 1, 2, 3, 4, 5.",
+      "start": 92.45,
+      "end": 97.44
+    },
+    {
+      "text": "And I want to make it clear.",
+      "start": 97.44,
+      "end": 98.24
+    },
+    {
+      "text": "You would never actually have to do it this way when",
+      "start": 98.24,
+      "end": 100.11
+    },
+    {
+      "text": "you're solving the problem.",
+      "start": 100.11,
+      "end": 101.14
+    },
+    {
+      "text": "You would just have to do the algebraic steps.",
+      "start": 101.14,
+      "end": 103.44
+    },
+    {
+      "text": "But I'm doing this for you so you can actually visualize",
+      "start": 103.44,
+      "end": 106.01
+    },
+    {
+      "text": "what this equation is saying.",
+      "start": 106.01,
+      "end": 107.86
+    },
+    {
+      "text": "the left-hand side is these two orange x's plus 3.",
+      "start": 107.86,
+      "end": 111.06
+    },
+    {
+      "text": "The right-hand side is 5x minus 2.",
+      "start": 111.06,
+      "end": 113.54
+    },
+    {
+      "text": "So minus 2, we could write as -- so let me do this",
+      "start": 113.54,
+      "end": 116.93
+    },
+    {
+      "text": "in a different color, I'll do it in pink.",
+      "start": 116.93,
+      "end": 118.89
+    },
+    {
+      "text": "So, minus 2, I'll do as minus 1 and minus 1.",
+      "start": 118.89,
+      "end": 124.58
+    },
+    {
+      "text": "Now, we want to isolate the x's on the same",
+      "start": 124.58,
+      "end": 128.42
+    },
+    {
+      "text": "side of the equation.",
+      "start": 128.42,
+      "end": 129.45
+    },
+    {
+      "text": "So, how could we do that?",
+      "start": 129.45,
+      "end": 130.87
+    },
+    {
+      "text": "Well, there's two ways of doing it.",
+      "start": 130.87,
+      "end": 132.67
+    },
+    {
+      "text": "We could subtract these two x's from both",
+      "start": 132.67,
+      "end": 135.25
+    },
+    {
+      "text": "sides of the equation.",
+      "start": 135.25,
+      "end": 136.45
+    },
+    {
+      "text": "And that would be pretty reasonable.",
+      "start": 136.45,
+      "end": 137.72
+    },
+    {
+      "text": "Because then you'd have 5 x's minus the 2 x's.",
+      "start": 137.72,
+      "end": 140.22
+    },
+    {
+      "text": "You'd have a positive number of x's on the right-hand side.",
+      "start": 140.22,
+      "end": 142.69
+    },
+    {
+      "text": "Or, you could actually subtract 5x from both sides.",
+      "start": 142.69,
+      "end": 145.2
+    },
+    {
+      "text": "And that's what's neat about algebra.",
+      "start": 145.2,
+      "end": 146.16
+    },
+    {
+      "text": "As long as you do legitimate operations, you will eventually",
+      "start": 146.16,
+      "end": 149.51
+    },
+    {
+      "text": "get the right answer.",
+      "start": 149.51,
+      "end": 150.89
+    },
+    {
+      "text": "So let's just start off subtracting 2x from both",
+      "start": 150.89,
+      "end": 154.32
+    },
+    {
+      "text": "sides of the equation.",
+      "start": 154.32,
+      "end": 155.69
+    },
+    {
+      "text": "And what I mean there, I mean we're going to remove 2 x's",
+      "start": 155.69,
+      "end": 158.18
+    },
+    {
+      "text": "from the left-hand side.",
+      "start": 158.18,
+      "end": 159.71
+    },
+    {
+      "text": "And if we were to move 2 x's on the left-hand side, we have to",
+      "start": 159.71,
+      "end": 161.98
+    },
+    {
+      "text": "remove 2 x's the right-hand side.",
+      "start": 161.98,
+      "end": 165.24
+    },
+    {
+      "text": "Just like that.",
+      "start": 165.24,
+      "end": 166.09
+    },
+    {
+      "text": "So what does that give us?",
+      "start": 166.09,
+      "end": 167
+    },
+    {
+      "text": "We're subtracting 2 x's.",
+      "start": 167,
+      "end": 169.7
+    },
+    {
+      "text": "2 x's from the left.",
+      "start": 169.7,
+      "end": 170.73
+    },
+    {
+      "text": "And we're also going to subtract 2 x's from the right.",
+      "start": 170.73,
+      "end": 173.73
+    },
+    {
+      "text": "Now, what does our left-hand side simplify to?",
+      "start": 173.73,
+      "end": 177.29
+    },
+    {
+      "text": "We have 2x plus 3 minus 2x.",
+      "start": 177.29,
+      "end": 179.46
+    },
+    {
+      "text": "The 2 x's cancel out.",
+      "start": 179.46,
+      "end": 181.34
+    },
+    {
+      "text": "So you're just left with -- you're just left with the 3.",
+      "start": 181.34,
+      "end": 184.49
+    },
+    {
+      "text": "And you see that over here.",
+      "start": 184.49,
+      "end": 185.56
+    },
+    {
+      "text": "We took 2 of these x's away.",
+      "start": 185.56,
+      "end": 187.39
+    },
+    {
+      "text": "We're just left with the plus 1, plus 1, plus 1.",
+      "start": 187.39,
+      "end": 190.84
+    },
+    {
+      "text": "And then on the right-hand side, 5x minus 2x.",
+      "start": 190.84,
+      "end": 195
+    },
+    {
+      "text": "We have it over here.",
+      "start": 195,
+      "end": 195.93
+    },
+    {
+      "text": "We have 5 x's minus 2 x's.",
+      "start": 195.93,
+      "end": 197.89
+    },
+    {
+      "text": "You only have 1, 2, 3, x's left over.",
+      "start": 197.89,
+      "end": 201.59
+    },
+    {
+      "text": "3 is equal to 3x.",
+      "start": 201.59,
+      "end": 203.86
+    },
+    {
+      "text": "And then you have your minus 2 there.",
+      "start": 203.86,
+      "end": 206.53
+    },
+    {
+      "text": "You have your minus 2.",
+      "start": 206.53,
+      "end": 209.22
+    },
+    {
+      "text": "So, normally if you were to do the problem, you would just",
+      "start": 209.22,
+      "end": 210.77
+    },
+    {
+      "text": "have to write what we have here on the left-hand side.",
+      "start": 210.77,
+      "end": 212.85
+    },
+    {
+      "text": "So what can we do next?",
+      "start": 212.85,
+      "end": 213.86
+    },
+    {
+      "text": "Remember, we want to isolate the x's.",
+      "start": 213.86,
+      "end": 215.88
+    },
+    {
+      "text": "Well, we have all of our x's on the right-hand side right here.",
+      "start": 215.88,
+      "end": 218.56
+    },
+    {
+      "text": "If we could get rid of this negative 2, off of the",
+      "start": 218.56,
+      "end": 220.83
+    },
+    {
+      "text": "right-hand side, then the x's will be alone.",
+      "start": 220.83,
+      "end": 223.31
+    },
+    {
+      "text": "They'll be isolated.",
+      "start": 223.31,
+      "end": 224.56
+    },
+    {
+      "text": "So how can we get rid of this negative 2, if we",
+      "start": 224.56,
+      "end": 226.57
+    },
+    {
+      "text": "visualize it over here.",
+      "start": 226.57,
+      "end": 227.51
+    },
+    {
+      "text": "This negative 1, this negative 1.",
+      "start": 227.51,
+      "end": 229.93
+    },
+    {
+      "text": "Well, we could add 2 to both sides of this equation.",
+      "start": 229.93,
+      "end": 233.39
+    },
+    {
+      "text": "Think about what happens there.",
+      "start": 233.39,
+      "end": 235
+    },
+    {
+      "text": "So, if we add 2, so I'm going to do it like this.",
+      "start": 235,
+      "end": 237.48
+    },
+    {
+      "text": "Plus 1, plus 1.",
+      "start": 237.48,
+      "end": 239.065
+    },
+    {
+      "text": "So you could literally see.",
+      "start": 239.065,
+      "end": 239.77
+    },
+    {
+      "text": "We're adding 2.",
+      "start": 239.77,
+      "end": 240.99
+    },
+    {
+      "text": "And then we're going to add 2 to the left-hand side.",
+      "start": 240.99,
+      "end": 242.99
+    },
+    {
+      "text": "1 plus, 1 plus.",
+      "start": 242.99,
+      "end": 245.32
+    },
+    {
+      "text": "What happens?",
+      "start": 245.32,
+      "end": 246.59
+    },
+    {
+      "text": "Let me do it over here as well.",
+      "start": 246.59,
+      "end": 247.79
+    },
+    {
+      "text": "So we're going to add 2.",
+      "start": 247.79,
+      "end": 249.07
+    },
+    {
+      "text": "We're going to add 2.",
+      "start": 249.07,
+      "end": 251.77
+    },
+    {
+      "text": "So what happens to the left-hand side?",
+      "start": 251.77,
+      "end": 253.38
+    },
+    {
+      "text": "3 plus 2 is going to be equal to 5.",
+      "start": 253.38,
+      "end": 257.78
+    },
+    {
+      "text": "And that is going to be equal to 3x minus 2 plus 2.",
+      "start": 257.78,
+      "end": 262
+    },
+    {
+      "text": "These guys cancel out.",
+      "start": 262,
+      "end": 263.31
+    },
+    {
+      "text": "And you're just left with 3x.",
+      "start": 263.31,
+      "end": 266.55
+    },
+    {
+      "text": "And we see it over here.",
+      "start": 266.55,
+      "end": 267.88
+    },
+    {
+      "text": "We have the left-hand side is 1 plus 1 plus 1 plus 1 plus 1.",
+      "start": 267.88,
+      "end": 271.39
+    },
+    {
+      "text": "We have 5 1's, or 5.",
+      "start": 271.39,
+      "end": 273.12
+    },
+    {
+      "text": "And the right-hand side, we have the 3 x's,",
+      "start": 273.12,
+      "end": 276.02
+    },
+    {
+      "text": "right over there.",
+      "start": 276.02,
+      "end": 277.04
+    },
+    {
+      "text": "And then we have the negative 1, negative 1.",
+      "start": 277.04,
+      "end": 278.73
+    },
+    {
+      "text": "Plus 1, plus 1, negative 1, these cancel out.",
+      "start": 278.73,
+      "end": 281.84
+    },
+    {
+      "text": "They get us to 0.",
+      "start": 281.84,
+      "end": 283.14
+    },
+    {
+      "text": "They cancel out.",
+      "start": 283.14,
+      "end": 284.06
+    },
+    {
+      "text": "So we're just left with 5 is equal to 3x.",
+      "start": 284.06,
+      "end": 287.5
+    },
+    {
+      "text": "So we have 1, 2, 3, 4, 5 is equal to 3x.",
+      "start": 287.5,
+      "end": 290.67
+    },
+    {
+      "text": "Let me clear everything that we've removed, so it looks",
+      "start": 290.67,
+      "end": 293.55
+    },
+    {
+      "text": "a little bit cleaner.",
+      "start": 293.55,
+      "end": 295.525
+    },
+    {
+      "text": "These are all of the things that we've removed.",
+      "start": 300.16,
+      "end": 302.74
+    },
+    {
+      "text": "Let me clear that out.",
+      "start": 302.74,
+      "end": 304.24
+    },
+    {
+      "text": "And then let me clear that out, like that.",
+      "start": 304.24,
+      "end": 307.68
+    },
+    {
+      "text": "Edit.",
+      "start": 307.68,
+      "end": 308.64
+    },
+    {
+      "text": "Clear.",
+      "start": 308.64,
+      "end": 309.3
+    },
+    {
+      "text": "So now we are just left with 1, 2, 3, 4, 5.",
+      "start": 309.3,
+      "end": 312.81
+    },
+    {
+      "text": "Actually, let me move this over.",
+      "start": 312.81,
+      "end": 314.23
+    },
+    {
+      "text": "So I could just move this over right over here.",
+      "start": 319.05,
+      "end": 322.62
+    },
+    {
+      "text": "We now have 1, 2, 3, 4, 5.",
+      "start": 322.62,
+      "end": 326.08
+    },
+    {
+      "text": "These are the two that we added here, is equal to 3x.",
+      "start": 326.08,
+      "end": 328.61
+    },
+    {
+      "text": "These guys canceled out.",
+      "start": 328.61,
+      "end": 329.75
+    },
+    {
+      "text": "That's why we have nothing there.",
+      "start": 329.75,
+      "end": 331.36
+    },
+    {
+      "text": "Now, to solve this, we just divide both sides",
+      "start": 331.36,
+      "end": 334.31
+    },
+    {
+      "text": "of this equation by 3.",
+      "start": 334.31,
+      "end": 335.95
+    },
+    {
+      "text": "And this is going to be a little hard to",
+      "start": 335.95,
+      "end": 337.17
+    },
+    {
+      "text": "visualize over here.",
+      "start": 337.17,
+      "end": 339.21
+    },
+    {
+      "text": "But if we divide over here both sides by 3, what do we get?",
+      "start": 339.21,
+      "end": 343.05
+    },
+    {
+      "text": "We divide the left by 3.",
+      "start": 343.05,
+      "end": 344.48
+    },
+    {
+      "text": "We divide the right by 3.",
+      "start": 344.48,
+      "end": 345.81
+    },
+    {
+      "text": "The whole reason why we divided by 3 is because the x was",
+      "start": 345.81,
+      "end": 348.56
+    },
+    {
+      "text": "being multiplied by 3.",
+      "start": 348.56,
+      "end": 351.46
+    },
+    {
+      "text": "3 is the coefficient on the x.",
+      "start": 351.46,
+      "end": 353.65
+    },
+    {
+      "text": "Fancy word, it literally just means the number",
+      "start": 353.65,
+      "end": 355.63
+    },
+    {
+      "text": "multiplying the variable.",
+      "start": 355.63,
+      "end": 357.36
+    },
+    {
+      "text": "The number we're solving, the variable we're solving for.",
+      "start": 357.36,
+      "end": 360.11
+    },
+    {
+      "text": "So these 3's cancel out.",
+      "start": 360.11,
+      "end": 362.14
+    },
+    {
+      "text": "The right-hand side of the equation is just x.",
+      "start": 362.14,
+      "end": 365.52
+    },
+    {
+      "text": "The left-hand side is 5/3.",
+      "start": 365.52,
+      "end": 368.26
+    },
+    {
+      "text": "So 5/3, we could say is is equal to 5/3.",
+      "start": 368.26,
+      "end": 370.78
+    },
+    {
+      "text": "And this is different than everything we've seen so far.",
+      "start": 370.78,
+      "end": 373.03
+    },
+    {
+      "text": "I now have the x on the right-hand side, the value",
+      "start": 373.03,
+      "end": 375.79
+    },
+    {
+      "text": "on the left-hand side.",
+      "start": 375.79,
+      "end": 376.71
+    },
+    {
+      "text": "That's completely fine.",
+      "start": 376.71,
+      "end": 377.72
+    },
+    {
+      "text": "This is the exact same thing as saying 5/3 is is equal to x is",
+      "start": 377.72,
+      "end": 381.8
+    },
+    {
+      "text": "the same thing as saying x's equal to 5/3.",
+      "start": 381.8,
+      "end": 384.68
+    },
+    {
+      "text": "Completely equivalent.",
+      "start": 384.68,
+      "end": 386.28
+    },
+    {
+      "text": "Completely equivalent.",
+      "start": 386.28,
+      "end": 387.08
+    },
+    {
+      "text": "We sometimes get more used to this one, but this is",
+      "start": 387.08,
+      "end": 389.14
+    },
+    {
+      "text": "completely the same thing.",
+      "start": 389.14,
+      "end": 391.51
+    },
+    {
+      "text": "Now, if we wanted to write this as a mixed number, if we want",
+      "start": 391.51,
+      "end": 395.09
+    },
+    {
+      "text": "to write this as a mixed number, 3 goes into 5 one",
+      "start": 395.09,
+      "end": 397.76
+    },
+    {
+      "text": "time with remainder 2.",
+      "start": 397.76,
+      "end": 399.48
+    },
+    {
+      "text": "So it's going to be 1 2/3.",
+      "start": 399.48,
+      "end": 402.61
+    },
+    {
+      "text": "So it's going to be 1 2/3.",
+      "start": 402.61,
+      "end": 404.68
+    },
+    {
+      "text": "So we could also write that x is equal to 1 2/3.",
+      "start": 404.68,
+      "end": 409.41
+    },
+    {
+      "text": "And I'll leave it up for you to actually substitute back",
+      "start": 409.41,
+      "end": 411.58
+    },
+    {
+      "text": "into this original equation.",
+      "start": 411.58,
+      "end": 412.99
+    },
+    {
+      "text": "And see that it works out.",
+      "start": 412.99,
+      "end": 414.65
+    },
+    {
+      "text": "Now, to visualize it over here, you know, how did he get 1",
+      "start": 414.65,
+      "end": 417.26
+    },
+    {
+      "text": "2/3, let's think about it.",
+      "start": 417.26,
+      "end": 418.39
+    },
+    {
+      "text": "Instead of doing 1, I'm going to do circles.",
+      "start": 418.39,
+      "end": 420.79
+    },
+    {
+      "text": "I am going to do circles.",
+      "start": 420.79,
+      "end": 423.51
+    },
+    {
+      "text": "Actually, even better, I'm going to do squares.",
+      "start": 423.51,
+      "end": 425.95
+    },
+    {
+      "text": "So I'm going to have 5 squares on the left-hand side.",
+      "start": 425.95,
+      "end": 428.46
+    },
+    {
+      "text": "I'll do it in this same yellow color right here.",
+      "start": 428.46,
+      "end": 431.57
+    },
+    {
+      "text": "So I have 1, 2, 3, 4, 5.",
+      "start": 431.57,
+      "end": 439.56
+    },
+    {
+      "text": "And that is going to be equal to the 3 x's.",
+      "start": 439.56,
+      "end": 443.172
+    },
+    {
+      "text": "x plus x plus x.",
+      "start": 443.172,
+      "end": 445.57
+    },
+    {
+      "text": "Now, we're dividing both sides of the equation by 3.",
+      "start": 445.57,
+      "end": 449.35
+    },
+    {
+      "text": "We're dividing both sides of the equation by 3.",
+      "start": 449.35,
+      "end": 452.15
+    },
+    {
+      "text": "Actually, that's where we did it up here, we",
+      "start": 452.15,
+      "end": 453.38
+    },
+    {
+      "text": "divided both sides by 3.",
+      "start": 453.38,
+      "end": 454.85
+    },
+    {
+      "text": "So how do you do that right-hand side's pretty",
+      "start": 454.85,
+      "end": 456.87
+    },
+    {
+      "text": "straightforward.",
+      "start": 456.87,
+      "end": 457.48
+    },
+    {
+      "text": "You want to divide these 3 x's into 3 groups.",
+      "start": 457.48,
+      "end": 460.76
+    },
+    {
+      "text": "That's 1, 2, 3 groups.",
+      "start": 460.76,
+      "end": 463.04
+    },
+    {
+      "text": "1, 2, 3.",
+      "start": 463.04,
+      "end": 463.7
+    },
+    {
+      "text": "Now, how do you divide 5 into 3?",
+      "start": 463.7,
+      "end": 465.7
+    },
+    {
+      "text": "And they have to be thought through even groups.",
+      "start": 465.7,
+      "end": 468
+    },
+    {
+      "text": "And the answer tells us.",
+      "start": 468,
+      "end": 469.83
+    },
+    {
+      "text": "Each group is going to be 1 2/3.",
+      "start": 469.83,
+      "end": 471.5
+    },
+    {
+      "text": "So, 1 2/3.",
+      "start": 471.5,
+      "end": 473.43
+    },
+    {
+      "text": "So it's going to be 2/3 of this, the next one.",
+      "start": 473.43,
+      "end": 475.96
+    },
+    {
+      "text": "And then we're going to have 1 2/3.",
+      "start": 475.96,
+      "end": 478.53
+    },
+    {
+      "text": "So this is 1/3.",
+      "start": 478.53,
+      "end": 479.74
+    },
+    {
+      "text": "We're going to need another.",
+      "start": 479.74,
+      "end": 481.48
+    },
+    {
+      "text": "Another 1, so this is 1 1/3.",
+      "start": 481.48,
+      "end": 484.27
+    },
+    {
+      "text": "We're going to need 1 more 1/3, so this is going",
+      "start": 484.27,
+      "end": 485.77
+    },
+    {
+      "text": "to be right here.",
+      "start": 485.77,
+      "end": 487.87
+    },
+    {
+      "text": "And then we're left with 2/3 and 1.",
+      "start": 487.87,
+      "end": 490.39
+    },
+    {
+      "text": "So we've broken it up into 3 groups.",
+      "start": 490.39,
+      "end": 492.45
+    },
+    {
+      "text": "This right here.",
+      "start": 492.45,
+      "end": 493.25
+    },
+    {
+      "text": "Let me make it clear.",
+      "start": 493.25,
+      "end": 494.4
+    },
+    {
+      "text": "Let me make it clear, this right here is 1 2/3.",
+      "start": 494.4,
+      "end": 498.84
+    },
+    {
+      "text": "1 2/3.",
+      "start": 498.84,
+      "end": 500.65
+    },
+    {
+      "text": "And then this right here, this 1/3.",
+      "start": 500.65,
+      "end": 503.42
+    },
+    {
+      "text": "That's another 1/3, so that's 2/3, and then",
+      "start": 503.42,
+      "end": 506.14
+    },
+    {
+      "text": "that's 1 right there.",
+      "start": 506.14,
+      "end": 507.01
+    },
+    {
+      "text": "So that's 1 2/3.",
+      "start": 507.01,
+      "end": 508.97
+    },
+    {
+      "text": "And then finally this is 2/3 and this is",
+      "start": 508.97,
+      "end": 512.48
+    },
+    {
+      "text": "1, so this is 1 2/3.",
+      "start": 512.48,
+      "end": 514.89
+    },
+    {
+      "text": "So when you divide both sides by 3 you get 1 2/3.",
+      "start": 514.89,
+      "end": 520.03
+    },
+    {
+      "text": "Each section, each bucket, is 1 2/3 on the left-hand side.",
+      "start": 520.03,
+      "end": 524.43
+    },
+    {
+      "text": "On the left-hand side, or 5/3.",
+      "start": 524.43,
+      "end": 526.08
+    },
+    {
+      "text": "And on the right-hand side we just have an x.",
+      "start": 526.08,
+      "end": 528.12
+    },
+    {
+      "text": "So it still works.",
+      "start": 528.12,
+      "end": 529.07
+    },
+    {
+      "text": "A little bit harder to visualize with fractions.",
+      "start": 529.07,
+      "end": 532.27
+    }
+  ]
+}

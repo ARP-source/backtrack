@@ -1,0 +1,407 @@
+{
+  "videoId": "OVMceVL_CEQ",
+  "title": "How to add fractions that have different denominators",
+  "channel": "Khan Academy",
+  "covers": [
+    "fraction_arithmetic"
+  ],
+  "punctuated": true,
+  "durationSec": 244,
+  "cues": [
+    {
+      "text": "We're asked to add 4/9 and 11/12 and to write our answer",
+      "start": 0.38,
+      "end": 4.55
+    },
+    {
+      "text": "as a mixed number, and then simplify and write our answer",
+      "start": 4.55,
+      "end": 7.31
+    },
+    {
+      "text": "as a mixed number.",
+      "start": 7.31,
+      "end": 9.24
+    },
+    {
+      "text": "So here we have two fractions we're adding together, but we",
+      "start": 9.24,
+      "end": 11.97
+    },
+    {
+      "text": "have different denominators.",
+      "start": 11.97,
+      "end": 13.7
+    },
+    {
+      "text": "So whenever you add fractions, the first thing you have to do",
+      "start": 13.7,
+      "end": 15.8
+    },
+    {
+      "text": "is check the denominators.",
+      "start": 15.8,
+      "end": 16.88
+    },
+    {
+      "text": "If they're the same, you can add, but if they're different",
+      "start": 16.88,
+      "end": 18.84
+    },
+    {
+      "text": "like this, you have to make them have the same",
+      "start": 18.84,
+      "end": 21.6
+    },
+    {
+      "text": "denominator.",
+      "start": 21.6,
+      "end": 22.58
+    },
+    {
+      "text": "So what we have to do is find a number that both 9 and 12",
+      "start": 22.58,
+      "end": 27.86
+    },
+    {
+      "text": "will divide into, and that will be our common",
+      "start": 27.86,
+      "end": 30.89
+    },
+    {
+      "text": "denominator, and you'll see why both 9 and 12 have to",
+      "start": 30.89,
+      "end": 33.8
+    },
+    {
+      "text": "divide into it.",
+      "start": 33.8,
+      "end": 34.97
+    },
+    {
+      "text": "So let's think about what that number is, and there's two",
+      "start": 34.97,
+      "end": 37.07
+    },
+    {
+      "text": "ways of coming up with that what we could call a least",
+      "start": 37.07,
+      "end": 39.79
+    },
+    {
+      "text": "common multiple, the smallest multiple of both 9",
+      "start": 39.79,
+      "end": 44.3
+    },
+    {
+      "text": "and 12 that is common.",
+      "start": 44.3,
+      "end": 46.54
+    },
+    {
+      "text": "One way is just to kind of look at the multiples of 9 and",
+      "start": 46.54,
+      "end": 49.31
+    },
+    {
+      "text": "see if any of them are divisible by 12.",
+      "start": 49.31,
+      "end": 51.45
+    },
+    {
+      "text": "So if you start with 9-- we can do it over here.",
+      "start": 51.45,
+      "end": 54.8
+    },
+    {
+      "text": "So you have 9, that's not divisible by 12.",
+      "start": 54.8,
+      "end": 57.23
+    },
+    {
+      "text": "18 isn't divisible by 12.",
+      "start": 57.23,
+      "end": 59.81
+    },
+    {
+      "text": "27 isn't divisible by 12.",
+      "start": 59.81,
+      "end": 62.81
+    },
+    {
+      "text": "36, well, that is divisible by 12.",
+      "start": 62.81,
+      "end": 65.67
+    },
+    {
+      "text": "That is 12 times 3.",
+      "start": 65.67,
+      "end": 67.48
+    },
+    {
+      "text": "So 9 goes into 36 and 12 goes into 36.",
+      "start": 67.48,
+      "end": 71.56
+    },
+    {
+      "text": "So what we want to do is write a common denominator.",
+      "start": 71.56,
+      "end": 73.62
+    },
+    {
+      "text": "So we're going to write 4/9 as something over 36, and we're",
+      "start": 73.62,
+      "end": 77.87
+    },
+    {
+      "text": "going to write 11/12 as something over 36.",
+      "start": 77.87,
+      "end": 83.5
+    },
+    {
+      "text": "Now, to turn your 9 into a 36, you have to",
+      "start": 83.5,
+      "end": 87.37
+    },
+    {
+      "text": "multiply it by 4, right?",
+      "start": 87.37,
+      "end": 92.72
+    },
+    {
+      "text": "9 times 4 is equal to 36.",
+      "start": 92.72,
+      "end": 97.62
+    },
+    {
+      "text": "Now, you can't just multiply the denominator by 4.",
+      "start": 97.62,
+      "end": 100.24
+    },
+    {
+      "text": "You also have to multiply the numerator by the same thing.",
+      "start": 100.24,
+      "end": 103.56
+    },
+    {
+      "text": "So if you multiply the numerator by 4, you get 4",
+      "start": 103.56,
+      "end": 105.6
+    },
+    {
+      "text": "times 4 is 16.",
+      "start": 105.6,
+      "end": 108.09
+    },
+    {
+      "text": "So 4/9 is the exact same thing as 16/36.",
+      "start": 108.09,
+      "end": 112.46
+    },
+    {
+      "text": "If you wanted to simplify this one to 4/9, you divide the",
+      "start": 112.46,
+      "end": 115.55
+    },
+    {
+      "text": "numerator and the denominator by 4.",
+      "start": 115.55,
+      "end": 118.02
+    },
+    {
+      "text": "Now, we do the same thing over here.",
+      "start": 118.02,
+      "end": 120.01
+    },
+    {
+      "text": "36, 12 times 3, so we're multiplying 12 by 3 to get 36.",
+      "start": 120.01,
+      "end": 127.8
+    },
+    {
+      "text": "Well, if we did that to the denominator, we also have to",
+      "start": 127.8,
+      "end": 130.03
+    },
+    {
+      "text": "do that to the numerator, so 11 times 3 is 33.",
+      "start": 130.03,
+      "end": 134.18
+    },
+    {
+      "text": "And just like that, we've now rewritten each of the",
+      "start": 134.18,
+      "end": 136.66
+    },
+    {
+      "text": "fractions so that they have the same denominator.",
+      "start": 136.66,
+      "end": 139.66
+    },
+    {
+      "text": "Both of their denominators is 36.",
+      "start": 139.66,
+      "end": 142.57
+    },
+    {
+      "text": "So now we're ready to add.",
+      "start": 142.57,
+      "end": 143.94
+    },
+    {
+      "text": "If you add these two things, we'll have 36, because we're",
+      "start": 143.94,
+      "end": 149.17
+    },
+    {
+      "text": "considering kind of parts of 36 or fractions of 36, and",
+      "start": 149.17,
+      "end": 153.11
+    },
+    {
+      "text": "then we have 16 plus 33 in the numerator.",
+      "start": 153.11,
+      "end": 155.47
+    },
+    {
+      "text": "Let me write that down.",
+      "start": 155.47,
+      "end": 156.42
+    },
+    {
+      "text": "16 plus 33 in the numerator.",
+      "start": 156.42,
+      "end": 161.19
+    },
+    {
+      "text": "And 16 plus 33 is what?",
+      "start": 161.19,
+      "end": 164.62
+    },
+    {
+      "text": "6 plus 33 would be 39 and then you have",
+      "start": 164.62,
+      "end": 168.02
+    },
+    {
+      "text": "another 10, so it's 49.",
+      "start": 168.02,
+      "end": 169.77
+    },
+    {
+      "text": "So it's equal to 49/36.",
+      "start": 169.77,
+      "end": 177.39
+    },
+    {
+      "text": "Now, can we simplify this?",
+      "start": 177.39,
+      "end": 179.36
+    },
+    {
+      "text": "49, it's 7 squared, so it has 1, 7 and 49 as factors.",
+      "start": 179.36,
+      "end": 183.65
+    },
+    {
+      "text": "This has 1-- it has a bunch of numbers, but it's not",
+      "start": 183.65,
+      "end": 186
+    },
+    {
+      "text": "divisible by 7, so this is actually in simplest form, but",
+      "start": 186,
+      "end": 192.77
+    },
+    {
+      "text": "this is an improper fraction.",
+      "start": 192.77,
+      "end": 194.4
+    },
+    {
+      "text": "The numerator is larger than the denominator.",
+      "start": 194.4,
+      "end": 196.26
+    },
+    {
+      "text": "So let's write it as a proper fraction.",
+      "start": 196.26,
+      "end": 198.48
+    },
+    {
+      "text": "To do that, we divide 36 into 49.",
+      "start": 198.48,
+      "end": 204.68
+    },
+    {
+      "text": "36 goes into 49 how many times?",
+      "start": 204.68,
+      "end": 206.85
+    },
+    {
+      "text": "Well, it only goes one time, so it equals 1.",
+      "start": 206.85,
+      "end": 209.44
+    },
+    {
+      "text": "And how much will be left over?",
+      "start": 209.44,
+      "end": 211.11
+    },
+    {
+      "text": "If I divide 36 into 49 one time, or 1 times 36 is 36,",
+      "start": 211.11,
+      "end": 216.13
+    },
+    {
+      "text": "then I have 13 left over to get to 49.",
+      "start": 216.13,
+      "end": 218.75
+    },
+    {
+      "text": "So it's 1 and 13/36.",
+      "start": 218.75,
+      "end": 223.46
+    },
+    {
+      "text": "And you can do that manually, if you like you.",
+      "start": 223.46,
+      "end": 226.1
+    },
+    {
+      "text": "You'd say 36 into 49.",
+      "start": 226.1,
+      "end": 228.96
+    },
+    {
+      "text": "36 goes into 49 one time.",
+      "start": 228.96,
+      "end": 230.68
+    },
+    {
+      "text": "1 times 36 is 36, and then you subtract.",
+      "start": 230.68,
+      "end": 234.13
+    },
+    {
+      "text": "9 minus 6 is 3.",
+      "start": 234.13,
+      "end": 235.77
+    },
+    {
+      "text": "4 minus 3 is 1.",
+      "start": 235.77,
+      "end": 238.31
+    },
+    {
+      "text": "You have a remainder of 13.",
+      "start": 238.31,
+      "end": 240.74
+    },
+    {
+      "text": "So that's our answer: 1 and 13/36.",
+      "start": 240.74,
+      "end": 244.09
+    }
+  ]
+}

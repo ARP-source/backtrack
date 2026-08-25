@@ -1,0 +1,403 @@
+{
+  "version": 1,
+  "domain": "Undergraduate Linear Algebra",
+  "note": "depth is derived: 1 + max(depth of prereqs). Roots are depth 0.",
+  "nodes": [
+    {
+      "id": "fraction_arithmetic",
+      "label": "Fraction arithmetic",
+      "blurb": "Can add, multiply, and divide fractions fluently, and knows why a common denominator is required.",
+      "depth": 0,
+      "prereqs": [],
+      "misconceptions": [
+        "adds numerators and denominators separately, so a/b + c/d becomes (a+c)/(b+d)",
+        "cancels a term across a sum, turning (x+2)/2 into x",
+        "inverts the wrong operand when dividing one fraction by another"
+      ]
+    },
+    {
+      "id": "negative_numbers",
+      "label": "Signed arithmetic",
+      "blurb": "Handles negative quantities and sign distribution without dropping or misplacing minus signs.",
+      "depth": 0,
+      "prereqs": [],
+      "misconceptions": [
+        "reads the symbol -x as necessarily naming a negative number",
+        "distributes a leading minus over only the first term, so -(a+b) becomes -a+b",
+        "assumes subtracting a negative must make a result smaller"
+      ]
+    },
+    {
+      "id": "coordinate_plane",
+      "label": "The coordinate plane",
+      "blurb": "Treats a point as an ordered pair of numbers read against chosen axes, not as a mark on paper.",
+      "depth": 0,
+      "prereqs": [],
+      "misconceptions": [
+        "reverses the order of the pair, plotting (x, y) at (y, x)",
+        "thinks of a point as a dot on the page rather than a numeric readout that depends on the axes",
+        "cannot locate a point without gridlines to count along"
+      ]
+    },
+    {
+      "id": "variables_and_expressions",
+      "label": "Variables and expressions",
+      "blurb": "Treats a letter as a number that varies and an expression as an object that can be rearranged.",
+      "depth": 1,
+      "prereqs": ["fraction_arithmetic", "negative_numbers"],
+      "misconceptions": [
+        "reads a variable as a label for a thing ('c is cookies') rather than as a quantity",
+        "assumes different letters must stand for different values",
+        "treats an expression as an instruction to compute rather than an object to manipulate"
+      ]
+    },
+    {
+      "id": "vector_arithmetic",
+      "label": "Vector arithmetic",
+      "blurb": "Adds and scales vectors componentwise and can picture the result as displacement in space.",
+      "depth": 1,
+      "prereqs": ["coordinate_plane", "negative_numbers"],
+      "misconceptions": [
+        "believes a vector is pinned to the origin and cannot be translated",
+        "conflates a vector with its magnitude, treating it as a single number",
+        "adds vectors by joining lists rather than by matching components"
+      ]
+    },
+    {
+      "id": "function_notation",
+      "label": "Function notation",
+      "blurb": "Reads f(x) as a machine applied to an input, independent of whether a formula is available.",
+      "depth": 2,
+      "prereqs": ["variables_and_expressions"],
+      "misconceptions": [
+        "reads f(x) as f multiplied by x",
+        "thinks f(x + 2) means f(x) + 2",
+        "believes a function must have a closed-form formula to be a function"
+      ]
+    },
+    {
+      "id": "solving_linear_equations",
+      "label": "Solving linear equations",
+      "blurb": "Isolates an unknown by applying reversible operations to both sides while preserving balance.",
+      "depth": 2,
+      "prereqs": ["variables_and_expressions", "fraction_arithmetic"],
+      "misconceptions": [
+        "moves a term across the equals sign without changing its sign",
+        "applies an operation to one side of the equation only",
+        "reads '=' as 'and then the answer is' rather than as an assertion that two things are equal"
+      ]
+    },
+    {
+      "id": "linear_combination",
+      "label": "Linear combination",
+      "blurb": "Sees scaling several vectors and adding them as a single reachable destination in space.",
+      "depth": 2,
+      "prereqs": ["vector_arithmetic"],
+      "misconceptions": [
+        "assumes the scalars must be positive, or must be whole numbers",
+        "believes a combination has to use every vector in the list",
+        "can compute one but cannot picture sweeping the scalars to reach a whole line or plane"
+      ]
+    },
+    {
+      "id": "dot_product",
+      "label": "Dot product",
+      "blurb": "Computes it and reads it as a measure of how much one vector points along another.",
+      "depth": 2,
+      "prereqs": ["vector_arithmetic"],
+      "misconceptions": [
+        "expects the result to be a vector rather than a number",
+        "memorises the componentwise formula with no link to angle or projection",
+        "thinks a dot product of zero means one of the vectors must be the zero vector"
+      ]
+    },
+    {
+      "id": "function_composition",
+      "label": "Function composition",
+      "blurb": "Applies f(g(x)) inside-out and understands the result as a single new function.",
+      "depth": 3,
+      "prereqs": ["function_notation"],
+      "misconceptions": [
+        "reads f(g(x)) left to right and applies f first",
+        "confuses composing functions with multiplying their outputs",
+        "assumes composition commutes, so f(g(x)) equals g(f(x))"
+      ]
+    },
+    {
+      "id": "slope_and_lines",
+      "label": "Slope and lines",
+      "blurb": "Connects the equation of a line to its geometry, and reads slope as a rate independent of drawing scale.",
+      "depth": 3,
+      "prereqs": ["coordinate_plane", "solving_linear_equations"],
+      "misconceptions": [
+        "takes the coordinate differences in opposite orders in the numerator and denominator",
+        "judges slope by how steep the drawn picture looks, ignoring the axis scale",
+        "assumes any equation graphing as a straight line is a linear function"
+      ]
+    },
+    {
+      "id": "span",
+      "label": "Span",
+      "blurb": "Names the full set of points reachable by linear combinations, and pictures it as a line, plane, or space.",
+      "depth": 3,
+      "prereqs": ["linear_combination"],
+      "misconceptions": [
+        "thinks span is the set of the given vectors themselves, not everything reachable from them",
+        "assumes n vectors always span n dimensions",
+        "pictures span as a finite collection of arrows rather than a continuous region"
+      ]
+    },
+    {
+      "id": "matrix_vector_product",
+      "label": "Matrix-vector product",
+      "blurb": "Computes Av and reads the result as a linear combination of the columns of A.",
+      "depth": 3,
+      "prereqs": ["linear_combination"],
+      "misconceptions": [
+        "multiplies elementwise, pairing entry against entry",
+        "executes the row-dot-vector algorithm but cannot see the output as a combination of A's columns",
+        "gets the shape rule backwards and pairs incompatible dimensions"
+      ]
+    },
+    {
+      "id": "orthogonality",
+      "label": "Orthogonality",
+      "blurb": "Uses a zero dot product as the definition of perpendicular, in any number of dimensions.",
+      "depth": 3,
+      "prereqs": ["dot_product"],
+      "misconceptions": [
+        "thinks orthogonality is a 2D picture with no meaning in higher dimensions",
+        "conflates orthogonal with linearly independent",
+        "believes the zero vector cannot be orthogonal to anything"
+      ]
+    },
+    {
+      "id": "systems_of_equations",
+      "label": "Systems of equations",
+      "blurb": "Solves several equations at once and reads the solution set as an intersection.",
+      "depth": 4,
+      "prereqs": ["solving_linear_equations", "slope_and_lines"],
+      "misconceptions": [
+        "expects every system to have exactly one solution",
+        "reads 'no solution' as 'the solution is zero'",
+        "solves algebraically without connecting the answer to intersecting lines or planes"
+      ]
+    },
+    {
+      "id": "linearity_property",
+      "label": "What 'linear' actually means",
+      "blurb": "Tests a map for additivity and scaling rather than for the shape of its graph.",
+      "depth": 4,
+      "prereqs": ["function_notation", "slope_and_lines"],
+      "misconceptions": [
+        "thinks 'linear' means 'graphs as a straight line', so f(x) = 2x + 3 counts",
+        "thinks any formula without exponents is linear",
+        "checks additivity but never scaling, or checks scaling but never additivity"
+      ]
+    },
+    {
+      "id": "linear_independence",
+      "label": "Linear independence",
+      "blurb": "Determines whether any vector in a set is redundant, i.e. already reachable from the others.",
+      "depth": 4,
+      "prereqs": ["span", "linear_combination"],
+      "misconceptions": [
+        "checks only pairs for being parallel, missing three-vector dependence",
+        "conflates independent with orthogonal",
+        "thinks a set containing the zero vector can still be independent"
+      ]
+    },
+    {
+      "id": "projection",
+      "label": "Projection",
+      "blurb": "Finds the closest point in a subspace and recognises the leftover as orthogonal to it.",
+      "depth": 4,
+      "prereqs": ["dot_product", "orthogonality", "span"],
+      "misconceptions": [
+        "thinks projecting means deleting a coordinate",
+        "omits the normalisation, so the answer scales with the length of the target vector",
+        "does not see the residual as orthogonal to the thing projected onto"
+      ]
+    },
+    {
+      "id": "gaussian_elimination",
+      "label": "Gaussian elimination",
+      "blurb": "Reduces a system with reversible row operations and reads the solution structure off the result.",
+      "depth": 5,
+      "prereqs": ["systems_of_equations"],
+      "misconceptions": [
+        "uses operations that are not reversible, such as scaling a row by zero",
+        "operates on columns as though they were rows",
+        "reaches echelon form but cannot tell unique, absent, and infinite solution sets apart"
+      ]
+    },
+    {
+      "id": "linear_transformations",
+      "label": "Linear transformations",
+      "blurb": "Sees a linear map as something acting on all of space at once, keeping grid lines parallel and the origin fixed.",
+      "depth": 5,
+      "prereqs": ["linearity_property", "function_composition", "vector_arithmetic"],
+      "misconceptions": [
+        "thinks any function taking vectors to vectors is a linear transformation",
+        "believes a linear transformation can move the origin",
+        "pictures the map acting on one vector at a time rather than on the whole space"
+      ]
+    },
+    {
+      "id": "basis",
+      "label": "Basis",
+      "blurb": "Recognises a minimal spanning set, and that a space admits many different bases.",
+      "depth": 5,
+      "prereqs": ["linear_independence", "span"],
+      "misconceptions": [
+        "thinks a space has one basis, the standard one",
+        "believes a basis must be orthogonal, or must consist of unit vectors",
+        "assumes adding more vectors gives a better basis"
+      ]
+    },
+    {
+      "id": "matrix_as_transformation",
+      "label": "A matrix as a transformation",
+      "blurb": "Reads the columns of a matrix as the landing spots of the basis vectors.",
+      "depth": 6,
+      "prereqs": ["matrix_vector_product", "linear_transformations"],
+      "misconceptions": [
+        "sees a matrix as a static grid of numbers rather than an encoding of where space goes",
+        "does not know the columns are the images of the basis vectors",
+        "thinks the matrix acts only on vectors written next to it, not on all of space"
+      ]
+    },
+    {
+      "id": "null_space",
+      "label": "Null space",
+      "blurb": "Identifies everything a transformation crushes to zero and links it to loss of dimension.",
+      "depth": 6,
+      "prereqs": ["gaussian_elimination", "span", "linear_transformations"],
+      "misconceptions": [
+        "calls the null space empty when the only solution is the zero vector",
+        "confuses the null space with the zero matrix",
+        "cannot connect a nontrivial null space to the transformation collapsing space"
+      ]
+    },
+    {
+      "id": "coordinates_in_a_basis",
+      "label": "Coordinates relative to a basis",
+      "blurb": "Reads a coordinate list as a description relative to a chosen basis, not as the vector itself.",
+      "depth": 6,
+      "prereqs": ["basis"],
+      "misconceptions": [
+        "thinks a vector's coordinates are intrinsic to it rather than relative to a chosen basis",
+        "reads entries given in a new basis as if they were still standard-basis components",
+        "believes only the standard basis produces valid coordinates"
+      ]
+    },
+    {
+      "id": "matrix_multiplication",
+      "label": "Matrix multiplication",
+      "blurb": "Computes a product and reads it as the composition of two transformations, applied right to left.",
+      "depth": 7,
+      "prereqs": ["matrix_vector_product", "function_composition", "matrix_as_transformation"],
+      "misconceptions": [
+        "believes it is elementwise, like addition",
+        "executes the row-times-column algorithm but cannot say what the product represents",
+        "assumes AB equals BA because multiplication of numbers commutes"
+      ]
+    },
+    {
+      "id": "determinant_2x2",
+      "label": "Determinant of a 2x2",
+      "blurb": "Computes ad - bc and reads it as the factor by which area is scaled, sign included.",
+      "depth": 7,
+      "prereqs": ["matrix_as_transformation"],
+      "misconceptions": [
+        "recalls the formula with the two products subtracted in the wrong order",
+        "computes it with no notion that it measures area scaling",
+        "treats a negative determinant as an arithmetic error rather than a flip in orientation"
+      ]
+    },
+    {
+      "id": "column_space_rank",
+      "label": "Column space and rank",
+      "blurb": "Identifies the span of the columns as the output space and rank as its dimension.",
+      "depth": 7,
+      "prereqs": ["span", "matrix_as_transformation", "linear_independence"],
+      "misconceptions": [
+        "counts rank as the number of columns rather than the number of independent ones",
+        "places the column space in the domain rather than the codomain",
+        "believes rank can exceed the smaller of the two dimensions"
+      ]
+    },
+    {
+      "id": "determinant_general",
+      "label": "Determinants in general",
+      "blurb": "Computes larger determinants and reads zero as the transformation flattening space.",
+      "depth": 8,
+      "prereqs": ["determinant_2x2", "gaussian_elimination"],
+      "misconceptions": [
+        "treats it as a formula to grind, with no notion of signed volume scaling",
+        "reads det = 0 as the matrix being empty or zero rather than collapsing a dimension",
+        "drops the alternating signs during cofactor expansion"
+      ]
+    },
+    {
+      "id": "invertibility",
+      "label": "Invertibility",
+      "blurb": "Knows when a transformation can be undone, and ties that to rank, determinant, and null space.",
+      "depth": 9,
+      "prereqs": ["matrix_multiplication", "determinant_general", "column_space_rank"],
+      "misconceptions": [
+        "thinks the inverse is found by taking reciprocals of the entries",
+        "believes every square matrix has an inverse",
+        "recites that det = 0 means singular but cannot say why collapsing space makes undoing impossible"
+      ]
+    },
+    {
+      "id": "eigenvectors",
+      "label": "Eigenvectors and eigenvalues",
+      "blurb": "Finds the directions a transformation leaves on their own span, and what it scales them by.",
+      "depth": 9,
+      "prereqs": ["determinant_general", "null_space", "matrix_as_transformation"],
+      "misconceptions": [
+        "thinks an eigenvector is left completely unchanged rather than kept on its own line",
+        "treats the eigenvector as a single vector instead of an entire line of solutions",
+        "solves the characteristic polynomial but cannot say what the eigenvalue measures"
+      ]
+    },
+    {
+      "id": "change_of_basis",
+      "label": "Change of basis",
+      "blurb": "Translates a vector's coordinates between bases and knows which direction the matrix carries you.",
+      "depth": 10,
+      "prereqs": ["coordinates_in_a_basis", "matrix_multiplication", "invertibility"],
+      "misconceptions": [
+        "applies the change-of-basis matrix in the wrong direction",
+        "thinks the vector itself changes rather than its coordinate readout",
+        "builds the matrix from the new basis vectors written in the new basis, which is always the identity"
+      ]
+    },
+    {
+      "id": "similarity",
+      "label": "Similar matrices",
+      "blurb": "Reads P inverse A P as the same transformation described from a different basis.",
+      "depth": 11,
+      "prereqs": ["change_of_basis", "matrix_multiplication"],
+      "misconceptions": [
+        "thinks similar matrices are ones that merely look alike",
+        "cannot read the sandwich as 'translate, act, translate back'",
+        "expects similar matrices to share visible entries"
+      ]
+    },
+    {
+      "id": "diagonalization",
+      "label": "Diagonalization",
+      "blurb": "Chooses an eigenbasis in which the transformation is nothing but scaling along axes.",
+      "depth": 12,
+      "prereqs": ["eigenvectors", "similarity", "basis"],
+      "misconceptions": [
+        "assumes every matrix is diagonalizable",
+        "orders the eigenvalues in D without matching the eigenvector order in P",
+        "sees it as a computational trick rather than as choosing the basis where the map is just scaling"
+      ]
+    }
+  ]
+}

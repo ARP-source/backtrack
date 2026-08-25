@@ -1,0 +1,697 @@
+{
+  "videoId": "vDqOoI-4Z6M",
+  "title": "What are variables, expressions, and equations?",
+  "channel": "Khan Academy",
+  "covers": [
+    "variables_and_expressions"
+  ],
+  "punctuated": true,
+  "durationSec": 414,
+  "cues": [
+    {
+      "text": "When we're dealing with basic arithmetic,",
+      "start": 0.59,
+      "end": 2.54
+    },
+    {
+      "text": "we see the concrete numbers there.",
+      "start": 2.54,
+      "end": 4.77
+    },
+    {
+      "text": "We'll see 23 plus 5.",
+      "start": 4.77,
+      "end": 7.262
+    },
+    {
+      "text": "We know what these numbers are right over here,",
+      "start": 7.262,
+      "end": 9.22
+    },
+    {
+      "text": "and we can calculate them.",
+      "start": 9.22,
+      "end": 10.303
+    },
+    {
+      "text": "It's going to be 28.",
+      "start": 10.303,
+      "end": 11.61
+    },
+    {
+      "text": "We can say 2 times 7.",
+      "start": 11.61,
+      "end": 13.92
+    },
+    {
+      "text": "We could say 3 divided by 4.",
+      "start": 13.92,
+      "end": 17.51
+    },
+    {
+      "text": "In all of these cases, we know exactly what numbers",
+      "start": 17.51,
+      "end": 19.94
+    },
+    {
+      "text": "we're dealing with.",
+      "start": 19.94,
+      "end": 20.93
+    },
+    {
+      "text": "As we start entering into the algebraic world--",
+      "start": 20.93,
+      "end": 23.791
+    },
+    {
+      "text": "and you probably have seen this a little bit already--",
+      "start": 23.791,
+      "end": 26.04
+    },
+    {
+      "text": "we start dealing with the ideas of variables.",
+      "start": 26.04,
+      "end": 30.08
+    },
+    {
+      "text": "And variables, there's a bunch of ways",
+      "start": 30.08,
+      "end": 31.82
+    },
+    {
+      "text": "you can think about them, but they're really",
+      "start": 31.82,
+      "end": 33.653
+    },
+    {
+      "text": "just values in expressions where they can change.",
+      "start": 33.653,
+      "end": 36.24
+    },
+    {
+      "text": "The values in those expressions can change.",
+      "start": 36.24,
+      "end": 38.55
+    },
+    {
+      "text": "For example, if I write x plus 5,",
+      "start": 38.55,
+      "end": 44.77
+    },
+    {
+      "text": "this is an expression right over here.",
+      "start": 44.77,
+      "end": 46.76
+    },
+    {
+      "text": "This can take on some value depending",
+      "start": 46.76,
+      "end": 49.11
+    },
+    {
+      "text": "on what the value of x is.",
+      "start": 49.11,
+      "end": 51.63
+    },
+    {
+      "text": "If x is equal to 1, then x plus 5,",
+      "start": 51.63,
+      "end": 60.45
+    },
+    {
+      "text": "our expression right over here, is going to be equal to 1.",
+      "start": 60.45,
+      "end": 65.87
+    },
+    {
+      "text": "Because now x is 1.",
+      "start": 65.87,
+      "end": 67.11
+    },
+    {
+      "text": "It'll be 1 plus 5, so x plus 5 will be equal to 6.",
+      "start": 67.11,
+      "end": 71.05
+    },
+    {
+      "text": "If x is equal to, I don't know, negative 7, then x plus 5",
+      "start": 71.05,
+      "end": 80.33
+    },
+    {
+      "text": "is going to be equal to-- well, now x is negative 7.",
+      "start": 80.33,
+      "end": 85.02
+    },
+    {
+      "text": "It's going to be negative 7 plus 5, which is negative 2.",
+      "start": 85.02,
+      "end": 88.73
+    },
+    {
+      "text": "So notice x here is a variable, and its value can",
+      "start": 88.73,
+      "end": 94.97
+    },
+    {
+      "text": "change depending on the context.",
+      "start": 94.97,
+      "end": 97.84
+    },
+    {
+      "text": "And this is in the context of an expression.",
+      "start": 97.84,
+      "end": 100.059
+    },
+    {
+      "text": "You'll also see it in the context of an equation.",
+      "start": 100.059,
+      "end": 102.1
+    },
+    {
+      "text": "It's actually important to realize",
+      "start": 102.1,
+      "end": 103.66
+    },
+    {
+      "text": "the distinction between an expression and an equation.",
+      "start": 103.66,
+      "end": 106.87
+    },
+    {
+      "text": "An expression is really just a statement",
+      "start": 106.87,
+      "end": 108.89
+    },
+    {
+      "text": "of value, a statement of some type of quantity.",
+      "start": 108.89,
+      "end": 111.84
+    },
+    {
+      "text": "So this is an expression.",
+      "start": 111.84,
+      "end": 114.29
+    },
+    {
+      "text": "An expression would be something like what",
+      "start": 114.29,
+      "end": 116.75
+    },
+    {
+      "text": "we saw over here, x plus 5.",
+      "start": 116.75,
+      "end": 119.22
+    },
+    {
+      "text": "The value of this expression will",
+      "start": 119.22,
+      "end": 120.7
+    },
+    {
+      "text": "change depending on what the value of this variable is.",
+      "start": 120.7,
+      "end": 125.74
+    },
+    {
+      "text": "And you could just evaluate it for different values of x.",
+      "start": 125.74,
+      "end": 129.05
+    },
+    {
+      "text": "Another expression could be something like, I don't know,",
+      "start": 129.05,
+      "end": 131.77
+    },
+    {
+      "text": "y plus z.",
+      "start": 131.77,
+      "end": 133.13
+    },
+    {
+      "text": "Now everything is a variable.",
+      "start": 133.13,
+      "end": 134.43
+    },
+    {
+      "text": "If y is 1 and z is 2, it's going to be 1 plus 2.",
+      "start": 134.43,
+      "end": 138.57
+    },
+    {
+      "text": "If y is 0 and z is negative 1, it's",
+      "start": 138.57,
+      "end": 141.82
+    },
+    {
+      "text": "going to be 0 plus negative 1.",
+      "start": 141.82,
+      "end": 144.476
+    },
+    {
+      "text": "These can all be evaluated, and they'll essentially",
+      "start": 144.476,
+      "end": 146.6
+    },
+    {
+      "text": "give you a value depending on the values of each",
+      "start": 146.6,
+      "end": 149.82
+    },
+    {
+      "text": "of these variables that make up the expression.",
+      "start": 149.82,
+      "end": 152.226
+    },
+    {
+      "text": "An equation, you're essentially setting expressions",
+      "start": 152.226,
+      "end": 154.35
+    },
+    {
+      "text": "to be equal to each other.",
+      "start": 154.35,
+      "end": 155.61
+    },
+    {
+      "text": "That's why they're called equations.",
+      "start": 155.61,
+      "end": 158.1
+    },
+    {
+      "text": "You're equating two things.",
+      "start": 158.1,
+      "end": 160.1
+    },
+    {
+      "text": "An equation, you'll see one expression",
+      "start": 160.1,
+      "end": 163.06
+    },
+    {
+      "text": "being equal to another expression.",
+      "start": 163.06,
+      "end": 164.83
+    },
+    {
+      "text": "For example, you could say something like x plus 3",
+      "start": 164.83,
+      "end": 169.9
+    },
+    {
+      "text": "is equal to 1.",
+      "start": 169.9,
+      "end": 172.23
+    },
+    {
+      "text": "And in this situation where you have one equation with only one",
+      "start": 172.23,
+      "end": 177.25
+    },
+    {
+      "text": "unknown, you can actually figure out",
+      "start": 177.25,
+      "end": 179.4
+    },
+    {
+      "text": "what x needs to be in this scenario.",
+      "start": 179.4,
+      "end": 181.587
+    },
+    {
+      "text": "And you might even do it in your head.",
+      "start": 181.587,
+      "end": 183.17
+    },
+    {
+      "text": "What plus 3 is equal to 1?",
+      "start": 183.17,
+      "end": 184.939
+    },
+    {
+      "text": "Well, you could do that in your head.",
+      "start": 184.939,
+      "end": 186.48
+    },
+    {
+      "text": "If I have negative 2, plus 3 is equal to 1.",
+      "start": 186.48,
+      "end": 189.22
+    },
+    {
+      "text": "In this context, an equation is starting",
+      "start": 189.22,
+      "end": 191.14
+    },
+    {
+      "text": "to constrain what value this variable can take on.",
+      "start": 191.14,
+      "end": 194.892
+    },
+    {
+      "text": "But it doesn't have to necessarily constrain it",
+      "start": 194.892,
+      "end": 196.85
+    },
+    {
+      "text": "as much.",
+      "start": 196.85,
+      "end": 197.4
+    },
+    {
+      "text": "You could have something like x plus y plus z is equal to 5.",
+      "start": 197.4,
+      "end": 205.75
+    },
+    {
+      "text": "Now you have this expression is equal to this other expression.",
+      "start": 205.75,
+      "end": 209.36
+    },
+    {
+      "text": "5 is really just an expression right over here.",
+      "start": 209.36,
+      "end": 211.669
+    },
+    {
+      "text": "And there are some constraints.",
+      "start": 211.669,
+      "end": 212.96
+    },
+    {
+      "text": "If someone tells you what y and z is, then",
+      "start": 212.96,
+      "end": 215.22
+    },
+    {
+      "text": "you're going to get an x.",
+      "start": 215.22,
+      "end": 216.48
+    },
+    {
+      "text": "If someone tells you what x and y is,",
+      "start": 216.48,
+      "end": 218.25
+    },
+    {
+      "text": "then that constrains what z is.",
+      "start": 218.25,
+      "end": 219.82
+    },
+    {
+      "text": "But it depends on what the different things are.",
+      "start": 219.82,
+      "end": 222.66
+    },
+    {
+      "text": "For example, if we said y is equal to 3 and z is equal to 2,",
+      "start": 222.66,
+      "end": 231.61
+    },
+    {
+      "text": "then what would be x in that situation?",
+      "start": 231.61,
+      "end": 233.6
+    },
+    {
+      "text": "If y is equal to 3 and z is equal to 2,",
+      "start": 233.6,
+      "end": 237.88
+    },
+    {
+      "text": "then you're going to have the left-hand expression",
+      "start": 237.88,
+      "end": 240.26
+    },
+    {
+      "text": "is going to be x plus 3 plus 2.",
+      "start": 240.26,
+      "end": 242.33
+    },
+    {
+      "text": "It's going to be x plus 5.",
+      "start": 242.33,
+      "end": 245.03
+    },
+    {
+      "text": "This part right over here is just going to be 5. x plus 5",
+      "start": 245.03,
+      "end": 247.56
+    },
+    {
+      "text": "is equal to 5.",
+      "start": 247.56,
+      "end": 248.92
+    },
+    {
+      "text": "And so what plus 5 is equal to 5?",
+      "start": 248.92,
+      "end": 251.2
+    },
+    {
+      "text": "Well, now we're constraining that x",
+      "start": 251.2,
+      "end": 254.75
+    },
+    {
+      "text": "would have to be equal to 0.",
+      "start": 254.75,
+      "end": 258.269
+    },
+    {
+      "text": "Hopefully you realize the difference",
+      "start": 258.269,
+      "end": 259.769
+    },
+    {
+      "text": "between expression and equation.",
+      "start": 259.769,
+      "end": 260.899
+    },
+    {
+      "text": "In an equation, essentially you're",
+      "start": 260.899,
+      "end": 262.315
+    },
+    {
+      "text": "equating two expressions.",
+      "start": 262.315,
+      "end": 263.64
+    },
+    {
+      "text": "The important thing to take away from here",
+      "start": 263.64,
+      "end": 265.39
+    },
+    {
+      "text": "is that a variable can take on different values",
+      "start": 265.39,
+      "end": 268.37
+    },
+    {
+      "text": "depending on the context of the problem.",
+      "start": 268.37,
+      "end": 271.57
+    },
+    {
+      "text": "And to hit the point home, let's just evaluate",
+      "start": 271.57,
+      "end": 274.44
+    },
+    {
+      "text": "a bunch of expressions when the variables have",
+      "start": 274.44,
+      "end": 277.06
+    },
+    {
+      "text": "different values.",
+      "start": 277.06,
+      "end": 278.35
+    },
+    {
+      "text": "For example, if we had the expression x to the y power,",
+      "start": 278.35,
+      "end": 287.89
+    },
+    {
+      "text": "if x is equal to 5 and y is equal to 2,",
+      "start": 287.89,
+      "end": 295.93
+    },
+    {
+      "text": "then our expression here is going to evaluate to,",
+      "start": 295.93,
+      "end": 299.06
+    },
+    {
+      "text": "well, x is now going to be 5.",
+      "start": 299.06,
+      "end": 302.68
+    },
+    {
+      "text": "y is going to be 2.",
+      "start": 302.68,
+      "end": 304.4
+    },
+    {
+      "text": "It's going to be 5 to the second power,",
+      "start": 304.4,
+      "end": 306.63
+    },
+    {
+      "text": "or it's going to evaluate to 25.",
+      "start": 306.63,
+      "end": 309.83
+    },
+    {
+      "text": "If we changed the values-- let me do that in that same color--",
+      "start": 309.83,
+      "end": 316.25
+    },
+    {
+      "text": "if we said x is equal to negative 2 and y is equal to 3,",
+      "start": 316.25,
+      "end": 324.85
+    },
+    {
+      "text": "then this expression would evaluate",
+      "start": 324.85,
+      "end": 326.65
+    },
+    {
+      "text": "to-- let me do it in that-- negative 2.",
+      "start": 326.65,
+      "end": 333.359
+    },
+    {
+      "text": "That's what we're going to substitute",
+      "start": 333.359,
+      "end": 334.9
+    },
+    {
+      "text": "for x now in this context.",
+      "start": 334.9,
+      "end": 336.76
+    },
+    {
+      "text": "And y is now 3, negative 2 to the third power,",
+      "start": 336.76,
+      "end": 342.3
+    },
+    {
+      "text": "which is negative 2 times negative 2 times negative 2,",
+      "start": 342.3,
+      "end": 344.86
+    },
+    {
+      "text": "which is negative 8.",
+      "start": 344.86,
+      "end": 346.842
+    },
+    {
+      "text": "Negative 2 times negative 2 is positive 4, times negative 2",
+      "start": 346.842,
+      "end": 349.3
+    },
+    {
+      "text": "again is equal to negative 8.",
+      "start": 349.3,
+      "end": 351.67
+    },
+    {
+      "text": "We could do even more complex things.",
+      "start": 356.4,
+      "end": 358.31
+    },
+    {
+      "text": "We could have an expression like the square root of x plus y",
+      "start": 358.31,
+      "end": 363.29
+    },
+    {
+      "text": "and then minus x, like that.",
+      "start": 363.29,
+      "end": 366.6
+    },
+    {
+      "text": "Let's say that x is equal to 1 and y is equal to 8.",
+      "start": 369.31,
+      "end": 375.89
+    },
+    {
+      "text": "Then this expression would evaluate to, well,",
+      "start": 375.89,
+      "end": 378.92
+    },
+    {
+      "text": "every time we see an x, we want to put a 1 there.",
+      "start": 378.92,
+      "end": 381.46
+    },
+    {
+      "text": "So we would have a 1 there, and you'd have a 1 over there.",
+      "start": 381.46,
+      "end": 384.8
+    },
+    {
+      "text": "And every time you see a y, you would put an 8 in its place",
+      "start": 384.8,
+      "end": 388.35
+    },
+    {
+      "text": "in this context.",
+      "start": 388.35,
+      "end": 389.32
+    },
+    {
+      "text": "We're setting these variables.",
+      "start": 389.32,
+      "end": 390.76
+    },
+    {
+      "text": "So you'd see an 8.",
+      "start": 390.76,
+      "end": 392.15
+    },
+    {
+      "text": "Under the radical sign, you would have a 1 plus 8.",
+      "start": 392.15,
+      "end": 394.64
+    },
+    {
+      "text": "So you'd have the principal root of 9, which is 3.",
+      "start": 394.64,
+      "end": 398.13
+    },
+    {
+      "text": "This whole thing would simplify.",
+      "start": 398.13,
+      "end": 399.97
+    },
+    {
+      "text": "In this context, when we set these variables",
+      "start": 399.97,
+      "end": 401.85
+    },
+    {
+      "text": "to be these things, this whole thing would simplify to be 3.",
+      "start": 401.85,
+      "end": 405.58
+    },
+    {
+      "text": "1 plus 8 is 9.",
+      "start": 405.58,
+      "end": 406.64
+    },
+    {
+      "text": "The principal root of that is 3.",
+      "start": 406.64,
+      "end": 408.74
+    },
+    {
+      "text": "And then you'd have 3 minus 1, which is equal to 2.",
+      "start": 408.74,
+      "end": 414.49
+    }
+  ]
+}

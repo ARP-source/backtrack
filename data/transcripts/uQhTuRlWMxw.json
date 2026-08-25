@@ -1,0 +1,895 @@
+{
+  "videoId": "uQhTuRlWMxw",
+  "title": "Inverse matrices, column space and null space | Chapter 7",
+  "channel": "3Blue1Brown",
+  "covers": [
+    "invertibility",
+    "column_space_rank",
+    "null_space",
+    "gaussian_elimination"
+  ],
+  "punctuated": true,
+  "durationSec": 720,
+  "cues": [
+    {
+      "text": "As you can probably tell by now, the bulk of this series is on understanding matrix",
+      "start": 10.24,
+      "end": 14.958
+    },
+    {
+      "text": "and vector operations through that more visual lens of linear transformations.",
+      "start": 14.958,
+      "end": 19.34
+    },
+    {
+      "text": "This video is no exception, describing the concepts of inverse matrices,",
+      "start": 19.98,
+      "end": 24.348
+    },
+    {
+      "text": "column space, rank, and null space through that lens.",
+      "start": 24.348,
+      "end": 27.52
+    },
+    {
+      "text": "A forewarning though, I'm not going to talk about the methods for actually",
+      "start": 27.52,
+      "end": 30.902
+    },
+    {
+      "text": "computing these things, and some would argue that that's pretty important.",
+      "start": 30.902,
+      "end": 34.24
+    },
+    {
+      "text": "There are a lot of very good resources for learning those methods outside this series,",
+      "start": 34.84,
+      "end": 39.353
+    },
+    {
+      "text": "keywords Gaussian elimination and row echelon form.",
+      "start": 39.353,
+      "end": 42
+    },
+    {
+      "text": "I think most of the value that I actually have to add here is on the intuition half.",
+      "start": 42.54,
+      "end": 46.34
+    },
+    {
+      "text": "Plus, in practice, we usually get software to compute this stuff for us anyway.",
+      "start": 46.9,
+      "end": 50.48
+    },
+    {
+      "text": "First, a few words on the usefulness of linear algebra.",
+      "start": 51.5,
+      "end": 53.92
+    },
+    {
+      "text": "By now, you already have a hint for how it's used in describing the manipulation",
+      "start": 54.3,
+      "end": 57.845
+    },
+    {
+      "text": "of space, which is useful for things like computer graphics and robotics.",
+      "start": 57.845,
+      "end": 61.04
+    },
+    {
+      "text": "But one of the main reasons that linear algebra is more",
+      "start": 61.5,
+      "end": 64.256
+    },
+    {
+      "text": "broadly applicable and required for just about any technical",
+      "start": 64.256,
+      "end": 67.259
+    },
+    {
+      "text": "discipline is that it lets us solve certain systems of equations.",
+      "start": 67.259,
+      "end": 70.46
+    },
+    {
+      "text": "When I say system of equations, I mean you have a list of variables,",
+      "start": 71.38,
+      "end": 74.766
+    },
+    {
+      "text": "things you don't know, and a list of equations relating them.",
+      "start": 74.766,
+      "end": 77.76
+    },
+    {
+      "text": "In a lot of situations, those equations can get very complicated.",
+      "start": 78.34,
+      "end": 81.6
+    },
+    {
+      "text": "But, if you're lucky, they might take on a certain special form.",
+      "start": 82.12,
+      "end": 85.3
+    },
+    {
+      "text": "Within each equation, the only thing happening to each variable is",
+      "start": 86.44,
+      "end": 89.92
+    },
+    {
+      "text": "that it's scaled by some constant, and the only thing happening to",
+      "start": 89.92,
+      "end": 93.399
+    },
+    {
+      "text": "each of those scaled variables is that they're added to each other.",
+      "start": 93.399,
+      "end": 96.88
+    },
+    {
+      "text": "So no exponents or fancy functions or multiplying two variables together,",
+      "start": 97.54,
+      "end": 101.394
+    },
+    {
+      "text": "things like that.",
+      "start": 101.394,
+      "end": 102.28
+    },
+    {
+      "text": "The typical way to organize this sort of special system of equations is to",
+      "start": 103.42,
+      "end": 107.612
+    },
+    {
+      "text": "throw all the variables on the left and put any lingering constants on the right.",
+      "start": 107.612,
+      "end": 112.14
+    },
+    {
+      "text": "It's also nice to vertically line up the common variables,",
+      "start": 113.6,
+      "end": 116.231
+    },
+    {
+      "text": "and to do that, you might need to throw in some zero coefficients",
+      "start": 116.231,
+      "end": 119.174
+    },
+    {
+      "text": "whenever the variable doesn't show up in one of the equations.",
+      "start": 119.174,
+      "end": 121.94
+    },
+    {
+      "text": "This is called a linear system of equations.",
+      "start": 124.54,
+      "end": 127.24
+    },
+    {
+      "text": "You might notice that this looks a lot like matrix-vector multiplication.",
+      "start": 128.1,
+      "end": 131.18
+    },
+    {
+      "text": "In fact, you can package all of the equations together into a single",
+      "start": 131.82,
+      "end": 135.629
+    },
+    {
+      "text": "vector equation where you have the matrix containing all of the",
+      "start": 135.629,
+      "end": 139.161
+    },
+    {
+      "text": "constant coefficients and a vector containing all of the variables,",
+      "start": 139.161,
+      "end": 142.915
+    },
+    {
+      "text": "and their matrix-vector product equals some different constant vector.",
+      "start": 142.915,
+      "end": 146.78
+    },
+    {
+      "text": "Let's name that constant matrix A, denote the vector holding the variables",
+      "start": 148.64,
+      "end": 153.06
+    },
+    {
+      "text": "with a bold-faced X, and call the constant vector on the right-hand side V.",
+      "start": 153.06,
+      "end": 157.48
+    },
+    {
+      "text": "This is more than just a notational trick to get",
+      "start": 158.86,
+      "end": 161.03
+    },
+    {
+      "text": "our system of equations written on one line.",
+      "start": 161.03,
+      "end": 162.98
+    },
+    {
+      "text": "It sheds light on a pretty cool geometric interpretation for the problem.",
+      "start": 163.34,
+      "end": 166.78
+    },
+    {
+      "text": "The matrix A corresponds with some linear transformation,",
+      "start": 167.62,
+      "end": 171.134
+    },
+    {
+      "text": "so solving Ax equals V means we're looking for a vector X, which,",
+      "start": 171.134,
+      "end": 175.132
+    },
+    {
+      "text": "after applying the transformation, lands on V.",
+      "start": 175.132,
+      "end": 177.92
+    },
+    {
+      "text": "Think about what's happening here for a moment.",
+      "start": 179.94,
+      "end": 181.78
+    },
+    {
+      "text": "You can hold in your head this really complicated idea of multiple",
+      "start": 182.06,
+      "end": 185.299
+    },
+    {
+      "text": "variables all intermingling with each other just by thinking about",
+      "start": 185.299,
+      "end": 188.538
+    },
+    {
+      "text": "squishing and morphing space and trying to figure out which vector lands on another.",
+      "start": 188.538,
+      "end": 192.6
+    },
+    {
+      "text": "Cool, right?",
+      "start": 193.16,
+      "end": 193.76
+    },
+    {
+      "text": "To start simple, let's say you have a system with two equations and two unknowns.",
+      "start": 194.6,
+      "end": 198.68
+    },
+    {
+      "text": "This means the matrix A is a 2x2 matrix, and V and X are each two-dimensional vectors.",
+      "start": 199,
+      "end": 203.96
+    },
+    {
+      "text": "Now, how we think about the solutions to this equation depends on whether the",
+      "start": 205.6,
+      "end": 209.62
+    },
+    {
+      "text": "transformation associated with A squishes all of space into a lower dimension,",
+      "start": 209.62,
+      "end": 213.693
+    },
+    {
+      "text": "like a line or a point, or if it leaves everything spanning the full two dimensions",
+      "start": 213.693,
+      "end": 218.023
+    },
+    {
+      "text": "where it started.",
+      "start": 218.023,
+      "end": 218.9
+    },
+    {
+      "text": "In the language of the last video, we subdivide into the cases where",
+      "start": 220.32,
+      "end": 224.18
+    },
+    {
+      "text": "A has zero determinant and the case where A has non-zero determinant.",
+      "start": 224.18,
+      "end": 228.04
+    },
+    {
+      "text": "Let's start with the most likely case, where the determinant is non-zero,",
+      "start": 231.3,
+      "end": 234.845
+    },
+    {
+      "text": "meaning space does not get squished into a zero-area region.",
+      "start": 234.845,
+      "end": 237.72
+    },
+    {
+      "text": "In this case, there will always be one and only one vector that lands on V,",
+      "start": 238.6,
+      "end": 242.793
+    },
+    {
+      "text": "and you can find it by playing the transformation in reverse.",
+      "start": 242.793,
+      "end": 246.16
+    },
+    {
+      "text": "Following where V goes as we rewind the tape like this,",
+      "start": 246.7,
+      "end": 250.141
+    },
+    {
+      "text": "you'll find the vector x such that A times x equals V.",
+      "start": 250.141,
+      "end": 253.46
+    },
+    {
+      "text": "When you play the transformation in reverse, it actually corresponds to a separate",
+      "start": 255.4,
+      "end": 259.93
+    },
+    {
+      "text": "linear transformation, commonly called the inverse of A, denoted A to the negative one.",
+      "start": 259.93,
+      "end": 264.68
+    },
+    {
+      "text": "For example, if A was a counterclockwise rotation by 90 degrees,",
+      "start": 265.36,
+      "end": 269.031
+    },
+    {
+      "text": "then the inverse of A would be a clockwise rotation by 90 degrees.",
+      "start": 269.031,
+      "end": 272.76
+    },
+    {
+      "text": "If A was a rightward shear that pushes j-hat one unit to the right,",
+      "start": 274.32,
+      "end": 278.019
+    },
+    {
+      "text": "the inverse of A would be a leftward shear that pushes j-hat one unit to the left.",
+      "start": 278.019,
+      "end": 282.48
+    },
+    {
+      "text": "In general, A inverse is the unique transformation with the property that if you first",
+      "start": 284.1,
+      "end": 288.633
+    },
+    {
+      "text": "apply A, then follow it with the transformation A inverse,",
+      "start": 288.633,
+      "end": 291.708
+    },
+    {
+      "text": "you end up back where you started.",
+      "start": 291.708,
+      "end": 293.48
+    },
+    {
+      "text": "Applying one transformation after another is captured algebraically with",
+      "start": 294.54,
+      "end": 298.638
+    },
+    {
+      "text": "matrix multiplication, so the core property of this transformation A inverse",
+      "start": 298.638,
+      "end": 302.961
+    },
+    {
+      "text": "is that A inverse times A equals the matrix that corresponds to doing nothing.",
+      "start": 302.961,
+      "end": 307.34
+    },
+    {
+      "text": "The transformation that does nothing is called the identity transformation.",
+      "start": 308.2,
+      "end": 311.32
+    },
+    {
+      "text": "It leaves i-hat and j-hat each where they are, unmoved, so its columns are 1,0 and 0,1.",
+      "start": 311.78,
+      "end": 318.08
+    },
+    {
+      "text": "Once you find this inverse, which in practice you'd do with a computer,",
+      "start": 319.98,
+      "end": 323.96
+    },
+    {
+      "text": "you can solve your equation by multiplying this inverse matrix by v.",
+      "start": 323.96,
+      "end": 327.72
+    },
+    {
+      "text": "And again, what this means geometrically is that you're",
+      "start": 329.96,
+      "end": 333.258
+    },
+    {
+      "text": "playing the transformation in reverse and following v.",
+      "start": 333.258,
+      "end": 336.44
+    },
+    {
+      "text": "This non-zero determinant case, which for a random choice of matrix is by far the",
+      "start": 340.2,
+      "end": 344.316
+    },
+    {
+      "text": "most likely one, corresponds with the idea that if you have two unknowns and two",
+      "start": 344.316,
+      "end": 348.383
+    },
+    {
+      "text": "equations, it's almost certainly the case that there's a single unique solution.",
+      "start": 348.383,
+      "end": 352.4
+    },
+    {
+      "text": "This idea also makes sense in higher dimensions,",
+      "start": 353.68,
+      "end": 356.184
+    },
+    {
+      "text": "when the number of equations equals the number of unknowns.",
+      "start": 356.184,
+      "end": 359.2
+    },
+    {
+      "text": "Again, the system of equations can be translated to the geometric",
+      "start": 359.38,
+      "end": 364.045
+    },
+    {
+      "text": "interpretation where you have some transformation A and some vector v,",
+      "start": 364.045,
+      "end": 369.064
+    },
+    {
+      "text": "and you're looking for the vector x that lands on v.",
+      "start": 369.064,
+      "end": 372.74
+    },
+    {
+      "text": "As long as the transformation A doesn't squish all of space into a lower dimension,",
+      "start": 375.74,
+      "end": 380.535
+    },
+    {
+      "text": "meaning its determinant is non-zero, there will be an inverse transformation A inverse,",
+      "start": 380.535,
+      "end": 385.559
+    },
+    {
+      "text": "with the property that if you first do A, then you do A inverse,",
+      "start": 385.559,
+      "end": 389.27
+    },
+    {
+      "text": "it's the same as doing nothing.",
+      "start": 389.27,
+      "end": 391.04
+    },
+    {
+      "text": "And to solve your equation, you just have to multiply",
+      "start": 393.54,
+      "end": 396.574
+    },
+    {
+      "text": "that reverse transformation matrix by the vector v.",
+      "start": 396.574,
+      "end": 399.44
+    },
+    {
+      "text": "But when the determinant is zero, and the transformation associated with the",
+      "start": 403.5,
+      "end": 407.671
+    },
+    {
+      "text": "system of equations squishes space into a smaller dimension, there is no inverse.",
+      "start": 407.671,
+      "end": 412.06
+    },
+    {
+      "text": "You cannot unsquish a line to turn it into a plane.",
+      "start": 412.48,
+      "end": 415.46
+    },
+    {
+      "text": "At least that's not something that a function can do.",
+      "start": 415.98,
+      "end": 418.06
+    },
+    {
+      "text": "That would require transforming each individual vector into a whole line full of vectors.",
+      "start": 418.36,
+      "end": 422.98
+    },
+    {
+      "text": "But functions can only take a single input to a single output.",
+      "start": 423.74,
+      "end": 426.74
+    },
+    {
+      "text": "Similarly, for three equations and three unknowns,",
+      "start": 428.4,
+      "end": 431.208
+    },
+    {
+      "text": "there will be no inverse if the corresponding transformation",
+      "start": 431.208,
+      "end": 434.568
+    },
+    {
+      "text": "squishes 3D space onto the plane, or even if it squishes it onto a line or a point.",
+      "start": 434.568,
+      "end": 439.14
+    },
+    {
+      "text": "Those all correspond to a determinant of zero,",
+      "start": 439.92,
+      "end": 442.2
+    },
+    {
+      "text": "since any region is squished into something with zero volume.",
+      "start": 442.2,
+      "end": 445.16
+    },
+    {
+      "text": "It's still possible that a solution exists even when there is no inverse.",
+      "start": 446.7,
+      "end": 450.64
+    },
+    {
+      "text": "It's just that when your transformation squishes space onto, say, a line,",
+      "start": 450.72,
+      "end": 455.02
+    },
+    {
+      "text": "you have to be lucky enough that the vector v lives somewhere on that line.",
+      "start": 455.02,
+      "end": 459.38
+    },
+    {
+      "text": "You might notice that some of these zero determinant",
+      "start": 463.3,
+      "end": 465.976
+    },
+    {
+      "text": "cases feel a lot more restrictive than others.",
+      "start": 465.976,
+      "end": 468.3
+    },
+    {
+      "text": "Given a 3x3 matrix, for example, it seems a lot harder for a solution",
+      "start": 468.84,
+      "end": 472.621
+    },
+    {
+      "text": "to exist when it squishes space onto a line compared to when it squishes",
+      "start": 472.621,
+      "end": 476.566
+    },
+    {
+      "text": "things onto a plane, even though both of those are zero determinant.",
+      "start": 476.566,
+      "end": 480.24
+    },
+    {
+      "text": "We have some language that's a bit more specific than just saying zero determinant.",
+      "start": 482.6,
+      "end": 486.1
+    },
+    {
+      "text": "When the output of a transformation is a line,",
+      "start": 486.52,
+      "end": 489.231
+    },
+    {
+      "text": "meaning it's one-dimensional, we say the transformation has a rank of one.",
+      "start": 489.231,
+      "end": 493.5
+    },
+    {
+      "text": "If all the vectors land on some two-dimensional plane,",
+      "start": 495.14,
+      "end": 498.073
+    },
+    {
+      "text": "we say the transformation has a rank of two.",
+      "start": 498.073,
+      "end": 500.42
+    },
+    {
+      "text": "So the word rank means the number of dimensions in the output of a transformation.",
+      "start": 502.92,
+      "end": 507.48
+    },
+    {
+      "text": "For instance, in the case of 2x2 matrices, rank two is the best that it can be.",
+      "start": 508.4,
+      "end": 512.72
+    },
+    {
+      "text": "It means the basis vectors continue to span the full two dimensions of space,",
+      "start": 513.08,
+      "end": 517.292
+    },
+    {
+      "text": "and the determinant is not zero.",
+      "start": 517.292,
+      "end": 519.02
+    },
+    {
+      "text": "But for 3x3 matrices, rank two means that we've collapsed,",
+      "start": 519.419,
+      "end": 522.639
+    },
+    {
+      "text": "but not as much as they would have collapsed for a rank one situation.",
+      "start": 522.639,
+      "end": 526.46
+    },
+    {
+      "text": "If a 3D transformation has a non-zero determinant and its output fills all of 3D space,",
+      "start": 527.24,
+      "end": 532.076
+    },
+    {
+      "text": "it has a rank of three.",
+      "start": 532.076,
+      "end": 533.34
+    },
+    {
+      "text": "This set of all possible outputs for your matrix, whether it's a line,",
+      "start": 534.52,
+      "end": 538.62
+    },
+    {
+      "text": "a plane, 3D space, whatever, is called the column space of your matrix.",
+      "start": 538.62,
+      "end": 542.72
+    },
+    {
+      "text": "You can probably guess where that name comes from.",
+      "start": 544.14,
+      "end": 546.28
+    },
+    {
+      "text": "The columns of your matrix tell you where the basis vectors land,",
+      "start": 546.56,
+      "end": 550.784
+    },
+    {
+      "text": "and the span of those transformed basis vectors gives you all possible outputs.",
+      "start": 550.784,
+      "end": 555.84
+    },
+    {
+      "text": "In other words, the column space is the span of the columns of your matrix.",
+      "start": 556.36,
+      "end": 561.14
+    },
+    {
+      "text": "So a more precise definition of rank would be that",
+      "start": 563.3,
+      "end": 566.147
+    },
+    {
+      "text": "it's the number of dimensions in the column space.",
+      "start": 566.147,
+      "end": 568.94
+    },
+    {
+      "text": "When this rank is as high as it can be, meaning it equals the number of columns,",
+      "start": 569.94,
+      "end": 574.49
+    },
+    {
+      "text": "we call the matrix full rank.",
+      "start": 574.49,
+      "end": 576.12
+    },
+    {
+      "text": "Notice the zero vector will always be included in the column space,",
+      "start": 578.54,
+      "end": 582.272
+    },
+    {
+      "text": "since linear transformations must keep the origin fixed in place.",
+      "start": 582.272,
+      "end": 585.84
+    },
+    {
+      "text": "For a full rank transformation, the only vector",
+      "start": 586.9,
+      "end": 589.353
+    },
+    {
+      "text": "that lands at the origin is the zero vector itself.",
+      "start": 589.353,
+      "end": 591.96
+    },
+    {
+      "text": "But for matrices that aren't full rank, which squish to a smaller dimension,",
+      "start": 592.46,
+      "end": 596.107
+    },
+    {
+      "text": "you can have a whole bunch of vectors that land on zero.",
+      "start": 596.107,
+      "end": 598.76
+    },
+    {
+      "text": "If a 2D transformation squishes space onto a line, for example,",
+      "start": 601.64,
+      "end": 605.128
+    },
+    {
+      "text": "there is a separate line in a different direction full of vectors that get squished",
+      "start": 605.128,
+      "end": 609.707
+    },
+    {
+      "text": "onto the origin.",
+      "start": 609.707,
+      "end": 610.58
+    },
+    {
+      "text": "If a 3D transformation squishes space onto a plane,",
+      "start": 611.78,
+      "end": 614.491
+    },
+    {
+      "text": "there's also a full line of vectors that land on the origin.",
+      "start": 614.491,
+      "end": 617.62
+    },
+    {
+      "text": "If a 3D transformation squishes all of space onto a line,",
+      "start": 620.52,
+      "end": 623.74
+    },
+    {
+      "text": "then there's a whole plane full of vectors that land on the origin.",
+      "start": 623.74,
+      "end": 627.46
+    },
+    {
+      "text": "This set of vectors that lands on the origin is called the null space,",
+      "start": 632.8,
+      "end": 637.045
+    },
+    {
+      "text": "or the kernel of your matrix.",
+      "start": 637.045,
+      "end": 638.78
+    },
+    {
+      "text": "It's the space of all vectors that become null,",
+      "start": 639.36,
+      "end": 641.795
+    },
+    {
+      "text": "in the sense that they land on the zero vector.",
+      "start": 641.795,
+      "end": 644.18
+    },
+    {
+      "text": "In terms of the linear system of equations, when v happens to be the zero vector,",
+      "start": 645.68,
+      "end": 649.946
+    },
+    {
+      "text": "the null space gives you all of the possible solutions to the equation.",
+      "start": 649.946,
+      "end": 653.64
+    },
+    {
+      "text": "So that's a very high level overview of how to",
+      "start": 656.42,
+      "end": 658.886
+    },
+    {
+      "text": "think about linear systems of equations geometrically.",
+      "start": 658.886,
+      "end": 661.72
+    },
+    {
+      "text": "Each system has some kind of linear transformation associated with it,",
+      "start": 662.3,
+      "end": 665.999
+    },
+    {
+      "text": "and when that transformation has an inverse, you can use that inverse to solve",
+      "start": 665.999,
+      "end": 670.114
+    },
+    {
+      "text": "your system.",
+      "start": 670.114,
+      "end": 670.74
+    },
+    {
+      "text": "Otherwise, the idea of column space lets us understand when a solution even exists,",
+      "start": 672.28,
+      "end": 677.24
+    },
+    {
+      "text": "and the idea of a null space helps us to understand what the",
+      "start": 677.24,
+      "end": 680.841
+    },
+    {
+      "text": "set of all possible solutions can look like.",
+      "start": 680.841,
+      "end": 683.44
+    },
+    {
+      "text": "Again, there's a lot that I haven't covered here,",
+      "start": 684.98,
+      "end": 687.397
+    },
+    {
+      "text": "most notably how to compute these things.",
+      "start": 687.397,
+      "end": 689.38
+    },
+    {
+      "text": "I also had to limit my scope to examples where the",
+      "start": 689.8,
+      "end": 692.304
+    },
+    {
+      "text": "number of equations equals the number of unknowns.",
+      "start": 692.304,
+      "end": 694.76
+    },
+    {
+      "text": "But the goal here is not to try to teach everything,",
+      "start": 694.88,
+      "end": 697.557
+    },
+    {
+      "text": "it's that you come away with a strong intuition for inverse matrices,",
+      "start": 697.557,
+      "end": 701.094
+    },
+    {
+      "text": "column space, and null space, and that those intuitions make any future",
+      "start": 701.094,
+      "end": 704.731
+    },
+    {
+      "text": "learning that you do more fruitful.",
+      "start": 704.731,
+      "end": 706.5
+    },
+    {
+      "text": "Next video, by popular request, will be a brief footnote about non-square matrices.",
+      "start": 707.66,
+      "end": 711.88
+    },
+    {
+      "text": "Then after that, I'm going to give you my take on dot products,",
+      "start": 711.88,
+      "end": 714.677
+    },
+    {
+      "text": "and something pretty cool that happens when you view them under the light of linear",
+      "start": 714.677,
+      "end": 718.348
+    },
+    {
+      "text": "transformations. See you then!",
+      "start": 718.348,
+      "end": 719.66
+    }
+  ]
+}

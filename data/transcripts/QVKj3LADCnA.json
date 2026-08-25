@@ -1,0 +1,5388 @@
+{
+  "videoId": "QVKj3LADCnA",
+  "title": "Lecture 2: Elimination with Matrices (18.06)",
+  "channel": "MIT OpenCourseWare",
+  "covers": [
+    "gaussian_elimination",
+    "systems_of_equations"
+  ],
+  "punctuated": true,
+  "durationSec": 2844,
+  "cues": [
+    {
+      "text": "Okay.",
+      "start": 9.56,
+      "end": 14.04
+    },
+    {
+      "text": "This is it. This is then the second",
+      "start": 11,
+      "end": 17.68
+    },
+    {
+      "text": "lecture in linear algebra.",
+      "start": 14.04,
+      "end": 19.08
+    },
+    {
+      "text": "And",
+      "start": 17.68,
+      "end": 21.72
+    },
+    {
+      "text": "I've put below",
+      "start": 19.08,
+      "end": 25.4
+    },
+    {
+      "text": "my main topics for today.",
+      "start": 21.72,
+      "end": 27.56
+    },
+    {
+      "text": "That I I put right there a system of",
+      "start": 25.4,
+      "end": 29.4
+    },
+    {
+      "text": "equations. That's going to be our",
+      "start": 27.56,
+      "end": 31.88
+    },
+    {
+      "text": "example to work with. But let me What",
+      "start": 29.4,
+      "end": 34.8
+    },
+    {
+      "text": "are we going to do with it?",
+      "start": 31.88,
+      "end": 34.8
+    },
+    {
+      "text": "We're going to solve it.",
+      "start": 35.36,
+      "end": 39.92
+    },
+    {
+      "text": "And the method of solution will not be",
+      "start": 37.52,
+      "end": 41.84
+    },
+    {
+      "text": "determinants.",
+      "start": 39.92,
+      "end": 43.36
+    },
+    {
+      "text": "Determinants are something that will",
+      "start": 41.84,
+      "end": 45.76
+    },
+    {
+      "text": "come later. The method we'll use is",
+      "start": 43.36,
+      "end": 47.88
+    },
+    {
+      "text": "called elimination.",
+      "start": 45.76,
+      "end": 49.24
+    },
+    {
+      "text": "And",
+      "start": 47.88,
+      "end": 51.72
+    },
+    {
+      "text": "it's the way every",
+      "start": 49.24,
+      "end": 54.96
+    },
+    {
+      "text": "software package solves equations.",
+      "start": 51.72,
+      "end": 56.96
+    },
+    {
+      "text": "And",
+      "start": 54.96,
+      "end": 59.84
+    },
+    {
+      "text": "so and and elimination",
+      "start": 56.96,
+      "end": 62.08
+    },
+    {
+      "text": "uh well, if it succeeds, it gets the",
+      "start": 59.84,
+      "end": 63.28
+    },
+    {
+      "text": "answer.",
+      "start": 62.08,
+      "end": 66.12
+    },
+    {
+      "text": "And normally it does succeed. If the",
+      "start": 63.28,
+      "end": 69.68
+    },
+    {
+      "text": "matrix A that's coming into that system",
+      "start": 66.12,
+      "end": 71.64
+    },
+    {
+      "text": "is a good matrix and I think this one",
+      "start": 69.68,
+      "end": 72.68
+    },
+    {
+      "text": "is,",
+      "start": 71.64,
+      "end": 75
+    },
+    {
+      "text": "then elimination will work. We'll get",
+      "start": 72.68,
+      "end": 78.24
+    },
+    {
+      "text": "the answer in an efficient way.",
+      "start": 75,
+      "end": 80.44
+    },
+    {
+      "text": "But why don't we, as long as we're sort",
+      "start": 78.24,
+      "end": 83.04
+    },
+    {
+      "text": "of seeing how elimination works, it's",
+      "start": 80.44,
+      "end": 86.2
+    },
+    {
+      "text": "always good to ask how could it fail?",
+      "start": 83.04,
+      "end": 88.88
+    },
+    {
+      "text": "So at the same time we'll see we'll see",
+      "start": 86.2,
+      "end": 91.16
+    },
+    {
+      "text": "how elimination decides whether the",
+      "start": 88.88,
+      "end": 93.52
+    },
+    {
+      "text": "matrix is a good one or has",
+      "start": 91.16,
+      "end": 95
+    },
+    {
+      "text": "has problems.",
+      "start": 93.52,
+      "end": 98.24
+    },
+    {
+      "text": "Then to complete the answer, there's a",
+      "start": 95,
+      "end": 100.8
+    },
+    {
+      "text": "obvious step of back substitution. In",
+      "start": 98.24,
+      "end": 102.12
+    },
+    {
+      "text": "fact,",
+      "start": 100.8,
+      "end": 104.36
+    },
+    {
+      "text": "the idea of elimination is",
+      "start": 102.12,
+      "end": 106.36
+    },
+    {
+      "text": "you would have thought of it.",
+      "start": 104.36,
+      "end": 107.64
+    },
+    {
+      "text": "Right? Uh",
+      "start": 106.36,
+      "end": 110.68
+    },
+    {
+      "text": "I mean, Gauss thought of it before we",
+      "start": 107.64,
+      "end": 113.24
+    },
+    {
+      "text": "did, but only because he was",
+      "start": 110.68,
+      "end": 116.44
+    },
+    {
+      "text": "born earlier. It's a natural idea.",
+      "start": 113.24,
+      "end": 117.2
+    },
+    {
+      "text": "Uh",
+      "start": 116.44,
+      "end": 117.96
+    },
+    {
+      "text": "uh",
+      "start": 117.2,
+      "end": 122.2
+    },
+    {
+      "text": "and died earlier, too. Okay, so uh",
+      "start": 117.96,
+      "end": 122.92
+    },
+    {
+      "text": "uh",
+      "start": 122.2,
+      "end": 125.28
+    },
+    {
+      "text": "but then",
+      "start": 122.92,
+      "end": 127.04
+    },
+    {
+      "text": "and you've seen the idea.",
+      "start": 125.28,
+      "end": 128.88
+    },
+    {
+      "text": "But now",
+      "start": 127.04,
+      "end": 130.96
+    },
+    {
+      "text": "the part that I want to show you is",
+      "start": 128.88,
+      "end": 133.48
+    },
+    {
+      "text": "elimination expressed in matrix language",
+      "start": 130.96,
+      "end": 135.84
+    },
+    {
+      "text": "cuz the whole course",
+      "start": 133.48,
+      "end": 138.24
+    },
+    {
+      "text": "all the key ideas get expressed as",
+      "start": 135.84,
+      "end": 140.2
+    },
+    {
+      "text": "matrix operations,",
+      "start": 138.24,
+      "end": 143.4
+    },
+    {
+      "text": "not as words.",
+      "start": 140.2,
+      "end": 144.8
+    },
+    {
+      "text": "And",
+      "start": 143.4,
+      "end": 146.44
+    },
+    {
+      "text": "one of the operations, of course, that",
+      "start": 144.8,
+      "end": 148.24
+    },
+    {
+      "text": "we'll meet is how do we multiply",
+      "start": 146.44,
+      "end": 151.959
+    },
+    {
+      "text": "matrices and why. Okay, so there's a",
+      "start": 148.24,
+      "end": 154.12
+    },
+    {
+      "text": "system of equations.",
+      "start": 151.959,
+      "end": 158.04
+    },
+    {
+      "text": "Three equations in three unknowns.",
+      "start": 154.12,
+      "end": 158.04
+    },
+    {
+      "text": "And there's the matrix, the 3 by 3",
+      "start": 158.2,
+      "end": 164.6
+    },
+    {
+      "text": "matrix that that So, this is the system",
+      "start": 161,
+      "end": 165.44
+    },
+    {
+      "text": "uh",
+      "start": 164.6,
+      "end": 168.08
+    },
+    {
+      "text": "Ax = b, you could say. This is This is",
+      "start": 165.44,
+      "end": 171.4
+    },
+    {
+      "text": "our system to solve. Ax = and the",
+      "start": 168.08,
+      "end": 175.68
+    },
+    {
+      "text": "right-hand side is that vector 2 12 2.",
+      "start": 171.4,
+      "end": 176.88
+    },
+    {
+      "text": "Okay.",
+      "start": 175.68,
+      "end": 177.959
+    },
+    {
+      "text": "Now,",
+      "start": 176.88,
+      "end": 180.88
+    },
+    {
+      "text": "uh when I describe elimination,",
+      "start": 177.959,
+      "end": 183.2
+    },
+    {
+      "text": "it gets to be a pain to keep writing the",
+      "start": 180.88,
+      "end": 185.92
+    },
+    {
+      "text": "equal signs and the pluses and so on.",
+      "start": 183.2,
+      "end": 188.08
+    },
+    {
+      "text": "It's the It's that matrix that's that",
+      "start": 185.92,
+      "end": 190
+    },
+    {
+      "text": "that totally matters.",
+      "start": 188.08,
+      "end": 192.32
+    },
+    {
+      "text": "Everything is in that matrix.",
+      "start": 190,
+      "end": 195.2
+    },
+    {
+      "text": "But behind it is those equations. So,",
+      "start": 192.32,
+      "end": 197.36
+    },
+    {
+      "text": "what does elimination do?",
+      "start": 195.2,
+      "end": 200.72
+    },
+    {
+      "text": "What's the first step of elimination?",
+      "start": 197.36,
+      "end": 202.28
+    },
+    {
+      "text": "We",
+      "start": 200.72,
+      "end": 204.32
+    },
+    {
+      "text": "we we accept the first equation, it's",
+      "start": 202.28,
+      "end": 206.04
+    },
+    {
+      "text": "okay.",
+      "start": 204.32,
+      "end": 208.239
+    },
+    {
+      "text": "I'm going to multiply that equation by",
+      "start": 206.04,
+      "end": 210.84
+    },
+    {
+      "text": "the right number, the right multiplier,",
+      "start": 208.239,
+      "end": 213.16
+    },
+    {
+      "text": "and I'm going to subtract it",
+      "start": 210.84,
+      "end": 215.92
+    },
+    {
+      "text": "from the second equation.",
+      "start": 213.16,
+      "end": 218.68
+    },
+    {
+      "text": "With what purpose? So, what what",
+      "start": 215.92,
+      "end": 220
+    },
+    {
+      "text": "what that will decide what the",
+      "start": 218.68,
+      "end": 223
+    },
+    {
+      "text": "multiplier should be. Our purpose is to",
+      "start": 220,
+      "end": 224.84
+    },
+    {
+      "text": "knock out",
+      "start": 223,
+      "end": 227.239
+    },
+    {
+      "text": "the X",
+      "start": 224.84,
+      "end": 230.12
+    },
+    {
+      "text": "part of equation two.",
+      "start": 227.239,
+      "end": 232.84
+    },
+    {
+      "text": "So, our purpose is to reduce, to",
+      "start": 230.12,
+      "end": 234.8
+    },
+    {
+      "text": "eliminate X.",
+      "start": 232.84,
+      "end": 237.2
+    },
+    {
+      "text": "So, what do I multiply",
+      "start": 234.8,
+      "end": 239.6
+    },
+    {
+      "text": "And again, I'll do it with this matrix",
+      "start": 237.2,
+      "end": 241.44
+    },
+    {
+      "text": "cuz I can do it short.",
+      "start": 239.6,
+      "end": 243.56
+    },
+    {
+      "text": "What what's the multiplier here? What do",
+      "start": 241.44,
+      "end": 246.68
+    },
+    {
+      "text": "I multiply equation one and subtract?",
+      "start": 243.56,
+      "end": 249.08
+    },
+    {
+      "text": "Notice I'm saying that word subtract. I",
+      "start": 246.68,
+      "end": 250.76
+    },
+    {
+      "text": "I'd like to stick to that convention.",
+      "start": 249.08,
+      "end": 254.24
+    },
+    {
+      "text": "I'll do a subtraction. So, what First of",
+      "start": 250.76,
+      "end": 255.16
+    },
+    {
+      "text": "all,",
+      "start": 254.24,
+      "end": 257.799
+    },
+    {
+      "text": "this is the key number, right? That I",
+      "start": 255.16,
+      "end": 259.64
+    },
+    {
+      "text": "I'm starting with.",
+      "start": 257.799,
+      "end": 261.959
+    },
+    {
+      "text": "And that's called the pivot.",
+      "start": 259.64,
+      "end": 263.919
+    },
+    {
+      "text": "I'll put a box around it and and write",
+      "start": 261.959,
+      "end": 267.6
+    },
+    {
+      "text": "its name down. That's the first pivot.",
+      "start": 263.919,
+      "end": 270.6
+    },
+    {
+      "text": "The first pivot.",
+      "start": 267.6,
+      "end": 272.96
+    },
+    {
+      "text": "Okay, so I'm going to use",
+      "start": 270.6,
+      "end": 274.56
+    },
+    {
+      "text": "that's sort of like the key number in",
+      "start": 272.96,
+      "end": 276.36
+    },
+    {
+      "text": "that equation. And now, what's the",
+      "start": 274.56,
+      "end": 278.6
+    },
+    {
+      "text": "multiplier? So, I'm going to I'm going",
+      "start": 276.36,
+      "end": 279.8
+    },
+    {
+      "text": "to",
+      "start": 278.6,
+      "end": 283.48
+    },
+    {
+      "text": "Uh my first row won't change.",
+      "start": 279.8,
+      "end": 286.24
+    },
+    {
+      "text": "But I mean that's the pivot row. But I'm",
+      "start": 283.48,
+      "end": 288.48
+    },
+    {
+      "text": "going to use it.",
+      "start": 286.24,
+      "end": 290.36
+    },
+    {
+      "text": "And now finally, let me ask what the",
+      "start": 288.48,
+      "end": 293.2
+    },
+    {
+      "text": "multiplier is. Yes.",
+      "start": 290.36,
+      "end": 296.2
+    },
+    {
+      "text": "Three. Three times that first equation",
+      "start": 293.2,
+      "end": 298.32
+    },
+    {
+      "text": "will knock out that three.",
+      "start": 296.2,
+      "end": 300.4
+    },
+    {
+      "text": "Okay. So, what will it leave? So, the",
+      "start": 298.32,
+      "end": 302.96
+    },
+    {
+      "text": "multiplier is three. Three times that",
+      "start": 300.4,
+      "end": 305.4
+    },
+    {
+      "text": "will leave will make that zero. That was",
+      "start": 302.96,
+      "end": 308
+    },
+    {
+      "text": "our purpose. Three twos away from the",
+      "start": 305.4,
+      "end": 310.48
+    },
+    {
+      "text": "eight will leave a two. And three ones",
+      "start": 308,
+      "end": 313.12
+    },
+    {
+      "text": "away from one will leave a minus two.",
+      "start": 310.48,
+      "end": 316.64
+    },
+    {
+      "text": "And this guy didn't change.",
+      "start": 313.12,
+      "end": 318.52
+    },
+    {
+      "text": "Okay.",
+      "start": 316.64,
+      "end": 320.72
+    },
+    {
+      "text": "Now, the next step. So, that step of",
+      "start": 318.52,
+      "end": 322.4
+    },
+    {
+      "text": "This is forward elimination and that",
+      "start": 320.72,
+      "end": 324.68
+    },
+    {
+      "text": "step's completed. Oh, well, you could",
+      "start": 322.4,
+      "end": 325.88
+    },
+    {
+      "text": "say, \"Wait a minute. What about the",
+      "start": 324.68,
+      "end": 327.44
+    },
+    {
+      "text": "right-hand side?\"",
+      "start": 325.88,
+      "end": 329.76
+    },
+    {
+      "text": "Shall I carry The right-hand side is",
+      "start": 327.44,
+      "end": 330.8
+    },
+    {
+      "text": "like",
+      "start": 329.76,
+      "end": 334.36
+    },
+    {
+      "text": "gets carried along. I actually MATLAB",
+      "start": 330.8,
+      "end": 336.24
+    },
+    {
+      "text": "finishes up with the left side before",
+      "start": 334.36,
+      "end": 337.919
+    },
+    {
+      "text": "and then just goes back to do the right",
+      "start": 336.24,
+      "end": 339.24
+    },
+    {
+      "text": "side. Maybe I",
+      "start": 337.919,
+      "end": 341.6
+    },
+    {
+      "text": "I'll be MATLAB for for a moment and do",
+      "start": 339.24,
+      "end": 345.6
+    },
+    {
+      "text": "that. Okay, so I just like I'm leaving a",
+      "start": 341.6,
+      "end": 348.6
+    },
+    {
+      "text": "column room for a column of B, the",
+      "start": 345.6,
+      "end": 350.36
+    },
+    {
+      "text": "right-hand side, but I will I'll fill it",
+      "start": 348.6,
+      "end": 352.28
+    },
+    {
+      "text": "in later. Okay.",
+      "start": 350.36,
+      "end": 354.16
+    },
+    {
+      "text": "Now, the next step of elimination is",
+      "start": 352.28,
+      "end": 357.28
+    },
+    {
+      "text": "what? Well, strictly speaking,",
+      "start": 354.16,
+      "end": 360.44
+    },
+    {
+      "text": "I should I cleaned up this was the",
+      "start": 357.28,
+      "end": 363.04
+    },
+    {
+      "text": "This position that I cleaned up was like",
+      "start": 360.44,
+      "end": 365.48
+    },
+    {
+      "text": "the 2 1 position,",
+      "start": 363.04,
+      "end": 368.96
+    },
+    {
+      "text": "row two, column one. So, I got a zero in",
+      "start": 365.48,
+      "end": 371.68
+    },
+    {
+      "text": "the 2 1 position. I'll I'll use 2 1 as",
+      "start": 368.96,
+      "end": 375.16
+    },
+    {
+      "text": "the index of that step. The next step",
+      "start": 371.68,
+      "end": 378.48
+    },
+    {
+      "text": "should be to finish the column and",
+      "start": 375.16,
+      "end": 380.72
+    },
+    {
+      "text": "get a zero in that position.",
+      "start": 378.48,
+      "end": 383.08
+    },
+    {
+      "text": "So, the next step is really the 3 1",
+      "start": 380.72,
+      "end": 385.64
+    },
+    {
+      "text": "step, row three, column one. But, of",
+      "start": 383.08,
+      "end": 389
+    },
+    {
+      "text": "course, I already have",
+      "start": 385.64,
+      "end": 392.52
+    },
+    {
+      "text": "zero. Okay. So, so the multiplier is",
+      "start": 389,
+      "end": 395.52
+    },
+    {
+      "text": "zero. I take zero of this equation away",
+      "start": 392.52,
+      "end": 398.28
+    },
+    {
+      "text": "from this one, and uh",
+      "start": 395.52,
+      "end": 400.84
+    },
+    {
+      "text": "I'm all set. So, I won't repeat that,",
+      "start": 398.28,
+      "end": 403.76
+    },
+    {
+      "text": "but there was a step there which",
+      "start": 400.84,
+      "end": 405
+    },
+    {
+      "text": "uh",
+      "start": 403.76,
+      "end": 407.4
+    },
+    {
+      "text": "MATLAB would have to look. It would look",
+      "start": 405,
+      "end": 408.919
+    },
+    {
+      "text": "at this number",
+      "start": 407.4,
+      "end": 410.08
+    },
+    {
+      "text": "and",
+      "start": 408.919,
+      "end": 412.04
+    },
+    {
+      "text": "uh do that step unless you told it in",
+      "start": 410.08,
+      "end": 415.76
+    },
+    {
+      "text": "advance that it was zero. Okay. Now, uh",
+      "start": 412.04,
+      "end": 417.6
+    },
+    {
+      "text": "now what? Now, we can see the second",
+      "start": 415.76,
+      "end": 419.12
+    },
+    {
+      "text": "pivot,",
+      "start": 417.6,
+      "end": 420.88
+    },
+    {
+      "text": "which is what?",
+      "start": 419.12,
+      "end": 424.64
+    },
+    {
+      "text": "The second pivot See, we've eliminated",
+      "start": 420.88,
+      "end": 426.76
+    },
+    {
+      "text": "X is now gone from this equation, right?",
+      "start": 424.64,
+      "end": 430
+    },
+    {
+      "text": "We're We're down to two equations",
+      "start": 426.76,
+      "end": 432.52
+    },
+    {
+      "text": "in Y and Z.",
+      "start": 430,
+      "end": 434.44
+    },
+    {
+      "text": "And so, now I just do it again. Like,",
+      "start": 432.52,
+      "end": 437.16
+    },
+    {
+      "text": "everything's recursive at this This is a",
+      "start": 434.44,
+      "end": 439.36
+    },
+    {
+      "text": "such a basic algorithm, and it's and",
+      "start": 437.16,
+      "end": 442
+    },
+    {
+      "text": "you've seen it. But, carry me through",
+      "start": 439.36,
+      "end": 444.28
+    },
+    {
+      "text": "one last step.",
+      "start": 442,
+      "end": 446.64
+    },
+    {
+      "text": "What What's the So, this is still the",
+      "start": 444.28,
+      "end": 448.4
+    },
+    {
+      "text": "first pivot.",
+      "start": 446.64,
+      "end": 450.52
+    },
+    {
+      "text": "Now, the second pivot is this guy who's",
+      "start": 448.4,
+      "end": 452.48
+    },
+    {
+      "text": "who's appeared there. And what's the",
+      "start": 450.52,
+      "end": 454.56
+    },
+    {
+      "text": "multiplier the appropriate multiplier",
+      "start": 452.48,
+      "end": 455.72
+    },
+    {
+      "text": "now?",
+      "start": 454.56,
+      "end": 458.44
+    },
+    {
+      "text": "I And what And what's my purpose? Is to",
+      "start": 455.72,
+      "end": 462.72
+    },
+    {
+      "text": "clean up the Is to wipe out the 3 2",
+      "start": 458.44,
+      "end": 464.84
+    },
+    {
+      "text": "position, right? This was the This was",
+      "start": 462.72,
+      "end": 468.32
+    },
+    {
+      "text": "the two one step. And now I'm going to",
+      "start": 464.84,
+      "end": 470.72
+    },
+    {
+      "text": "take the",
+      "start": 468.32,
+      "end": 472.92
+    },
+    {
+      "text": "three two step.",
+      "start": 470.72,
+      "end": 475.64
+    },
+    {
+      "text": "So, this all stays the same.",
+      "start": 472.92,
+      "end": 477.52
+    },
+    {
+      "text": "1 2 1",
+      "start": 475.64,
+      "end": 480.6
+    },
+    {
+      "text": "0 2 -1",
+      "start": 477.52,
+      "end": 483.6
+    },
+    {
+      "text": "and the the pivot are there. Now I'm",
+      "start": 480.6,
+      "end": 485.04
+    },
+    {
+      "text": "using this pivot. So, what's the",
+      "start": 483.6,
+      "end": 486.92
+    },
+    {
+      "text": "multiplier?",
+      "start": 485.04,
+      "end": 488.32
+    },
+    {
+      "text": "Two.",
+      "start": 486.92,
+      "end": 492.16
+    },
+    {
+      "text": "Two times this equation, this row, gets",
+      "start": 488.32,
+      "end": 494.04
+    },
+    {
+      "text": "subtracted from this row and makes that",
+      "start": 492.16,
+      "end": 498.52
+    },
+    {
+      "text": "a zero. So, it's zero zero and what's",
+      "start": 494.04,
+      "end": 501.56
+    },
+    {
+      "text": "Is it a five?",
+      "start": 498.52,
+      "end": 503.04
+    },
+    {
+      "text": "Yeah, I guess it's a five. Is that",
+      "start": 501.56,
+      "end": 504.12
+    },
+    {
+      "text": "right?",
+      "start": 503.04,
+      "end": 506.44
+    },
+    {
+      "text": "Cuz I have a one there and I'm",
+      "start": 504.12,
+      "end": 507.96
+    },
+    {
+      "text": "subtracting",
+      "start": 506.44,
+      "end": 510.48
+    },
+    {
+      "text": "twice of the twice this, so I it think",
+      "start": 507.96,
+      "end": 512.96
+    },
+    {
+      "text": "it it's a five there. There's the third",
+      "start": 510.48,
+      "end": 515.08
+    },
+    {
+      "text": "pivot. So, let me put a box around all",
+      "start": 512.96,
+      "end": 518
+    },
+    {
+      "text": "three pivots.",
+      "start": 515.08,
+      "end": 518
+    },
+    {
+      "text": "Is there a",
+      "start": 521.479,
+      "end": 525.72
+    },
+    {
+      "text": "I think that's Oh, did I just invent a",
+      "start": 523.52,
+      "end": 528.56
+    },
+    {
+      "text": "negative one?",
+      "start": 525.72,
+      "end": 531.12
+    },
+    {
+      "text": "I I I'm sorry that the tape can't",
+      "start": 528.56,
+      "end": 533.12
+    },
+    {
+      "text": "the",
+      "start": 531.12,
+      "end": 536.08
+    },
+    {
+      "text": "correct that as easily as I can. Okay,",
+      "start": 533.12,
+      "end": 538.28
+    },
+    {
+      "text": "is that Thank you very much.",
+      "start": 536.08,
+      "end": 540.76
+    },
+    {
+      "text": "Uh",
+      "start": 538.28,
+      "end": 543.52
+    },
+    {
+      "text": "You get an A in the course now. Is that",
+      "start": 540.76,
+      "end": 547.24
+    },
+    {
+      "text": "Is that Is that correct?",
+      "start": 543.52,
+      "end": 547.24
+    },
+    {
+      "text": "Is it correct now?",
+      "start": 547.48,
+      "end": 551.2
+    },
+    {
+      "text": "Okay.",
+      "start": 549.68,
+      "end": 553.88
+    },
+    {
+      "text": "So, the three pivots are there.",
+      "start": 551.2,
+      "end": 555.44
+    },
+    {
+      "text": "Uh",
+      "start": 553.88,
+      "end": 558.16
+    },
+    {
+      "text": "I I know right away a lot about this",
+      "start": 555.44,
+      "end": 561.56
+    },
+    {
+      "text": "matrix. The this this elimination step",
+      "start": 558.16,
+      "end": 563.64
+    },
+    {
+      "text": "from A this this matrix I'm going to",
+      "start": 561.56,
+      "end": 565.96
+    },
+    {
+      "text": "call U.",
+      "start": 563.64,
+      "end": 568.16
+    },
+    {
+      "text": "U for upper triangular. So, the whole",
+      "start": 565.96,
+      "end": 570.64
+    },
+    {
+      "text": "purpose of elimination was to get from A",
+      "start": 568.16,
+      "end": 571.96
+    },
+    {
+      "text": "to U.",
+      "start": 570.64,
+      "end": 574.92
+    },
+    {
+      "text": "And literally that's the most common",
+      "start": 571.96,
+      "end": 577.76
+    },
+    {
+      "text": "calculation in scientific computing.",
+      "start": 574.92,
+      "end": 579.72
+    },
+    {
+      "text": "And any And people think of how could I",
+      "start": 577.76,
+      "end": 582
+    },
+    {
+      "text": "do that faster because it's a major",
+      "start": 579.72,
+      "end": 583.08
+    },
+    {
+      "text": "major",
+      "start": 582,
+      "end": 584.2
+    },
+    {
+      "text": "thing.",
+      "start": 583.08,
+      "end": 586.32
+    },
+    {
+      "text": "But we're doing it the straightforward",
+      "start": 584.2,
+      "end": 587.48
+    },
+    {
+      "text": "way.",
+      "start": 586.32,
+      "end": 590.16
+    },
+    {
+      "text": "We found three pivots. And by the way, I",
+      "start": 587.48,
+      "end": 592.68
+    },
+    {
+      "text": "didn't say this.",
+      "start": 590.16,
+      "end": 594.68
+    },
+    {
+      "text": "Pivots can't be zero.",
+      "start": 592.68,
+      "end": 597.32
+    },
+    {
+      "text": "I don't accept zero as a pivot. And I",
+      "start": 594.68,
+      "end": 598.84
+    },
+    {
+      "text": "didn't get zero.",
+      "start": 597.32,
+      "end": 601
+    },
+    {
+      "text": "So this this matrix is great. It gave me",
+      "start": 598.84,
+      "end": 602.68
+    },
+    {
+      "text": "three pivots.",
+      "start": 601,
+      "end": 604.4
+    },
+    {
+      "text": "I didn't have to do anything special. I",
+      "start": 602.68,
+      "end": 607.32
+    },
+    {
+      "text": "just followed the rules and",
+      "start": 604.4,
+      "end": 607.92
+    },
+    {
+      "text": "uh",
+      "start": 607.32,
+      "end": 611.68
+    },
+    {
+      "text": "and uh the pivots are 1, 2, and 5.",
+      "start": 607.92,
+      "end": 614.28
+    },
+    {
+      "text": "By the way, just cuz I always anticipate",
+      "start": 611.68,
+      "end": 616.76
+    },
+    {
+      "text": "stuff from a later day, if I wanted to",
+      "start": 614.28,
+      "end": 618.44
+    },
+    {
+      "text": "know the determinant of the the",
+      "start": 616.76,
+      "end": 620.28
+    },
+    {
+      "text": "determinant of this matrix, which I",
+      "start": 618.44,
+      "end": 622.64
+    },
+    {
+      "text": "never do want to know, uh but I would",
+      "start": 620.28,
+      "end": 623.96
+    },
+    {
+      "text": "just multiply the pivots. The",
+      "start": 622.64,
+      "end": 627
+    },
+    {
+      "text": "determinant is 10. So even things like",
+      "start": 623.96,
+      "end": 631.16
+    },
+    {
+      "text": "the determinant are are uh",
+      "start": 627,
+      "end": 632.72
+    },
+    {
+      "text": "are here.",
+      "start": 631.16,
+      "end": 634.84
+    },
+    {
+      "text": "Okay.",
+      "start": 632.72,
+      "end": 637.68
+    },
+    {
+      "text": "Now Oh, let me talk about failure for a",
+      "start": 634.84,
+      "end": 640.44
+    },
+    {
+      "text": "moment and then",
+      "start": 637.68,
+      "end": 642.12
+    },
+    {
+      "text": "and then uh",
+      "start": 640.44,
+      "end": 645.36
+    },
+    {
+      "text": "come back to success. Uh How could this",
+      "start": 642.12,
+      "end": 647.64
+    },
+    {
+      "text": "have failed?",
+      "start": 645.36,
+      "end": 649.48
+    },
+    {
+      "text": "How could",
+      "start": 647.64,
+      "end": 650.52
+    },
+    {
+      "text": "um",
+      "start": 649.48,
+      "end": 653.24
+    },
+    {
+      "text": "Well, how could By fail, I mean fail to",
+      "start": 650.52,
+      "end": 656.72
+    },
+    {
+      "text": "come up with three pivots.",
+      "start": 653.24,
+      "end": 656.72
+    },
+    {
+      "text": "What How Tell me I mean there are a",
+      "start": 657.24,
+      "end": 660.72
+    },
+    {
+      "text": "couple of points.",
+      "start": 658.88,
+      "end": 662.64
+    },
+    {
+      "text": "I would have already been in trouble if",
+      "start": 660.72,
+      "end": 666.52
+    },
+    {
+      "text": "this first very first number here was",
+      "start": 662.64,
+      "end": 669.16
+    },
+    {
+      "text": "zero. If it was a zero there,",
+      "start": 666.52,
+      "end": 670.72
+    },
+    {
+      "text": "suppose that had been a zero. There were",
+      "start": 669.16,
+      "end": 673.96
+    },
+    {
+      "text": "no x's in that equation first equation.",
+      "start": 670.72,
+      "end": 674.76
+    },
+    {
+      "text": "It",
+      "start": 673.96,
+      "end": 676.2
+    },
+    {
+      "text": "Does that mean I can't solve the",
+      "start": 674.76,
+      "end": 679.08
+    },
+    {
+      "text": "problem? Does that mean I quit?",
+      "start": 676.2,
+      "end": 681.52
+    },
+    {
+      "text": "No.",
+      "start": 679.08,
+      "end": 681.52
+    },
+    {
+      "text": "What do I do?",
+      "start": 681.64,
+      "end": 686.12
+    },
+    {
+      "text": "I ex- switch rows. I exchange rows. So",
+      "start": 683.2,
+      "end": 689
+    },
+    {
+      "text": "in case of a zero, I I will not say zero",
+      "start": 686.12,
+      "end": 690.08
+    },
+    {
+      "text": "pivot.",
+      "start": 689,
+      "end": 692
+    },
+    {
+      "text": "I will never be heard to utter those",
+      "start": 690.08,
+      "end": 695.2
+    },
+    {
+      "text": "words, zero pivot. But, if there's a",
+      "start": 692,
+      "end": 697.72
+    },
+    {
+      "text": "zero in the pivot position, maybe I can",
+      "start": 695.2,
+      "end": 701.04
+    },
+    {
+      "text": "say that, I would try to exchange for a",
+      "start": 697.72,
+      "end": 704.36
+    },
+    {
+      "text": "lower equation and get a non get a",
+      "start": 701.04,
+      "end": 707.04
+    },
+    {
+      "text": "proper pivot up there. Okay. Now, for",
+      "start": 704.36,
+      "end": 708.2
+    },
+    {
+      "text": "example,",
+      "start": 707.04,
+      "end": 711.28
+    },
+    {
+      "text": "this second pivot came out two. Could it",
+      "start": 708.2,
+      "end": 713.48
+    },
+    {
+      "text": "have come out zero? What Actually, if I",
+      "start": 711.28,
+      "end": 716.6
+    },
+    {
+      "text": "change that eight a little bit,",
+      "start": 713.48,
+      "end": 719.84
+    },
+    {
+      "text": "I would have got again",
+      "start": 716.6,
+      "end": 722.28
+    },
+    {
+      "text": "a a little trouble. What What should I",
+      "start": 719.84,
+      "end": 725.8
+    },
+    {
+      "text": "change that eight to so that I get some",
+      "start": 722.28,
+      "end": 728.04
+    },
+    {
+      "text": "so that I run into trouble?",
+      "start": 725.8,
+      "end": 731.2
+    },
+    {
+      "text": "A six. If that had been a six,",
+      "start": 728.04,
+      "end": 733.92
+    },
+    {
+      "text": "then this would have been",
+      "start": 731.2,
+      "end": 736.44
+    },
+    {
+      "text": "zero and I couldn't have used that as",
+      "start": 733.92,
+      "end": 738.76
+    },
+    {
+      "text": "the pivot, but I could have exchanged",
+      "start": 736.44,
+      "end": 740.08
+    },
+    {
+      "text": "again.",
+      "start": 738.76,
+      "end": 741.8
+    },
+    {
+      "text": "In this case,",
+      "start": 740.08,
+      "end": 744.44
+    },
+    {
+      "text": "in this case, because what When can I",
+      "start": 741.8,
+      "end": 746.68
+    },
+    {
+      "text": "When can I get out of trouble?",
+      "start": 744.44,
+      "end": 748.44
+    },
+    {
+      "text": "I can get out of trouble if there's a",
+      "start": 746.68,
+      "end": 751.88
+    },
+    {
+      "text": "non-zero below this this troublesome",
+      "start": 748.44,
+      "end": 754.2
+    },
+    {
+      "text": "zero. And there is here.",
+      "start": 751.88,
+      "end": 756.96
+    },
+    {
+      "text": "So, I would be okay in this case. If",
+      "start": 754.2,
+      "end": 759.96
+    },
+    {
+      "text": "this was a six, I would survive by a row",
+      "start": 756.96,
+      "end": 761.4
+    },
+    {
+      "text": "exchange.",
+      "start": 759.96,
+      "end": 763.16
+    },
+    {
+      "text": "Now,",
+      "start": 761.4,
+      "end": 764.8
+    },
+    {
+      "text": "of course,",
+      "start": 763.16,
+      "end": 766.2
+    },
+    {
+      "text": "it might have happened that I couldn't",
+      "start": 764.8,
+      "end": 768.68
+    },
+    {
+      "text": "do the row that that there was zeros",
+      "start": 766.2,
+      "end": 771.88
+    },
+    {
+      "text": "below it, but here there wasn't. Now, I",
+      "start": 768.68,
+      "end": 773.96
+    },
+    {
+      "text": "could also have got in trouble if this",
+      "start": 771.88,
+      "end": 778.36
+    },
+    {
+      "text": "number one was a little different.",
+      "start": 773.96,
+      "end": 778.36
+    },
+    {
+      "text": "See, that one became a five, I guess, by",
+      "start": 778.44,
+      "end": 784.24
+    },
+    {
+      "text": "the end.",
+      "start": 781.44,
+      "end": 784.24
+    },
+    {
+      "text": "So, do you do you Can you see what",
+      "start": 784.96,
+      "end": 790.56
+    },
+    {
+      "text": "number there would have got me trouble",
+      "start": 787.36,
+      "end": 794
+    },
+    {
+      "text": "that I really couldn't get out of?",
+      "start": 790.56,
+      "end": 795.8
+    },
+    {
+      "text": "Trouble that I couldn't get out of would",
+      "start": 794,
+      "end": 799.16
+    },
+    {
+      "text": "mean if the pivot is",
+      "start": 795.8,
+      "end": 801.64
+    },
+    {
+      "text": "All right. If the if zero is in the",
+      "start": 799.16,
+      "end": 804.68
+    },
+    {
+      "text": "pivot position and I can't I've got no",
+      "start": 801.64,
+      "end": 807.48
+    },
+    {
+      "text": "place to exchange. So, there there there",
+      "start": 804.68,
+      "end": 810.2
+    },
+    {
+      "text": "must be some number",
+      "start": 807.48,
+      "end": 812.32
+    },
+    {
+      "text": "which if I had had here, it would have",
+      "start": 810.2,
+      "end": 814.36
+    },
+    {
+      "text": "meant failure.",
+      "start": 812.32,
+      "end": 816.52
+    },
+    {
+      "text": "Negative four, good.",
+      "start": 814.36,
+      "end": 818.4
+    },
+    {
+      "text": "If it was a negative four here, if it",
+      "start": 816.52,
+      "end": 820.92
+    },
+    {
+      "text": "happened to be a negative four, can I",
+      "start": 818.4,
+      "end": 823.48
+    },
+    {
+      "text": "can I I'll temporarily put it up here.",
+      "start": 820.92,
+      "end": 826.12
+    },
+    {
+      "text": "If If this had been a negative",
+      "start": 823.48,
+      "end": 829.24
+    },
+    {
+      "text": "four Z, then I would have gone through",
+      "start": 826.12,
+      "end": 830.8
+    },
+    {
+      "text": "the same steps. This would have been a",
+      "start": 829.24,
+      "end": 832.52
+    },
+    {
+      "text": "minus four. It still would have been a",
+      "start": 830.8,
+      "end": 835.4
+    },
+    {
+      "text": "minus four. But at the last minute it",
+      "start": 832.52,
+      "end": 839.48
+    },
+    {
+      "text": "would have become zero.",
+      "start": 835.4,
+      "end": 841.08
+    },
+    {
+      "text": "And there wouldn't have been a third",
+      "start": 839.48,
+      "end": 843.72
+    },
+    {
+      "text": "pivot. The matrix would have not been",
+      "start": 841.08,
+      "end": 845.16
+    },
+    {
+      "text": "invertible.",
+      "start": 843.72,
+      "end": 847.4
+    },
+    {
+      "text": "Of course, the inverse of a matrix is",
+      "start": 845.16,
+      "end": 850.52
+    },
+    {
+      "text": "coming next week, but uh",
+      "start": 847.4,
+      "end": 852.92
+    },
+    {
+      "text": "you've heard these words before. So,",
+      "start": 850.52,
+      "end": 855.44
+    },
+    {
+      "text": "that that's how we we we identify",
+      "start": 852.92,
+      "end": 856.84
+    },
+    {
+      "text": "failure.",
+      "start": 855.44,
+      "end": 859.6
+    },
+    {
+      "text": "There's temporary failure when we can do",
+      "start": 856.84,
+      "end": 862.32
+    },
+    {
+      "text": "a row exchange and and get out of it. Or",
+      "start": 859.6,
+      "end": 864.32
+    },
+    {
+      "text": "there's complete failure when we get a",
+      "start": 862.32,
+      "end": 865.92
+    },
+    {
+      "text": "zero and",
+      "start": 864.32,
+      "end": 867.44
+    },
+    {
+      "text": "and there's nothing below that we can",
+      "start": 865.92,
+      "end": 869.68
+    },
+    {
+      "text": "use. Okay.",
+      "start": 867.44,
+      "end": 874.28
+    },
+    {
+      "text": "Let's stay with uh back to success now.",
+      "start": 869.68,
+      "end": 877
+    },
+    {
+      "text": "In fact, I guess the next topic is back",
+      "start": 874.28,
+      "end": 878.96
+    },
+    {
+      "text": "substitution.",
+      "start": 877,
+      "end": 882.96
+    },
+    {
+      "text": "So, what's back substitution? Well, that",
+      "start": 878.96,
+      "end": 884.68
+    },
+    {
+      "text": "Now, I better bring the right hand side",
+      "start": 882.96,
+      "end": 886.64
+    },
+    {
+      "text": "in.",
+      "start": 884.68,
+      "end": 890.2
+    },
+    {
+      "text": "So, what would MATLAB do?",
+      "start": 886.64,
+      "end": 892.16
+    },
+    {
+      "text": "And what should we do? Let's Let's Let",
+      "start": 890.2,
+      "end": 894
+    },
+    {
+      "text": "me bring in the right hand side as an",
+      "start": 892.16,
+      "end": 895.52
+    },
+    {
+      "text": "extra column.",
+      "start": 894,
+      "end": 900.12
+    },
+    {
+      "text": "So, there comes B. So, it's 2 12 2.",
+      "start": 895.52,
+      "end": 900.12
+    },
+    {
+      "text": "This is I I would call this the",
+      "start": 902.32,
+      "end": 906.64
+    },
+    {
+      "text": "augmented matrix. Augment means you've",
+      "start": 903.92,
+      "end": 909.56
+    },
+    {
+      "text": "tacked something on. I've tacked on this",
+      "start": 906.64,
+      "end": 911.76
+    },
+    {
+      "text": "extra column.",
+      "start": 909.56,
+      "end": 915.2
+    },
+    {
+      "text": "Because when I'm working with equations,",
+      "start": 911.76,
+      "end": 917.92
+    },
+    {
+      "text": "I do the same thing to both sides.",
+      "start": 915.2,
+      "end": 920.92
+    },
+    {
+      "text": "So, at this step, I I",
+      "start": 917.92,
+      "end": 922.96
+    },
+    {
+      "text": "two of the first equation away from the",
+      "start": 920.92,
+      "end": 926.08
+    },
+    {
+      "text": "second equation so that this",
+      "start": 922.96,
+      "end": 928.08
+    },
+    {
+      "text": "augmented shall I I even brought some",
+      "start": 926.08,
+      "end": 931.52
+    },
+    {
+      "text": "colored chalk, but I don't know",
+      "start": 928.08,
+      "end": 934.16
+    },
+    {
+      "text": "if it shows up. So, this is like the",
+      "start": 931.52,
+      "end": 935.84
+    },
+    {
+      "text": "augmented",
+      "start": 934.16,
+      "end": 937.4
+    },
+    {
+      "text": "No, damn.",
+      "start": 935.84,
+      "end": 941.6
+    },
+    {
+      "text": "Circle the wrong thing. Okay, here's the",
+      "start": 937.4,
+      "end": 943.96
+    },
+    {
+      "text": "Here is B.",
+      "start": 941.6,
+      "end": 946.68
+    },
+    {
+      "text": "Okay, that's the extra column. Okay, so",
+      "start": 943.96,
+      "end": 948.04
+    },
+    {
+      "text": "what happened",
+      "start": 946.68,
+      "end": 949.92
+    },
+    {
+      "text": "to that extra column, the right-hand",
+      "start": 948.04,
+      "end": 952.44
+    },
+    {
+      "text": "side of the equations when I did the",
+      "start": 949.92,
+      "end": 954.48
+    },
+    {
+      "text": "first step? So, with that was three of",
+      "start": 952.44,
+      "end": 957.76
+    },
+    {
+      "text": "this away from this, so it took the two",
+      "start": 954.48,
+      "end": 959.6
+    },
+    {
+      "text": "stayed the same,",
+      "start": 957.76,
+      "end": 962.12
+    },
+    {
+      "text": "but three twos got taken away from 12",
+      "start": 959.6,
+      "end": 964.48
+    },
+    {
+      "text": "leaving six, and that two stayed the",
+      "start": 962.12,
+      "end": 966.8
+    },
+    {
+      "text": "same. So, this is the",
+      "start": 964.48,
+      "end": 969.32
+    },
+    {
+      "text": "how it's looking halfway along, and then",
+      "start": 966.8,
+      "end": 972.72
+    },
+    {
+      "text": "let me just carry to the end. The two",
+      "start": 969.32,
+      "end": 976.28
+    },
+    {
+      "text": "and the six stay the same, but",
+      "start": 972.72,
+      "end": 979.04
+    },
+    {
+      "text": "what do I have here?",
+      "start": 976.28,
+      "end": 981.72
+    },
+    {
+      "text": "Oh, gosh.",
+      "start": 979.04,
+      "end": 981.72
+    },
+    {
+      "text": "Uh help me out now. What So, now I'm I'm",
+      "start": 982.48,
+      "end": 987.76
+    },
+    {
+      "text": "This is This is still like forward",
+      "start": 985.72,
+      "end": 989.32
+    },
+    {
+      "text": "elimination.",
+      "start": 987.76,
+      "end": 991.56
+    },
+    {
+      "text": "I I got to this point, which I think is",
+      "start": 989.32,
+      "end": 992.64
+    },
+    {
+      "text": "right.",
+      "start": 991.56,
+      "end": 994.48
+    },
+    {
+      "text": "And now, what did I do with this step? I",
+      "start": 992.64,
+      "end": 996.88
+    },
+    {
+      "text": "multiplied that pivot by two or that",
+      "start": 994.48,
+      "end": 998.92
+    },
+    {
+      "text": "whole equation by two and subtracted",
+      "start": 996.88,
+      "end": 1001.64
+    },
+    {
+      "text": "from that. So, I think I take two sixes,",
+      "start": 998.92,
+      "end": 1003.76
+    },
+    {
+      "text": "which is 12 away from the two. Do you",
+      "start": 1001.64,
+      "end": 1006.28
+    },
+    {
+      "text": "think minus 10",
+      "start": 1003.76,
+      "end": 1009.56
+    },
+    {
+      "text": "is my final right-hand side?",
+      "start": 1006.28,
+      "end": 1011.36
+    },
+    {
+      "text": "The right-hand side that goes with U,",
+      "start": 1009.56,
+      "end": 1014.76
+    },
+    {
+      "text": "and let me call that once and forever",
+      "start": 1011.36,
+      "end": 1016.8
+    },
+    {
+      "text": "the vector C.",
+      "start": 1014.76,
+      "end": 1020.4
+    },
+    {
+      "text": "So, C is what happens to B,",
+      "start": 1016.8,
+      "end": 1024
+    },
+    {
+      "text": "and U is what happens to A.",
+      "start": 1020.4,
+      "end": 1028.04
+    },
+    {
+      "text": "Okay, there you've seen elimination",
+      "start": 1024,
+      "end": 1028.04
+    },
+    {
+      "text": "clean. Okay.",
+      "start": 1028.28,
+      "end": 1033.92
+    },
+    {
+      "text": "Oh, what's back substitution?",
+      "start": 1031.24,
+      "end": 1035.88
+    },
+    {
+      "text": "So, So, what are my final equations",
+      "start": 1033.92,
+      "end": 1039.92
+    },
+    {
+      "text": "then? Can I Can I copy these equations?",
+      "start": 1035.88,
+      "end": 1048.319
+    },
+    {
+      "text": "Uh x + 2y + z = 2 is still there. And 2y",
+      "start": 1039.92,
+      "end": 1054.96
+    },
+    {
+      "text": "- 2z = 6 is there. And 5z is -10.",
+      "start": 1048.319,
+      "end": 1055.96
+    },
+    {
+      "text": "Okay.",
+      "start": 1054.96,
+      "end": 1058.24
+    },
+    {
+      "text": "That Those are the equations that are",
+      "start": 1055.96,
+      "end": 1061.6
+    },
+    {
+      "text": "that these numbers are telling me about.",
+      "start": 1058.24,
+      "end": 1066.92
+    },
+    {
+      "text": "That Those are the equations Ux = c.",
+      "start": 1061.6,
+      "end": 1070.04
+    },
+    {
+      "text": "Okay, how do I solve them?",
+      "start": 1066.92,
+      "end": 1073.16
+    },
+    {
+      "text": "What do What one do I solve for first?",
+      "start": 1070.04,
+      "end": 1075.92
+    },
+    {
+      "text": "z I see immediately that the correct",
+      "start": 1073.16,
+      "end": 1079.04
+    },
+    {
+      "text": "value of z is",
+      "start": 1075.92,
+      "end": 1080.56
+    },
+    {
+      "text": "-2.",
+      "start": 1079.04,
+      "end": 1082.8
+    },
+    {
+      "text": "And what do I do next?",
+      "start": 1080.56,
+      "end": 1086.16
+    },
+    {
+      "text": "I go back upwards. I now know z here.",
+      "start": 1082.8,
+      "end": 1087.52
+    },
+    {
+      "text": "So,",
+      "start": 1086.16,
+      "end": 1090.8
+    },
+    {
+      "text": "uh if z is -2, that's four there. Is",
+      "start": 1087.52,
+      "end": 1092.32
+    },
+    {
+      "text": "that right?",
+      "start": 1090.8,
+      "end": 1096.04
+    },
+    {
+      "text": "And so, 2y + the four is six. Maybe y is",
+      "start": 1092.32,
+      "end": 1098.6
+    },
+    {
+      "text": "one.",
+      "start": 1096.04,
+      "end": 1098.6
+    },
+    {
+      "text": "Going This is This is back substitution.",
+      "start": 1098.68,
+      "end": 1102.8
+    },
+    {
+      "text": "We're doing it on the fly cuz it's so",
+      "start": 1100.96,
+      "end": 1105.24
+    },
+    {
+      "text": "easy. And then x",
+      "start": 1102.8,
+      "end": 1107.12
+    },
+    {
+      "text": "is",
+      "start": 1105.24,
+      "end": 1113.8
+    },
+    {
+      "text": "So, x 2y's is 2 - 2. Maybe x is 2.",
+      "start": 1107.12,
+      "end": 1113.8
+    },
+    {
+      "text": "So, you see what back substitution is.",
+      "start": 1118.52,
+      "end": 1122.72
+    },
+    {
+      "text": "It's the",
+      "start": 1121.52,
+      "end": 1125.2
+    },
+    {
+      "text": "simple step solving the equations in",
+      "start": 1122.72,
+      "end": 1128.12
+    },
+    {
+      "text": "reverse order because the system is",
+      "start": 1125.2,
+      "end": 1130.8
+    },
+    {
+      "text": "triangular. Okay.",
+      "start": 1128.12,
+      "end": 1131.96
+    },
+    {
+      "text": "Good.",
+      "start": 1130.8,
+      "end": 1133.76
+    },
+    {
+      "text": "So, that's elimination and back",
+      "start": 1131.96,
+      "end": 1136.04
+    },
+    {
+      "text": "substitution. And I kept the right-hand",
+      "start": 1133.76,
+      "end": 1137.56
+    },
+    {
+      "text": "side along.",
+      "start": 1136.04,
+      "end": 1140.52
+    },
+    {
+      "text": "Okay, now what do I What So, that",
+      "start": 1137.56,
+      "end": 1141.92
+    },
+    {
+      "text": "That like is",
+      "start": 1140.52,
+      "end": 1143.48
+    },
+    {
+      "text": "first",
+      "start": 1141.92,
+      "end": 1145.6
+    },
+    {
+      "text": "piece of the lecture.",
+      "start": 1143.48,
+      "end": 1148.68
+    },
+    {
+      "text": "What's the second piece?",
+      "start": 1145.6,
+      "end": 1152.16
+    },
+    {
+      "text": "Matrices are going to get in. So, So, I",
+      "start": 1148.68,
+      "end": 1154.72
+    },
+    {
+      "text": "first I wrote stuff with X's, Y's, and",
+      "start": 1152.16,
+      "end": 1159
+    },
+    {
+      "text": "Z's in there. Then I really",
+      "start": 1154.72,
+      "end": 1159
+    },
+    {
+      "text": "got the right shorthand just writing the",
+      "start": 1159.44,
+      "end": 1164.52
+    },
+    {
+      "text": "matrix entries.",
+      "start": 1162.08,
+      "end": 1167.88
+    },
+    {
+      "text": "And now I want to write the operations",
+      "start": 1164.52,
+      "end": 1169.76
+    },
+    {
+      "text": "that I did",
+      "start": 1167.88,
+      "end": 1172.76
+    },
+    {
+      "text": "in matrices, right? I've carried the",
+      "start": 1169.76,
+      "end": 1176.08
+    },
+    {
+      "text": "matrices along, but I haven't said",
+      "start": 1172.76,
+      "end": 1178.04
+    },
+    {
+      "text": "the",
+      "start": 1176.08,
+      "end": 1180.36
+    },
+    {
+      "text": "operation",
+      "start": 1178.04,
+      "end": 1183.2
+    },
+    {
+      "text": "that those those elimination steps I I",
+      "start": 1180.36,
+      "end": 1185.68
+    },
+    {
+      "text": "now want to express as matrices. Okay,",
+      "start": 1183.2,
+      "end": 1188.28
+    },
+    {
+      "text": "here they come.",
+      "start": 1185.68,
+      "end": 1188.28
+    },
+    {
+      "text": "So, now this is elimination matrices.",
+      "start": 1189.56,
+      "end": 1193.88
+    },
+    {
+      "text": "Okay. Let me take that Let me take that",
+      "start": 1195.28,
+      "end": 1201.4
+    },
+    {
+      "text": "first step, which which took me from 1 2",
+      "start": 1198.28,
+      "end": 1205.2
+    },
+    {
+      "text": "1 3 8 1",
+      "start": 1201.4,
+      "end": 1205.2
+    },
+    {
+      "text": "0 4 1.",
+      "start": 1205.44,
+      "end": 1208.24
+    },
+    {
+      "text": "I I want to operate on that. I'm I'm",
+      "start": 1209.92,
+      "end": 1216.16
+    },
+    {
+      "text": "want to do uh elimination on that.",
+      "start": 1212.36,
+      "end": 1217.92
+    },
+    {
+      "text": "Okay.",
+      "start": 1216.16,
+      "end": 1220.44
+    },
+    {
+      "text": "Okay. Now, actually I'm I'm remembering",
+      "start": 1217.92,
+      "end": 1224.24
+    },
+    {
+      "text": "a point I want to I want to",
+      "start": 1220.44,
+      "end": 1224.24
+    },
+    {
+      "text": "single out as as",
+      "start": 1224.28,
+      "end": 1227.32
+    },
+    {
+      "text": "as",
+      "start": 1226.4,
+      "end": 1230.36
+    },
+    {
+      "text": "uh specially important. Let me Let me",
+      "start": 1227.32,
+      "end": 1232.44
+    },
+    {
+      "text": "move the board up",
+      "start": 1230.36,
+      "end": 1235
+    },
+    {
+      "text": "for that.",
+      "start": 1232.44,
+      "end": 1235
+    },
+    {
+      "text": "Cuz",
+      "start": 1236.56,
+      "end": 1239.68
+    },
+    {
+      "text": "when we do matrix operations, we got to",
+      "start": 1237.76,
+      "end": 1241.88
+    },
+    {
+      "text": "like be able to see the big picture.",
+      "start": 1239.68,
+      "end": 1244.92
+    },
+    {
+      "text": "Okay, last time I spoke about",
+      "start": 1241.88,
+      "end": 1247.16
+    },
+    {
+      "text": "the big picture of when I multiply a",
+      "start": 1244.92,
+      "end": 1250.64
+    },
+    {
+      "text": "matrix by a right-hand side. If I have",
+      "start": 1247.16,
+      "end": 1253.52
+    },
+    {
+      "text": "some matrix there, and I multiply it by",
+      "start": 1250.64,
+      "end": 1255.88
+    },
+    {
+      "text": "3 4 5, let's say.",
+      "start": 1253.52,
+      "end": 1259.2
+    },
+    {
+      "text": "So, here's a matrix.",
+      "start": 1255.88,
+      "end": 1259.2
+    },
+    {
+      "text": "What did I say? Well, I guess I only",
+      "start": 1259.48,
+      "end": 1264
+    },
+    {
+      "text": "said it on the videotape, but",
+      "start": 1261.64,
+      "end": 1265.52
+    },
+    {
+      "text": "do you remember",
+      "start": 1264,
+      "end": 1266.88
+    },
+    {
+      "text": "how I look at that matrix",
+      "start": 1265.52,
+      "end": 1268.44
+    },
+    {
+      "text": "multiplication,",
+      "start": 1266.88,
+      "end": 1271.48
+    },
+    {
+      "text": "the result of multiplying a matrix by",
+      "start": 1268.44,
+      "end": 1274.28
+    },
+    {
+      "text": "some vector",
+      "start": 1271.48,
+      "end": 1278.12
+    },
+    {
+      "text": "is a combination of the",
+      "start": 1274.28,
+      "end": 1280.44
+    },
+    {
+      "text": "columns",
+      "start": 1278.12,
+      "end": 1283.2
+    },
+    {
+      "text": "of the matrix. It's three times the",
+      "start": 1280.44,
+      "end": 1284.6
+    },
+    {
+      "text": "first column.",
+      "start": 1283.2,
+      "end": 1287.56
+    },
+    {
+      "text": "It's three times column one",
+      "start": 1284.6,
+      "end": 1291.44
+    },
+    {
+      "text": "plus four times column two",
+      "start": 1287.56,
+      "end": 1296.28
+    },
+    {
+      "text": "plus five times column three.",
+      "start": 1291.44,
+      "end": 1296.28
+    },
+    {
+      "text": "Okay. I'm going to come back to that",
+      "start": 1299.6,
+      "end": 1305.92
+    },
+    {
+      "text": "multiple times. What I wanted to do now",
+      "start": 1302.32,
+      "end": 1310.12
+    },
+    {
+      "text": "was to emphasize the",
+      "start": 1305.92,
+      "end": 1314.28
+    },
+    {
+      "text": "parallel thing with rows.",
+      "start": 1310.12,
+      "end": 1317.8
+    },
+    {
+      "text": "Why? Because all our operations here for",
+      "start": 1314.28,
+      "end": 1320.64
+    },
+    {
+      "text": "this like this two weeks of the course",
+      "start": 1317.8,
+      "end": 1324.16
+    },
+    {
+      "text": "are row operations. So, I have to",
+      "start": 1320.64,
+      "end": 1327.08
+    },
+    {
+      "text": "So, if this isn't",
+      "start": 1324.16,
+      "end": 1329.6
+    },
+    {
+      "text": "what I need for row operations, let me",
+      "start": 1327.08,
+      "end": 1330.56
+    },
+    {
+      "text": "let me",
+      "start": 1329.6,
+      "end": 1332.84
+    },
+    {
+      "text": "let me do a row operation. Suppose I",
+      "start": 1330.56,
+      "end": 1335.92
+    },
+    {
+      "text": "have my matrix",
+      "start": 1332.84,
+      "end": 1338.48
+    },
+    {
+      "text": "again",
+      "start": 1335.92,
+      "end": 1338.48
+    },
+    {
+      "text": "and suppose I multiply on the left by",
+      "start": 1338.96,
+      "end": 1345.84
+    },
+    {
+      "text": "some, let's say 1 2 7.",
+      "start": 1341.2,
+      "end": 1345.84
+    },
+    {
+      "text": "Again, I'm just like saying what the",
+      "start": 1348.56,
+      "end": 1353.76
+    },
+    {
+      "text": "result is.",
+      "start": 1351.04,
+      "end": 1356.12
+    },
+    {
+      "text": "And then we'll",
+      "start": 1353.76,
+      "end": 1358.28
+    },
+    {
+      "text": "say how matrix multiplication works and",
+      "start": 1356.12,
+      "end": 1360.32
+    },
+    {
+      "text": "we'll see that it's true.",
+      "start": 1358.28,
+      "end": 1361.48
+    },
+    {
+      "text": "Okay.",
+      "start": 1360.32,
+      "end": 1362.76
+    },
+    {
+      "text": "But",
+      "start": 1361.48,
+      "end": 1365.64
+    },
+    {
+      "text": "maybe already I'm making uh uh uh",
+      "start": 1362.76,
+      "end": 1368.84
+    },
+    {
+      "text": "I'm sort of bringing up the central idea",
+      "start": 1365.64,
+      "end": 1370.64
+    },
+    {
+      "text": "of linear algebra is",
+      "start": 1368.84,
+      "end": 1374.4
+    },
+    {
+      "text": "how these matrices work by rows as well",
+      "start": 1370.64,
+      "end": 1376.8
+    },
+    {
+      "text": "as by columns. Okay, how does it work by",
+      "start": 1374.4,
+      "end": 1379.32
+    },
+    {
+      "text": "rows? What what",
+      "start": 1376.8,
+      "end": 1381.6
+    },
+    {
+      "text": "So, this is a",
+      "start": 1379.32,
+      "end": 1384.68
+    },
+    {
+      "text": "that that's a row vector.",
+      "start": 1381.6,
+      "end": 1387.08
+    },
+    {
+      "text": "It's a It's I could say that's a 1 by 3",
+      "start": 1384.68,
+      "end": 1388.48
+    },
+    {
+      "text": "matrix.",
+      "start": 1387.08,
+      "end": 1390.8
+    },
+    {
+      "text": "A row vector multiplying a 3 by 3",
+      "start": 1388.48,
+      "end": 1391.96
+    },
+    {
+      "text": "matrix.",
+      "start": 1390.8,
+      "end": 1394.4
+    },
+    {
+      "text": "What",
+      "start": 1391.96,
+      "end": 1394.4
+    },
+    {
+      "text": "What's the output?",
+      "start": 1395.28,
+      "end": 1400.72
+    },
+    {
+      "text": "What's the product of a row times a",
+      "start": 1397.24,
+      "end": 1403.36
+    },
+    {
+      "text": "matrix?",
+      "start": 1400.72,
+      "end": 1403.36
+    },
+    {
+      "text": "And okay, it's a row.",
+      "start": 1403.4,
+      "end": 1408.72
+    },
+    {
+      "text": "A row A column",
+      "start": 1406.2,
+      "end": 1411.12
+    },
+    {
+      "text": "I Sorry, a matrix times a column is a",
+      "start": 1408.72,
+      "end": 1413.56
+    },
+    {
+      "text": "column. So, matrix",
+      "start": 1411.12,
+      "end": 1417.48
+    },
+    {
+      "text": "times a Yeah, matrix",
+      "start": 1413.56,
+      "end": 1419.28
+    },
+    {
+      "text": "times a column",
+      "start": 1417.48,
+      "end": 1421.72
+    },
+    {
+      "text": "is a column.",
+      "start": 1419.28,
+      "end": 1424.28
+    },
+    {
+      "text": "And we know what column it is. Over",
+      "start": 1421.72,
+      "end": 1426.84
+    },
+    {
+      "text": "here, I'm doing a row times a matrix,",
+      "start": 1424.28,
+      "end": 1428.72
+    },
+    {
+      "text": "and what And what is the What's the",
+      "start": 1426.84,
+      "end": 1431.88
+    },
+    {
+      "text": "answer? It's one of that first row. So,",
+      "start": 1428.72,
+      "end": 1435.92
+    },
+    {
+      "text": "it's 1 * 1 * row 1",
+      "start": 1431.88,
+      "end": 1437.12
+    },
+    {
+      "text": "plus",
+      "start": 1435.92,
+      "end": 1440.32
+    },
+    {
+      "text": "2 * row 2",
+      "start": 1437.12,
+      "end": 1444.56
+    },
+    {
+      "text": "plus 7 * row 3.",
+      "start": 1440.32,
+      "end": 1444.56
+    },
+    {
+      "text": "When as we do matrix multiplication,",
+      "start": 1444.96,
+      "end": 1450.64
+    },
+    {
+      "text": "keep your eye on",
+      "start": 1448.16,
+      "end": 1453.6
+    },
+    {
+      "text": "what it's doing with whole vectors.",
+      "start": 1450.64,
+      "end": 1456.36
+    },
+    {
+      "text": "And what it's doing what what it's doing",
+      "start": 1453.6,
+      "end": 1461.64
+    },
+    {
+      "text": "in this case is it's combining the rows.",
+      "start": 1456.36,
+      "end": 1463.36
+    },
+    {
+      "text": "We have a combination a linear",
+      "start": 1461.64,
+      "end": 1465.36
+    },
+    {
+      "text": "combination of the rows. Okay, I want to",
+      "start": 1463.36,
+      "end": 1467.96
+    },
+    {
+      "text": "use that.",
+      "start": 1465.36,
+      "end": 1467.96
+    },
+    {
+      "text": "Okay. Now, So, my question is, what's",
+      "start": 1473.08,
+      "end": 1478.92
+    },
+    {
+      "text": "the matrix that does this first step?",
+      "start": 1475.6,
+      "end": 1480.36
+    },
+    {
+      "text": "That takes",
+      "start": 1478.92,
+      "end": 1483.52
+    },
+    {
+      "text": "subtracts three of equation one from",
+      "start": 1480.36,
+      "end": 1486.52
+    },
+    {
+      "text": "equation two. That's what I want to do.",
+      "start": 1483.52,
+      "end": 1488.4
+    },
+    {
+      "text": "So, this is going to be a a matrix",
+      "start": 1486.52,
+      "end": 1492.08
+    },
+    {
+      "text": "that's going to subtract",
+      "start": 1488.4,
+      "end": 1492.08
+    },
+    {
+      "text": "3 * * row 1",
+      "start": 1492.6,
+      "end": 1497.52
+    },
+    {
+      "text": "from row two.",
+      "start": 1497.92,
+      "end": 1501.52
+    },
+    {
+      "text": "And leaves the other rows the same. Just",
+      "start": 1503.72,
+      "end": 1507.92
+    },
+    {
+      "text": "just I mean the answer is going to be",
+      "start": 1505.76,
+      "end": 1509.12
+    },
+    {
+      "text": "that.",
+      "start": 1507.92,
+      "end": 1512.52
+    },
+    {
+      "text": "So, whatever matrix this is",
+      "start": 1509.12,
+      "end": 1514.24
+    },
+    {
+      "text": "and you're going to like tell me what",
+      "start": 1512.52,
+      "end": 1517.44
+    },
+    {
+      "text": "matrix will do it. It's the matrix that",
+      "start": 1514.24,
+      "end": 1520.24
+    },
+    {
+      "text": "leaves the first row unchanged, leaves",
+      "start": 1517.44,
+      "end": 1523.16
+    },
+    {
+      "text": "the last row unchanged, but takes three",
+      "start": 1520.24,
+      "end": 1524.92
+    },
+    {
+      "text": "of these away from this. So, it puts a",
+      "start": 1523.16,
+      "end": 1526.92
+    },
+    {
+      "text": "zero there, a two there, and a minus",
+      "start": 1524.92,
+      "end": 1528
+    },
+    {
+      "text": "two.",
+      "start": 1526.92,
+      "end": 1529.4
+    },
+    {
+      "text": "Good.",
+      "start": 1528,
+      "end": 1531.36
+    },
+    {
+      "text": "What matrix will do it?",
+      "start": 1529.4,
+      "end": 1532.96
+    },
+    {
+      "text": "It's these.",
+      "start": 1531.36,
+      "end": 1536.28
+    },
+    {
+      "text": "It should be a pretty simple matrix",
+      "start": 1532.96,
+      "end": 1540.2
+    },
+    {
+      "text": "cuz we're doing a very simple step.",
+      "start": 1536.28,
+      "end": 1540.2
+    },
+    {
+      "text": "We're just doing this step that changes",
+      "start": 1540.28,
+      "end": 1545.28
+    },
+    {
+      "text": "row two. So, actually row one is not",
+      "start": 1543.08,
+      "end": 1546.92
+    },
+    {
+      "text": "changing. So,",
+      "start": 1545.28,
+      "end": 1550.64
+    },
+    {
+      "text": "tell me how the matrix should begin.",
+      "start": 1546.92,
+      "end": 1550.64
+    },
+    {
+      "text": "One",
+      "start": 1551.2,
+      "end": 1556.12
+    },
+    {
+      "text": "So, the first row of the matrix will be",
+      "start": 1553.04,
+      "end": 1558.04
+    },
+    {
+      "text": "one",
+      "start": 1556.12,
+      "end": 1560.84
+    },
+    {
+      "text": "zero zero.",
+      "start": 1558.04,
+      "end": 1560.84
+    },
+    {
+      "text": "Because that's just the right thing.",
+      "start": 1561.08,
+      "end": 1566
+    },
+    {
+      "text": "That takes one of that row and none of",
+      "start": 1563.52,
+      "end": 1567.96
+    },
+    {
+      "text": "the other rows, and that's what we want.",
+      "start": 1566,
+      "end": 1571.08
+    },
+    {
+      "text": "What's the last row of the matrix?",
+      "start": 1567.96,
+      "end": 1573.2
+    },
+    {
+      "text": "Zero zero one.",
+      "start": 1571.08,
+      "end": 1575.36
+    },
+    {
+      "text": "Cuz that takes",
+      "start": 1573.2,
+      "end": 1577.6
+    },
+    {
+      "text": "one of the third row and none of the",
+      "start": 1575.36,
+      "end": 1580.28
+    },
+    {
+      "text": "other rows. That's great. Okay.",
+      "start": 1577.6,
+      "end": 1582.12
+    },
+    {
+      "text": "Now, suppose I didn't want to do",
+      "start": 1580.28,
+      "end": 1584.4
+    },
+    {
+      "text": "anything at all.",
+      "start": 1582.12,
+      "end": 1586.8
+    },
+    {
+      "text": "Suppose my row Well, I guess maybe I had",
+      "start": 1584.4,
+      "end": 1590.32
+    },
+    {
+      "text": "a a case here when I already had a zero",
+      "start": 1586.8,
+      "end": 1593.24
+    },
+    {
+      "text": "and didn't have to do anything. What",
+      "start": 1590.32,
+      "end": 1596.2
+    },
+    {
+      "text": "matrix does nothing?",
+      "start": 1593.24,
+      "end": 1600.12
+    },
+    {
+      "text": "Like just leaves you where you were.",
+      "start": 1596.2,
+      "end": 1602.32
+    },
+    {
+      "text": "If I put in",
+      "start": 1600.12,
+      "end": 1606.64
+    },
+    {
+      "text": "if I put in zero one zero, that would be",
+      "start": 1602.32,
+      "end": 1609.2
+    },
+    {
+      "text": "that would be",
+      "start": 1606.64,
+      "end": 1610.76
+    },
+    {
+      "text": "That's the matrix. What's the name of",
+      "start": 1609.2,
+      "end": 1612.36
+    },
+    {
+      "text": "that matrix?",
+      "start": 1610.76,
+      "end": 1615.12
+    },
+    {
+      "text": "The identity matrix, right.",
+      "start": 1612.36,
+      "end": 1617.16
+    },
+    {
+      "text": "So it does absolutely nothing. It just",
+      "start": 1615.12,
+      "end": 1618.68
+    },
+    {
+      "text": "multiplies everything and leaves it",
+      "start": 1617.16,
+      "end": 1620.72
+    },
+    {
+      "text": "where it is. It's like a one, like the",
+      "start": 1618.68,
+      "end": 1623.64
+    },
+    {
+      "text": "number one for matrices. But that that's",
+      "start": 1620.72,
+      "end": 1625.48
+    },
+    {
+      "text": "not what we want cuz we want to change",
+      "start": 1623.64,
+      "end": 1626.56
+    },
+    {
+      "text": "this",
+      "start": 1625.48,
+      "end": 1627.92
+    },
+    {
+      "text": "row two.",
+      "start": 1626.56,
+      "end": 1631
+    },
+    {
+      "text": "Uh so, what's the correct",
+      "start": 1627.92,
+      "end": 1633.48
+    },
+    {
+      "text": "What should I put in here now to come",
+      "start": 1631,
+      "end": 1636.56
+    },
+    {
+      "text": "out to do to do it right?",
+      "start": 1633.48,
+      "end": 1638.68
+    },
+    {
+      "text": "I want to get What do I want What am I",
+      "start": 1636.56,
+      "end": 1641.16
+    },
+    {
+      "text": "I'm after? I want to sub tract my I I I",
+      "start": 1638.68,
+      "end": 1642.44
+    },
+    {
+      "text": "want",
+      "start": 1641.16,
+      "end": 1645.56
+    },
+    {
+      "text": "three of row one to get subtracted off.",
+      "start": 1642.44,
+      "end": 1647.96
+    },
+    {
+      "text": "So what's that row What's the right",
+      "start": 1645.56,
+      "end": 1652.32
+    },
+    {
+      "text": "matrix to finish that matrix for me?",
+      "start": 1647.96,
+      "end": 1652.32
+    },
+    {
+      "text": "But -3 goes here.",
+      "start": 1652.4,
+      "end": 1656.16
+    },
+    {
+      "text": "And what goes here? That one. And what",
+      "start": 1656.32,
+      "end": 1661.36
+    },
+    {
+      "text": "goes here? The zero.",
+      "start": 1659,
+      "end": 1663.56
+    },
+    {
+      "text": "That's the good matrix. That's the",
+      "start": 1661.36,
+      "end": 1665.44
+    },
+    {
+      "text": "matrix that takes",
+      "start": 1663.56,
+      "end": 1669.52
+    },
+    {
+      "text": "-3 of row one plus the row two and gives",
+      "start": 1665.44,
+      "end": 1671.96
+    },
+    {
+      "text": "the new row two. Should we just like",
+      "start": 1669.52,
+      "end": 1674.56
+    },
+    {
+      "text": "check",
+      "start": 1671.96,
+      "end": 1674.56
+    },
+    {
+      "text": "uh some",
+      "start": 1675.24,
+      "end": 1679.12
+    },
+    {
+      "text": "particular entry? How How do I check a",
+      "start": 1676.64,
+      "end": 1681.96
+    },
+    {
+      "text": "particular entry of a matrix in in",
+      "start": 1679.12,
+      "end": 1684.44
+    },
+    {
+      "text": "matrix multiplication? Like suppose I",
+      "start": 1681.96,
+      "end": 1688.52
+    },
+    {
+      "text": "wanted to check the entry here that's in",
+      "start": 1684.44,
+      "end": 1691.84
+    },
+    {
+      "text": "row two, column three.",
+      "start": 1688.52,
+      "end": 1693.56
+    },
+    {
+      "text": "So where does the entry in row two,",
+      "start": 1691.84,
+      "end": 1696.36
+    },
+    {
+      "text": "column three come from?",
+      "start": 1693.56,
+      "end": 1700
+    },
+    {
+      "text": "I would look at row two of this guy",
+      "start": 1696.36,
+      "end": 1702.88
+    },
+    {
+      "text": "and column",
+      "start": 1700,
+      "end": 1705.04
+    },
+    {
+      "text": "three of this one",
+      "start": 1702.88,
+      "end": 1707.16
+    },
+    {
+      "text": "to get that number. That number comes",
+      "start": 1705.04,
+      "end": 1709.84
+    },
+    {
+      "text": "from the second row and the third column",
+      "start": 1707.16,
+      "end": 1711.56
+    },
+    {
+      "text": "and I just take this",
+      "start": 1709.84,
+      "end": 1716.96
+    },
+    {
+      "text": "dot product. -3 I'm multiplying. -3 + 1",
+      "start": 1711.56,
+      "end": 1719.56
+    },
+    {
+      "text": "and 0 gives the -2.",
+      "start": 1716.96,
+      "end": 1722.32
+    },
+    {
+      "text": "Yeah, it it works.",
+      "start": 1719.56,
+      "end": 1724.24
+    },
+    {
+      "text": "So we got various ways to multiply",
+      "start": 1722.32,
+      "end": 1726.76
+    },
+    {
+      "text": "matrices now.",
+      "start": 1724.24,
+      "end": 1729.84
+    },
+    {
+      "text": "We're We're sort of like informally",
+      "start": 1726.76,
+      "end": 1732.68
+    },
+    {
+      "text": "we've got by columns, we've got Well, we",
+      "start": 1729.84,
+      "end": 1735.96
+    },
+    {
+      "text": "will have by columns, by rows, by each",
+      "start": 1732.68,
+      "end": 1738.88
+    },
+    {
+      "text": "entry at a time, but",
+      "start": 1735.96,
+      "end": 1740.08
+    },
+    {
+      "text": "it's good to see that matrix",
+      "start": 1738.88,
+      "end": 1742.12
+    },
+    {
+      "text": "multiplication when one of the matrices",
+      "start": 1740.08,
+      "end": 1745.52
+    },
+    {
+      "text": "is so simple. So, this guy",
+      "start": 1742.12,
+      "end": 1748.36
+    },
+    {
+      "text": "is our elementary matrix. Let's Let's",
+      "start": 1745.52,
+      "end": 1752.48
+    },
+    {
+      "text": "call it E for elementary or elimination.",
+      "start": 1748.36,
+      "end": 1756.16
+    },
+    {
+      "text": "And let me put the indexes 2 1",
+      "start": 1752.48,
+      "end": 1759.76
+    },
+    {
+      "text": "because it's the matrix that we needed",
+      "start": 1756.16,
+      "end": 1762.52
+    },
+    {
+      "text": "to fix the 2 1 position. It's the It's",
+      "start": 1759.76,
+      "end": 1765.2
+    },
+    {
+      "text": "the matrix that we needed to get this",
+      "start": 1762.52,
+      "end": 1768.04
+    },
+    {
+      "text": "2 1 position to be zero.",
+      "start": 1765.2,
+      "end": 1769.28
+    },
+    {
+      "text": "Okay.",
+      "start": 1768.04,
+      "end": 1772.08
+    },
+    {
+      "text": "Good enough. So, what do I do next?",
+      "start": 1769.28,
+      "end": 1774.48
+    },
+    {
+      "text": "I need another matrix, right?",
+      "start": 1772.08,
+      "end": 1776.84
+    },
+    {
+      "text": "I I need some I I There's There's",
+      "start": 1774.48,
+      "end": 1779.36
+    },
+    {
+      "text": "another step here.",
+      "start": 1776.84,
+      "end": 1782.52
+    },
+    {
+      "text": "And I want to express the whole",
+      "start": 1779.36,
+      "end": 1786.76
+    },
+    {
+      "text": "elimination process in matrix language.",
+      "start": 1782.52,
+      "end": 1790.6
+    },
+    {
+      "text": "So, tell me what now Now, so next step,",
+      "start": 1786.76,
+      "end": 1793.48
+    },
+    {
+      "text": "step two",
+      "start": 1790.6,
+      "end": 1793.48
+    },
+    {
+      "text": "which was what? Subtract",
+      "start": 1793.52,
+      "end": 1798.36
+    },
+    {
+      "text": "What was What was the actual step that",
+      "start": 1796.4,
+      "end": 1799.88
+    },
+    {
+      "text": "we did?",
+      "start": 1798.36,
+      "end": 1803.72
+    },
+    {
+      "text": "I think I subtracted, do you remember?",
+      "start": 1799.88,
+      "end": 1806
+    },
+    {
+      "text": "I had a two in the pivot and a four",
+      "start": 1803.72,
+      "end": 1808.76
+    },
+    {
+      "text": "below it, so I subtracted",
+      "start": 1806,
+      "end": 1811.64
+    },
+    {
+      "text": "two times",
+      "start": 1808.76,
+      "end": 1813.96
+    },
+    {
+      "text": "times row two",
+      "start": 1811.64,
+      "end": 1816.6
+    },
+    {
+      "text": "from row three.",
+      "start": 1813.96,
+      "end": 1818.16
+    },
+    {
+      "text": "From row",
+      "start": 1816.6,
+      "end": 1820.4
+    },
+    {
+      "text": "three. Tell me the matrix that'll do",
+      "start": 1818.16,
+      "end": 1822.84
+    },
+    {
+      "text": "that.",
+      "start": 1820.4,
+      "end": 1822.84
+    },
+    {
+      "text": "And tell me its name.",
+      "start": 1823.84,
+      "end": 1828.64
+    },
+    {
+      "text": "Okay, it's going to be",
+      "start": 1826.52,
+      "end": 1831.84
+    },
+    {
+      "text": "E for elementary or elimination matrix,",
+      "start": 1828.64,
+      "end": 1834.6
+    },
+    {
+      "text": "and what's the index number that that",
+      "start": 1831.84,
+      "end": 1837.12
+    },
+    {
+      "text": "that I used to tell me what",
+      "start": 1834.6,
+      "end": 1838.64
+    },
+    {
+      "text": "E",
+      "start": 1837.12,
+      "end": 1841.88
+    },
+    {
+      "text": "3 2, right? Because So fixing this",
+      "start": 1838.64,
+      "end": 1845.2
+    },
+    {
+      "text": "3 2 position. And what's what is the",
+      "start": 1841.88,
+      "end": 1847.52
+    },
+    {
+      "text": "matrix now?",
+      "start": 1845.2,
+      "end": 1850.32
+    },
+    {
+      "text": "Okay, you remember so E32 is supposed to",
+      "start": 1847.52,
+      "end": 1854.12
+    },
+    {
+      "text": "multiply my guy that I have.",
+      "start": 1850.32,
+      "end": 1857.2
+    },
+    {
+      "text": "And it's supposed to produce",
+      "start": 1854.12,
+      "end": 1860
+    },
+    {
+      "text": "the right result which was it leaves",
+      "start": 1857.2,
+      "end": 1862.2
+    },
+    {
+      "text": "supposed to leave the first row, it's",
+      "start": 1860,
+      "end": 1864.76
+    },
+    {
+      "text": "supposed to leave the second row, and",
+      "start": 1862.2,
+      "end": 1866.4
+    },
+    {
+      "text": "it's supposed to straighten out that",
+      "start": 1864.76,
+      "end": 1869.12
+    },
+    {
+      "text": "third row to",
+      "start": 1866.4,
+      "end": 1870.4
+    },
+    {
+      "text": "to this.",
+      "start": 1869.12,
+      "end": 1874.76
+    },
+    {
+      "text": "And what's the matrix that does that?",
+      "start": 1870.4,
+      "end": 1874.76
+    },
+    {
+      "text": "100, right? Because we don't change the",
+      "start": 1875.48,
+      "end": 1880.36
+    },
+    {
+      "text": "first row.",
+      "start": 1877.76,
+      "end": 1882.88
+    },
+    {
+      "text": "And the next row we don't change either.",
+      "start": 1880.36,
+      "end": 1884.92
+    },
+    {
+      "text": "And the last row is the one we do",
+      "start": 1882.88,
+      "end": 1887.16
+    },
+    {
+      "text": "change.",
+      "start": 1884.92,
+      "end": 1889.64
+    },
+    {
+      "text": "And what do I do?",
+      "start": 1887.16,
+      "end": 1891
+    },
+    {
+      "text": "Let's see the",
+      "start": 1889.64,
+      "end": 1893.48
+    },
+    {
+      "text": "I've subtract two times",
+      "start": 1891,
+      "end": 1895.04
+    },
+    {
+      "text": "So what's this row?",
+      "start": 1893.48,
+      "end": 1897
+    },
+    {
+      "text": "What's this here?",
+      "start": 1895.04,
+      "end": 1899
+    },
+    {
+      "text": "Zero, right? Because the first row is",
+      "start": 1897,
+      "end": 1900.88
+    },
+    {
+      "text": "not involved.",
+      "start": 1899,
+      "end": 1903.32
+    },
+    {
+      "text": "The second it's just in the 32 position,",
+      "start": 1900.88,
+      "end": 1904.44
+    },
+    {
+      "text": "isn't it?",
+      "start": 1903.32,
+      "end": 1907.48
+    },
+    {
+      "text": "It's num the key number",
+      "start": 1904.44,
+      "end": 1909.96
+    },
+    {
+      "text": "is this minus the multiplier that goes",
+      "start": 1907.48,
+      "end": 1911.92
+    },
+    {
+      "text": "sitting there in that 32 position. So",
+      "start": 1909.96,
+      "end": 1914.76
+    },
+    {
+      "text": "it's a Is it a minus two?",
+      "start": 1911.92,
+      "end": 1918.24
+    },
+    {
+      "text": "To subtract two and then this is a one",
+      "start": 1914.76,
+      "end": 1921
+    },
+    {
+      "text": "so that I",
+      "start": 1918.24,
+      "end": 1921
+    },
+    {
+      "text": "I",
+      "start": 1921.04,
+      "end": 1924.6
+    },
+    {
+      "text": "the the overall effect is to take minus",
+      "start": 1922.08,
+      "end": 1929.72
+    },
+    {
+      "text": "two of this row plus one of that. Okay.",
+      "start": 1924.6,
+      "end": 1929.72
+    },
+    {
+      "text": "So I've now given you the pieces.",
+      "start": 1930.36,
+      "end": 1936.6
+    },
+    {
+      "text": "The elimination matrices, the elementary",
+      "start": 1934.24,
+      "end": 1940.64
+    },
+    {
+      "text": "matrices that take each step.",
+      "start": 1936.6,
+      "end": 1940.64
+    },
+    {
+      "text": "So now what?",
+      "start": 1941.48,
+      "end": 1946.12
+    },
+    {
+      "text": "Now the next",
+      "start": 1943.76,
+      "end": 1948.16
+    },
+    {
+      "text": "point in the lecture is to put those",
+      "start": 1946.12,
+      "end": 1949.72
+    },
+    {
+      "text": "steps together",
+      "start": 1948.16,
+      "end": 1953.08
+    },
+    {
+      "text": "into a matrix that does it all.",
+      "start": 1949.72,
+      "end": 1955.16
+    },
+    {
+      "text": "And and see how it all happens. So now",
+      "start": 1953.08,
+      "end": 1957.12
+    },
+    {
+      "text": "I'm going to express the whole,",
+      "start": 1955.16,
+      "end": 1959.44
+    },
+    {
+      "text": "everything we did today",
+      "start": 1957.12,
+      "end": 1961.16
+    },
+    {
+      "text": "so far",
+      "start": 1959.44,
+      "end": 1964.6
+    },
+    {
+      "text": "on on A.",
+      "start": 1961.16,
+      "end": 1967
+    },
+    {
+      "text": "Was to start with A,",
+      "start": 1964.6,
+      "end": 1971.12
+    },
+    {
+      "text": "we multiplied it by E21.",
+      "start": 1967,
+      "end": 1973.56
+    },
+    {
+      "text": "That was the first step. And then we",
+      "start": 1971.12,
+      "end": 1979.16
+    },
+    {
+      "text": "multiplied that result by E32.",
+      "start": 1973.56,
+      "end": 1982.36
+    },
+    {
+      "text": "And that led us to this thing, and what",
+      "start": 1979.16,
+      "end": 1984.92
+    },
+    {
+      "text": "was that matrix?",
+      "start": 1982.36,
+      "end": 1987.28
+    },
+    {
+      "text": "U.",
+      "start": 1984.92,
+      "end": 1987.28
+    },
+    {
+      "text": "You see why I like matrix notation cuz",
+      "start": 1990.8,
+      "end": 1998.6
+    },
+    {
+      "text": "there in like little space,",
+      "start": 1994.92,
+      "end": 2001.72
+    },
+    {
+      "text": "a few bits when it's compressed on the",
+      "start": 1998.6,
+      "end": 2005.4
+    },
+    {
+      "text": "web is everything is this whole lecture.",
+      "start": 2001.72,
+      "end": 2007
+    },
+    {
+      "text": "Okay.",
+      "start": 2005.4,
+      "end": 2009.44
+    },
+    {
+      "text": "Now,",
+      "start": 2007,
+      "end": 2009.44
+    },
+    {
+      "text": "there are there are important facts",
+      "start": 2011.04,
+      "end": 2015.88
+    },
+    {
+      "text": "about matrix multiplication.",
+      "start": 2012.8,
+      "end": 2018.84
+    },
+    {
+      "text": "And we're close to maybe the most",
+      "start": 2015.88,
+      "end": 2020.4
+    },
+    {
+      "text": "important.",
+      "start": 2018.84,
+      "end": 2023.24
+    },
+    {
+      "text": "And that that is this. Suppose I ask you",
+      "start": 2020.4,
+      "end": 2025.88
+    },
+    {
+      "text": "this question. Suppose I start",
+      "start": 2023.24,
+      "end": 2028.84
+    },
+    {
+      "text": "start with a matrix A,",
+      "start": 2025.88,
+      "end": 2032.08
+    },
+    {
+      "text": "and I want to end with a matrix U,",
+      "start": 2028.84,
+      "end": 2034.6
+    },
+    {
+      "text": "and I want to say, what matrix does the",
+      "start": 2032.08,
+      "end": 2037.36
+    },
+    {
+      "text": "whole job?",
+      "start": 2034.6,
+      "end": 2037.36
+    },
+    {
+      "text": "What matrix",
+      "start": 2037.8,
+      "end": 2043.4
+    },
+    {
+      "text": "takes me from A to U?",
+      "start": 2039.56,
+      "end": 2047.2
+    },
+    {
+      "text": "Using the letters I've got.",
+      "start": 2043.4,
+      "end": 2048.159
+    },
+    {
+      "text": "So,",
+      "start": 2047.2,
+      "end": 2050.679
+    },
+    {
+      "text": "and the answer is simple. I'm not asking",
+      "start": 2048.159,
+      "end": 2055.56
+    },
+    {
+      "text": "this is but it's highly important.",
+      "start": 2050.679,
+      "end": 2055.56
+    },
+    {
+      "text": "How could I how would I create the",
+      "start": 2056.32,
+      "end": 2061.12
+    },
+    {
+      "text": "matrix that does the whole job at once?",
+      "start": 2058.28,
+      "end": 2063.08
+    },
+    {
+      "text": "That does all of elimination in one",
+      "start": 2061.12,
+      "end": 2064.76
+    },
+    {
+      "text": "shot.",
+      "start": 2063.08,
+      "end": 2066.8
+    },
+    {
+      "text": "It would be I would just put these",
+      "start": 2064.76,
+      "end": 2069.52
+    },
+    {
+      "text": "together, right?",
+      "start": 2066.8,
+      "end": 2071.76
+    },
+    {
+      "text": "In other words, this is the thing I'm",
+      "start": 2069.52,
+      "end": 2074.24
+    },
+    {
+      "text": "struggling to say.",
+      "start": 2071.76,
+      "end": 2078.12
+    },
+    {
+      "text": "I can move those parentheses.",
+      "start": 2074.24,
+      "end": 2078.12
+    },
+    {
+      "text": "If I keep the matrices in order, I can't",
+      "start": 2078.639,
+      "end": 2083.919
+    },
+    {
+      "text": "mess around with the order of the",
+      "start": 2081.76,
+      "end": 2087.12
+    },
+    {
+      "text": "matrices, but I can change the order",
+      "start": 2083.919,
+      "end": 2090.28
+    },
+    {
+      "text": "that I do the multiplications. I can",
+      "start": 2087.12,
+      "end": 2094.72
+    },
+    {
+      "text": "multiply these two first.",
+      "start": 2090.28,
+      "end": 2094.72
+    },
+    {
+      "text": "In other words, you see what those",
+      "start": 2095.56,
+      "end": 2099.44
+    },
+    {
+      "text": "parentheses are doing?",
+      "start": 2097.68,
+      "end": 2104.16
+    },
+    {
+      "text": "It's saying do multiply the E's first.",
+      "start": 2099.44,
+      "end": 2105.84
+    },
+    {
+      "text": "And that gives you the matrix that does",
+      "start": 2104.16,
+      "end": 2107.6
+    },
+    {
+      "text": "everything at once.",
+      "start": 2105.84,
+      "end": 2108.88
+    },
+    {
+      "text": "Okay.",
+      "start": 2107.6,
+      "end": 2111.96
+    },
+    {
+      "text": "What So, this fact that this is",
+      "start": 2108.88,
+      "end": 2114.8
+    },
+    {
+      "text": "automatically the same as this.",
+      "start": 2111.96,
+      "end": 2117.2
+    },
+    {
+      "text": "For every",
+      "start": 2114.8,
+      "end": 2119.36
+    },
+    {
+      "text": "matrix multiplication, which I'm",
+      "start": 2117.2,
+      "end": 2122.32
+    },
+    {
+      "text": "conscious of still not telling you in",
+      "start": 2119.36,
+      "end": 2123.96
+    },
+    {
+      "text": "every detail.",
+      "start": 2122.32,
+      "end": 2126.32
+    },
+    {
+      "text": "But like you're seeing how it works.",
+      "start": 2123.96,
+      "end": 2128.2
+    },
+    {
+      "text": "And this is highly important and maybe",
+      "start": 2126.32,
+      "end": 2130.24
+    },
+    {
+      "text": "tell me the long word that that",
+      "start": 2128.2,
+      "end": 2134.12
+    },
+    {
+      "text": "describes this law for matrices. That",
+      "start": 2130.24,
+      "end": 2137.52
+    },
+    {
+      "text": "that you can move the parentheses.",
+      "start": 2134.12,
+      "end": 2140.6
+    },
+    {
+      "text": "It's the called the associative law.",
+      "start": 2137.52,
+      "end": 2143.24
+    },
+    {
+      "text": "I I think you can now forget that.",
+      "start": 2140.6,
+      "end": 2144.52
+    },
+    {
+      "text": "Uh it's",
+      "start": 2143.24,
+      "end": 2146.2
+    },
+    {
+      "text": "uh",
+      "start": 2144.52,
+      "end": 2147.8
+    },
+    {
+      "text": "But don't forget the law. I mean like",
+      "start": 2146.2,
+      "end": 2149.64
+    },
+    {
+      "text": "forget the word associative. I don't",
+      "start": 2147.8,
+      "end": 2151.88
+    },
+    {
+      "text": "know. But don't don't forget the law.",
+      "start": 2149.64,
+      "end": 2154.12
+    },
+    {
+      "text": "Because actually we'll see",
+      "start": 2151.88,
+      "end": 2157.8
+    },
+    {
+      "text": "so many uh steps in",
+      "start": 2154.12,
+      "end": 2160.04
+    },
+    {
+      "text": "linear algebra.",
+      "start": 2157.8,
+      "end": 2163.24
+    },
+    {
+      "text": "So many proofs even of of of main fact",
+      "start": 2160.04,
+      "end": 2166.48
+    },
+    {
+      "text": "come from just moving the parentheses.",
+      "start": 2163.24,
+      "end": 2168.64
+    },
+    {
+      "text": "It's a it's like",
+      "start": 2166.48,
+      "end": 2172.12
+    },
+    {
+      "text": "And it's not that easy to",
+      "start": 2168.64,
+      "end": 2174.72
+    },
+    {
+      "text": "I mean the to prove to prove that this",
+      "start": 2172.12,
+      "end": 2177.08
+    },
+    {
+      "text": "is correct, you have to go into the gory",
+      "start": 2174.72,
+      "end": 2179.44
+    },
+    {
+      "text": "details of matrix multiplication, do it",
+      "start": 2177.08,
+      "end": 2181.4
+    },
+    {
+      "text": "both ways, and see that you come out the",
+      "start": 2179.44,
+      "end": 2183.32
+    },
+    {
+      "text": "same.",
+      "start": 2181.4,
+      "end": 2185.84
+    },
+    {
+      "text": "Maybe I'll leave the uh author to do",
+      "start": 2183.32,
+      "end": 2187.16
+    },
+    {
+      "text": "that.",
+      "start": 2185.84,
+      "end": 2190.12
+    },
+    {
+      "text": "Okay. So, there we go.",
+      "start": 2187.16,
+      "end": 2192.04
+    },
+    {
+      "text": "That's That's",
+      "start": 2190.12,
+      "end": 2193.16
+    },
+    {
+      "text": "uh",
+      "start": 2192.04,
+      "end": 2195.96
+    },
+    {
+      "text": "That's how I So, there's a a single",
+      "start": 2193.16,
+      "end": 2199.72
+    },
+    {
+      "text": "matrix. I I could call it E. Now, oh",
+      "start": 2195.96,
+      "end": 2201.28
+    },
+    {
+      "text": "while while we're talking about these",
+      "start": 2199.72,
+      "end": 2204.12
+    },
+    {
+      "text": "matrices,",
+      "start": 2201.28,
+      "end": 2204.12
+    },
+    {
+      "text": "tell me one other There's another type",
+      "start": 2204.16,
+      "end": 2209.72
+    },
+    {
+      "text": "of elementary matrix.",
+      "start": 2206.6,
+      "end": 2211.96
+    },
+    {
+      "text": "And we already said why we might need",
+      "start": 2209.72,
+      "end": 2214.52
+    },
+    {
+      "text": "it. We We didn't need it in this case,",
+      "start": 2211.96,
+      "end": 2216.76
+    },
+    {
+      "text": "but it's the matrix that exchanges two",
+      "start": 2214.52,
+      "end": 2218.4
+    },
+    {
+      "text": "rows.",
+      "start": 2216.76,
+      "end": 2221.84
+    },
+    {
+      "text": "It's a called a permutation matrix.",
+      "start": 2218.4,
+      "end": 2224.52
+    },
+    {
+      "text": "Can you just like tell me what that",
+      "start": 2221.84,
+      "end": 2226.8
+    },
+    {
+      "text": "would be? So, I'm just like this is a",
+      "start": 2224.52,
+      "end": 2228.96
+    },
+    {
+      "text": "slight digression.",
+      "start": 2226.8,
+      "end": 2231.48
+    },
+    {
+      "text": "And we'll Yeah, so let me get some Let",
+      "start": 2228.96,
+      "end": 2232.8
+    },
+    {
+      "text": "me figure out where I'm going to put a",
+      "start": 2231.48,
+      "end": 2236.12
+    },
+    {
+      "text": "permutation matrix.",
+      "start": 2232.8,
+      "end": 2236.12
+    },
+    {
+      "text": "You'll see I'm always squeezing stuff",
+      "start": 2236.64,
+      "end": 2242.28
+    },
+    {
+      "text": "in. So, permutation.",
+      "start": 2238.76,
+      "end": 2242.28
+    },
+    {
+      "text": "Or in fact, uh this this one uh like",
+      "start": 2243.2,
+      "end": 2249.36
+    },
+    {
+      "text": "exchange",
+      "start": 2246.36,
+      "end": 2249.36
+    },
+    {
+      "text": "rows.",
+      "start": 2250.6,
+      "end": 2255.92
+    },
+    {
+      "text": "So, I exchange rows one and two just to",
+      "start": 2253.36,
+      "end": 2257.76
+    },
+    {
+      "text": "make life easy.",
+      "start": 2255.92,
+      "end": 2260.24
+    },
+    {
+      "text": "So, if I had my matrix, uh let me just",
+      "start": 2257.76,
+      "end": 2264.2
+    },
+    {
+      "text": "do two by two. A B C D.",
+      "start": 2260.24,
+      "end": 2268.16
+    },
+    {
+      "text": "Suppose I want to find the matrix",
+      "start": 2264.2,
+      "end": 2272.6
+    },
+    {
+      "text": "that exchanges those rows.",
+      "start": 2268.16,
+      "end": 2272.6
+    },
+    {
+      "text": "What is it?",
+      "start": 2275.2,
+      "end": 2277.72
+    },
+    {
+      "text": "So, the matrix that exchanges those",
+      "start": 2278.28,
+      "end": 2282.84
+    },
+    {
+      "text": "rows, the the row I want is C D and it's",
+      "start": 2280.32,
+      "end": 2286.92
+    },
+    {
+      "text": "there. So, I I better take one of it.",
+      "start": 2282.84,
+      "end": 2289.16
+    },
+    {
+      "text": "The row I want here is up top, so I'll",
+      "start": 2286.92,
+      "end": 2292.16
+    },
+    {
+      "text": "take one of that. So, actually, I've",
+      "start": 2289.16,
+      "end": 2294.96
+    },
+    {
+      "text": "just the easy way This is the my matrix",
+      "start": 2292.16,
+      "end": 2296.96
+    },
+    {
+      "text": "that I'll call P",
+      "start": 2294.96,
+      "end": 2300.12
+    },
+    {
+      "text": "for permutation.",
+      "start": 2296.96,
+      "end": 2300.12
+    },
+    {
+      "text": "It's the matrix Actually, the the easy",
+      "start": 2301.4,
+      "end": 2307.24
+    },
+    {
+      "text": "way to find it is just do the thing to",
+      "start": 2305.04,
+      "end": 2309.44
+    },
+    {
+      "text": "the identity matrix.",
+      "start": 2307.24,
+      "end": 2311.52
+    },
+    {
+      "text": "Exchange rows Exchange the rows of the",
+      "start": 2309.44,
+      "end": 2313.68
+    },
+    {
+      "text": "identity matrix, and then",
+      "start": 2311.52,
+      "end": 2316.2
+    },
+    {
+      "text": "that's the matrix that'll do do row",
+      "start": 2313.68,
+      "end": 2318.48
+    },
+    {
+      "text": "exchanges for you.",
+      "start": 2316.2,
+      "end": 2321.04
+    },
+    {
+      "text": "Could Suppose I wanted to exchange",
+      "start": 2318.48,
+      "end": 2322.96
+    },
+    {
+      "text": "columns instead.",
+      "start": 2321.04,
+      "end": 2324.84
+    },
+    {
+      "text": "Columns have hardly got into today's",
+      "start": 2322.96,
+      "end": 2326.48
+    },
+    {
+      "text": "lecture, but they certainly are going to",
+      "start": 2324.84,
+      "end": 2328.4
+    },
+    {
+      "text": "be around.",
+      "start": 2326.48,
+      "end": 2330.8
+    },
+    {
+      "text": "How could I if I started with this",
+      "start": 2328.4,
+      "end": 2333.24
+    },
+    {
+      "text": "matrix ABCD",
+      "start": 2330.8,
+      "end": 2335.36
+    },
+    {
+      "text": "and then I wouldn't",
+      "start": 2333.24,
+      "end": 2335.96
+    },
+    {
+      "text": "I",
+      "start": 2335.36,
+      "end": 2337.36
+    },
+    {
+      "text": "I'm not even going to write this down.",
+      "start": 2335.96,
+      "end": 2340.52
+    },
+    {
+      "text": "I'm just going to ask you.",
+      "start": 2337.36,
+      "end": 2340.52
+    },
+    {
+      "text": "Cuz it Cuz in elimination, we're we're",
+      "start": 2340.68,
+      "end": 2345.16
+    },
+    {
+      "text": "doing rows.",
+      "start": 2343.36,
+      "end": 2348.32
+    },
+    {
+      "text": "But suppose we wanted to exchange the",
+      "start": 2345.16,
+      "end": 2352.48
+    },
+    {
+      "text": "columns of a matrix.",
+      "start": 2348.32,
+      "end": 2352.48
+    },
+    {
+      "text": "How",
+      "start": 2353.12,
+      "end": 2356.24
+    },
+    {
+      "text": "How would I do that? What What What",
+      "start": 2353.8,
+      "end": 2359.04
+    },
+    {
+      "text": "matrix multiplication would do that job?",
+      "start": 2356.24,
+      "end": 2361.88
+    },
+    {
+      "text": "Actually, why not? I'll write it down.",
+      "start": 2359.04,
+      "end": 2364.36
+    },
+    {
+      "text": "So this is like just",
+      "start": 2361.88,
+      "end": 2366.68
+    },
+    {
+      "text": "I'll write it under here and then",
+      "start": 2364.36,
+      "end": 2368.16
+    },
+    {
+      "text": "hide it again.",
+      "start": 2366.68,
+      "end": 2373.28
+    },
+    {
+      "text": "Okay. Suppose I had my matrix ABCD",
+      "start": 2368.16,
+      "end": 2373.28
+    },
+    {
+      "text": "and I want to get to",
+      "start": 2373.52,
+      "end": 2380.16
+    },
+    {
+      "text": "AC over here and BD here.",
+      "start": 2375.64,
+      "end": 2380.16
+    },
+    {
+      "text": "What matrix does that job?",
+      "start": 2384.72,
+      "end": 2388.68
+    },
+    {
+      "text": "Can I multiply Can I cook up some matrix",
+      "start": 2392.12,
+      "end": 2397.64
+    },
+    {
+      "text": "that",
+      "start": 2396.4,
+      "end": 2400
+    },
+    {
+      "text": "produces that answer?",
+      "start": 2397.64,
+      "end": 2402.24
+    },
+    {
+      "text": "And I You can see from where I put my",
+      "start": 2400,
+      "end": 2406
+    },
+    {
+      "text": "hand, I was really asking",
+      "start": 2402.24,
+      "end": 2409.56
+    },
+    {
+      "text": "can I put a matrix here on the left that",
+      "start": 2406,
+      "end": 2413.84
+    },
+    {
+      "text": "will exchange columns? And the answer is",
+      "start": 2409.56,
+      "end": 2415.36
+    },
+    {
+      "text": "no.",
+      "start": 2413.84,
+      "end": 2417.56
+    },
+    {
+      "text": "If I So I'm just bringing out again this",
+      "start": 2415.36,
+      "end": 2420.8
+    },
+    {
+      "text": "point that when I multiply on the left,",
+      "start": 2417.56,
+      "end": 2423.4
+    },
+    {
+      "text": "I'm doing row operations. So, if I want",
+      "start": 2420.8,
+      "end": 2425.52
+    },
+    {
+      "text": "to do a column operation, where do I put",
+      "start": 2423.4,
+      "end": 2428
+    },
+    {
+      "text": "that permutation matrix?",
+      "start": 2425.52,
+      "end": 2429.52
+    },
+    {
+      "text": "On the",
+      "start": 2428,
+      "end": 2430.92
+    },
+    {
+      "text": "on the right.",
+      "start": 2429.52,
+      "end": 2433.64
+    },
+    {
+      "text": "If I put it here, where I just barely",
+      "start": 2430.92,
+      "end": 2436.4
+    },
+    {
+      "text": "left room for it. So, I I'll exchange",
+      "start": 2433.64,
+      "end": 2440.24
+    },
+    {
+      "text": "the two columns of the identity.",
+      "start": 2436.4,
+      "end": 2442.76
+    },
+    {
+      "text": "Then it comes out right.",
+      "start": 2440.24,
+      "end": 2444.72
+    },
+    {
+      "text": "Cuz now I'm multiplying a column at a",
+      "start": 2442.76,
+      "end": 2447.76
+    },
+    {
+      "text": "time. This This is the first column and",
+      "start": 2444.72,
+      "end": 2450.92
+    },
+    {
+      "text": "says take one take none of that column,",
+      "start": 2447.76,
+      "end": 2453.88
+    },
+    {
+      "text": "one of this one, and then you got it.",
+      "start": 2450.92,
+      "end": 2456.24
+    },
+    {
+      "text": "Over here, take one of this one, none of",
+      "start": 2453.88,
+      "end": 2458.4
+    },
+    {
+      "text": "this one, and you've got AC.",
+      "start": 2456.24,
+      "end": 2459.28
+    },
+    {
+      "text": "So,",
+      "start": 2458.4,
+      "end": 2462
+    },
+    {
+      "text": "in short, to do column operations, the",
+      "start": 2459.28,
+      "end": 2464.64
+    },
+    {
+      "text": "matrix multiplies on the right. To do",
+      "start": 2462,
+      "end": 2466.6
+    },
+    {
+      "text": "row operations, it multiplies on the",
+      "start": 2464.64,
+      "end": 2469
+    },
+    {
+      "text": "left. Okay.",
+      "start": 2466.6,
+      "end": 2471.6
+    },
+    {
+      "text": "Okay. And it's row operations that we're",
+      "start": 2469,
+      "end": 2473
+    },
+    {
+      "text": "really doing.",
+      "start": 2471.6,
+      "end": 2475.44
+    },
+    {
+      "text": "Okay.",
+      "start": 2473,
+      "end": 2475.44
+    },
+    {
+      "text": "And of course, do it",
+      "start": 2478.72,
+      "end": 2484.16
+    },
+    {
+      "text": "I I I mentioned in passing, but I better",
+      "start": 2481.4,
+      "end": 2488
+    },
+    {
+      "text": "say it very clearly",
+      "start": 2484.16,
+      "end": 2488
+    },
+    {
+      "text": "that you can't exchange the orders of",
+      "start": 2488.72,
+      "end": 2493.56
+    },
+    {
+      "text": "matrices. And that's just the point I",
+      "start": 2491.36,
+      "end": 2495.28
+    },
+    {
+      "text": "was making again here.",
+      "start": 2493.56,
+      "end": 2499.44
+    },
+    {
+      "text": "A * B is not the same as B * A.",
+      "start": 2495.28,
+      "end": 2504
+    },
+    {
+      "text": "You have to keep these matrices in their",
+      "start": 2499.44,
+      "end": 2508.56
+    },
+    {
+      "text": "Gauss-given order here, right? You You",
+      "start": 2504,
+      "end": 2509.8
+    },
+    {
+      "text": "But",
+      "start": 2508.56,
+      "end": 2513.2
+    },
+    {
+      "text": "uh but you can move the parentheses.",
+      "start": 2509.8,
+      "end": 2515.4
+    },
+    {
+      "text": "So, that In other words, the",
+      "start": 2513.2,
+      "end": 2517.96
+    },
+    {
+      "text": "commutative law, which would allow you",
+      "start": 2515.4,
+      "end": 2520.04
+    },
+    {
+      "text": "to",
+      "start": 2517.96,
+      "end": 2523.8
+    },
+    {
+      "text": "take it in the other order, is false.",
+      "start": 2520.04,
+      "end": 2525.84
+    },
+    {
+      "text": "So, we have to keep it in that order.",
+      "start": 2523.8,
+      "end": 2526.88
+    },
+    {
+      "text": "Okay.",
+      "start": 2525.84,
+      "end": 2527.84
+    },
+    {
+      "text": "So,",
+      "start": 2526.88,
+      "end": 2529.84
+    },
+    {
+      "text": "uh",
+      "start": 2527.84,
+      "end": 2533.08
+    },
+    {
+      "text": "What What next?",
+      "start": 2529.84,
+      "end": 2533.08
+    },
+    {
+      "text": "I could do this multiplication.",
+      "start": 2533.64,
+      "end": 2539.44
+    },
+    {
+      "text": "I could do E32.",
+      "start": 2536.6,
+      "end": 2541.2
+    },
+    {
+      "text": "So, let me come back to see what that",
+      "start": 2539.44,
+      "end": 2543.68
+    },
+    {
+      "text": "was.",
+      "start": 2541.2,
+      "end": 2543.68
+    },
+    {
+      "text": "Here was",
+      "start": 2544.68,
+      "end": 2549.32
+    },
+    {
+      "text": "E21.",
+      "start": 2546.56,
+      "end": 2551.2
+    },
+    {
+      "text": "And here is",
+      "start": 2549.32,
+      "end": 2553.72
+    },
+    {
+      "text": "E32.",
+      "start": 2551.2,
+      "end": 2555.64
+    },
+    {
+      "text": "And if I multiply those matrices",
+      "start": 2553.72,
+      "end": 2558.32
+    },
+    {
+      "text": "together,",
+      "start": 2555.64,
+      "end": 2558.32
+    },
+    {
+      "text": "E32 and then E21, I'll get a single",
+      "start": 2559.2,
+      "end": 2566.2
+    },
+    {
+      "text": "matrix that does elimination.",
+      "start": 2562.6,
+      "end": 2566.2
+    },
+    {
+      "text": "Uh",
+      "start": 2567.16,
+      "end": 2570.92
+    },
+    {
+      "text": "I don't want to do it that.",
+      "start": 2569.16,
+      "end": 2572.44
+    },
+    {
+      "text": "I don't I don't",
+      "start": 2570.92,
+      "end": 2576.04
+    },
+    {
+      "text": "If I do that multiplication,",
+      "start": 2572.44,
+      "end": 2576.04
+    },
+    {
+      "text": "there there's a better way to do this.",
+      "start": 2577.6,
+      "end": 2582.44
+    },
+    {
+      "text": "And and and so in this last few minutes",
+      "start": 2580.28,
+      "end": 2584.6
+    },
+    {
+      "text": "of today's lecture, can I anticipate",
+      "start": 2582.44,
+      "end": 2587.48
+    },
+    {
+      "text": "that better way?",
+      "start": 2584.6,
+      "end": 2587.48
+    },
+    {
+      "text": "The better way is to think not how do I",
+      "start": 2588.24,
+      "end": 2595.76
+    },
+    {
+      "text": "get from A to U,",
+      "start": 2592.68,
+      "end": 2600.24
+    },
+    {
+      "text": "but how do I get from U back to A?",
+      "start": 2595.76,
+      "end": 2601.32
+    },
+    {
+      "text": "So,",
+      "start": 2600.24,
+      "end": 2604.68
+    },
+    {
+      "text": "reversing steps is going to come in.",
+      "start": 2601.32,
+      "end": 2606.64
+    },
+    {
+      "text": "Inverse",
+      "start": 2604.68,
+      "end": 2608.88
+    },
+    {
+      "text": "I'll use the word inverse here.",
+      "start": 2606.64,
+      "end": 2613.36
+    },
+    {
+      "text": "Okay. So, let me make the first step at",
+      "start": 2608.88,
+      "end": 2617.08
+    },
+    {
+      "text": "what's the inverse matrix.",
+      "start": 2613.36,
+      "end": 2617.08
+    },
+    {
+      "text": "All the matrices you've seen on this",
+      "start": 2617.16,
+      "end": 2622.8
+    },
+    {
+      "text": "board have inverses.",
+      "start": 2619.08,
+      "end": 2622.8
+    },
+    {
+      "text": "I",
+      "start": 2622.96,
+      "end": 2627.84
+    },
+    {
+      "text": "I didn't write any bad matrices down. We",
+      "start": 2624.04,
+      "end": 2630.04
+    },
+    {
+      "text": "we spoke about possible failure and for",
+      "start": 2627.84,
+      "end": 2632.48
+    },
+    {
+      "text": "a moment we put in a matrix that would",
+      "start": 2630.04,
+      "end": 2635.48
+    },
+    {
+      "text": "fail. But right now, all these matrices",
+      "start": 2632.48,
+      "end": 2638.36
+    },
+    {
+      "text": "are good. They're all invertible. And",
+      "start": 2635.48,
+      "end": 2640.72
+    },
+    {
+      "text": "let's take the inverse",
+      "start": 2638.36,
+      "end": 2642.08
+    },
+    {
+      "text": "Well, let me say first what is the",
+      "start": 2640.72,
+      "end": 2645.48
+    },
+    {
+      "text": "inverse mean and find it. Okay, so we're",
+      "start": 2642.08,
+      "end": 2650.8
+    },
+    {
+      "text": "getting a little leg up on inverses.",
+      "start": 2645.48,
+      "end": 2652.12
+    },
+    {
+      "text": "Okay.",
+      "start": 2650.8,
+      "end": 2654.96
+    },
+    {
+      "text": "So this is the final",
+      "start": 2652.12,
+      "end": 2658.08
+    },
+    {
+      "text": "moments of today.",
+      "start": 2654.96,
+      "end": 2658.08
+    },
+    {
+      "text": "Ah, sorry.",
+      "start": 2658.12,
+      "end": 2662.4
+    },
+    {
+      "text": "He's still there.",
+      "start": 2659.64,
+      "end": 2662.4
+    },
+    {
+      "text": "Okay.",
+      "start": 2662.8,
+      "end": 2667.24
+    },
+    {
+      "text": "Inverses.",
+      "start": 2664.52,
+      "end": 2667.24
+    },
+    {
+      "text": "Okay, and I'm just going to take one",
+      "start": 2671.24,
+      "end": 2674.84
+    },
+    {
+      "text": "example and then we're done.",
+      "start": 2672.64,
+      "end": 2677.92
+    },
+    {
+      "text": "The example I'll take will be that E.",
+      "start": 2674.84,
+      "end": 2688.08
+    },
+    {
+      "text": "I'm So my matrix is 1 0 0 -3 1 0 0 0 1.",
+      "start": 2677.92,
+      "end": 2688.08
+    },
+    {
+      "text": "And I want to find the matrix that",
+      "start": 2688.2,
+      "end": 2693.68
+    },
+    {
+      "text": "undoes",
+      "start": 2692.2,
+      "end": 2695.84
+    },
+    {
+      "text": "that step.",
+      "start": 2693.68,
+      "end": 2699.48
+    },
+    {
+      "text": "So what was that step? The step was",
+      "start": 2695.84,
+      "end": 2702.08
+    },
+    {
+      "text": "subtract three times row one from row",
+      "start": 2699.48,
+      "end": 2703.6
+    },
+    {
+      "text": "two.",
+      "start": 2702.08,
+      "end": 2707.2
+    },
+    {
+      "text": "So what matrix will",
+      "start": 2703.6,
+      "end": 2707.2
+    },
+    {
+      "text": "get me back?",
+      "start": 2709.04,
+      "end": 2714.44
+    },
+    {
+      "text": "What matrix will bring back",
+      "start": 2710.64,
+      "end": 2717.56
+    },
+    {
+      "text": "you know, if I started with a 2 12 2 and",
+      "start": 2714.44,
+      "end": 2720.88
+    },
+    {
+      "text": "it changed it to a 2 6 2 because of this",
+      "start": 2717.56,
+      "end": 2724.4
+    },
+    {
+      "text": "guy, I want to get back to the 2 12 2.",
+      "start": 2720.88,
+      "end": 2727.2
+    },
+    {
+      "text": "I want to I want to find the matrix",
+      "start": 2724.4,
+      "end": 2730.12
+    },
+    {
+      "text": "which which undoes elimination. The",
+      "start": 2727.2,
+      "end": 2732.84
+    },
+    {
+      "text": "matrix which multiplies this to give the",
+      "start": 2730.12,
+      "end": 2735.52
+    },
+    {
+      "text": "identity.",
+      "start": 2732.84,
+      "end": 2735.52
+    },
+    {
+      "text": "And",
+      "start": 2738.36,
+      "end": 2741.96
+    },
+    {
+      "text": "you can tell me what I should do in",
+      "start": 2740,
+      "end": 2743.68
+    },
+    {
+      "text": "words first and then we'll write down",
+      "start": 2741.96,
+      "end": 2745.68
+    },
+    {
+      "text": "the matrix that does it.",
+      "start": 2743.68,
+      "end": 2748.6
+    },
+    {
+      "text": "If this step subtracted three times row",
+      "start": 2745.68,
+      "end": 2750.96
+    },
+    {
+      "text": "one from row two, what's the inverse",
+      "start": 2748.6,
+      "end": 2753.48
+    },
+    {
+      "text": "step?",
+      "start": 2750.96,
+      "end": 2753.48
+    },
+    {
+      "text": "I add",
+      "start": 2755.04,
+      "end": 2760.6
+    },
+    {
+      "text": "three times row one",
+      "start": 2757.6,
+      "end": 2763.44
+    },
+    {
+      "text": "to row two, right? I add it back. What I",
+      "start": 2760.6,
+      "end": 2765.92
+    },
+    {
+      "text": "subtracted away I add back. So, the",
+      "start": 2763.44,
+      "end": 2769.08
+    },
+    {
+      "text": "inverse matrix in this case is I I now",
+      "start": 2765.92,
+      "end": 2771.8
+    },
+    {
+      "text": "want to add three times row one to row",
+      "start": 2769.08,
+      "end": 2772.88
+    },
+    {
+      "text": "two.",
+      "start": 2771.8,
+      "end": 2775.12
+    },
+    {
+      "text": "So, I won't change row one.",
+      "start": 2772.88,
+      "end": 2777.12
+    },
+    {
+      "text": "I won't change row three.",
+      "start": 2775.12,
+      "end": 2779.32
+    },
+    {
+      "text": "And I'll add",
+      "start": 2777.12,
+      "end": 2782.96
+    },
+    {
+      "text": "three times row one to row two.",
+      "start": 2779.32,
+      "end": 2786.52
+    },
+    {
+      "text": "That's a case where the inverse is",
+      "start": 2782.96,
+      "end": 2787.68
+    },
+    {
+      "text": "clear.",
+      "start": 2786.52,
+      "end": 2791.8
+    },
+    {
+      "text": "It's clear in words what to do.",
+      "start": 2787.68,
+      "end": 2794.8
+    },
+    {
+      "text": "Because what this did was",
+      "start": 2791.8,
+      "end": 2797.28
+    },
+    {
+      "text": "simple to express.",
+      "start": 2794.8,
+      "end": 2800.92
+    },
+    {
+      "text": "It just changed row two by",
+      "start": 2797.28,
+      "end": 2803.56
+    },
+    {
+      "text": "by subtracting three of row one. So, to",
+      "start": 2800.92,
+      "end": 2805.68
+    },
+    {
+      "text": "invert it I go that way.",
+      "start": 2803.56,
+      "end": 2807.84
+    },
+    {
+      "text": "And if you if we do that calculation,",
+      "start": 2805.68,
+      "end": 2810.52
+    },
+    {
+      "text": "three times this row plus one times this",
+      "start": 2807.84,
+      "end": 2812.8
+    },
+    {
+      "text": "row comes out the right row of the",
+      "start": 2810.52,
+      "end": 2817
+    },
+    {
+      "text": "identity. Okay. So, inverses are and",
+      "start": 2812.8,
+      "end": 2820.96
+    },
+    {
+      "text": "So, if this matrix was E",
+      "start": 2817,
+      "end": 2820.96
+    },
+    {
+      "text": "and this matrix is I for identity, then",
+      "start": 2821.68,
+      "end": 2828.24
+    },
+    {
+      "text": "what's the notation for this guy?",
+      "start": 2824.96,
+      "end": 2830.96
+    },
+    {
+      "text": "E to the minus one.",
+      "start": 2828.24,
+      "end": 2832.64
+    },
+    {
+      "text": "E inverse.",
+      "start": 2830.96,
+      "end": 2834.04
+    },
+    {
+      "text": "Okay.",
+      "start": 2832.64,
+      "end": 2836.28
+    },
+    {
+      "text": "Let Let's stop there for today. That's",
+      "start": 2834.04,
+      "end": 2839.76
+    },
+    {
+      "text": "the a little jump on what's coming",
+      "start": 2836.28,
+      "end": 2843.8
+    },
+    {
+      "text": "on Monday. So, see you Monday.",
+      "start": 2839.76,
+      "end": 2843.8
+    }
+  ]
+}

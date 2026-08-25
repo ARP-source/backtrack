@@ -1,0 +1,547 @@
+{
+  "videoId": "zkJ1gOrYhEg",
+  "title": "Adding fractions with unlike denominators introduction",
+  "channel": "Khan Academy",
+  "covers": [
+    "fraction_arithmetic"
+  ],
+  "punctuated": false,
+  "durationSec": 243,
+  "cues": [
+    {
+      "text": "in this video we're gonna try to figure",
+      "start": 0.399,
+      "end": 4.16
+    },
+    {
+      "text": "out what one-half plus one-third is",
+      "start": 1.92,
+      "end": 6.96
+    },
+    {
+      "text": "equal to and like always i encourage you",
+      "start": 4.16,
+      "end": 8.4
+    },
+    {
+      "text": "to pause this video and try to figure it",
+      "start": 6.96,
+      "end": 10.48
+    },
+    {
+      "text": "out on your own",
+      "start": 8.4,
+      "end": 11.92
+    },
+    {
+      "text": "all right now let's work through this",
+      "start": 10.48,
+      "end": 14
+    },
+    {
+      "text": "together and it might be helpful to",
+      "start": 11.92,
+      "end": 16.72
+    },
+    {
+      "text": "visualize one-half and one-third",
+      "start": 14,
+      "end": 19.279
+    },
+    {
+      "text": "so this is a visualization of one-half",
+      "start": 16.72,
+      "end": 21.6
+    },
+    {
+      "text": "if you view this entire bar as a whole",
+      "start": 19.279,
+      "end": 24.48
+    },
+    {
+      "text": "then we have shaded in half of it and if",
+      "start": 21.6,
+      "end": 26.8
+    },
+    {
+      "text": "you wanted to visualize one-third it",
+      "start": 24.48,
+      "end": 28.96
+    },
+    {
+      "text": "looks like that so you could view this",
+      "start": 26.8,
+      "end": 32.8
+    },
+    {
+      "text": "as this half plus this gray third here",
+      "start": 28.96,
+      "end": 34.96
+    },
+    {
+      "text": "what is that going to be equal to",
+      "start": 32.8,
+      "end": 36.8
+    },
+    {
+      "text": "now one of the difficult things is we",
+      "start": 34.96,
+      "end": 38.64
+    },
+    {
+      "text": "know how to add if we have the same",
+      "start": 36.8,
+      "end": 40.079
+    },
+    {
+      "text": "denominator so if we had a certain",
+      "start": 38.64,
+      "end": 41.6
+    },
+    {
+      "text": "number of halves here and a certain",
+      "start": 40.079,
+      "end": 43.36
+    },
+    {
+      "text": "number of halves here well then we would",
+      "start": 41.6,
+      "end": 45.2
+    },
+    {
+      "text": "know how many halves we have here but",
+      "start": 43.36,
+      "end": 47.039
+    },
+    {
+      "text": "here we're trying to add halves to",
+      "start": 45.2,
+      "end": 49.68
+    },
+    {
+      "text": "thirds so how do we do that",
+      "start": 47.039,
+      "end": 52.64
+    },
+    {
+      "text": "well we try to set up a common",
+      "start": 49.68,
+      "end": 55.12
+    },
+    {
+      "text": "denominator now what do we mean by a",
+      "start": 52.64,
+      "end": 57.52
+    },
+    {
+      "text": "common denominator well what if we could",
+      "start": 55.12,
+      "end": 58.559
+    },
+    {
+      "text": "express",
+      "start": 57.52,
+      "end": 62.48
+    },
+    {
+      "text": "this quantity and this quantity in terms",
+      "start": 58.559,
+      "end": 65.199
+    },
+    {
+      "text": "of some other denominator",
+      "start": 62.48,
+      "end": 67.36
+    },
+    {
+      "text": "and a good way to think about it is is",
+      "start": 65.199,
+      "end": 70.24
+    },
+    {
+      "text": "there a multiple of two and three and",
+      "start": 67.36,
+      "end": 72.08
+    },
+    {
+      "text": "it's simplest when you use the least",
+      "start": 70.24,
+      "end": 74.08
+    },
+    {
+      "text": "common multiple and the least common",
+      "start": 72.08,
+      "end": 78
+    },
+    {
+      "text": "multiple of two and three is six so can",
+      "start": 74.08,
+      "end": 81.439
+    },
+    {
+      "text": "we express one-half in terms of sixths",
+      "start": 78,
+      "end": 83.759
+    },
+    {
+      "text": "and can we express one-third in terms of",
+      "start": 81.439,
+      "end": 86.799
+    },
+    {
+      "text": "sixths so let me just start with 1",
+      "start": 83.759,
+      "end": 87.6
+    },
+    {
+      "text": "over",
+      "start": 86.799,
+      "end": 89.759
+    },
+    {
+      "text": "2 and i made this little fraction bar a",
+      "start": 87.6,
+      "end": 91.2
+    },
+    {
+      "text": "little bit longer because you'll see why",
+      "start": 89.759,
+      "end": 92.96
+    },
+    {
+      "text": "in a second well if i want to express it",
+      "start": 91.2,
+      "end": 95.84
+    },
+    {
+      "text": "in terms of 6 to go from halves to 6 i",
+      "start": 92.96,
+      "end": 97.92
+    },
+    {
+      "text": "would have to multiply the denominator",
+      "start": 95.84,
+      "end": 99.52
+    },
+    {
+      "text": "by 3.",
+      "start": 97.92,
+      "end": 100.56
+    },
+    {
+      "text": "but if i want to multiply the",
+      "start": 99.52,
+      "end": 102.399
+    },
+    {
+      "text": "denominator by 3 and not change the",
+      "start": 100.56,
+      "end": 104
+    },
+    {
+      "text": "value of the fraction i have to multiply",
+      "start": 102.399,
+      "end": 107.04
+    },
+    {
+      "text": "the numerator by 3 as well",
+      "start": 104,
+      "end": 110
+    },
+    {
+      "text": "and to see why that makes sense",
+      "start": 107.04,
+      "end": 111.52
+    },
+    {
+      "text": "think about this",
+      "start": 110,
+      "end": 114
+    },
+    {
+      "text": "so this what we have in green is exactly",
+      "start": 111.52,
+      "end": 116.159
+    },
+    {
+      "text": "what we had before but now by",
+      "start": 114,
+      "end": 118.079
+    },
+    {
+      "text": "multiplying the numerator and the",
+      "start": 116.159,
+      "end": 120.32
+    },
+    {
+      "text": "denominator by three i've expressed it",
+      "start": 118.079,
+      "end": 123.68
+    },
+    {
+      "text": "into sixths so notice i have six times",
+      "start": 120.32,
+      "end": 126.719
+    },
+    {
+      "text": "as many divisions of the whole bar",
+      "start": 123.68,
+      "end": 128.479
+    },
+    {
+      "text": "and the green part which you could view",
+      "start": 126.719,
+      "end": 131.36
+    },
+    {
+      "text": "as the numerator i now have three times",
+      "start": 128.479,
+      "end": 134.8
+    },
+    {
+      "text": "as many so these are now sixths so i now",
+      "start": 131.36,
+      "end": 137.92
+    },
+    {
+      "text": "have three sixths instead of one half so",
+      "start": 134.8,
+      "end": 141.04
+    },
+    {
+      "text": "this is the same thing as three over six",
+      "start": 137.92,
+      "end": 143.84
+    },
+    {
+      "text": "and i want to add that or if i want to",
+      "start": 141.04,
+      "end": 147.76
+    },
+    {
+      "text": "add this to what well how do i express 1",
+      "start": 143.84,
+      "end": 150
+    },
+    {
+      "text": "3 in terms of 6",
+      "start": 147.76,
+      "end": 152.879
+    },
+    {
+      "text": "well the way that i could do that it's 1",
+      "start": 150,
+      "end": 154.8
+    },
+    {
+      "text": "over 3. i would want to take each of",
+      "start": 152.879,
+      "end": 156.4
+    },
+    {
+      "text": "these thirds and make them into two",
+      "start": 154.8,
+      "end": 157.519
+    },
+    {
+      "text": "sections",
+      "start": 156.4,
+      "end": 158.319
+    },
+    {
+      "text": "so",
+      "start": 157.519,
+      "end": 160.239
+    },
+    {
+      "text": "to go from thirds to six i'd multiply",
+      "start": 158.319,
+      "end": 162.239
+    },
+    {
+      "text": "the denominator by two but i'd also be",
+      "start": 160.239,
+      "end": 164.72
+    },
+    {
+      "text": "multiplying the numerator by two and to",
+      "start": 162.239,
+      "end": 167.599
+    },
+    {
+      "text": "see why that makes sense notice this",
+      "start": 164.72,
+      "end": 170.08
+    },
+    {
+      "text": "shaded in gray part is exactly what we",
+      "start": 167.599,
+      "end": 172.56
+    },
+    {
+      "text": "have here but now we took each of these",
+      "start": 170.08,
+      "end": 175.04
+    },
+    {
+      "text": "sections and we made them into two",
+      "start": 172.56,
+      "end": 177.04
+    },
+    {
+      "text": "sections so you multiply the numerator",
+      "start": 175.04,
+      "end": 179.36
+    },
+    {
+      "text": "and the denominator by two instead of",
+      "start": 177.04,
+      "end": 181.599
+    },
+    {
+      "text": "thirds instead of three equal sections",
+      "start": 179.36,
+      "end": 183.519
+    },
+    {
+      "text": "we now have six equal sections that's",
+      "start": 181.599,
+      "end": 185.519
+    },
+    {
+      "text": "what the denominator times two did",
+      "start": 183.519,
+      "end": 188.64
+    },
+    {
+      "text": "instead of shading in just one of them i",
+      "start": 185.519,
+      "end": 190.08
+    },
+    {
+      "text": "now have shaded in two of them because",
+      "start": 188.64,
+      "end": 191.519
+    },
+    {
+      "text": "that one thing that i shaded has now",
+      "start": 190.08,
+      "end": 193.44
+    },
+    {
+      "text": "turned into two sections and that's what",
+      "start": 191.519,
+      "end": 195.68
+    },
+    {
+      "text": "multiplying the numerator by two does",
+      "start": 193.44,
+      "end": 198.08
+    },
+    {
+      "text": "and so this is the same thing as 3 6",
+      "start": 195.68,
+      "end": 201.12
+    },
+    {
+      "text": "plus this is going to be 2 6. then you",
+      "start": 198.08,
+      "end": 204
+    },
+    {
+      "text": "could see it here this is 1 6 2 6",
+      "start": 201.12,
+      "end": 207.28
+    },
+    {
+      "text": "and now that everything is in terms of 6",
+      "start": 204,
+      "end": 208.72
+    },
+    {
+      "text": "what is it going to be well it's going",
+      "start": 207.28,
+      "end": 210.879
+    },
+    {
+      "text": "to be a certain number of sixths if i",
+      "start": 208.72,
+      "end": 213.28
+    },
+    {
+      "text": "have three of something plus two of that",
+      "start": 210.879,
+      "end": 214.64
+    },
+    {
+      "text": "something well it's going to be five of",
+      "start": 213.28,
+      "end": 215.92
+    },
+    {
+      "text": "that something in this case the",
+      "start": 214.64,
+      "end": 218.239
+    },
+    {
+      "text": "something is sixths so it's going to be",
+      "start": 215.92,
+      "end": 219.599
+    },
+    {
+      "text": "five sixths",
+      "start": 218.239,
+      "end": 221.519
+    },
+    {
+      "text": "i have trouble saying that and you can",
+      "start": 219.599,
+      "end": 223.68
+    },
+    {
+      "text": "visualize visualize it right over here",
+      "start": 221.519,
+      "end": 226
+    },
+    {
+      "text": "this is three of the sixths one two",
+      "start": 223.68,
+      "end": 228.799
+    },
+    {
+      "text": "three plus two of the six one two gets",
+      "start": 226,
+      "end": 230.72
+    },
+    {
+      "text": "us to five sixths but you could also",
+      "start": 228.799,
+      "end": 232.239
+    },
+    {
+      "text": "view it as this green part was the",
+      "start": 230.72,
+      "end": 234.72
+    },
+    {
+      "text": "original half and this gray part was the",
+      "start": 232.239,
+      "end": 237.36
+    },
+    {
+      "text": "original one third but to be able to",
+      "start": 234.72,
+      "end": 239.68
+    },
+    {
+      "text": "compute it we expressed both of them in",
+      "start": 237.36,
+      "end": 243.239
+    },
+    {
+      "text": "terms of sixths",
+      "start": 239.68,
+      "end": 243.239
+    }
+  ]
+}

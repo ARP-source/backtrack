@@ -1,0 +1,142 @@
+{
+  "videoId": "jWpiMu5LNdg",
+  "title": "How to solve one-step equations",
+  "channel": "Khan Academy",
+  "covers": [
+    "solving_linear_equations"
+  ],
+  "punctuated": true,
+  "durationSec": 126,
+  "cues": [
+    {
+      "text": "Now that we're comfortable with the \"why\" of why we do something to both sides of an equation,",
+      "start": 0.042,
+      "end": 5.042
+    },
+    {
+      "text": "let's see if we can apply it to some equations to solve for",
+      "start": 5.203,
+      "end": 7.678
+    },
+    {
+      "text": "an unknown variable. So let's say that you have x plus seven is equal to ten, and I want to solve for x.",
+      "start": 7.678,
+      "end": 16.544
+    },
+    {
+      "text": "All its saying is something plus seven is equal to ten, and you might be able to figure that out in your head,",
+      "start": 16.544,
+      "end": 20.329
+    },
+    {
+      "text": "but if you want to do it a little bit more systematically, you're like well just",
+      "start": 20.329,
+      "end": 22.873
+    },
+    {
+      "text": "all I want on the left hand side is an x. Well if all I want on the left hand side is an x",
+      "start": 22.873,
+      "end": 26.781
+    },
+    {
+      "text": "I'd want to get rid of the seven. I want to subtract seven from the left-hand side, but if I want to maintain an equality",
+      "start": 26.781,
+      "end": 33.023
+    },
+    {
+      "text": "here, whatever I do to the left-hand side I also have to do to the right-hand side going back to our scales",
+      "start": 33.023,
+      "end": 38.729
+    },
+    {
+      "text": "that's so that we can keep our scale balanced, so that we can say that the left is still equal to the right.",
+      "start": 38.729,
+      "end": 43.677
+    },
+    {
+      "text": "And so what we're going to be left with is x and then the sevens cancel out",
+      "start": 43.677,
+      "end": 50.564
+    },
+    {
+      "text": "is equal to ten minus seven is equal to three. So that unknown is three,",
+      "start": 50.564,
+      "end": 56.493
+    },
+    {
+      "text": "and you can verify it, three plus seven is indeed equal to ten.",
+      "start": 56.493,
+      "end": 61.562
+    },
+    {
+      "text": "Let's try one more. Let's say we have a minus five is equal to negative two.",
+      "start": 61.562,
+      "end": 70.749
+    },
+    {
+      "text": "So this is a little bit more interesting since we have all of these negative numbers here, but we can use",
+      "start": 70.749,
+      "end": 75.395
+    },
+    {
+      "text": "the exact same logic. We just want an a over here on the left-hand side",
+      "start": 75.395,
+      "end": 79.727
+    },
+    {
+      "text": "so we have to get rid of this negative five somehow.",
+      "start": 79.727,
+      "end": 83.023
+    },
+    {
+      "text": "Well the best way of getting rid of a negative 5 is to add five to it.",
+      "start": 83.023,
+      "end": 86.244
+    },
+    {
+      "text": "So I'll do that. So I will add five to the left-hand side.",
+      "start": 86.244,
+      "end": 90.63
+    },
+    {
+      "text": "But if I want the left-hand side to stay equal to the right-hand side,",
+      "start": 90.63,
+      "end": 94.311
+    },
+    {
+      "text": "whatever I do to the left I have to do the right.",
+      "start": 94.311,
+      "end": 96.348
+    },
+    {
+      "text": "So I'm going to have to add five on the right-hand side as well,",
+      "start": 96.348,
+      "end": 100.193
+    },
+    {
+      "text": "and so on the left-hand side I'm left with a, and then the negative five and the positive five cancel out",
+      "start": 100.193,
+      "end": 108.755
+    },
+    {
+      "text": "and on the right hand side, and they're going to stay equal because I did the same thing to both sides,",
+      "start": 108.755,
+      "end": 113.179
+    },
+    {
+      "text": "we have negative two plus five which is equal to three.",
+      "start": 113.179,
+      "end": 117.424
+    },
+    {
+      "text": "So a is equal to three. Once again you can verify it.",
+      "start": 117.424,
+      "end": 122.362
+    },
+    {
+      "text": "Three minus five is indeed equal to negative two.",
+      "start": 122.362,
+      "end": 126.362
+    }
+  ]
+}

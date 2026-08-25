@@ -1,0 +1,412 @@
+{
+  "videoId": "NQSN00zL5gg",
+  "title": "Adding and subtracting negative numbers",
+  "channel": "Khan Academy",
+  "covers": [
+    "negative_numbers"
+  ],
+  "punctuated": true,
+  "durationSec": 246,
+  "cues": [
+    {
+      "text": "Let's have some practice adding and subtracting",
+      "start": 0.5,
+      "end": 2.57
+    },
+    {
+      "text": "negative numbers.",
+      "start": 2.57,
+      "end": 3.42
+    },
+    {
+      "text": "So the first example I want to look at is 2 minus 3.",
+      "start": 3.42,
+      "end": 8.36
+    },
+    {
+      "text": "So right now I'm just subtracting a positive number",
+      "start": 8.36,
+      "end": 11.05
+    },
+    {
+      "text": "from another positive number, but you might already",
+      "start": 11.05,
+      "end": 13.37
+    },
+    {
+      "text": "see that I'm subtracting a larger number from a smaller",
+      "start": 13.37,
+      "end": 16.021
+    },
+    {
+      "text": "number.",
+      "start": 16.021,
+      "end": 16.52
+    },
+    {
+      "text": "So I'm probably, or I will, definitely",
+      "start": 16.52,
+      "end": 18.37
+    },
+    {
+      "text": "end up with a negative number.",
+      "start": 18.37,
+      "end": 19.71
+    },
+    {
+      "text": "But let's just think about this a little bit.",
+      "start": 19.71,
+      "end": 21.584
+    },
+    {
+      "text": "And I'm going to do it with a number line.",
+      "start": 21.584,
+      "end": 23.53
+    },
+    {
+      "text": "So there's my number line right over there.",
+      "start": 23.53,
+      "end": 26.23
+    },
+    {
+      "text": "Now this is 0, this is 1, this is 2, this is negative 1,",
+      "start": 26.23,
+      "end": 32.08
+    },
+    {
+      "text": "this is negative 2.",
+      "start": 32.08,
+      "end": 34.03
+    },
+    {
+      "text": "We could view this as starting at 2.",
+      "start": 34.03,
+      "end": 36.22
+    },
+    {
+      "text": "So this is 2 right over here, and then we're",
+      "start": 36.22,
+      "end": 38.28
+    },
+    {
+      "text": "going to subtract 3 from that 2.",
+      "start": 38.28,
+      "end": 41.15
+    },
+    {
+      "text": "So we're going to move 3 to the left on the number line.",
+      "start": 41.15,
+      "end": 44.26
+    },
+    {
+      "text": "So we're going to move 3 to the left, 1, 2, 3.",
+      "start": 44.26,
+      "end": 48.42
+    },
+    {
+      "text": "And that gets us to negative 1.",
+      "start": 48.42,
+      "end": 51.33
+    },
+    {
+      "text": "This is equal to negative 1.",
+      "start": 51.33,
+      "end": 52.94
+    },
+    {
+      "text": "Now let's mix it up a little bit more.",
+      "start": 52.94,
+      "end": 54.81
+    },
+    {
+      "text": "Let's imagine what would happen if we had negative 2 minus 3.",
+      "start": 54.81,
+      "end": 61.8
+    },
+    {
+      "text": "So this was positive 2 minus 3.",
+      "start": 61.8,
+      "end": 63.5
+    },
+    {
+      "text": "Now let's think about negative 2 minus 3.",
+      "start": 63.5,
+      "end": 66.29
+    },
+    {
+      "text": "So once again, let's draw our number line.",
+      "start": 66.29,
+      "end": 70.35
+    },
+    {
+      "text": "And I'll put 0 over here.",
+      "start": 70.35,
+      "end": 72.35
+    },
+    {
+      "text": "So this is 0, this is 1, this is negative 1, negative 2,",
+      "start": 72.35,
+      "end": 77.8
+    },
+    {
+      "text": "negative 3, negative 4, negative 5, negative 6, and I",
+      "start": 77.8,
+      "end": 83.03
+    },
+    {
+      "text": "could keep going.",
+      "start": 83.03,
+      "end": 84.38
+    },
+    {
+      "text": "But we're starting at negative 2,",
+      "start": 84.38,
+      "end": 88.46
+    },
+    {
+      "text": "and then we're subtracting 3 again.",
+      "start": 88.46,
+      "end": 90.16
+    },
+    {
+      "text": "So once again, we're going to move three",
+      "start": 90.16,
+      "end": 91.826
+    },
+    {
+      "text": "to the left of negative 2.",
+      "start": 91.826,
+      "end": 93.49
+    },
+    {
+      "text": "So we go 1, 2, 3.",
+      "start": 93.49,
+      "end": 96.64
+    },
+    {
+      "text": "We end up at negative 5.",
+      "start": 96.64,
+      "end": 99.23
+    },
+    {
+      "text": "So this is negative 5.",
+      "start": 99.23,
+      "end": 100.38
+    },
+    {
+      "text": "So notice in both situations we subtracted 3,",
+      "start": 100.38,
+      "end": 102.77
+    },
+    {
+      "text": "we moved 3 to the left on the number line.",
+      "start": 102.77,
+      "end": 104.96
+    },
+    {
+      "text": "It's just here we started 2 to the right of 0.",
+      "start": 104.96,
+      "end": 107.92
+    },
+    {
+      "text": "Here we started 2 to the left of 0.",
+      "start": 107.92,
+      "end": 111.8
+    },
+    {
+      "text": "This is negative 2.",
+      "start": 111.8,
+      "end": 113.33
+    },
+    {
+      "text": "Let's do another example with these same numbers.",
+      "start": 113.33,
+      "end": 117.64
+    },
+    {
+      "text": "Let's imagine negative 2 plus 3.",
+      "start": 117.64,
+      "end": 125.17
+    },
+    {
+      "text": "I encourage you to pause this video,",
+      "start": 125.17,
+      "end": 126.83
+    },
+    {
+      "text": "and try to think about this on your own.",
+      "start": 126.83,
+      "end": 130.06
+    },
+    {
+      "text": "So we could draw the number line--",
+      "start": 130.06,
+      "end": 132.254
+    },
+    {
+      "text": "I could draw a straighter number line than that-- so",
+      "start": 132.254,
+      "end": 134.42
+    },
+    {
+      "text": "draw the number line again.",
+      "start": 134.42,
+      "end": 136.17
+    },
+    {
+      "text": "And let's say that this is negative 2,",
+      "start": 136.17,
+      "end": 138.46
+    },
+    {
+      "text": "negative 1, 0, 1, and 2 again.",
+      "start": 138.46,
+      "end": 143.102
+    },
+    {
+      "text": "We're starting at negative 2, we're",
+      "start": 143.102,
+      "end": 144.56
+    },
+    {
+      "text": "starting 2 to the left of zero.",
+      "start": 144.56,
+      "end": 147.724
+    },
+    {
+      "text": "So we're starting at negative 2, and we're going to add 3.",
+      "start": 147.724,
+      "end": 150.14
+    },
+    {
+      "text": "So we're going to go 3 to the right",
+      "start": 150.14,
+      "end": 151.598
+    },
+    {
+      "text": "now, 1, 2, 3, and we end up at positive 1.",
+      "start": 151.598,
+      "end": 160.67
+    },
+    {
+      "text": "Now let's think about 2, so positive 2,",
+      "start": 160.67,
+      "end": 167.45
+    },
+    {
+      "text": "and we're going to subtract a negative 3.",
+      "start": 167.45,
+      "end": 170.44
+    },
+    {
+      "text": "And other videos we've already talked about this.",
+      "start": 174.909,
+      "end": 176.95
+    },
+    {
+      "text": "In fact, there's a video explaining why this actually",
+      "start": 176.95,
+      "end": 179.158
+    },
+    {
+      "text": "makes sense.",
+      "start": 179.158,
+      "end": 179.84
+    },
+    {
+      "text": "But when you subtract a negative,",
+      "start": 179.84,
+      "end": 181.39
+    },
+    {
+      "text": "this is the same thing as adding the positive.",
+      "start": 181.39,
+      "end": 184.56
+    },
+    {
+      "text": "So 2 minus negative 3 is the exact same thing as 2",
+      "start": 184.56,
+      "end": 189.46
+    },
+    {
+      "text": "plus 2 plus positive 3.",
+      "start": 189.46,
+      "end": 193.03
+    },
+    {
+      "text": "These two statements are equivalent,",
+      "start": 193.03,
+      "end": 195.06
+    },
+    {
+      "text": "and this just boils down to, this right over here,",
+      "start": 195.06,
+      "end": 198.28
+    },
+    {
+      "text": "is just going to be 5.",
+      "start": 198.28,
+      "end": 201.29
+    },
+    {
+      "text": "Now, let's mix it up a little bit more.",
+      "start": 201.29,
+      "end": 203.39
+    },
+    {
+      "text": "Let's imagine negative 2 minus negative 3.",
+      "start": 203.39,
+      "end": 211.28
+    },
+    {
+      "text": "Now, this might seem really intimidating to have",
+      "start": 214.51,
+      "end": 216.89
+    },
+    {
+      "text": "all of these negatives in place here,",
+      "start": 216.89,
+      "end": 218.81
+    },
+    {
+      "text": "but you just have to remember subtracting",
+      "start": 218.81,
+      "end": 221.13
+    },
+    {
+      "text": "a negative, like this, is going to get you a positive.",
+      "start": 221.13,
+      "end": 225.21
+    },
+    {
+      "text": "So this is the exact same thing as negative 2 plus 3,",
+      "start": 225.21,
+      "end": 232.09
+    },
+    {
+      "text": "and negative 2 plus 3, we've already",
+      "start": 232.09,
+      "end": 234.72
+    },
+    {
+      "text": "seen it right over here.",
+      "start": 234.72,
+      "end": 235.89
+    },
+    {
+      "text": "You start at negative 2, you start 2 to the left of 0,",
+      "start": 235.89,
+      "end": 239.31
+    },
+    {
+      "text": "and then we're going to go 3 to the right,",
+      "start": 239.31,
+      "end": 241.08
+    },
+    {
+      "text": "we're adding 3, 1, 2, 3.",
+      "start": 241.08,
+      "end": 245.678
+    }
+  ]
+}

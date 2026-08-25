@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# secrets — never commit
+.env
+.env.local
+.env*.local
+
+# next.js
+.next/
+out/
+build/
+next-env.d.ts
+
+# model cache (@xenova downloads weights here)
+.cache/
+models/
+
+# llm response cache (regenerable, keyed by input hash)
+.llm-cache/
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+.vercel
+*.tsbuildinfo

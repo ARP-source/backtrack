@@ -1,0 +1,318 @@
+{
+  "videoId": "rHLEWRxRGiM",
+  "title": "Three-dimensional linear transformations | Chapter 5",
+  "channel": "3Blue1Brown",
+  "covers": [
+    "matrix_as_transformation",
+    "linear_transformations"
+  ],
+  "punctuated": true,
+  "durationSec": 275,
+  "cues": [
+    {
+      "text": "Hey folks, I've got a relatively quick video for you today,",
+      "start": 13.46,
+      "end": 16.416
+    },
+    {
+      "text": "just sort of a footnote between chapters.",
+      "start": 16.416,
+      "end": 18.52
+    },
+    {
+      "text": "In the last two videos I talked about linear transformations and matrices,",
+      "start": 19.06,
+      "end": 22.561
+    },
+    {
+      "text": "but I only showed the specific case of transformations that take",
+      "start": 22.561,
+      "end": 25.636
+    },
+    {
+      "text": "two-dimensional vectors to other two-dimensional vectors.",
+      "start": 25.636,
+      "end": 28.38
+    },
+    {
+      "text": "In general throughout the series we'll work mainly in two dimensions,",
+      "start": 28.92,
+      "end": 32.14
+    },
+    {
+      "text": "mostly because it's easier to actually see on the screen and wrap your mind around.",
+      "start": 32.14,
+      "end": 36.06
+    },
+    {
+      "text": "But more importantly than that, once you get all the core ideas in two dimensions,",
+      "start": 36.5,
+      "end": 40.243
+    },
+    {
+      "text": "they carry over pretty seamlessly to higher dimensions.",
+      "start": 40.243,
+      "end": 42.8
+    },
+    {
+      "text": "Nevertheless, it's good to peek our heads outside of flatland now and then to,",
+      "start": 43.8,
+      "end": 47.163
+    },
+    {
+      "text": "you know, see what it means to apply these ideas in more than just those two dimensions.",
+      "start": 47.163,
+      "end": 51
+    },
+    {
+      "text": "For example, consider a linear transformation with three-dimensional",
+      "start": 52.34,
+      "end": 55.814
+    },
+    {
+      "text": "vectors as inputs and three-dimensional vectors as outputs.",
+      "start": 55.814,
+      "end": 58.88
+    },
+    {
+      "text": "We can visualize this by smooshing around all the points in three-dimensional space,",
+      "start": 60.16,
+      "end": 64.989
+    },
+    {
+      "text": "as represented by a grid, in such a way that keeps the grid lines parallel",
+      "start": 64.989,
+      "end": 69.301
+    },
+    {
+      "text": "and evenly spaced, and which fixes the origin in place.",
+      "start": 69.301,
+      "end": 72.52
+    },
+    {
+      "text": "And just as with two dimensions, every point of space that we see moving around is",
+      "start": 73.46,
+      "end": 77.954
+    },
+    {
+      "text": "really just a proxy for a vector who has its tip at that point,",
+      "start": 77.954,
+      "end": 81.461
+    },
+    {
+      "text": "and what we're really doing is thinking about input vectors moving over to their",
+      "start": 81.461,
+      "end": 85.9
+    },
+    {
+      "text": "corresponding outputs.",
+      "start": 85.9,
+      "end": 87.16
+    },
+    {
+      "text": "And just as with two dimensions, one of these transformations",
+      "start": 87.9,
+      "end": 90.876
+    },
+    {
+      "text": "is completely described by where the basis vectors go.",
+      "start": 90.876,
+      "end": 93.56
+    },
+    {
+      "text": "But now, there are three standard basis vectors that we typically use.",
+      "start": 94.16,
+      "end": 97.68
+    },
+    {
+      "text": "The unit vector in the x direction, i-hat, the unit vector in the y direction,",
+      "start": 98,
+      "end": 102.451
+    },
+    {
+      "text": "j-hat, and a new guy, the unit vector in the z direction, called k-hat.",
+      "start": 102.451,
+      "end": 106.56
+    },
+    {
+      "text": "In fact, I think it's easier to think about these transformations by only following those",
+      "start": 107.14,
+      "end": 111.682
+    },
+    {
+      "text": "basis vectors, since the full 3D grid representing all points can get kind of messy.",
+      "start": 111.682,
+      "end": 116.02
+    },
+    {
+      "text": "By leaving a copy of the original axes in the background,",
+      "start": 116.92,
+      "end": 119.762
+    },
+    {
+      "text": "we can think about the coordinates of where each of these three basis vectors lands.",
+      "start": 119.762,
+      "end": 124
+    },
+    {
+      "text": "Record the coordinates of these three vectors as the columns of a 3x3 matrix.",
+      "start": 125.82,
+      "end": 130.46
+    },
+    {
+      "text": "This gives a matrix that completely describes the transformation using only nine numbers.",
+      "start": 131.26,
+      "end": 136.16
+    },
+    {
+      "text": "As a simple example, consider the transformation",
+      "start": 137.2,
+      "end": 140.545
+    },
+    {
+      "text": "that rotates space 90 degrees around the y-axis.",
+      "start": 140.545,
+      "end": 143.96
+    },
+    {
+      "text": "So that would mean that it takes i-hat to the coordinates (0, 0, -1) on the z-axis.",
+      "start": 144.86,
+      "end": 150.1
+    },
+    {
+      "text": "It doesn't move j-hat, so it stays at the coordinates (0, 1, 0).",
+      "start": 150.82,
+      "end": 154.28
+    },
+    {
+      "text": "And then k-hat moves over to the x-axis at (1, 0, 0).",
+      "start": 154.88,
+      "end": 158.84
+    },
+    {
+      "text": "Those three sets of coordinates become the columns of",
+      "start": 160.99,
+      "end": 163.848
+    },
+    {
+      "text": "a matrix that describes that rotation transformation.",
+      "start": 163.848,
+      "end": 166.76
+    },
+    {
+      "text": "To see where a vector with coordinates (x, y, z) lands,",
+      "start": 169.76,
+      "end": 172.625
+    },
+    {
+      "text": "the reasoning is almost identical to what it was for two dimensions.",
+      "start": 172.625,
+      "end": 176.22
+    },
+    {
+      "text": "Each of those coordinates can be thought of as instructions for how to",
+      "start": 176.94,
+      "end": 180.49
+    },
+    {
+      "text": "scale each basis vector so that they add together to get your vector.",
+      "start": 180.49,
+      "end": 184.04
+    },
+    {
+      "text": "And the important part, just like the 2D case,",
+      "start": 186.26,
+      "end": 188.917
+    },
+    {
+      "text": "is that this scaling and adding process works both before and after the transformation.",
+      "start": 188.917,
+      "end": 194
+    },
+    {
+      "text": "So to see where your vector lands, you multiply those coordinates by the",
+      "start": 196.38,
+      "end": 200.326
+    },
+    {
+      "text": "corresponding columns of the matrix, and then you add together the three results.",
+      "start": 200.326,
+      "end": 204.82
+    },
+    {
+      "text": "Multiplying two matrices is also similar.",
+      "start": 209.6,
+      "end": 211.5
+    },
+    {
+      "text": "Whenever you see two 3x3 matrices getting multiplied together,",
+      "start": 212.02,
+      "end": 215.522
+    },
+    {
+      "text": "you should imagine first applying the transformation encoded by the right one,",
+      "start": 215.522,
+      "end": 219.984
+    },
+    {
+      "text": "then applying the transformation encoded by the left one.",
+      "start": 219.984,
+      "end": 223.26
+    },
+    {
+      "text": "It turns out that 3D matrix multiplication is actually pretty important for fields",
+      "start": 224.06,
+      "end": 228.246
+    },
+    {
+      "text": "like computer graphics and robotics, since things like rotations in three dimensions",
+      "start": 228.246,
+      "end": 232.584
+    },
+    {
+      "text": "can be pretty hard to describe, but they're easier to wrap your mind around if you",
+      "start": 232.584,
+      "end": 236.821
+    },
+    {
+      "text": "can break them down as the composition of separate, easier-to-think-about rotations.",
+      "start": 236.821,
+      "end": 241.16
+    },
+    {
+      "text": "Performing this matrix multiplication numerically is,",
+      "start": 244.36,
+      "end": 247.034
+    },
+    {
+      "text": "once again, pretty similar to the two-dimensional case.",
+      "start": 247.034,
+      "end": 249.86
+    },
+    {
+      "text": "In fact, a good way to test your understanding of the last video would be to try to",
+      "start": 250.48,
+      "end": 254.674
+    },
+    {
+      "text": "reason through what specifically this matrix multiplication should look like,",
+      "start": 254.674,
+      "end": 258.615
+    },
+    {
+      "text": "thinking closely about how it relates to the idea of applying two successive",
+      "start": 258.615,
+      "end": 262.506
+    },
+    {
+      "text": "transformations in space.",
+      "start": 262.506,
+      "end": 263.82
+    },
+    {
+      "text": "In the next video, I'll start getting into the determinant.",
+      "start": 272.14,
+      "end": 274.5
+    }
+  ]
+}

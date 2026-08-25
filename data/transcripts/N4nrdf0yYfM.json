@@ -1,0 +1,1297 @@
+{
+  "videoId": "N4nrdf0yYfM",
+  "title": "Introduction to the coordinate plane",
+  "channel": "Khan Academy",
+  "covers": [
+    "coordinate_plane"
+  ],
+  "punctuated": true,
+  "durationSec": 682,
+  "cues": [
+    {
+      "text": "This right here is a picture of Rene Descartes.",
+      "start": 0.61,
+      "end": 3.62
+    },
+    {
+      "text": "Once again, one of the great minds",
+      "start": 3.62,
+      "end": 5.4
+    },
+    {
+      "text": "in both math and philosophy.",
+      "start": 5.4,
+      "end": 7.24
+    },
+    {
+      "text": "And I think you're seeing a little bit of a trend",
+      "start": 7.24,
+      "end": 9.49
+    },
+    {
+      "text": "here, that the great philosophers were also",
+      "start": 9.49,
+      "end": 11.52
+    },
+    {
+      "text": "great mathematicians and vice versa.",
+      "start": 11.52,
+      "end": 14.639
+    },
+    {
+      "text": "And he was somewhat of a contemporary of Galileo.",
+      "start": 14.639,
+      "end": 16.68
+    },
+    {
+      "text": "He was 32 years younger, although he died shortly",
+      "start": 16.68,
+      "end": 20.27
+    },
+    {
+      "text": "after Galileo died.",
+      "start": 20.27,
+      "end": 21.14
+    },
+    {
+      "text": "This guy died at a much younger age.",
+      "start": 21.14,
+      "end": 22.9
+    },
+    {
+      "text": "Galileo was well into his 70s.",
+      "start": 22.9,
+      "end": 24.96
+    },
+    {
+      "text": "Descartes died at what is only 54 years old.",
+      "start": 24.96,
+      "end": 27.9
+    },
+    {
+      "text": "And he's probably most known in popular culture for this quote",
+      "start": 27.9,
+      "end": 31.349
+    },
+    {
+      "text": "right over here, a very philosophical",
+      "start": 31.349,
+      "end": 32.89
+    },
+    {
+      "text": "quote. \"I think, therefore I am.\"",
+      "start": 32.89,
+      "end": 35.454
+    },
+    {
+      "text": "But I also wanted to throw in, and this isn't that related",
+      "start": 35.454,
+      "end": 37.87
+    },
+    {
+      "text": "to algebra, but I just thought it was a really neat quote,",
+      "start": 37.87,
+      "end": 40.57
+    },
+    {
+      "text": "probably his least famous quote, this one right over here.",
+      "start": 40.57,
+      "end": 44.032
+    },
+    {
+      "text": "And I like it just because it's very practical,",
+      "start": 44.032,
+      "end": 45.99
+    },
+    {
+      "text": "and it makes you realize that these great minds,",
+      "start": 45.99,
+      "end": 48.61
+    },
+    {
+      "text": "these pillars of philosophy and mathematics,",
+      "start": 48.61,
+      "end": 51.21
+    },
+    {
+      "text": "at the end of the day, they really were just human beings.",
+      "start": 51.21,
+      "end": 54.32
+    },
+    {
+      "text": "And he said, \"You just keep pushing.",
+      "start": 54.32,
+      "end": 56.16
+    },
+    {
+      "text": "You just keep pushing.",
+      "start": 56.16,
+      "end": 57.41
+    },
+    {
+      "text": "I made every mistake that could be made.",
+      "start": 57.41,
+      "end": 59.74
+    },
+    {
+      "text": "But I just kept pushing.\"",
+      "start": 59.74,
+      "end": 61.49
+    },
+    {
+      "text": "Which I think is very, very good life advice.",
+      "start": 61.49,
+      "end": 65.4
+    },
+    {
+      "text": "Now, he did many things in philosophy and mathematics.",
+      "start": 65.4,
+      "end": 68.431
+    },
+    {
+      "text": "But the reason why I'm including him",
+      "start": 68.431,
+      "end": 69.93
+    },
+    {
+      "text": "here as we build our foundations of algebra",
+      "start": 69.93,
+      "end": 72.57
+    },
+    {
+      "text": "is that he is the individual most responsible",
+      "start": 72.57,
+      "end": 76.63
+    },
+    {
+      "text": "for a very strong connection between algebra and geometry.",
+      "start": 76.63,
+      "end": 81.42
+    },
+    {
+      "text": "So on the left over here, you have the world of algebra,",
+      "start": 81.42,
+      "end": 84.46
+    },
+    {
+      "text": "and we've discussed it a little bit.",
+      "start": 84.46,
+      "end": 86.24
+    },
+    {
+      "text": "You have equations that deal with symbols,",
+      "start": 86.24,
+      "end": 88.23
+    },
+    {
+      "text": "and these symbols are essentially",
+      "start": 88.23,
+      "end": 89.86
+    },
+    {
+      "text": "they can take on values.",
+      "start": 89.86,
+      "end": 91.73
+    },
+    {
+      "text": "So you could have something like y is equal to 2x minus 1.",
+      "start": 91.73,
+      "end": 97.29
+    },
+    {
+      "text": "This gives us a relationship between whatever x is",
+      "start": 97.29,
+      "end": 100.03
+    },
+    {
+      "text": "and whatever y is.",
+      "start": 100.03,
+      "end": 101.72
+    },
+    {
+      "text": "And we can even set up a table here and pick values for x",
+      "start": 101.72,
+      "end": 105.96
+    },
+    {
+      "text": "and see what the values of y would be.",
+      "start": 105.96,
+      "end": 108.09
+    },
+    {
+      "text": "And I could just pick random values for x,",
+      "start": 108.09,
+      "end": 111.211
+    },
+    {
+      "text": "and then figure out what y is.",
+      "start": 111.211,
+      "end": 112.46
+    },
+    {
+      "text": "But I'll pick relatively straightforward values",
+      "start": 112.46,
+      "end": 115.08
+    },
+    {
+      "text": "just so that the math doesn't get too complicated.",
+      "start": 115.08,
+      "end": 117.68
+    },
+    {
+      "text": "So for example, if x is negative 2,",
+      "start": 117.68,
+      "end": 120.23
+    },
+    {
+      "text": "then y is going to be 2 times negative",
+      "start": 120.23,
+      "end": 122.11
+    },
+    {
+      "text": "2 minus 1, which is negative 4 minus 1, which is negative 5.",
+      "start": 122.11,
+      "end": 131.77
+    },
+    {
+      "text": "If x is negative 1, then y is going",
+      "start": 131.77,
+      "end": 135.13
+    },
+    {
+      "text": "to be 2 times negative 1 minus 1, which",
+      "start": 135.13,
+      "end": 140.44
+    },
+    {
+      "text": "is equal to-- this is negative 2 minus 1, which is negative 3.",
+      "start": 140.44,
+      "end": 144.1
+    },
+    {
+      "text": "If x is equal to 0, then y is going to be 2 times 0 minus 1.",
+      "start": 144.1,
+      "end": 151.88
+    },
+    {
+      "text": "2 times 0 is 0 minus 1 is just negative 1.",
+      "start": 151.88,
+      "end": 154.71
+    },
+    {
+      "text": "I'll do a couple more.",
+      "start": 154.71,
+      "end": 157.494
+    },
+    {
+      "text": "And I could have picked any values here.",
+      "start": 157.494,
+      "end": 159.16
+    },
+    {
+      "text": "I could have said, well, what happens",
+      "start": 159.16,
+      "end": 160.02
+    },
+    {
+      "text": "if x is the negative square root of 2,",
+      "start": 160.02,
+      "end": 161.603
+    },
+    {
+      "text": "or what happens if x is negative 5/2, or positive 6/7?",
+      "start": 161.603,
+      "end": 167.014
+    },
+    {
+      "text": "But I'm just picking these numbers",
+      "start": 167.014,
+      "end": 168.43
+    },
+    {
+      "text": "because it makes the math a lot easier when",
+      "start": 168.43,
+      "end": 170.221
+    },
+    {
+      "text": "I try to figure out what y is going to be.",
+      "start": 170.221,
+      "end": 172.11
+    },
+    {
+      "text": "But when x is 1, y is going to be 2 times 1 minus 1.",
+      "start": 172.11,
+      "end": 176.61
+    },
+    {
+      "text": "2 times 1 is 2 minus 1 is 1.",
+      "start": 176.61,
+      "end": 179.115
+    },
+    {
+      "text": "And I'll do one more.",
+      "start": 179.115,
+      "end": 181.03
+    },
+    {
+      "text": "I'll do one more in a color that I have not used yet.",
+      "start": 181.03,
+      "end": 184.47
+    },
+    {
+      "text": "Let's see, this purple.",
+      "start": 184.47,
+      "end": 186.18
+    },
+    {
+      "text": "If x is 2, then y is going to be 2 times 2--",
+      "start": 186.18,
+      "end": 190.56
+    },
+    {
+      "text": "now our x is 2-- minus 1.",
+      "start": 190.56,
+      "end": 193.73
+    },
+    {
+      "text": "So that is 4 minus 1 is equal to 3.",
+      "start": 193.73,
+      "end": 196.2
+    },
+    {
+      "text": "So fair enough.",
+      "start": 196.2,
+      "end": 196.99
+    },
+    {
+      "text": "I just kind of sampled this relationship.",
+      "start": 196.99,
+      "end": 199.44
+    },
+    {
+      "text": "I said, OK, this describes the general relationship",
+      "start": 199.44,
+      "end": 202.08
+    },
+    {
+      "text": "between a variable y and a variable x.",
+      "start": 202.08,
+      "end": 204.415
+    },
+    {
+      "text": "And then I just made it a little bit more concrete.",
+      "start": 204.415,
+      "end": 206.54
+    },
+    {
+      "text": "I said, OK, well, then for each of these values",
+      "start": 206.54,
+      "end": 210.15
+    },
+    {
+      "text": "of x, what would be the corresponding value of y?",
+      "start": 210.15,
+      "end": 213.55
+    },
+    {
+      "text": "And what Descartes realized is is",
+      "start": 213.55,
+      "end": 215.21
+    },
+    {
+      "text": "that you could visualize this.",
+      "start": 215.21,
+      "end": 216.82
+    },
+    {
+      "text": "One, you could visualize these individual points,",
+      "start": 216.82,
+      "end": 219.83
+    },
+    {
+      "text": "but that could also help you, in general,",
+      "start": 219.83,
+      "end": 222.13
+    },
+    {
+      "text": "to visualize this relationship.",
+      "start": 222.13,
+      "end": 225.135
+    },
+    {
+      "text": "And so what he essentially did is",
+      "start": 225.135,
+      "end": 226.51
+    },
+    {
+      "text": "he bridged the worlds of this kind of very",
+      "start": 226.51,
+      "end": 229.87
+    },
+    {
+      "text": "abstract, symbolic algebra and that and geometry,",
+      "start": 229.87,
+      "end": 233.74
+    },
+    {
+      "text": "which was concerned with shapes and sizes and angles.",
+      "start": 233.74,
+      "end": 237.29
+    },
+    {
+      "text": "So over here you have the world of geometry.",
+      "start": 237.29,
+      "end": 242.667
+    },
+    {
+      "text": "And obviously, there are people in history, maybe many people,",
+      "start": 242.667,
+      "end": 245.25
+    },
+    {
+      "text": "who history may have forgotten who might have dabbled in this.",
+      "start": 245.25,
+      "end": 248.37
+    },
+    {
+      "text": "But before Descartes, it's generally",
+      "start": 248.37,
+      "end": 250.99
+    },
+    {
+      "text": "viewed that geometry was Euclidean geometry,",
+      "start": 250.99,
+      "end": 253.644
+    },
+    {
+      "text": "and that's essentially the geometry that you studied",
+      "start": 253.644,
+      "end": 255.81
+    },
+    {
+      "text": "in a geometry class in eighth or ninth grade",
+      "start": 255.81,
+      "end": 258.49
+    },
+    {
+      "text": "or 10th grade in a traditional high school curriculum.",
+      "start": 258.49,
+      "end": 261.91
+    },
+    {
+      "text": "And that's the geometry of studying",
+      "start": 261.91,
+      "end": 263.74
+    },
+    {
+      "text": "the relationships between triangles and their angles,",
+      "start": 263.74,
+      "end": 267.94
+    },
+    {
+      "text": "and the relationships between circles and you have radii,",
+      "start": 267.94,
+      "end": 271.83
+    },
+    {
+      "text": "and then you have triangles inscribed in circles,",
+      "start": 271.83,
+      "end": 274.822
+    },
+    {
+      "text": "and all the rest.",
+      "start": 274.822,
+      "end": 275.53
+    },
+    {
+      "text": "And we go into some depth in that in the geometry playlist.",
+      "start": 275.53,
+      "end": 278.896
+    },
+    {
+      "text": "But Descartes said, well, I think",
+      "start": 278.896,
+      "end": 280.27
+    },
+    {
+      "text": "I can represent this visually the same way that you could",
+      "start": 280.27,
+      "end": 283.5
+    },
+    {
+      "text": "with studying these triangles and these circles.",
+      "start": 283.5,
+      "end": 286.4
+    },
+    {
+      "text": "He said, well, if we view a piece of paper,",
+      "start": 286.4,
+      "end": 290.26
+    },
+    {
+      "text": "if we think about a two-dimensional plane,",
+      "start": 290.26,
+      "end": 292.01
+    },
+    {
+      "text": "you could view a piece of paper as kind",
+      "start": 292.01,
+      "end": 293.635
+    },
+    {
+      "text": "of a section of a two-dimensional plane.",
+      "start": 293.635,
+      "end": 295.685
+    },
+    {
+      "text": "And we call it two dimensions because there's",
+      "start": 295.685,
+      "end": 297.56
+    },
+    {
+      "text": "two directions that you could go in.",
+      "start": 297.56,
+      "end": 299.27
+    },
+    {
+      "text": "There's the up/down direction.",
+      "start": 299.27,
+      "end": 300.78
+    },
+    {
+      "text": "That's one direction.",
+      "start": 300.78,
+      "end": 302.09
+    },
+    {
+      "text": "So let me draw that.",
+      "start": 302.09,
+      "end": 303.45
+    },
+    {
+      "text": "I'll do it in blue because we're starting to visualize things,",
+      "start": 303.45,
+      "end": 306.21
+    },
+    {
+      "text": "so I'll do it in the geometry color.",
+      "start": 306.21,
+      "end": 308.05
+    },
+    {
+      "text": "So you have the up/down direction.",
+      "start": 308.05,
+      "end": 311.63
+    },
+    {
+      "text": "And you have the left/right direction.",
+      "start": 311.63,
+      "end": 313.99
+    },
+    {
+      "text": "That's why it's called a two-dimensional plane.",
+      "start": 313.99,
+      "end": 316.149
+    },
+    {
+      "text": "If we're dealing in three dimensions,",
+      "start": 316.149,
+      "end": 317.69
+    },
+    {
+      "text": "you would have an in/out dimension.",
+      "start": 317.69,
+      "end": 320.87
+    },
+    {
+      "text": "And it's very easy to do two dimensions on the screen",
+      "start": 320.87,
+      "end": 323.14
+    },
+    {
+      "text": "because the screen is two dimensional.",
+      "start": 323.14,
+      "end": 325.23
+    },
+    {
+      "text": "And he, says, well, you know, there are two variables here,",
+      "start": 325.23,
+      "end": 327.92
+    },
+    {
+      "text": "and they have this relationship.",
+      "start": 327.92,
+      "end": 329.52
+    },
+    {
+      "text": "So why don't I associate each of these variables",
+      "start": 329.52,
+      "end": 331.9
+    },
+    {
+      "text": "with one of these dimensions over here?",
+      "start": 331.9,
+      "end": 334.38
+    },
+    {
+      "text": "And by convention, let's make the y variable, which is really",
+      "start": 334.38,
+      "end": 337.975
+    },
+    {
+      "text": "the dependent variable-- the way we did it,",
+      "start": 337.975,
+      "end": 339.99
+    },
+    {
+      "text": "it depends on what x is-- let's put that on the vertical axis.",
+      "start": 339.99,
+      "end": 343.056
+    },
+    {
+      "text": "And let's put our independent variable,",
+      "start": 343.056,
+      "end": 344.68
+    },
+    {
+      "text": "the one where I just randomly picked values for it",
+      "start": 344.68,
+      "end": 346.49
+    },
+    {
+      "text": "to see what y would become, let's",
+      "start": 346.49,
+      "end": 347.99
+    },
+    {
+      "text": "put that on the horizontal axis.",
+      "start": 347.99,
+      "end": 350.29
+    },
+    {
+      "text": "And it actually was Descartes who",
+      "start": 350.29,
+      "end": 352.19
+    },
+    {
+      "text": "came up with the convention of using x's and y's, and we'll",
+      "start": 352.19,
+      "end": 355.65
+    },
+    {
+      "text": "see later z's, in algebra so extensively",
+      "start": 355.65,
+      "end": 358.32
+    },
+    {
+      "text": "as unknown variables or the variables",
+      "start": 358.32,
+      "end": 360.48
+    },
+    {
+      "text": "that you're manipulating.",
+      "start": 360.48,
+      "end": 361.75
+    },
+    {
+      "text": "But he says, well, if we think about it this way,",
+      "start": 361.75,
+      "end": 363.791
+    },
+    {
+      "text": "if we number these dimensions-- so let's",
+      "start": 363.791,
+      "end": 367.33
+    },
+    {
+      "text": "say that in the x direction, let's make this right over here",
+      "start": 367.33,
+      "end": 372.27
+    },
+    {
+      "text": "is negative 3.",
+      "start": 372.27,
+      "end": 375.45
+    },
+    {
+      "text": "Let's make this negative 2.",
+      "start": 375.45,
+      "end": 377.57
+    },
+    {
+      "text": "This is negative 1.",
+      "start": 377.57,
+      "end": 378.95
+    },
+    {
+      "text": "This is 0.",
+      "start": 378.95,
+      "end": 380.26
+    },
+    {
+      "text": "Now, I'm just numbering the x direction,",
+      "start": 380.26,
+      "end": 383.29
+    },
+    {
+      "text": "the left/right direction.",
+      "start": 383.29,
+      "end": 384.81
+    },
+    {
+      "text": "Now this is positive 1.",
+      "start": 384.81,
+      "end": 386.45
+    },
+    {
+      "text": "This is positive 2.",
+      "start": 386.45,
+      "end": 387.83
+    },
+    {
+      "text": "This is positive 3.",
+      "start": 387.83,
+      "end": 389.66
+    },
+    {
+      "text": "And we could do the same in the y direction.",
+      "start": 389.66,
+      "end": 391.93
+    },
+    {
+      "text": "So let's see, so this could be, let's say this is negative 5,",
+      "start": 391.93,
+      "end": 396.2
+    },
+    {
+      "text": "negative 4, negative 3, negative-- actually,",
+      "start": 396.2,
+      "end": 399.56
+    },
+    {
+      "text": "let me do it a little bit neater than that.",
+      "start": 399.56,
+      "end": 402.01
+    },
+    {
+      "text": "Let me clean this up a little bit.",
+      "start": 402.01,
+      "end": 404.07
+    },
+    {
+      "text": "So let me erase this and extend this down",
+      "start": 404.07,
+      "end": 406.369
+    },
+    {
+      "text": "a little bit so I can go all the way down to negative 5",
+      "start": 406.369,
+      "end": 408.66
+    },
+    {
+      "text": "without making it look too messy.",
+      "start": 408.66,
+      "end": 411.18
+    },
+    {
+      "text": "So let's go all the way down here.",
+      "start": 411.18,
+      "end": 413.24
+    },
+    {
+      "text": "And so we can number it.",
+      "start": 413.24,
+      "end": 414.24
+    },
+    {
+      "text": "This is 1.",
+      "start": 414.24,
+      "end": 415.58
+    },
+    {
+      "text": "This is 2.",
+      "start": 415.58,
+      "end": 416.65
+    },
+    {
+      "text": "This is 3.",
+      "start": 416.65,
+      "end": 417.77
+    },
+    {
+      "text": "And then this could be negative 1, negative 2.",
+      "start": 417.77,
+      "end": 420.872
+    },
+    {
+      "text": "And these are all just conventions.",
+      "start": 420.872,
+      "end": 422.33
+    },
+    {
+      "text": "It could have been labeled the other way.",
+      "start": 422.33,
+      "end": 423.66
+    },
+    {
+      "text": "We could've decided to put the x there and the y there",
+      "start": 423.66,
+      "end": 425.909
+    },
+    {
+      "text": "and make this the positive direction",
+      "start": 425.909,
+      "end": 427.5
+    },
+    {
+      "text": "and make this the negative direction.",
+      "start": 427.5,
+      "end": 428.87
+    },
+    {
+      "text": "But this is just the convention that people",
+      "start": 428.87,
+      "end": 430.661
+    },
+    {
+      "text": "adopted starting with Descartes.",
+      "start": 430.661,
+      "end": 432.3
+    },
+    {
+      "text": "Negative 2, negative 3, negative 4, and negative 5.",
+      "start": 432.3,
+      "end": 437.74
+    },
+    {
+      "text": "And he says, well, I think I can associate",
+      "start": 437.74,
+      "end": 440.76
+    },
+    {
+      "text": "each of these pairs of values with a point in two dimensions.",
+      "start": 440.76,
+      "end": 445.11
+    },
+    {
+      "text": "I can take the x-coordinate, I can take the x value right over",
+      "start": 445.11,
+      "end": 448.28
+    },
+    {
+      "text": "here, and I say, OK, that's a negative 2.",
+      "start": 448.28,
+      "end": 450.09
+    },
+    {
+      "text": "That would be right over there along the left/right direction.",
+      "start": 450.09,
+      "end": 453.48
+    },
+    {
+      "text": "I'm going to the left because it's negative.",
+      "start": 453.48,
+      "end": 455.37
+    },
+    {
+      "text": "And that's associated with negative 5",
+      "start": 455.37,
+      "end": 457.42
+    },
+    {
+      "text": "in the vertical direction.",
+      "start": 457.42,
+      "end": 459.04
+    },
+    {
+      "text": "So I say the y value is negative 5,",
+      "start": 459.04,
+      "end": 461.55
+    },
+    {
+      "text": "and so if I go 2 to the left and 5 down,",
+      "start": 461.55,
+      "end": 466.35
+    },
+    {
+      "text": "I get to this point right over there.",
+      "start": 466.35,
+      "end": 468.78
+    },
+    {
+      "text": "So he says, these two values, negative 2 and negative 5,",
+      "start": 468.78,
+      "end": 473.09
+    },
+    {
+      "text": "I can associate it with this point in this plane",
+      "start": 473.09,
+      "end": 476.27
+    },
+    {
+      "text": "right over here, in this two-dimensional plane.",
+      "start": 476.27,
+      "end": 478.63
+    },
+    {
+      "text": "So I'll say that point has the coordinates, tells me",
+      "start": 478.63,
+      "end": 482.64
+    },
+    {
+      "text": "where to find that point, negative 2, negative 5.",
+      "start": 482.64,
+      "end": 485.7
+    },
+    {
+      "text": "And these coordinates are called Cartesian coordinates,",
+      "start": 485.7,
+      "end": 488.36
+    },
+    {
+      "text": "named for Rene Descartes because he's",
+      "start": 488.36,
+      "end": 491.677
+    },
+    {
+      "text": "the guy that came up with these.",
+      "start": 491.677,
+      "end": 493.01
+    },
+    {
+      "text": "He's associating, all of a sudden, these relationships",
+      "start": 493.01,
+      "end": 495.26
+    },
+    {
+      "text": "with points on a coordinate plane.",
+      "start": 495.26,
+      "end": 497.06
+    },
+    {
+      "text": "And then he said, well, OK, let's do another one.",
+      "start": 497.06,
+      "end": 499.44
+    },
+    {
+      "text": "There's this other relationship, where",
+      "start": 499.44,
+      "end": 501.05
+    },
+    {
+      "text": "I have when x is equal to negative 1,",
+      "start": 501.05,
+      "end": 505.385
+    },
+    {
+      "text": "y is equal to negative 3.",
+      "start": 505.385,
+      "end": 507.16
+    },
+    {
+      "text": "So x is negative 1, y is negative 3.",
+      "start": 507.16,
+      "end": 509.692
+    },
+    {
+      "text": "That's that point right over there.",
+      "start": 509.692,
+      "end": 511.15
+    },
+    {
+      "text": "And the convention is, once again,",
+      "start": 511.15,
+      "end": 512.73
+    },
+    {
+      "text": "when you list the coordinates, you",
+      "start": 512.73,
+      "end": 514.146
+    },
+    {
+      "text": "list the x-coordinate, then the y-coordinate.",
+      "start": 514.146,
+      "end": 516.169
+    },
+    {
+      "text": "And that's just what people decided to do.",
+      "start": 516.169,
+      "end": 518.44
+    },
+    {
+      "text": "Negative 1, negative 3, that would",
+      "start": 518.44,
+      "end": 519.9
+    },
+    {
+      "text": "be that point right over there.",
+      "start": 519.9,
+      "end": 522.039
+    },
+    {
+      "text": "And then you have the point when x is 0, y is negative 1.",
+      "start": 522.039,
+      "end": 525.04
+    },
+    {
+      "text": "When x is 0 right over here, which",
+      "start": 525.04,
+      "end": 527.63
+    },
+    {
+      "text": "means I don't go to the left or the right, y is negative 1,",
+      "start": 527.63,
+      "end": 530.63
+    },
+    {
+      "text": "which means I go 1 down.",
+      "start": 530.63,
+      "end": 531.847
+    },
+    {
+      "text": "So that's that point right over there,",
+      "start": 531.847,
+      "end": 533.43
+    },
+    {
+      "text": "0, negative 1, right over there.",
+      "start": 533.43,
+      "end": 537
+    },
+    {
+      "text": "And I could keep doing this.",
+      "start": 537,
+      "end": 538.62
+    },
+    {
+      "text": "When x is 1, y is 1.",
+      "start": 538.62,
+      "end": 540.43
+    },
+    {
+      "text": "When x is 2, y is 3.",
+      "start": 543.57,
+      "end": 545.595
+    },
+    {
+      "text": "Actually, let me do it in that same purple color.",
+      "start": 549,
+      "end": 551.43
+    },
+    {
+      "text": "When x is 2, y is 3, 2 comma 3.",
+      "start": 551.43,
+      "end": 556.22
+    },
+    {
+      "text": "And then this one right over here in orange was 1 comma 1.",
+      "start": 556.22,
+      "end": 560.39
+    },
+    {
+      "text": "And this is neat by itself.",
+      "start": 560.39,
+      "end": 561.82
+    },
+    {
+      "text": "I essentially just sampled possible x's.",
+      "start": 561.82,
+      "end": 564.131
+    },
+    {
+      "text": "But what he realized is, not only do",
+      "start": 564.131,
+      "end": 565.63
+    },
+    {
+      "text": "you sample these possible x's, but if you just",
+      "start": 565.63,
+      "end": 567.92
+    },
+    {
+      "text": "kept sampling x's, if you tried sampling all the x's",
+      "start": 567.92,
+      "end": 570.15
+    },
+    {
+      "text": "in between, you would actually end up plotting out a line.",
+      "start": 570.15,
+      "end": 573.63
+    },
+    {
+      "text": "So if you were to do every possible x,",
+      "start": 573.63,
+      "end": 575.84
+    },
+    {
+      "text": "you would end up getting a line that looks something",
+      "start": 575.84,
+      "end": 578.13
+    },
+    {
+      "text": "like that right over there.",
+      "start": 578.13,
+      "end": 584.56
+    },
+    {
+      "text": "And any relation, if you pick any x and find any y,",
+      "start": 584.56,
+      "end": 588.45
+    },
+    {
+      "text": "it really represents a point on this line.",
+      "start": 588.45,
+      "end": 590.8
+    },
+    {
+      "text": "Or another way to think about it, any point on this line",
+      "start": 590.8,
+      "end": 593.38
+    },
+    {
+      "text": "represents a solution to this equation right over here.",
+      "start": 593.38,
+      "end": 596.781
+    },
+    {
+      "text": "So if you have this point right over here,",
+      "start": 596.781,
+      "end": 598.53
+    },
+    {
+      "text": "which looks like it's about x is 1 and 1/2, y is 2.",
+      "start": 598.53,
+      "end": 602.09
+    },
+    {
+      "text": "So me write that, 1.5 comma 2.",
+      "start": 602.09,
+      "end": 606.4
+    },
+    {
+      "text": "That is a solution to this equation.",
+      "start": 606.4,
+      "end": 608.47
+    },
+    {
+      "text": "When x is 1.5, 2 times 1.5 is 3 minus 1 is 2.",
+      "start": 608.47,
+      "end": 613.36
+    },
+    {
+      "text": "That is right over there.",
+      "start": 613.36,
+      "end": 614.98
+    },
+    {
+      "text": "So all of a sudden, he was able to bridge",
+      "start": 614.98,
+      "end": 616.81
+    },
+    {
+      "text": "this gap or this relationship between algebra and geometry.",
+      "start": 616.81,
+      "end": 622.14
+    },
+    {
+      "text": "We can now visualize all of the x and y pairs",
+      "start": 622.14,
+      "end": 626.69
+    },
+    {
+      "text": "that satisfy this equation right over here.",
+      "start": 626.69,
+      "end": 631.14
+    },
+    {
+      "text": "And so he is responsible for making this bridge,",
+      "start": 631.14,
+      "end": 635.587
+    },
+    {
+      "text": "and that's why the coordinates that we",
+      "start": 635.587,
+      "end": 637.17
+    },
+    {
+      "text": "use to specify these points are called Cartesian coordinates.",
+      "start": 637.17,
+      "end": 642.17
+    },
+    {
+      "text": "And as we'll see, the first type of equations we will study",
+      "start": 642.17,
+      "end": 645.77
+    },
+    {
+      "text": "are equations of this form over here.",
+      "start": 645.77,
+      "end": 648
+    },
+    {
+      "text": "And in a traditional algebra curriculum,",
+      "start": 648,
+      "end": 650.01
+    },
+    {
+      "text": "they're called linear equations.",
+      "start": 650.01,
+      "end": 651.37
+    },
+    {
+      "text": "And you might be saying, well, OK, this is an equation.",
+      "start": 655,
+      "end": 657.54
+    },
+    {
+      "text": "I see that this is equal to that.",
+      "start": 657.54,
+      "end": 659.1
+    },
+    {
+      "text": "But what's so linear about them?",
+      "start": 659.1,
+      "end": 660.605
+    },
+    {
+      "text": "What makes them look like a line?",
+      "start": 660.605,
+      "end": 662.11
+    },
+    {
+      "text": "And to realize why they are linear,",
+      "start": 662.11,
+      "end": 663.72
+    },
+    {
+      "text": "you have to make this jump that Rene Descartes made,",
+      "start": 663.72,
+      "end": 667.07
+    },
+    {
+      "text": "because if you were to plot this using Cartesian coordinates",
+      "start": 667.07,
+      "end": 670.48
+    },
+    {
+      "text": "on a Euclidean plane, you will get a line.",
+      "start": 670.48,
+      "end": 673.622
+    },
+    {
+      "text": "And in the future, we'll see that there's",
+      "start": 673.622,
+      "end": 675.33
+    },
+    {
+      "text": "other types of equations where you won't get a line, where",
+      "start": 675.33,
+      "end": 677.746
+    },
+    {
+      "text": "you'll get a curve or something kind of crazy or funky.",
+      "start": 677.746,
+      "end": 681.87
+    }
+  ]
+}

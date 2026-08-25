@@ -1,0 +1,503 @@
+{
+  "videoId": "wUNWjd4bMmw",
+  "title": "Introduction to function composition",
+  "channel": "Khan Academy",
+  "covers": [
+    "function_composition",
+    "function_notation"
+  ],
+  "punctuated": true,
+  "durationSec": 374,
+  "cues": [
+    {
+      "text": "Voiceover:So we have three different",
+      "start": 0.707,
+      "end": 2.195
+    },
+    {
+      "text": "function definitions here.",
+      "start": 2.195,
+      "end": 3.346
+    },
+    {
+      "text": "This is F of X in blue, here we map between different",
+      "start": 3.346,
+      "end": 6.579
+    },
+    {
+      "text": "values of T and what G of T would be.",
+      "start": 6.579,
+      "end": 10.653
+    },
+    {
+      "text": "So you could use this as a definition of G of T.",
+      "start": 10.653,
+      "end": 13.996
+    },
+    {
+      "text": "And here we map from X to H of X.",
+      "start": 13.996,
+      "end": 18.363
+    },
+    {
+      "text": "So for example, when X is equal",
+      "start": 18.363,
+      "end": 20.025
+    },
+    {
+      "text": "to three, H of X is equal to zero.",
+      "start": 20.025,
+      "end": 22.636
+    },
+    {
+      "text": "When X is equal to one, H of X is equal to two.",
+      "start": 22.636,
+      "end": 26.204
+    },
+    {
+      "text": "And actually let me number",
+      "start": 26.204,
+      "end": 27.424
+    },
+    {
+      "text": "this one, two, three, just like that.",
+      "start": 27.424,
+      "end": 30.459
+    },
+    {
+      "text": "Now what I want to do in this video is introduce you",
+      "start": 30.459,
+      "end": 33.562
+    },
+    {
+      "text": "to the idea of composing functions.",
+      "start": 33.562,
+      "end": 37.991
+    },
+    {
+      "text": "Now what does it mean to compose functions?",
+      "start": 37.991,
+      "end": 40.455
+    },
+    {
+      "text": "Well that means to build up a function by composing",
+      "start": 40.455,
+      "end": 43.19
+    },
+    {
+      "text": "one function of other functions or I guess",
+      "start": 43.19,
+      "end": 46.693
+    },
+    {
+      "text": "you could think of nesting them.",
+      "start": 46.693,
+      "end": 48.102
+    },
+    {
+      "text": "What do I mean by that?",
+      "start": 48.102,
+      "end": 49.446
+    },
+    {
+      "text": "Well, let's think about what it means to evaluate",
+      "start": 49.446,
+      "end": 53.641
+    },
+    {
+      "text": "F of, not X, but we're going to evaluate F of,",
+      "start": 53.687,
+      "end": 57.138
+    },
+    {
+      "text": "actually let's just start with a little warm-up.",
+      "start": 57.138,
+      "end": 60.066
+    },
+    {
+      "text": "Let's evaluate F of G of two.",
+      "start": 60.066,
+      "end": 67.443
+    },
+    {
+      "text": "Now what do you think this is going to be",
+      "start": 67.443,
+      "end": 69.075
+    },
+    {
+      "text": "and I encourage you to pause this video",
+      "start": 69.075,
+      "end": 70.514
+    },
+    {
+      "text": "and think about it on your own.",
+      "start": 70.514,
+      "end": 73.074
+    },
+    {
+      "text": "Well it seems kind of daunting at first,",
+      "start": 73.074,
+      "end": 75.106
+    },
+    {
+      "text": "if you're not very familiar with the notation,",
+      "start": 75.106,
+      "end": 77.186
+    },
+    {
+      "text": "but we just have to remember what a function is.",
+      "start": 77.186,
+      "end": 79.154
+    },
+    {
+      "text": "A function is just a mapping from",
+      "start": 79.154,
+      "end": 80.402
+    },
+    {
+      "text": "one set of numbers to another.",
+      "start": 80.402,
+      "end": 82.355
+    },
+    {
+      "text": "So for example, when we're saying G of two,",
+      "start": 82.355,
+      "end": 84.739
+    },
+    {
+      "text": "that means take the number two, input it",
+      "start": 84.739,
+      "end": 87.971
+    },
+    {
+      "text": "into the function G and then you're going to get",
+      "start": 87.971,
+      "end": 91.509
+    },
+    {
+      "text": "an output which we are going to call G of two.",
+      "start": 91.509,
+      "end": 96.454
+    },
+    {
+      "text": "Now we're going to use that output, G of two,",
+      "start": 96.454,
+      "end": 98.772
+    },
+    {
+      "text": "and then input it into the function F.",
+      "start": 98.772,
+      "end": 101.507
+    },
+    {
+      "text": "So we're going to input it into the function F,",
+      "start": 101.507,
+      "end": 107.759
+    },
+    {
+      "text": "and what we're going to get is F",
+      "start": 107.759,
+      "end": 109.054
+    },
+    {
+      "text": "of the thing that we inputted, F of G of two.",
+      "start": 109.054,
+      "end": 115.881
+    },
+    {
+      "text": "So let's just take it step by step.",
+      "start": 115.881,
+      "end": 117.392
+    },
+    {
+      "text": "What is G of two?",
+      "start": 117.392,
+      "end": 119.856
+    },
+    {
+      "text": "Well when T is equal to two, G of two is negative three.",
+      "start": 119.856,
+      "end": 128.746
+    },
+    {
+      "text": "So when I put negative three into F, what am I going to get?",
+      "start": 129.176,
+      "end": 135.135
+    },
+    {
+      "text": "Well, I'm going to get negative three squared minus one,",
+      "start": 135.135,
+      "end": 142.43
+    },
+    {
+      "text": "which is nine minus one which is going to be equal to eight.",
+      "start": 142.43,
+      "end": 147.118
+    },
+    {
+      "text": "So this right over here is equal to eight.",
+      "start": 147.118,
+      "end": 149.343
+    },
+    {
+      "text": "F of G of two is going to be equal to eight.",
+      "start": 149.343,
+      "end": 153.983
+    },
+    {
+      "text": "Now, what would, using this same exact logic,",
+      "start": 153.983,
+      "end": 157.326
+    },
+    {
+      "text": "what would F of H of two be?",
+      "start": 157.326,
+      "end": 166.869
+    },
+    {
+      "text": "And once again, I encourage you to pause the video",
+      "start": 166.869,
+      "end": 168.362
+    },
+    {
+      "text": "and think about it on your own.",
+      "start": 168.362,
+      "end": 170.73
+    },
+    {
+      "text": "Well let's think about it this way, instead of",
+      "start": 170.73,
+      "end": 173.818
+    },
+    {
+      "text": "doing it using this little diagram, here everywhere",
+      "start": 173.818,
+      "end": 177.257
+    },
+    {
+      "text": "you see the input is X, whatever the input is",
+      "start": 177.257,
+      "end": 181.61
+    },
+    {
+      "text": "you square it and minus one.",
+      "start": 181.61,
+      "end": 183.355
+    },
+    {
+      "text": "Here the input is H of two, and so we're going to",
+      "start": 183.355,
+      "end": 186.682
+    },
+    {
+      "text": "take the input, which is H of two, and we're going to",
+      "start": 186.682,
+      "end": 190.234
+    },
+    {
+      "text": "square it and we're going to subtract one.",
+      "start": 190.234,
+      "end": 197.065
+    },
+    {
+      "text": "So F of H of two is H of two squared minus one.",
+      "start": 197.065,
+      "end": 201.241
+    },
+    {
+      "text": "Now what is H of two?",
+      "start": 201.241,
+      "end": 203.45
+    },
+    {
+      "text": "When X is equal to two, H of two is one.",
+      "start": 203.45,
+      "end": 206.698
+    },
+    {
+      "text": "So H of two is one, so since H of two is equal to one,",
+      "start": 206.698,
+      "end": 212.297
+    },
+    {
+      "text": "this simplifies two one squared minus one,",
+      "start": 212.297,
+      "end": 215.561
+    },
+    {
+      "text": "well that's just going to be one minus one",
+      "start": 215.561,
+      "end": 217.513
+    },
+    {
+      "text": "which is equal to zero.",
+      "start": 217.513,
+      "end": 222.522
+    },
+    {
+      "text": "We could have done it with the diagram way,",
+      "start": 222.522,
+      "end": 224.698
+    },
+    {
+      "text": "we could have said, hey we're going to input",
+      "start": 224.698,
+      "end": 226.826
+    },
+    {
+      "text": "two into H, if you input two into H you get one,",
+      "start": 226.826,
+      "end": 234.585
+    },
+    {
+      "text": "so that is H of two right over here.",
+      "start": 234.585,
+      "end": 237.321
+    },
+    {
+      "text": "So that is H of two, and then we're going to input that",
+      "start": 237.321,
+      "end": 240.762
+    },
+    {
+      "text": "into F, which is going to give us F of one.",
+      "start": 240.762,
+      "end": 249.77
+    },
+    {
+      "text": "F of one is one squared minus one, which is zero.",
+      "start": 249.77,
+      "end": 254.479
+    },
+    {
+      "text": "So this right over here is F of H of two.",
+      "start": 254.479,
+      "end": 257.902
+    },
+    {
+      "text": "H of two is the input into F, so the output",
+      "start": 258.394,
+      "end": 259.862
+    },
+    {
+      "text": "is going to be F of our input, F of H of two.",
+      "start": 259.862,
+      "end": 267.062
+    },
+    {
+      "text": "Now we can go even further, let's do a composite.",
+      "start": 267.062,
+      "end": 269.526
+    },
+    {
+      "text": "Let's compose three of these functions together.",
+      "start": 269.526,
+      "end": 275.111
+    },
+    {
+      "text": "So let's take, and I'm doing this on the fly a little bit,",
+      "start": 275.111,
+      "end": 284.086
+    },
+    {
+      "text": "so I hope it's a good result, G of F of two,",
+      "start": 284.086,
+      "end": 296.07
+    },
+    {
+      "text": "and let me just think about this for one second.",
+      "start": 296.07,
+      "end": 299.175
+    },
+    {
+      "text": "So that's going to be G of F of two,",
+      "start": 299.175,
+      "end": 303.59
+    },
+    {
+      "text": "and let's take H of G of F of two, just for fun.",
+      "start": 303.59,
+      "end": 309.704
+    },
+    {
+      "text": "Now we're really doing a triple composition.",
+      "start": 309.704,
+      "end": 312.167
+    },
+    {
+      "text": "So there's a bunch of ways we could do this.",
+      "start": 312.167,
+      "end": 313.718
+    },
+    {
+      "text": "One way is to just try to evaluate what is F of two.",
+      "start": 313.718,
+      "end": 319.398
+    },
+    {
+      "text": "Well F of two is going to be equal to two squared minus one.",
+      "start": 319.398,
+      "end": 326.183
+    },
+    {
+      "text": "It's going to be four minus one or three.",
+      "start": 326.183,
+      "end": 328.711
+    },
+    {
+      "text": "So this is going to be equal to three.",
+      "start": 328.711,
+      "end": 332.87
+    },
+    {
+      "text": "Now what is G of three?",
+      "start": 332.87,
+      "end": 335.238
+    },
+    {
+      "text": "G of three is when T is equal to three, G of three is four.",
+      "start": 335.238,
+      "end": 341.787
+    },
+    {
+      "text": "So G of three, this whole thing, is four.",
+      "start": 341.787,
+      "end": 347.531
+    },
+    {
+      "text": "F of two is three, three of G is four.",
+      "start": 347.531,
+      "end": 350.267
+    },
+    {
+      "text": "What is H of four?",
+      "start": 350.267,
+      "end": 352.427
+    },
+    {
+      "text": "Well we can just look back to our original graph here.",
+      "start": 352.427,
+      "end": 355.804
+    },
+    {
+      "text": "When X is four, H of four is negative one.",
+      "start": 355.804,
+      "end": 359.787
+    },
+    {
+      "text": "So H of G of F of two, is just equal to negative one.",
+      "start": 359.787,
+      "end": 367.915
+    },
+    {
+      "text": "So hopefully this you somewhat familiar with how",
+      "start": 367.915,
+      "end": 370.492
+    },
+    {
+      "text": "to evaluate the composition of functions.",
+      "start": 370.492,
+      "end": 373.548
+    }
+  ]
+}

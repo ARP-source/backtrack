@@ -1,0 +1,1884 @@
+{
+  "videoId": "LyGKycYT2v0",
+  "title": "Dot products and duality | Chapter 9",
+  "channel": "3Blue1Brown",
+  "covers": [
+    "dot_product",
+    "orthogonality",
+    "projection"
+  ],
+  "punctuated": true,
+  "durationSec": 831,
+  "cues": [
+    {
+      "text": "Traditionally, dot products are",
+      "start": 20.84,
+      "end": 23.72
+    },
+    {
+      "text": "something that's introduced really early",
+      "start": 22.2,
+      "end": 25.48
+    },
+    {
+      "text": "on in a linear algebra course, typically",
+      "start": 23.72,
+      "end": 27.24
+    },
+    {
+      "text": "right at the start. So, it might seem",
+      "start": 25.48,
+      "end": 28.76
+    },
+    {
+      "text": "strange that I've pushed them back this",
+      "start": 27.24,
+      "end": 30.16
+    },
+    {
+      "text": "far in the series.",
+      "start": 28.76,
+      "end": 31.84
+    },
+    {
+      "text": "I did this because there's a standard",
+      "start": 30.16,
+      "end": 33.16
+    },
+    {
+      "text": "way to introduce the topic which",
+      "start": 31.84,
+      "end": 34.64
+    },
+    {
+      "text": "requires nothing more than a basic",
+      "start": 33.16,
+      "end": 36.68
+    },
+    {
+      "text": "understanding of vectors, but a fuller",
+      "start": 34.64,
+      "end": 38.12
+    },
+    {
+      "text": "understanding of the role that dot",
+      "start": 36.68,
+      "end": 40.12
+    },
+    {
+      "text": "products play in math can only really be",
+      "start": 38.12,
+      "end": 41.64
+    },
+    {
+      "text": "found under the light of linear",
+      "start": 40.12,
+      "end": 43.36
+    },
+    {
+      "text": "transformations.",
+      "start": 41.64,
+      "end": 44.88
+    },
+    {
+      "text": "Before that, though, let me just briefly",
+      "start": 43.36,
+      "end": 46.64
+    },
+    {
+      "text": "cover the standard way that dot products",
+      "start": 44.88,
+      "end": 48.52
+    },
+    {
+      "text": "are introduced, which I'm assuming is at",
+      "start": 46.64,
+      "end": 50.16
+    },
+    {
+      "text": "least partially review for a number of",
+      "start": 48.52,
+      "end": 51.24
+    },
+    {
+      "text": "viewers.",
+      "start": 50.16,
+      "end": 53.52
+    },
+    {
+      "text": "Numerically, if you have two vectors of",
+      "start": 51.24,
+      "end": 55.96
+    },
+    {
+      "text": "the same dimension, two lists of numbers",
+      "start": 53.52,
+      "end": 58.12
+    },
+    {
+      "text": "with the same lengths, taking their dot",
+      "start": 55.96,
+      "end": 60.48
+    },
+    {
+      "text": "product means pairing up all of the",
+      "start": 58.12,
+      "end": 62.84
+    },
+    {
+      "text": "coordinates, multiplying those pairs",
+      "start": 60.48,
+      "end": 66.68
+    },
+    {
+      "text": "together, and adding the result.",
+      "start": 62.84,
+      "end": 70.44
+    },
+    {
+      "text": "So, the vector 1 2 dotted with 3 4 would",
+      "start": 66.68,
+      "end": 74.52
+    },
+    {
+      "text": "be 1 * 3 + 2 * 4.",
+      "start": 70.44,
+      "end": 78.68
+    },
+    {
+      "text": "The vector 6 2 8 3 dotted with 1 8 5 3",
+      "start": 74.52,
+      "end": 84.84
+    },
+    {
+      "text": "would be 6 * 1 + 2 * 8 + 8 * 5 + 3 * 3.",
+      "start": 78.68,
+      "end": 87.16
+    },
+    {
+      "text": "Luckily, this computation has a really",
+      "start": 84.84,
+      "end": 89.48
+    },
+    {
+      "text": "nice geometric interpretation. To think",
+      "start": 87.16,
+      "end": 90.92
+    },
+    {
+      "text": "about the dot product between two",
+      "start": 89.48,
+      "end": 94.6
+    },
+    {
+      "text": "vectors V and W, imagine projecting W",
+      "start": 90.92,
+      "end": 96.48
+    },
+    {
+      "text": "onto the line that passes through the",
+      "start": 94.6,
+      "end": 98.64
+    },
+    {
+      "text": "origin and the tip of V.",
+      "start": 96.48,
+      "end": 99.96
+    },
+    {
+      "text": "Multiplying the length of this",
+      "start": 98.64,
+      "end": 102.52
+    },
+    {
+      "text": "projection by the length of V, you have",
+      "start": 99.96,
+      "end": 106.44
+    },
+    {
+      "text": "the dot product V.W.",
+      "start": 102.52,
+      "end": 108.08
+    },
+    {
+      "text": "Except when this projection of W is",
+      "start": 106.44,
+      "end": 109.72
+    },
+    {
+      "text": "pointing in the opposite direction from",
+      "start": 108.08,
+      "end": 111.56
+    },
+    {
+      "text": "V, that dot product will actually be",
+      "start": 109.72,
+      "end": 113.96
+    },
+    {
+      "text": "negative.",
+      "start": 111.56,
+      "end": 115.2
+    },
+    {
+      "text": "So, when two vectors are generally",
+      "start": 113.96,
+      "end": 116.76
+    },
+    {
+      "text": "pointing in the same direction, their",
+      "start": 115.2,
+      "end": 119.52
+    },
+    {
+      "text": "dot product is positive.",
+      "start": 116.76,
+      "end": 121.24
+    },
+    {
+      "text": "When they're perpendicular, meaning the",
+      "start": 119.52,
+      "end": 123.24
+    },
+    {
+      "text": "projection of one onto the other is the",
+      "start": 121.24,
+      "end": 126
+    },
+    {
+      "text": "zero vector, their dot product is zero.",
+      "start": 123.24,
+      "end": 127.36
+    },
+    {
+      "text": "And if they point in generally the",
+      "start": 126,
+      "end": 129.16
+    },
+    {
+      "text": "opposite direction, their dot product is",
+      "start": 127.36,
+      "end": 131.679
+    },
+    {
+      "text": "negative.",
+      "start": 129.16,
+      "end": 131.679
+    },
+    {
+      "text": "Now, this interpretation is weirdly",
+      "start": 131.72,
+      "end": 135.76
+    },
+    {
+      "text": "asymmetric. It treats the two vectors",
+      "start": 133.8,
+      "end": 137.44
+    },
+    {
+      "text": "very differently. So, when I first",
+      "start": 135.76,
+      "end": 139.32
+    },
+    {
+      "text": "learned this, I was surprised that order",
+      "start": 137.44,
+      "end": 141.32
+    },
+    {
+      "text": "doesn't matter.",
+      "start": 139.32,
+      "end": 143.959
+    },
+    {
+      "text": "You could instead project V onto W,",
+      "start": 141.32,
+      "end": 145.72
+    },
+    {
+      "text": "multiply the length of the projected V",
+      "start": 143.959,
+      "end": 147.72
+    },
+    {
+      "text": "by the length of W, and get the same",
+      "start": 145.72,
+      "end": 150.28
+    },
+    {
+      "text": "result.",
+      "start": 147.72,
+      "end": 151.84
+    },
+    {
+      "text": "I mean, doesn't that feel like a really",
+      "start": 150.28,
+      "end": 154.88
+    },
+    {
+      "text": "different process?",
+      "start": 151.84,
+      "end": 154.88
+    },
+    {
+      "text": "Here's the intuition for why order",
+      "start": 155.48,
+      "end": 158.48
+    },
+    {
+      "text": "doesn't matter.",
+      "start": 157.04,
+      "end": 160.44
+    },
+    {
+      "text": "If V and W happen to have the same",
+      "start": 158.48,
+      "end": 163
+    },
+    {
+      "text": "length, we could leverage some symmetry.",
+      "start": 160.44,
+      "end": 165.32
+    },
+    {
+      "text": "Since projecting W onto V, then",
+      "start": 163,
+      "end": 166.44
+    },
+    {
+      "text": "multiplying the length of that",
+      "start": 165.32,
+      "end": 168.68
+    },
+    {
+      "text": "projection by the length of V, is a",
+      "start": 166.44,
+      "end": 171.08
+    },
+    {
+      "text": "complete mirror image of projecting V",
+      "start": 168.68,
+      "end": 173.36
+    },
+    {
+      "text": "onto W, then multiplying the length of",
+      "start": 171.08,
+      "end": 177.16
+    },
+    {
+      "text": "that projection by the length of W.",
+      "start": 173.36,
+      "end": 179.64
+    },
+    {
+      "text": "Now, if you scale one of them, say V, by",
+      "start": 177.16,
+      "end": 181.56
+    },
+    {
+      "text": "some constant like two, so that they",
+      "start": 179.64,
+      "end": 183.92
+    },
+    {
+      "text": "don't have equal length, the symmetry is",
+      "start": 181.56,
+      "end": 184.959
+    },
+    {
+      "text": "broken.",
+      "start": 183.92,
+      "end": 186.56
+    },
+    {
+      "text": "But let's think through how to interpret",
+      "start": 184.959,
+      "end": 188.48
+    },
+    {
+      "text": "the dot product between this new vector,",
+      "start": 186.56,
+      "end": 190.92
+    },
+    {
+      "text": "two times V, and W.",
+      "start": 188.48,
+      "end": 192.64
+    },
+    {
+      "text": "If you think of W is getting projected",
+      "start": 190.92,
+      "end": 196.4
+    },
+    {
+      "text": "onto V, then the dot product 2V dot W",
+      "start": 192.64,
+      "end": 199.08
+    },
+    {
+      "text": "will be exactly twice the dot product V",
+      "start": 196.4,
+      "end": 200.36
+    },
+    {
+      "text": "dot W.",
+      "start": 199.08,
+      "end": 203.2
+    },
+    {
+      "text": "This is because when you scale V by two,",
+      "start": 200.36,
+      "end": 204.68
+    },
+    {
+      "text": "it doesn't change the length of the",
+      "start": 203.2,
+      "end": 207.04
+    },
+    {
+      "text": "projection of W, but it doubles the",
+      "start": 204.68,
+      "end": 208.519
+    },
+    {
+      "text": "length of the vector that you're",
+      "start": 207.04,
+      "end": 210.36
+    },
+    {
+      "text": "projecting onto.",
+      "start": 208.519,
+      "end": 211.72
+    },
+    {
+      "text": "But on the other hand, let's say you",
+      "start": 210.36,
+      "end": 213.519
+    },
+    {
+      "text": "were thinking about V getting projected",
+      "start": 211.72,
+      "end": 214.92
+    },
+    {
+      "text": "onto W.",
+      "start": 213.519,
+      "end": 216.44
+    },
+    {
+      "text": "Well, in that case, the length of the",
+      "start": 214.92,
+      "end": 218.28
+    },
+    {
+      "text": "projection is the thing that gets scaled",
+      "start": 216.44,
+      "end": 220.32
+    },
+    {
+      "text": "when we multiply V by two, but the",
+      "start": 218.28,
+      "end": 221.28
+    },
+    {
+      "text": "length of the vector that you're",
+      "start": 220.32,
+      "end": 223.72
+    },
+    {
+      "text": "projecting onto stays constant. So, the",
+      "start": 221.28,
+      "end": 225.84
+    },
+    {
+      "text": "overall effect is still to just double",
+      "start": 223.72,
+      "end": 227.64
+    },
+    {
+      "text": "the dot product. So, even though",
+      "start": 225.84,
+      "end": 229.6
+    },
+    {
+      "text": "symmetry is broken in this case, the",
+      "start": 227.64,
+      "end": 231.44
+    },
+    {
+      "text": "effect that this scaling has on the",
+      "start": 229.6,
+      "end": 233.72
+    },
+    {
+      "text": "value of the dot product is the same",
+      "start": 231.44,
+      "end": 236.76
+    },
+    {
+      "text": "under both interpretations.",
+      "start": 233.72,
+      "end": 238.52
+    },
+    {
+      "text": "There's also one other big question that",
+      "start": 236.76,
+      "end": 239.88
+    },
+    {
+      "text": "confused me when I first learned this",
+      "start": 238.52,
+      "end": 242.4
+    },
+    {
+      "text": "stuff. Why on Earth does this numerical",
+      "start": 239.88,
+      "end": 244.32
+    },
+    {
+      "text": "process of matching coordinates,",
+      "start": 242.4,
+      "end": 246.04
+    },
+    {
+      "text": "multiplying pairs, and adding them",
+      "start": 244.32,
+      "end": 248.2
+    },
+    {
+      "text": "together have anything to do with",
+      "start": 246.04,
+      "end": 250.84
+    },
+    {
+      "text": "projection?",
+      "start": 248.2,
+      "end": 253.12
+    },
+    {
+      "text": "Well, to give a satisfactory answer, and",
+      "start": 250.84,
+      "end": 254.48
+    },
+    {
+      "text": "also to do full justice to the",
+      "start": 253.12,
+      "end": 256.68
+    },
+    {
+      "text": "significance of the dot product, we need",
+      "start": 254.48,
+      "end": 258.2
+    },
+    {
+      "text": "to unearth something a little bit deeper",
+      "start": 256.68,
+      "end": 260.16
+    },
+    {
+      "text": "going on here, which often goes by the",
+      "start": 258.2,
+      "end": 261.959
+    },
+    {
+      "text": "name duality.",
+      "start": 260.16,
+      "end": 263.68
+    },
+    {
+      "text": "But before getting into that, I need to",
+      "start": 261.959,
+      "end": 265.28
+    },
+    {
+      "text": "spend some time talking about linear",
+      "start": 263.68,
+      "end": 267.68
+    },
+    {
+      "text": "transformations from multiple dimensions",
+      "start": 265.28,
+      "end": 269.36
+    },
+    {
+      "text": "to one dimension, which is just the",
+      "start": 267.68,
+      "end": 272
+    },
+    {
+      "text": "number line.",
+      "start": 269.36,
+      "end": 272
+    },
+    {
+      "text": "These are functions that take in a 2D",
+      "start": 272.52,
+      "end": 276.28
+    },
+    {
+      "text": "vector and spit out some number. But",
+      "start": 274.16,
+      "end": 278.08
+    },
+    {
+      "text": "linear transformations are of course",
+      "start": 276.28,
+      "end": 279.36
+    },
+    {
+      "text": "much more restricted than your",
+      "start": 278.08,
+      "end": 281.32
+    },
+    {
+      "text": "run-of-the-mill function with a 2D input",
+      "start": 279.36,
+      "end": 284.04
+    },
+    {
+      "text": "and a 1D output. As with transformations",
+      "start": 281.32,
+      "end": 285.56
+    },
+    {
+      "text": "in higher dimensions, like the ones I",
+      "start": 284.04,
+      "end": 287.44
+    },
+    {
+      "text": "talked about in chapter three, there are",
+      "start": 285.56,
+      "end": 289
+    },
+    {
+      "text": "some formal properties that make these",
+      "start": 287.44,
+      "end": 290.68
+    },
+    {
+      "text": "functions linear. But I'm going to",
+      "start": 289,
+      "end": 292.56
+    },
+    {
+      "text": "purposely ignore those here so as to not",
+      "start": 290.68,
+      "end": 294.56
+    },
+    {
+      "text": "distract from our end goal, and instead",
+      "start": 292.56,
+      "end": 296.48
+    },
+    {
+      "text": "focus on a certain visual property",
+      "start": 294.56,
+      "end": 297.76
+    },
+    {
+      "text": "that's equivalent to all the formal",
+      "start": 296.48,
+      "end": 299
+    },
+    {
+      "text": "stuff.",
+      "start": 297.76,
+      "end": 302.04
+    },
+    {
+      "text": "If you take a line of evenly spaced dots",
+      "start": 299,
+      "end": 304.24
+    },
+    {
+      "text": "and apply a transformation,",
+      "start": 302.04,
+      "end": 306.64
+    },
+    {
+      "text": "a linear transformation will keep those",
+      "start": 304.24,
+      "end": 309.12
+    },
+    {
+      "text": "dots evenly spaced once they land in the",
+      "start": 306.64,
+      "end": 312.16
+    },
+    {
+      "text": "output space, which is the number line.",
+      "start": 309.12,
+      "end": 314
+    },
+    {
+      "text": "Otherwise, if there's some line of dots",
+      "start": 312.16,
+      "end": 315.72
+    },
+    {
+      "text": "that gets unevenly spaced, then your",
+      "start": 314,
+      "end": 319.16
+    },
+    {
+      "text": "transformation is not linear.",
+      "start": 315.72,
+      "end": 319.16
+    },
+    {
+      "text": "As with the cases we've seen before, one",
+      "start": 319.2,
+      "end": 323.16
+    },
+    {
+      "text": "of these linear transformations is",
+      "start": 321.28,
+      "end": 325.08
+    },
+    {
+      "text": "completely determined by where it takes",
+      "start": 323.16,
+      "end": 327.8
+    },
+    {
+      "text": "i-hat and j-hat. But this time, each one",
+      "start": 325.08,
+      "end": 329.68
+    },
+    {
+      "text": "of those basis vectors just lands on a",
+      "start": 327.8,
+      "end": 331.72
+    },
+    {
+      "text": "number. So, when we record where they",
+      "start": 329.68,
+      "end": 334.48
+    },
+    {
+      "text": "land as the columns of a matrix, each of",
+      "start": 331.72,
+      "end": 338.28
+    },
+    {
+      "text": "those columns just has a single number.",
+      "start": 334.48,
+      "end": 341.68
+    },
+    {
+      "text": "This is a 1 by 2 matrix.",
+      "start": 338.28,
+      "end": 343.16
+    },
+    {
+      "text": "Let's walk through an example of what it",
+      "start": 341.68,
+      "end": 344.28
+    },
+    {
+      "text": "means to apply one of these",
+      "start": 343.16,
+      "end": 346.56
+    },
+    {
+      "text": "transformations to a vector. Let's say",
+      "start": 344.28,
+      "end": 348.08
+    },
+    {
+      "text": "you have a linear transformation that",
+      "start": 346.56,
+      "end": 352.4
+    },
+    {
+      "text": "takes I hat to 1 and J hat to -2.",
+      "start": 348.08,
+      "end": 353.64
+    },
+    {
+      "text": "To follow where a vector with",
+      "start": 352.4,
+      "end": 357.04
+    },
+    {
+      "text": "coordinates, say 4 3, ends up, think of",
+      "start": 353.64,
+      "end": 360.2
+    },
+    {
+      "text": "breaking up this vector as 4 * I hat + 3",
+      "start": 357.04,
+      "end": 361.76
+    },
+    {
+      "text": "* J hat.",
+      "start": 360.2,
+      "end": 364.04
+    },
+    {
+      "text": "A consequence of linearity is that after",
+      "start": 361.76,
+      "end": 366.52
+    },
+    {
+      "text": "the transformation, the vector will be 4",
+      "start": 364.04,
+      "end": 370.04
+    },
+    {
+      "text": "* the place where I hat lands, 1, + 3 *",
+      "start": 366.52,
+      "end": 372.84
+    },
+    {
+      "text": "the place where J hat lands, -2,",
+      "start": 370.04,
+      "end": 374.4
+    },
+    {
+      "text": "which in this case implies that it lands",
+      "start": 372.84,
+      "end": 377.36
+    },
+    {
+      "text": "on -2.",
+      "start": 374.4,
+      "end": 377.36
+    },
+    {
+      "text": "When you do this calculation purely",
+      "start": 378.08,
+      "end": 381.6
+    },
+    {
+      "text": "numerically, it's matrix-vector",
+      "start": 379.68,
+      "end": 384.48
+    },
+    {
+      "text": "multiplication.",
+      "start": 381.6,
+      "end": 384.48
+    },
+    {
+      "text": "Now, this numerical operation of",
+      "start": 386,
+      "end": 390.48
+    },
+    {
+      "text": "multiplying a 1x2 matrix by a vector",
+      "start": 387.76,
+      "end": 392.12
+    },
+    {
+      "text": "feels just like taking the dot product",
+      "start": 390.48,
+      "end": 394.64
+    },
+    {
+      "text": "of two vectors. Doesn't that 1x2 matrix",
+      "start": 392.12,
+      "end": 396.2
+    },
+    {
+      "text": "just look like a vector that we tipped",
+      "start": 394.64,
+      "end": 397.919
+    },
+    {
+      "text": "on its side?",
+      "start": 396.2,
+      "end": 399.28
+    },
+    {
+      "text": "In fact, we could say right now that",
+      "start": 397.919,
+      "end": 401.72
+    },
+    {
+      "text": "there's a nice association between 1x2",
+      "start": 399.28,
+      "end": 404.44
+    },
+    {
+      "text": "matrices and 2D vectors defined by",
+      "start": 401.72,
+      "end": 406.36
+    },
+    {
+      "text": "tilting the numerical representation of",
+      "start": 404.44,
+      "end": 408.08
+    },
+    {
+      "text": "a vector on its side to get the",
+      "start": 406.36,
+      "end": 410.64
+    },
+    {
+      "text": "associated matrix, or to tip the matrix",
+      "start": 408.08,
+      "end": 413.48
+    },
+    {
+      "text": "back up to get the associated vector.",
+      "start": 410.64,
+      "end": 414.84
+    },
+    {
+      "text": "Since we're just looking at numerical",
+      "start": 413.48,
+      "end": 416.72
+    },
+    {
+      "text": "expressions right now, going back and",
+      "start": 414.84,
+      "end": 419.24
+    },
+    {
+      "text": "forth between vectors and 1x2 matrices",
+      "start": 416.72,
+      "end": 421.72
+    },
+    {
+      "text": "might feel like a silly thing to do.",
+      "start": 419.24,
+      "end": 423.52
+    },
+    {
+      "text": "But this suggests something that's truly",
+      "start": 421.72,
+      "end": 425.8
+    },
+    {
+      "text": "awesome from the geometric view. There's",
+      "start": 423.52,
+      "end": 427.72
+    },
+    {
+      "text": "some kind of connection between linear",
+      "start": 425.8,
+      "end": 429.4
+    },
+    {
+      "text": "transformations that take vectors to",
+      "start": 427.72,
+      "end": 433.84
+    },
+    {
+      "text": "numbers and vectors themselves.",
+      "start": 429.4,
+      "end": 433.84
+    },
+    {
+      "text": "Let me show an example that clarifies",
+      "start": 435.48,
+      "end": 438.68
+    },
+    {
+      "text": "the significance, and which just so",
+      "start": 436.88,
+      "end": 440.4
+    },
+    {
+      "text": "happens to also answer the dot product",
+      "start": 438.68,
+      "end": 442
+    },
+    {
+      "text": "puzzle from earlier.",
+      "start": 440.4,
+      "end": 443.56
+    },
+    {
+      "text": "Unlearn what you have learned, and",
+      "start": 442,
+      "end": 445.28
+    },
+    {
+      "text": "imagine that you don't already know that",
+      "start": 443.56,
+      "end": 449.04
+    },
+    {
+      "text": "the dot product relates to projection.",
+      "start": 445.28,
+      "end": 450.76
+    },
+    {
+      "text": "What I'm going to do here is take a copy",
+      "start": 449.04,
+      "end": 452.32
+    },
+    {
+      "text": "of the number line and place it",
+      "start": 450.76,
+      "end": 454.44
+    },
+    {
+      "text": "diagonally in space somehow, with the",
+      "start": 452.32,
+      "end": 456.8
+    },
+    {
+      "text": "number zero sitting at the origin.",
+      "start": 454.44,
+      "end": 458.4
+    },
+    {
+      "text": "Now, think of the two-dimensional unit",
+      "start": 456.8,
+      "end": 460.56
+    },
+    {
+      "text": "vector whose tip sits where the number",
+      "start": 458.4,
+      "end": 462.72
+    },
+    {
+      "text": "one on the number line is. I want to",
+      "start": 460.56,
+      "end": 465.68
+    },
+    {
+      "text": "give that guy a name, u hat.",
+      "start": 462.72,
+      "end": 467.2
+    },
+    {
+      "text": "This little guy plays an important role",
+      "start": 465.68,
+      "end": 468.92
+    },
+    {
+      "text": "in what's about to happen, so just keep",
+      "start": 467.2,
+      "end": 471
+    },
+    {
+      "text": "him in the back of your mind.",
+      "start": 468.92,
+      "end": 473.4
+    },
+    {
+      "text": "If we project 2D vectors straight onto",
+      "start": 471,
+      "end": 475.68
+    },
+    {
+      "text": "this diagonal number line, in effect,",
+      "start": 473.4,
+      "end": 477.44
+    },
+    {
+      "text": "we've just defined a function that takes",
+      "start": 475.68,
+      "end": 479.6
+    },
+    {
+      "text": "2D vectors to numbers.",
+      "start": 477.44,
+      "end": 481.28
+    },
+    {
+      "text": "What's more, this function is actually",
+      "start": 479.6,
+      "end": 483.8
+    },
+    {
+      "text": "linear since it passes our visual test",
+      "start": 481.28,
+      "end": 486.2
+    },
+    {
+      "text": "that any line of evenly spaced dots",
+      "start": 483.8,
+      "end": 488.24
+    },
+    {
+      "text": "remains evenly spaced once it lands on",
+      "start": 486.2,
+      "end": 490.96
+    },
+    {
+      "text": "the number line.",
+      "start": 488.24,
+      "end": 490.96
+    },
+    {
+      "text": "Just to be clear, even though I've",
+      "start": 491.84,
+      "end": 495.6
+    },
+    {
+      "text": "embedded the number line in 2D space",
+      "start": 493.48,
+      "end": 497.4
+    },
+    {
+      "text": "like this, the outputs of the function",
+      "start": 495.6,
+      "end": 499.88
+    },
+    {
+      "text": "are numbers, not 2D vectors.",
+      "start": 497.4,
+      "end": 500.84
+    },
+    {
+      "text": "You should think of a function that",
+      "start": 499.88,
+      "end": 502.76
+    },
+    {
+      "text": "takes in two coordinates and outputs a",
+      "start": 500.84,
+      "end": 505
+    },
+    {
+      "text": "single coordinate.",
+      "start": 502.76,
+      "end": 506.56
+    },
+    {
+      "text": "But that vector u hat is a",
+      "start": 505,
+      "end": 508.24
+    },
+    {
+      "text": "two-dimensional vector living in the",
+      "start": 506.56,
+      "end": 510.6
+    },
+    {
+      "text": "input space. It's just situated in such",
+      "start": 508.24,
+      "end": 512.32
+    },
+    {
+      "text": "a way that overlaps with the embedding",
+      "start": 510.6,
+      "end": 514.599
+    },
+    {
+      "text": "of the number line.",
+      "start": 512.32,
+      "end": 516.64
+    },
+    {
+      "text": "With this projection, we just defined a",
+      "start": 514.599,
+      "end": 519.2
+    },
+    {
+      "text": "linear transformation from 2D vectors to",
+      "start": 516.64,
+      "end": 520.96
+    },
+    {
+      "text": "numbers. So, we're going to be able to",
+      "start": 519.2,
+      "end": 523.159
+    },
+    {
+      "text": "find some kind of 1 by 2 matrix that",
+      "start": 520.96,
+      "end": 525.44
+    },
+    {
+      "text": "describes that transformation.",
+      "start": 523.159,
+      "end": 527.8
+    },
+    {
+      "text": "To find that 1 by 2 matrix, let's zoom",
+      "start": 525.44,
+      "end": 529.96
+    },
+    {
+      "text": "in on this diagonal number line setup",
+      "start": 527.8,
+      "end": 532.44
+    },
+    {
+      "text": "and think about where i hat and j hat",
+      "start": 529.96,
+      "end": 534.6
+    },
+    {
+      "text": "each land since those landing spots are",
+      "start": 532.44,
+      "end": 538.48
+    },
+    {
+      "text": "going to be the columns of the matrix.",
+      "start": 534.6,
+      "end": 538.48
+    },
+    {
+      "text": "This part's super cool. We can reason",
+      "start": 538.56,
+      "end": 541.8
+    },
+    {
+      "text": "through it with a really elegant piece",
+      "start": 540.12,
+      "end": 544.56
+    },
+    {
+      "text": "of symmetry. Since i hat and u hat are",
+      "start": 541.8,
+      "end": 547.28
+    },
+    {
+      "text": "both unit vectors, projecting i hat onto",
+      "start": 544.56,
+      "end": 549.44
+    },
+    {
+      "text": "the line passing through u hat looks",
+      "start": 547.28,
+      "end": 551.96
+    },
+    {
+      "text": "totally symmetric to projecting u hat",
+      "start": 549.44,
+      "end": 553.72
+    },
+    {
+      "text": "onto the x-axis.",
+      "start": 551.96,
+      "end": 555.44
+    },
+    {
+      "text": "So, when we ask what number does i hat",
+      "start": 553.72,
+      "end": 557.48
+    },
+    {
+      "text": "land on when it gets projected, the",
+      "start": 555.44,
+      "end": 558.839
+    },
+    {
+      "text": "answer's going to be the same as",
+      "start": 557.48,
+      "end": 560.76
+    },
+    {
+      "text": "whatever u hat lands on when it's",
+      "start": 558.839,
+      "end": 562.839
+    },
+    {
+      "text": "projected onto the x-axis.",
+      "start": 560.76,
+      "end": 565.72
+    },
+    {
+      "text": "But projecting u hat onto the x-axis",
+      "start": 562.839,
+      "end": 568.16
+    },
+    {
+      "text": "just means taking the x-coordinate of u",
+      "start": 565.72,
+      "end": 571
+    },
+    {
+      "text": "hat. So, by symmetry, the number where i",
+      "start": 568.16,
+      "end": 572.96
+    },
+    {
+      "text": "hat lands when it's projected onto that",
+      "start": 571,
+      "end": 575
+    },
+    {
+      "text": "diagonal number line is going to be the",
+      "start": 572.96,
+      "end": 579.2
+    },
+    {
+      "text": "x-coordinate of u hat. Isn't that cool?",
+      "start": 575,
+      "end": 580.92
+    },
+    {
+      "text": "The reasoning is almost identical for",
+      "start": 579.2,
+      "end": 582.72
+    },
+    {
+      "text": "the j hat case. Think about it for a",
+      "start": 580.92,
+      "end": 585.28
+    },
+    {
+      "text": "moment.",
+      "start": 582.72,
+      "end": 585.28
+    },
+    {
+      "text": "For all the same reasons, the y",
+      "start": 589.32,
+      "end": 593.2
+    },
+    {
+      "text": "coordinate of u hat gives us the number",
+      "start": 591.16,
+      "end": 595.32
+    },
+    {
+      "text": "where j hat lands when it's projected",
+      "start": 593.2,
+      "end": 597.48
+    },
+    {
+      "text": "onto the number line copy.",
+      "start": 595.32,
+      "end": 598.76
+    },
+    {
+      "text": "Pause and ponder that for a moment. I",
+      "start": 597.48,
+      "end": 601
+    },
+    {
+      "text": "just think that's really cool.",
+      "start": 598.76,
+      "end": 602.8
+    },
+    {
+      "text": "So, the entries of the 1 by 2 matrix",
+      "start": 601,
+      "end": 605.04
+    },
+    {
+      "text": "describing the projection transformation",
+      "start": 602.8,
+      "end": 606.96
+    },
+    {
+      "text": "are going to be the coordinates of u",
+      "start": 605.04,
+      "end": 607.84
+    },
+    {
+      "text": "hat.",
+      "start": 606.96,
+      "end": 609.28
+    },
+    {
+      "text": "And computing this projection",
+      "start": 607.84,
+      "end": 611.2
+    },
+    {
+      "text": "transformation for arbitrary vectors in",
+      "start": 609.28,
+      "end": 613.28
+    },
+    {
+      "text": "space, which requires multiplying that",
+      "start": 611.2,
+      "end": 615.24
+    },
+    {
+      "text": "matrix by those vectors, is",
+      "start": 613.28,
+      "end": 617.64
+    },
+    {
+      "text": "computationally identical to taking a",
+      "start": 615.24,
+      "end": 620.92
+    },
+    {
+      "text": "dot product with u hat.",
+      "start": 617.64,
+      "end": 620.92
+    },
+    {
+      "text": "This is why taking the dot product with",
+      "start": 621.76,
+      "end": 625.92
+    },
+    {
+      "text": "a unit vector can be interpreted as",
+      "start": 623.88,
+      "end": 628.4
+    },
+    {
+      "text": "projecting a vector onto the span of",
+      "start": 625.92,
+      "end": 632.56
+    },
+    {
+      "text": "that unit vector and taking the length.",
+      "start": 628.4,
+      "end": 632.56
+    },
+    {
+      "text": "So, what about non-unit vectors? For",
+      "start": 634.16,
+      "end": 637.84
+    },
+    {
+      "text": "example, let's say we take that unit",
+      "start": 636.32,
+      "end": 639.76
+    },
+    {
+      "text": "vector u hat, but we scale it up by a",
+      "start": 637.84,
+      "end": 641.2
+    },
+    {
+      "text": "factor of three.",
+      "start": 639.76,
+      "end": 643.4
+    },
+    {
+      "text": "Numerically, each of its components gets",
+      "start": 641.2,
+      "end": 645.52
+    },
+    {
+      "text": "multiplied by three. So, looking at the",
+      "start": 643.4,
+      "end": 647.96
+    },
+    {
+      "text": "matrix associated with that vector, it",
+      "start": 645.52,
+      "end": 650.92
+    },
+    {
+      "text": "takes i hat and j hat to three times the",
+      "start": 647.96,
+      "end": 654.44
+    },
+    {
+      "text": "values where they landed before.",
+      "start": 650.92,
+      "end": 654.44
+    },
+    {
+      "text": "Since this is all linear, it implies",
+      "start": 655.48,
+      "end": 659.64
+    },
+    {
+      "text": "more generally that the new matrix can",
+      "start": 657.48,
+      "end": 661.6
+    },
+    {
+      "text": "be interpreted as projecting any vector",
+      "start": 659.64,
+      "end": 663.12
+    },
+    {
+      "text": "onto the number line copy and",
+      "start": 661.6,
+      "end": 665.24
+    },
+    {
+      "text": "multiplying where it lands by three.",
+      "start": 663.12,
+      "end": 667
+    },
+    {
+      "text": "This is why the dot product with a",
+      "start": 665.24,
+      "end": 669.48
+    },
+    {
+      "text": "non-unit vector can be interpreted as",
+      "start": 667,
+      "end": 671.72
+    },
+    {
+      "text": "first projecting onto that vector, then",
+      "start": 669.48,
+      "end": 673.72
+    },
+    {
+      "text": "scaling up the length of that projection",
+      "start": 671.72,
+      "end": 676.96
+    },
+    {
+      "text": "by the length of the vector.",
+      "start": 673.72,
+      "end": 676.96
+    },
+    {
+      "text": "Take a moment to think about what",
+      "start": 677.76,
+      "end": 680.56
+    },
+    {
+      "text": "happened here. We had a linear",
+      "start": 678.88,
+      "end": 682.32
+    },
+    {
+      "text": "transformation from 2D space to the",
+      "start": 680.56,
+      "end": 684.24
+    },
+    {
+      "text": "number line, which was not defined in",
+      "start": 682.32,
+      "end": 686.12
+    },
+    {
+      "text": "terms of numerical vectors or numerical",
+      "start": 684.24,
+      "end": 687.88
+    },
+    {
+      "text": "dot products. It was just defined by",
+      "start": 686.12,
+      "end": 690.08
+    },
+    {
+      "text": "projecting space onto a diagonal copy of",
+      "start": 687.88,
+      "end": 691.52
+    },
+    {
+      "text": "the number line.",
+      "start": 690.08,
+      "end": 692.84
+    },
+    {
+      "text": "But because the transformation is",
+      "start": 691.52,
+      "end": 695.56
+    },
+    {
+      "text": "linear, it was necessarily described by",
+      "start": 692.84,
+      "end": 697.56
+    },
+    {
+      "text": "some 1 by 2 matrix. And since",
+      "start": 695.56,
+      "end": 699.68
+    },
+    {
+      "text": "multiplying a 1 by 2 matrix by a 2D",
+      "start": 697.56,
+      "end": 701.48
+    },
+    {
+      "text": "vector is the same as turning that",
+      "start": 699.68,
+      "end": 703.04
+    },
+    {
+      "text": "matrix on its side and taking a dot",
+      "start": 701.48,
+      "end": 705.08
+    },
+    {
+      "text": "product, this transformation was",
+      "start": 703.04,
+      "end": 709.72
+    },
+    {
+      "text": "inescapably related to some 2D vector.",
+      "start": 705.08,
+      "end": 711.68
+    },
+    {
+      "text": "The lesson here is that anytime you have",
+      "start": 709.72,
+      "end": 713.6
+    },
+    {
+      "text": "one of these linear transformations",
+      "start": 711.68,
+      "end": 715.72
+    },
+    {
+      "text": "whose output space is the number line,",
+      "start": 713.6,
+      "end": 717.44
+    },
+    {
+      "text": "no matter how it was defined, there's",
+      "start": 715.72,
+      "end": 719.4
+    },
+    {
+      "text": "going to be some unique vector V",
+      "start": 717.44,
+      "end": 721.48
+    },
+    {
+      "text": "corresponding to that transformation in",
+      "start": 719.4,
+      "end": 722.48
+    },
+    {
+      "text": "the sense that applying the",
+      "start": 721.48,
+      "end": 724.28
+    },
+    {
+      "text": "transformation is the same thing as",
+      "start": 722.48,
+      "end": 728.36
+    },
+    {
+      "text": "taking a dot product with that vector.",
+      "start": 724.28,
+      "end": 728.36
+    },
+    {
+      "text": "To me, this is utterly beautiful.",
+      "start": 729.88,
+      "end": 734.12
+    },
+    {
+      "text": "It's an example of something in math",
+      "start": 732.76,
+      "end": 736.12
+    },
+    {
+      "text": "called duality.",
+      "start": 734.12,
+      "end": 738.32
+    },
+    {
+      "text": "Duality shows up in many different ways",
+      "start": 736.12,
+      "end": 740.2
+    },
+    {
+      "text": "and forms throughout math, and it's",
+      "start": 738.32,
+      "end": 742.92
+    },
+    {
+      "text": "super tricky to actually define. Loosely",
+      "start": 740.2,
+      "end": 744.84
+    },
+    {
+      "text": "speaking, it refers to situations where",
+      "start": 742.92,
+      "end": 746.88
+    },
+    {
+      "text": "you have a natural but surprising",
+      "start": 744.84,
+      "end": 749.16
+    },
+    {
+      "text": "correspondence between two types of",
+      "start": 746.88,
+      "end": 751
+    },
+    {
+      "text": "mathematical thing.",
+      "start": 749.16,
+      "end": 752.24
+    },
+    {
+      "text": "For the linear algebra case that you",
+      "start": 751,
+      "end": 754
+    },
+    {
+      "text": "just learned about, you'd say that the",
+      "start": 752.24,
+      "end": 756.08
+    },
+    {
+      "text": "dual of a vector is the linear",
+      "start": 754,
+      "end": 758.64
+    },
+    {
+      "text": "transformation that it encodes.",
+      "start": 756.08,
+      "end": 760.52
+    },
+    {
+      "text": "And the dual of a linear transformation",
+      "start": 758.64,
+      "end": 762.76
+    },
+    {
+      "text": "from some space to one dimension is a",
+      "start": 760.52,
+      "end": 766.68
+    },
+    {
+      "text": "certain vector in that space.",
+      "start": 762.76,
+      "end": 766.68
+    },
+    {
+      "text": "So, to sum up, on the surface, the dot",
+      "start": 767.04,
+      "end": 771.56
+    },
+    {
+      "text": "product is a very useful geometric tool",
+      "start": 769.12,
+      "end": 773.4
+    },
+    {
+      "text": "for understanding projections and for",
+      "start": 771.56,
+      "end": 775.04
+    },
+    {
+      "text": "testing whether or not vectors tend to",
+      "start": 773.4,
+      "end": 777.12
+    },
+    {
+      "text": "point in the same direction. And that's",
+      "start": 775.04,
+      "end": 778.88
+    },
+    {
+      "text": "probably the most important thing for",
+      "start": 777.12,
+      "end": 781.24
+    },
+    {
+      "text": "you to remember about the dot product.",
+      "start": 778.88,
+      "end": 783.24
+    },
+    {
+      "text": "But, at a deeper level, dotting two",
+      "start": 781.24,
+      "end": 785.48
+    },
+    {
+      "text": "vectors together is a way to translate",
+      "start": 783.24,
+      "end": 786.88
+    },
+    {
+      "text": "one of them into the world of",
+      "start": 785.48,
+      "end": 788.4
+    },
+    {
+      "text": "transformations.",
+      "start": 786.88,
+      "end": 790.28
+    },
+    {
+      "text": "Again, numerically, this might feel like",
+      "start": 788.4,
+      "end": 792.36
+    },
+    {
+      "text": "a silly point to emphasize. It's just",
+      "start": 790.28,
+      "end": 794
+    },
+    {
+      "text": "two computations that happen to look",
+      "start": 792.36,
+      "end": 796.04
+    },
+    {
+      "text": "similar. But, the reason I find this so",
+      "start": 794,
+      "end": 798.2
+    },
+    {
+      "text": "important is that throughout math, when",
+      "start": 796.04,
+      "end": 800.04
+    },
+    {
+      "text": "you're dealing with a vector, once you",
+      "start": 798.2,
+      "end": 802.08
+    },
+    {
+      "text": "really get to know its personality,",
+      "start": 800.04,
+      "end": 803.76
+    },
+    {
+      "text": "sometimes you realize that it's easier",
+      "start": 802.08,
+      "end": 805.8
+    },
+    {
+      "text": "to understand it not as an arrow in",
+      "start": 803.76,
+      "end": 808.88
+    },
+    {
+      "text": "space, but as the physical embodiment of",
+      "start": 805.8,
+      "end": 811.16
+    },
+    {
+      "text": "a linear transformation. It's as if the",
+      "start": 808.88,
+      "end": 812.84
+    },
+    {
+      "text": "vector is really just a conceptual",
+      "start": 811.16,
+      "end": 815.4
+    },
+    {
+      "text": "shorthand for a certain transformation,",
+      "start": 812.84,
+      "end": 817.12
+    },
+    {
+      "text": "since it's easier for us to think about",
+      "start": 815.4,
+      "end": 819.56
+    },
+    {
+      "text": "arrows in space rather than moving all",
+      "start": 817.12,
+      "end": 822.96
+    },
+    {
+      "text": "of that space to the number line.",
+      "start": 819.56,
+      "end": 824.6
+    },
+    {
+      "text": "In the next video, you'll see another",
+      "start": 822.96,
+      "end": 826.84
+    },
+    {
+      "text": "really cool example of this duality in",
+      "start": 824.6,
+      "end": 828.64
+    },
+    {
+      "text": "action as I talk about the cross",
+      "start": 826.84,
+      "end": 831.32
+    },
+    {
+      "text": "product.",
+      "start": 828.64,
+      "end": 831.32
+    }
+  ]
+}

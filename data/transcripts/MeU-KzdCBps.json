@@ -1,0 +1,843 @@
+{
+  "videoId": "MeU-KzdCBps",
+  "title": "Introduction to slope",
+  "channel": "Khan Academy",
+  "covers": [
+    "slope_and_lines",
+    "coordinate_plane"
+  ],
+  "punctuated": true,
+  "durationSec": 413,
+  "cues": [
+    {
+      "text": "- [Voiceover] As we start to graph lines,",
+      "start": 0.516,
+      "end": 2.118
+    },
+    {
+      "text": "we might notice that they're differences between lines.",
+      "start": 2.118,
+      "end": 4.3
+    },
+    {
+      "text": "For example, this pink or this magenta line here,",
+      "start": 4.3,
+      "end": 7.76
+    },
+    {
+      "text": "it looks steeper than this blue line.",
+      "start": 7.76,
+      "end": 10.361
+    },
+    {
+      "text": "And what we'll see is this notion of steepness,",
+      "start": 11.091,
+      "end": 13.681
+    },
+    {
+      "text": "how steep a line is, how quickly does it increase",
+      "start": 13.681,
+      "end": 17.404
+    },
+    {
+      "text": "or how quickly does it decrease,",
+      "start": 17.424,
+      "end": 18.719
+    },
+    {
+      "text": "is a really useful idea in mathematics.",
+      "start": 19.039,
+      "end": 21.716
+    },
+    {
+      "text": "So ideally, we'd be able to assign a number",
+      "start": 22.156,
+      "end": 25.16
+    },
+    {
+      "text": "to each of these lines or to any lines that",
+      "start": 25.38,
+      "end": 27.357
+    },
+    {
+      "text": "describes how steep it is,",
+      "start": 27.357,
+      "end": 29.563
+    },
+    {
+      "text": "how quickly does it increase or decrease?",
+      "start": 29.563,
+      "end": 33.278
+    },
+    {
+      "text": "So what's a reasonable way to do that?",
+      "start": 33.968,
+      "end": 35.577
+    },
+    {
+      "text": "What's a reasonable way to assign a number",
+      "start": 35.577,
+      "end": 37.497
+    },
+    {
+      "text": "to these lines that describe their steepness?",
+      "start": 37.497,
+      "end": 40.058
+    },
+    {
+      "text": "Well one way to think about it, could say well,",
+      "start": 41.328,
+      "end": 43.061
+    },
+    {
+      "text": "how much does a line increase",
+      "start": 43.061,
+      "end": 45.461
+    },
+    {
+      "text": "in the vertical direction",
+      "start": 47.758,
+      "end": 48.781
+    },
+    {
+      "text": "for a given increase in the horizontal direction?",
+      "start": 48.781,
+      "end": 51.892
+    },
+    {
+      "text": "So let's write this down.",
+      "start": 52.482,
+      "end": 53.388
+    },
+    {
+      "text": "So let's say if we an increase",
+      "start": 54.038,
+      "end": 56.606
+    },
+    {
+      "text": "increase, in vertical,",
+      "start": 57.366,
+      "end": 59.358
+    },
+    {
+      "text": "in vertical,",
+      "start": 60.493,
+      "end": 61.56
+    },
+    {
+      "text": "for a given increase in horizontal",
+      "start": 62.48,
+      "end": 65.382
+    },
+    {
+      "text": "for a given increase",
+      "start": 65.382,
+      "end": 67.924
+    },
+    {
+      "text": "a given increase",
+      "start": 68.707,
+      "end": 70.292
+    },
+    {
+      "text": "in horizontal.",
+      "start": 71.243,
+      "end": 72.773
+    },
+    {
+      "text": "So, how can this give us a value?",
+      "start": 73.623,
+      "end": 77.34
+    },
+    {
+      "text": "Well let's look at that magenta line again.",
+      "start": 78.094,
+      "end": 80.927
+    },
+    {
+      "text": "Now let's just start at an arbituary point",
+      "start": 81.43,
+      "end": 83.299
+    },
+    {
+      "text": "in that magenta line.",
+      "start": 83.299,
+      "end": 84.244
+    },
+    {
+      "text": "But I'll start at a point",
+      "start": 84.244,
+      "end": 85.176
+    },
+    {
+      "text": "where it's going to be easy for me",
+      "start": 85.176,
+      "end": 86.466
+    },
+    {
+      "text": "to figure out what point we're at.",
+      "start": 86.466,
+      "end": 88.532
+    },
+    {
+      "text": "So if we were to start right here,",
+      "start": 89.212,
+      "end": 90.731
+    },
+    {
+      "text": "and if I were to increase in the horizontal",
+      "start": 91.941,
+      "end": 94.423
+    },
+    {
+      "text": "direction by one.",
+      "start": 94.563,
+      "end": 96.28
+    },
+    {
+      "text": "So I move one to the right.",
+      "start": 97.09,
+      "end": 98.36
+    },
+    {
+      "text": "To get back on the line, how much",
+      "start": 98.825,
+      "end": 100.066
+    },
+    {
+      "text": "do I have to increase in the vertical direction?",
+      "start": 100.066,
+      "end": 102.342
+    },
+    {
+      "text": "Well I have to increase in the vertical direction by two.",
+      "start": 102.862,
+      "end": 105.714
+    },
+    {
+      "text": "By two.",
+      "start": 107.214,
+      "end": 107.951
+    },
+    {
+      "text": "So at least for this magenta line,",
+      "start": 107.951,
+      "end": 109.444
+    },
+    {
+      "text": "it looks like our increase in vertical is",
+      "start": 109.444,
+      "end": 112.062
+    },
+    {
+      "text": "two, whenever we have an increase in",
+      "start": 112.236,
+      "end": 114.761
+    },
+    {
+      "text": "one in the horizontal direction.",
+      "start": 114.831,
+      "end": 116.084
+    },
+    {
+      "text": "Let's see, does that still work if I were to",
+      "start": 117.947,
+      "end": 120.585
+    },
+    {
+      "text": "start here, instead of increasing the horizontal",
+      "start": 121.608,
+      "end": 123.386
+    },
+    {
+      "text": "direction by one, if I were increase in",
+      "start": 123.386,
+      "end": 125.917
+    },
+    {
+      "text": "the horizontal direction...",
+      "start": 125.917,
+      "end": 127.519
+    },
+    {
+      "text": "So let's increase by three.",
+      "start": 127.519,
+      "end": 128.657
+    },
+    {
+      "text": "So now, I've gone plus three",
+      "start": 128.657,
+      "end": 131.722
+    },
+    {
+      "text": "in the horizontal direction,",
+      "start": 131.722,
+      "end": 132.79
+    },
+    {
+      "text": "then to get back on the line,",
+      "start": 132.79,
+      "end": 134.206
+    },
+    {
+      "text": "how much do I have to increase in the vertical direction?",
+      "start": 134.206,
+      "end": 135.929
+    },
+    {
+      "text": "I have to increase by one, two, three, four, five, six",
+      "start": 135.929,
+      "end": 140.336
+    },
+    {
+      "text": "I have to increase by six.",
+      "start": 140.876,
+      "end": 142.426
+    },
+    {
+      "text": "So plus six.",
+      "start": 143.016,
+      "end": 144.028
+    },
+    {
+      "text": "So when I increase by three",
+      "start": 144.688,
+      "end": 147.489
+    },
+    {
+      "text": "in the horizontal direction,",
+      "start": 147.689,
+      "end": 150.225
+    },
+    {
+      "text": "I increase by six in the vertical.",
+      "start": 150.865,
+      "end": 152.983
+    },
+    {
+      "text": "We were just saying, hey, let's just measure",
+      "start": 152.983,
+      "end": 154.701
+    },
+    {
+      "text": "how much to we increase in vertical",
+      "start": 154.701,
+      "end": 155.653
+    },
+    {
+      "text": "for a given increase in the horizontal?",
+      "start": 155.653,
+      "end": 157.325
+    },
+    {
+      "text": "Well two over one is just two",
+      "start": 158.115,
+      "end": 159.415
+    },
+    {
+      "text": "and that's the same thing as six over three.",
+      "start": 159.415,
+      "end": 161.831
+    },
+    {
+      "text": "So no matter where I start on this line,",
+      "start": 162.487,
+      "end": 164.479
+    },
+    {
+      "text": "no matter where I start on this line,",
+      "start": 164.834,
+      "end": 166.887
+    },
+    {
+      "text": "if I take and if I increase in the horizontal direction",
+      "start": 167.684,
+      "end": 171.053
+    },
+    {
+      "text": "by a given amount,",
+      "start": 171.463,
+      "end": 172.991
+    },
+    {
+      "text": "I'm going to increase twice as much",
+      "start": 172.991,
+      "end": 174.631
+    },
+    {
+      "text": "twice as much",
+      "start": 175.171,
+      "end": 176.21
+    },
+    {
+      "text": "in the vertical direction.",
+      "start": 176.68,
+      "end": 179.239
+    },
+    {
+      "text": "Twice as much in the vertical direction.",
+      "start": 179.476,
+      "end": 181.493
+    },
+    {
+      "text": "So this notion of this increase in vertical",
+      "start": 181.563,
+      "end": 183.919
+    },
+    {
+      "text": "divided by increase in horizontal,",
+      "start": 183.919,
+      "end": 185.617
+    },
+    {
+      "text": "this is what mathematicians use to describe",
+      "start": 185.877,
+      "end": 189.027
+    },
+    {
+      "text": "the steepness of lines.",
+      "start": 189.027,
+      "end": 190.211
+    },
+    {
+      "text": "And this is called the slope.",
+      "start": 190.901,
+      "end": 192.543
+    },
+    {
+      "text": "So this is called the slope of a line.",
+      "start": 193.242,
+      "end": 194.669
+    },
+    {
+      "text": "And you're probably familiar with the notion",
+      "start": 195.609,
+      "end": 197.525
+    },
+    {
+      "text": "of the word slope being used for a ski slope,",
+      "start": 198.275,
+      "end": 201.637
+    },
+    {
+      "text": "and that's because a ski slope has a certain inclination.",
+      "start": 201.987,
+      "end": 204.201
+    },
+    {
+      "text": "It could have a steep slope or a shallow slope.",
+      "start": 204.201,
+      "end": 205.582
+    },
+    {
+      "text": "So slope is a measure for how steep something is.",
+      "start": 206.512,
+      "end": 209.149
+    },
+    {
+      "text": "And the convention is, is we measure the increase",
+      "start": 209.649,
+      "end": 212.867
+    },
+    {
+      "text": "in vertical for a given in increase in horizontal.",
+      "start": 212.867,
+      "end": 215.172
+    },
+    {
+      "text": "So six two over one is equal to six over three",
+      "start": 216.052,
+      "end": 218.628
+    },
+    {
+      "text": "is equal to two, this is equal to the slope",
+      "start": 218.628,
+      "end": 220.744
+    },
+    {
+      "text": "of this magenta line.",
+      "start": 220.744,
+      "end": 222.416
+    },
+    {
+      "text": "So let me write this down.",
+      "start": 224.72,
+      "end": 226.252
+    },
+    {
+      "text": "So this slope right over here, the slope of that line,",
+      "start": 226.88,
+      "end": 230.108
+    },
+    {
+      "text": "is going to be equal to two.",
+      "start": 230.548,
+      "end": 232.708
+    },
+    {
+      "text": "And one way to interpret that,",
+      "start": 233.168,
+      "end": 234.598
+    },
+    {
+      "text": "for whatever amount you increase in the",
+      "start": 234.598,
+      "end": 236.778
+    },
+    {
+      "text": "horizontal direction, you're going to increase",
+      "start": 236.778,
+      "end": 238.339
+    },
+    {
+      "text": "twice as much in the vertical direction.",
+      "start": 238.339,
+      "end": 240.745
+    },
+    {
+      "text": "Now what about this blue line here?",
+      "start": 241.655,
+      "end": 243.309
+    },
+    {
+      "text": "What would be the slope of the blue line?",
+      "start": 243.309,
+      "end": 244.983
+    },
+    {
+      "text": "Well, let me rewrite another way that you'll typically",
+      "start": 245.412,
+      "end": 248.268
+    },
+    {
+      "text": "see the definition of slope.",
+      "start": 248.268,
+      "end": 249.758
+    },
+    {
+      "text": "And this is just the convention that mathematicians",
+      "start": 249.758,
+      "end": 252.223
+    },
+    {
+      "text": "have defined for slope",
+      "start": 252.223,
+      "end": 253.515
+    },
+    {
+      "text": "but it's a valuable one.",
+      "start": 253.515,
+      "end": 254.607
+    },
+    {
+      "text": "What is are is our change in vertical",
+      "start": 255.017,
+      "end": 256.58
+    },
+    {
+      "text": "for a given change in horizontal?",
+      "start": 256.58,
+      "end": 259.042
+    },
+    {
+      "text": "And I'll introduce a new notation for you.",
+      "start": 259.822,
+      "end": 262.655
+    },
+    {
+      "text": "So, change in vertical,",
+      "start": 263.275,
+      "end": 265.68
+    },
+    {
+      "text": "and in this coordinate,",
+      "start": 266.726,
+      "end": 267.908
+    },
+    {
+      "text": "the vertical is our Y coordinate.",
+      "start": 268.357,
+      "end": 270.125
+    },
+    {
+      "text": "divided by our change in horizontal.",
+      "start": 270.975,
+      "end": 273.213
+    },
+    {
+      "text": "And X is our horizontal coordinate",
+      "start": 274.103,
+      "end": 275.466
+    },
+    {
+      "text": "in this coordinate plane right over here.",
+      "start": 275.876,
+      "end": 279.536
+    },
+    {
+      "text": "So wait, you said change in but then you",
+      "start": 280.098,
+      "end": 282.346
+    },
+    {
+      "text": "drew this triangle.",
+      "start": 282.346,
+      "end": 283.465
+    },
+    {
+      "text": "Well this is the Greek letter delta.",
+      "start": 283.465,
+      "end": 285.88
+    },
+    {
+      "text": "This is the Greek letter delta.",
+      "start": 286.06,
+      "end": 288.248
+    },
+    {
+      "text": "And it's a math symbol used to represent change in.",
+      "start": 288.248,
+      "end": 292.474
+    },
+    {
+      "text": "So that's delta, delta.",
+      "start": 293.054,
+      "end": 295.237
+    },
+    {
+      "text": "And it literally means, change in Y,",
+      "start": 297.197,
+      "end": 299.319
+    },
+    {
+      "text": "change in Y,",
+      "start": 299.909,
+      "end": 301.649
+    },
+    {
+      "text": "divided by change in X,",
+      "start": 302.349,
+      "end": 304.214
+    },
+    {
+      "text": "change in X.",
+      "start": 304.657,
+      "end": 306.602
+    },
+    {
+      "text": "So if we want to find the slope of the blue line,",
+      "start": 307.141,
+      "end": 308.72
+    },
+    {
+      "text": "we just have to say, well how much does Y change",
+      "start": 309.05,
+      "end": 311.994
+    },
+    {
+      "text": "for a given change in X?",
+      "start": 311.994,
+      "end": 313.201
+    },
+    {
+      "text": "So, the slope of the blue line.",
+      "start": 314.225,
+      "end": 315.618
+    },
+    {
+      "text": "So let's see, let me do it this way.",
+      "start": 317.228,
+      "end": 319.997
+    },
+    {
+      "text": "Let's just start at some point here.",
+      "start": 323.876,
+      "end": 325.502
+    },
+    {
+      "text": "And let's say my X changes by two",
+      "start": 325.502,
+      "end": 328.242
+    },
+    {
+      "text": "so my delta X is equal to positive two.",
+      "start": 328.242,
+      "end": 331.515
+    },
+    {
+      "text": "What's my delta Y going to be?",
+      "start": 331.515,
+      "end": 333.257
+    },
+    {
+      "text": "What's going to be my change in Y?",
+      "start": 333.257,
+      "end": 334.511
+    },
+    {
+      "text": "Well, if I go by the right by two,",
+      "start": 334.511,
+      "end": 337.367
+    },
+    {
+      "text": "to get back on the line,",
+      "start": 337.367,
+      "end": 338.411
+    },
+    {
+      "text": "I'll have to increase my Y by two.",
+      "start": 338.411,
+      "end": 340.014
+    },
+    {
+      "text": "So my change in Y is also going to be plus two.",
+      "start": 340.014,
+      "end": 344.345
+    },
+    {
+      "text": "So the slope of this blue line,",
+      "start": 344.955,
+      "end": 346.19
+    },
+    {
+      "text": "the slope of the blue line,",
+      "start": 347.02,
+      "end": 348.442
+    },
+    {
+      "text": "which is change in Y over change in X.",
+      "start": 348.952,
+      "end": 351.809
+    },
+    {
+      "text": "We just saw that when our change in X is positive two,",
+      "start": 352.629,
+      "end": 355.311
+    },
+    {
+      "text": "our change in Y is also positive two.",
+      "start": 355.741,
+      "end": 358.449
+    },
+    {
+      "text": "So our slope is two divided by two,",
+      "start": 358.919,
+      "end": 360.771
+    },
+    {
+      "text": "which is equal to one.",
+      "start": 360.991,
+      "end": 361.863
+    },
+    {
+      "text": "Which tells us however much we increase in",
+      "start": 362.483,
+      "end": 364.44
+    },
+    {
+      "text": "X, we're going to increase the same amount in Y.",
+      "start": 364.44,
+      "end": 366.971
+    },
+    {
+      "text": "We see that, we increase one in X, we increase",
+      "start": 366.971,
+      "end": 369.63
+    },
+    {
+      "text": "one in Y.",
+      "start": 369.63,
+      "end": 370.709
+    },
+    {
+      "text": "Increase one in X, increase one in Y.",
+      "start": 370.709,
+      "end": 372.404
+    },
+    {
+      "text": ">From any point on the line, that's going to be true.",
+      "start": 372.404,
+      "end": 374.703
+    },
+    {
+      "text": "You increase three in X,",
+      "start": 374.703,
+      "end": 377.291
+    },
+    {
+      "text": "you're going to increase three in Y.",
+      "start": 377.74,
+      "end": 380.391
+    },
+    {
+      "text": "It's actually true the other way.",
+      "start": 380.851,
+      "end": 382.063
+    },
+    {
+      "text": "If you decrease one in X,",
+      "start": 382.283,
+      "end": 384.13
+    },
+    {
+      "text": "you're going to decrease one in Y.",
+      "start": 384.13,
+      "end": 385.941
+    },
+    {
+      "text": "If you decrease two in X,",
+      "start": 386.681,
+      "end": 388.541
+    },
+    {
+      "text": "you're going to decrease two in Y.",
+      "start": 388.541,
+      "end": 390.621
+    },
+    {
+      "text": "And that makes sense from the math of it as well",
+      "start": 391.491,
+      "end": 394.694
+    },
+    {
+      "text": "Because if you're change in X is negative two,",
+      "start": 395.234,
+      "end": 397.806
+    },
+    {
+      "text": "that's what we did right over here,",
+      "start": 397.806,
+      "end": 399.547
+    },
+    {
+      "text": "our change is X is negative two,",
+      "start": 399.727,
+      "end": 401.66
+    },
+    {
+      "text": "we went two back,",
+      "start": 401.79,
+      "end": 402.542
+    },
+    {
+      "text": "then your change in Y is going to be negative two as well.",
+      "start": 402.542,
+      "end": 405.445
+    },
+    {
+      "text": "Your change in Y is going to be negative two,",
+      "start": 406.295,
+      "end": 407.906
+    },
+    {
+      "text": "and negative two divided by negative two,",
+      "start": 407.906,
+      "end": 410.088
+    },
+    {
+      "text": "is positive one, which is your slope again.",
+      "start": 410.088,
+      "end": 413.246
+    }
+  ]
+}

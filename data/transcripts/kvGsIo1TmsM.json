@@ -1,0 +1,742 @@
+{
+  "videoId": "kvGsIo1TmsM",
+  "title": "What is a function?",
+  "channel": "Khan Academy",
+  "covers": [
+    "function_notation"
+  ],
+  "punctuated": true,
+  "durationSec": 476,
+  "cues": [
+    {
+      "text": "A function-- and I'm going to speak about it",
+      "start": 0.72,
+      "end": 2.86
+    },
+    {
+      "text": "in very abstract terms right now-- is something that",
+      "start": 2.86,
+      "end": 6.35
+    },
+    {
+      "text": "will take an input, and it'll munch on that input,",
+      "start": 6.35,
+      "end": 11.134
+    },
+    {
+      "text": "it'll look at that input, it will do something",
+      "start": 11.134,
+      "end": 13.05
+    },
+    {
+      "text": "to that input.",
+      "start": 13.05,
+      "end": 14.01
+    },
+    {
+      "text": "And based on what that input is, it will produce a given output.",
+      "start": 14.01,
+      "end": 20.23
+    },
+    {
+      "text": "What is an example of a function?",
+      "start": 20.23,
+      "end": 22.2
+    },
+    {
+      "text": "I could have something like f of x-- and x",
+      "start": 22.2,
+      "end": 27.94
+    },
+    {
+      "text": "tends to be the variable most used for an input",
+      "start": 27.94,
+      "end": 30.2
+    },
+    {
+      "text": "into the function.",
+      "start": 30.2,
+      "end": 31.2
+    },
+    {
+      "text": "And the name of a function, f tends",
+      "start": 31.2,
+      "end": 34.1
+    },
+    {
+      "text": "to be the most-used variable.",
+      "start": 34.1,
+      "end": 35.65
+    },
+    {
+      "text": "But we'll see that you can use others-- is equal to,",
+      "start": 35.65,
+      "end": 41.68
+    },
+    {
+      "text": "let's say, x squared, if x is even.",
+      "start": 41.68,
+      "end": 48.36
+    },
+    {
+      "text": "And let's say it is equal to x plus 5, if x is odd.",
+      "start": 48.36,
+      "end": 59.68
+    },
+    {
+      "text": "What would happen if we input 2 into this function?",
+      "start": 59.68,
+      "end": 63.96
+    },
+    {
+      "text": "The way that we would denote inputting 2",
+      "start": 63.96,
+      "end": 65.91
+    },
+    {
+      "text": "is that we would want to evaluate f of 2.",
+      "start": 65.91,
+      "end": 70.73
+    },
+    {
+      "text": "This is saying, let's input 2 into our function f.",
+      "start": 70.73,
+      "end": 74.76
+    },
+    {
+      "text": "And everywhere we see this x here,",
+      "start": 74.76,
+      "end": 76.66
+    },
+    {
+      "text": "this variable-- you can kind of use as a placeholder-- let's",
+      "start": 76.66,
+      "end": 79.32
+    },
+    {
+      "text": "replace it with our input.",
+      "start": 79.32,
+      "end": 81.39
+    },
+    {
+      "text": "So let's see.",
+      "start": 81.39,
+      "end": 81.98
+    },
+    {
+      "text": "If 2 is even, do 2 squared.",
+      "start": 81.98,
+      "end": 84.81
+    },
+    {
+      "text": "If 2 is odd, do 2 plus 5.",
+      "start": 84.81,
+      "end": 87.87
+    },
+    {
+      "text": "Well, 2 is even, so we're going to do 2 squared.",
+      "start": 87.87,
+      "end": 91.67
+    },
+    {
+      "text": "In this case, f of 2 is going to be 2 squared, or 4.",
+      "start": 91.67,
+      "end": 96.25
+    },
+    {
+      "text": "Now what would f of 3 be?",
+      "start": 96.25,
+      "end": 100.54
+    },
+    {
+      "text": "Well, once again, everywhere we see this variable,",
+      "start": 100.54,
+      "end": 102.64
+    },
+    {
+      "text": "we'll replace it with our input.",
+      "start": 102.64,
+      "end": 104.135
+    },
+    {
+      "text": "So f of 3, 3 squared if 3 is even, 3 plus 5 if 3 is odd.",
+      "start": 108.25,
+      "end": 114.95
+    },
+    {
+      "text": "Well, 3 is odd, so it's going to be 3 plus 5.",
+      "start": 114.95,
+      "end": 117.39
+    },
+    {
+      "text": "It is going to be equal to 8.",
+      "start": 117.39,
+      "end": 122.67
+    },
+    {
+      "text": "You might say, OK, that's neat, Sal.",
+      "start": 122.67,
+      "end": 124.2
+    },
+    {
+      "text": "This was kind of an interesting way",
+      "start": 124.2,
+      "end": 125.79
+    },
+    {
+      "text": "to define a function, a way to kind of munch on these numbers.",
+      "start": 125.79,
+      "end": 129.139
+    },
+    {
+      "text": "But I could have done this with traditional equations",
+      "start": 129.139,
+      "end": 132.217
+    },
+    {
+      "text": "in some way, especially if you allowed",
+      "start": 132.217,
+      "end": 133.8
+    },
+    {
+      "text": "me to use the squirrelly bracket thing.",
+      "start": 133.8,
+      "end": 136.14
+    },
+    {
+      "text": "What can a function do that maybe my traditional toolkits",
+      "start": 136.14,
+      "end": 139.71
+    },
+    {
+      "text": "might have not been as expressive about?",
+      "start": 139.71,
+      "end": 142.16
+    },
+    {
+      "text": "Well, you could even do a function like this.",
+      "start": 142.16,
+      "end": 145.88
+    },
+    {
+      "text": "Let me not use f and x anymore, just",
+      "start": 145.88,
+      "end": 147.79
+    },
+    {
+      "text": "to show you that the notation is more general than that.",
+      "start": 147.79,
+      "end": 150.8
+    },
+    {
+      "text": "I could say h of a is equal to the next largest number that",
+      "start": 150.8,
+      "end": 167.05
+    },
+    {
+      "text": "starts with the same letter as variable a.",
+      "start": 167.05,
+      "end": 177.886
+    },
+    {
+      "text": "And we're going to assume that we're dealing in English.",
+      "start": 180.46,
+      "end": 183.33
+    },
+    {
+      "text": "Given that, what is h of 2 going to be?",
+      "start": 183.33,
+      "end": 189.93
+    },
+    {
+      "text": "Well, 2 starts with a T. What's the next largest",
+      "start": 189.93,
+      "end": 192.89
+    },
+    {
+      "text": "number that starts with a T?",
+      "start": 192.89,
+      "end": 194.21
+    },
+    {
+      "text": "Well, it's going to be equal to 3.",
+      "start": 194.21,
+      "end": 198.61
+    },
+    {
+      "text": "Now what would h of-- I don't know, let's think about this,",
+      "start": 198.61,
+      "end": 205.21
+    },
+    {
+      "text": "h of 8 be equal to?",
+      "start": 205.21,
+      "end": 207.99
+    },
+    {
+      "text": "Well, 8 starts with an E. The next largest number",
+      "start": 207.99,
+      "end": 211.57
+    },
+    {
+      "text": "that starts with an E-- it's not 9, 10-- it would be 11.",
+      "start": 211.57,
+      "end": 217.4
+    },
+    {
+      "text": "And so now you see it's a very, very, very general tool.",
+      "start": 217.4,
+      "end": 222.1
+    },
+    {
+      "text": "This h function that we just defined, we'll look at it.",
+      "start": 222.1,
+      "end": 224.63
+    },
+    {
+      "text": "We'll look at the letter that the number",
+      "start": 224.63,
+      "end": 226.5
+    },
+    {
+      "text": "starts with in English.",
+      "start": 226.5,
+      "end": 227.869
+    },
+    {
+      "text": "So it's doing this really, really, really, really",
+      "start": 227.869,
+      "end": 229.91
+    },
+    {
+      "text": "wacky thing.",
+      "start": 229.91,
+      "end": 230.99
+    },
+    {
+      "text": "Now not all functions have to be this wacky.",
+      "start": 230.99,
+      "end": 233.07
+    },
+    {
+      "text": "In fact, you have already been dealing with functions.",
+      "start": 233.07,
+      "end": 235.95
+    },
+    {
+      "text": "You have seen things like y is equal to x plus 1.",
+      "start": 235.95,
+      "end": 242.34
+    },
+    {
+      "text": "This can be viewed as a function.",
+      "start": 242.34,
+      "end": 244.08
+    },
+    {
+      "text": "We could write this as y is a function",
+      "start": 244.08,
+      "end": 247.52
+    },
+    {
+      "text": "of x, which is equal to x plus 1.",
+      "start": 247.52,
+      "end": 251.76
+    },
+    {
+      "text": "If you give as an input-- let me write",
+      "start": 251.76,
+      "end": 256.39
+    },
+    {
+      "text": "it this way-- for example, when x is 0 we could say f of 0",
+      "start": 256.39,
+      "end": 263.65
+    },
+    {
+      "text": "is equal to, well, you take 0.",
+      "start": 263.65,
+      "end": 265.71
+    },
+    {
+      "text": "You add 1.",
+      "start": 265.71,
+      "end": 266.83
+    },
+    {
+      "text": "It's equal to 1.",
+      "start": 266.83,
+      "end": 268.44
+    },
+    {
+      "text": "f of 2 is equal to 2.",
+      "start": 268.44,
+      "end": 270.447
+    },
+    {
+      "text": "You've already done this before.",
+      "start": 270.447,
+      "end": 271.78
+    },
+    {
+      "text": "You've done things where you said, look,",
+      "start": 271.78,
+      "end": 273.76
+    },
+    {
+      "text": "let me make a table of x and put our y's there.",
+      "start": 273.76,
+      "end": 277.25
+    },
+    {
+      "text": "When x is 0, y is 1.",
+      "start": 277.25,
+      "end": 280.23
+    },
+    {
+      "text": "I'm sorry.",
+      "start": 280.23,
+      "end": 282.99
+    },
+    {
+      "text": "I made a little mistake.",
+      "start": 282.99,
+      "end": 284.15
+    },
+    {
+      "text": "Where f of 2 is equal to 3.",
+      "start": 284.15,
+      "end": 286.66
+    },
+    {
+      "text": "And you've done this before with tables where you say,",
+      "start": 286.66,
+      "end": 288.92
+    },
+    {
+      "text": "look, x and y.",
+      "start": 288.92,
+      "end": 291.47
+    },
+    {
+      "text": "When x is 0, y is 1.",
+      "start": 291.47,
+      "end": 293.65
+    },
+    {
+      "text": "When x is 2, y is 3.",
+      "start": 293.65,
+      "end": 297.151
+    },
+    {
+      "text": "You might say, well, what was the whole point of using",
+      "start": 297.151,
+      "end": 299.4
+    },
+    {
+      "text": "the function notation here to say",
+      "start": 299.4,
+      "end": 301.31
+    },
+    {
+      "text": "f of x is equal to x plus 1?",
+      "start": 301.31,
+      "end": 303.82
+    },
+    {
+      "text": "The whole point is to think in these more general terms.",
+      "start": 303.82,
+      "end": 307.39
+    },
+    {
+      "text": "For something like this, you didn't really",
+      "start": 307.39,
+      "end": 309.14
+    },
+    {
+      "text": "have to introduce function notations.",
+      "start": 309.14,
+      "end": 311.417
+    },
+    {
+      "text": "But it doesn't hurt to introduce function notations because it",
+      "start": 311.417,
+      "end": 314
+    },
+    {
+      "text": "makes it very clear that the function takes an input,",
+      "start": 314,
+      "end": 317.82
+    },
+    {
+      "text": "takes my x-- in this definition it munches on it.",
+      "start": 317.82,
+      "end": 321.52
+    },
+    {
+      "text": "It says, OK, x plus 1.",
+      "start": 321.52,
+      "end": 323.5
+    },
+    {
+      "text": "And then it produces 1 more than it.",
+      "start": 323.5,
+      "end": 326.08
+    },
+    {
+      "text": "So here, whatever the input is, the output is 1 more",
+      "start": 326.08,
+      "end": 329.46
+    },
+    {
+      "text": "than that original function.",
+      "start": 329.46,
+      "end": 331.1
+    },
+    {
+      "text": "Now I know what you're asking.",
+      "start": 331.1,
+      "end": 332.35
+    },
+    {
+      "text": "All right.",
+      "start": 332.35,
+      "end": 332.85
+    },
+    {
+      "text": "Well, what is not a function then?",
+      "start": 332.85,
+      "end": 335.21
+    },
+    {
+      "text": "Well, remember, we said a function",
+      "start": 335.21,
+      "end": 336.75
+    },
+    {
+      "text": "is something that takes an input and produces only one",
+      "start": 336.75,
+      "end": 339.85
+    },
+    {
+      "text": "possible output for that given input.",
+      "start": 339.85,
+      "end": 343.13
+    },
+    {
+      "text": "For example-- and let me look at a visual way",
+      "start": 343.13,
+      "end": 346.58
+    },
+    {
+      "text": "of thinking about a function this time, or a relationship,",
+      "start": 346.58,
+      "end": 349.1
+    },
+    {
+      "text": "I should say-- let's say that's our y-axis,",
+      "start": 349.1,
+      "end": 353.19
+    },
+    {
+      "text": "and this right over here is our x-axis.",
+      "start": 353.19,
+      "end": 355.463
+    },
+    {
+      "text": "Let me draw a circle here that has radius 2.",
+      "start": 358.241,
+      "end": 365.72
+    },
+    {
+      "text": "So it's a circle of radius 2.",
+      "start": 365.72,
+      "end": 367.95
+    },
+    {
+      "text": "This is negative 2.",
+      "start": 367.95,
+      "end": 369.3
+    },
+    {
+      "text": "This is positive 2.",
+      "start": 369.3,
+      "end": 371.12
+    },
+    {
+      "text": "This is negative 2.",
+      "start": 371.12,
+      "end": 372.73
+    },
+    {
+      "text": "So my circle, it's centered at the origin.",
+      "start": 372.73,
+      "end": 375.94
+    },
+    {
+      "text": "It has radius 2.",
+      "start": 375.94,
+      "end": 377.33
+    },
+    {
+      "text": "That's my best attempt at drawing the circle.",
+      "start": 377.33,
+      "end": 380.56
+    },
+    {
+      "text": "Let me fill it in.",
+      "start": 380.56,
+      "end": 381.92
+    },
+    {
+      "text": "So this is a circle.",
+      "start": 381.92,
+      "end": 383.1
+    },
+    {
+      "text": "The equation of this circle is going",
+      "start": 383.1,
+      "end": 385.07
+    },
+    {
+      "text": "to be x squared plus y squared is equal to the radius squared,",
+      "start": 385.07,
+      "end": 388.37
+    },
+    {
+      "text": "is equal to 2 squared, or it's equal to 4.",
+      "start": 388.37,
+      "end": 391.36
+    },
+    {
+      "text": "The question is, is this relationship between x and y--",
+      "start": 391.36,
+      "end": 394.027
+    },
+    {
+      "text": "here I've expressed it as an equation.",
+      "start": 394.027,
+      "end": 395.61
+    },
+    {
+      "text": "Here I've visually drawn all of the x's and y's that satisfy",
+      "start": 395.61,
+      "end": 400.02
+    },
+    {
+      "text": "this equation-- is this relationship between x",
+      "start": 400.02,
+      "end": 403.22
+    },
+    {
+      "text": "and y a function?",
+      "start": 403.22,
+      "end": 405.28
+    },
+    {
+      "text": "And we can see visually that it's not",
+      "start": 405.28,
+      "end": 407.06
+    },
+    {
+      "text": "going to be a function.",
+      "start": 407.06,
+      "end": 408.28
+    },
+    {
+      "text": "You pick a given x.",
+      "start": 408.28,
+      "end": 409.85
+    },
+    {
+      "text": "Let's say x is equal to 1.",
+      "start": 409.85,
+      "end": 413.82
+    },
+    {
+      "text": "There's two possible y's that are associated with it,",
+      "start": 413.82,
+      "end": 417.15
+    },
+    {
+      "text": "this y up here and this y down here.",
+      "start": 417.15,
+      "end": 420.237
+    },
+    {
+      "text": "We could even solve for that by looking at the equation.",
+      "start": 420.237,
+      "end": 422.57
+    },
+    {
+      "text": "When x is equal to 1, we get 1 squared plus y squared",
+      "start": 422.57,
+      "end": 426.21
+    },
+    {
+      "text": "is equal to 4.",
+      "start": 426.21,
+      "end": 427.073
+    },
+    {
+      "text": "1 plus y squared is equal to 4.",
+      "start": 427.073,
+      "end": 431.39
+    },
+    {
+      "text": "Or subtracting 1 from both sides, y squared is equal to 3.",
+      "start": 431.39,
+      "end": 435.72
+    },
+    {
+      "text": "Or y is equal to the positive or the negative square root of 3.",
+      "start": 435.72,
+      "end": 440.83
+    },
+    {
+      "text": "This right over here is the positive square root of 3,",
+      "start": 440.83,
+      "end": 443.72
+    },
+    {
+      "text": "and this right over here is the negative square root of 3.",
+      "start": 443.72,
+      "end": 446.7
+    },
+    {
+      "text": "So this situation, this relationship",
+      "start": 446.7,
+      "end": 448.81
+    },
+    {
+      "text": "where I inputted a 1 into my little box here,",
+      "start": 448.81,
+      "end": 454.13
+    },
+    {
+      "text": "and associated with the 1, I associate",
+      "start": 454.13,
+      "end": 456.68
+    },
+    {
+      "text": "both a positive square root of 3 and a negative square root",
+      "start": 456.68,
+      "end": 460.51
+    },
+    {
+      "text": "of 3, this is not a function.",
+      "start": 460.51,
+      "end": 467
+    },
+    {
+      "text": "I cannot associate with my input two different outputs.",
+      "start": 467,
+      "end": 471.54
+    },
+    {
+      "text": "I can only have one output for a given input.",
+      "start": 471.54,
+      "end": 476.24
+    }
+  ]
+}
