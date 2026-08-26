@@ -266,6 +266,9 @@ npm run demo:check      # 10 full passes; fails on any variation or slowness
 
 The rehearsed student is missing **function composition** and **slope**. Both are stated prerequisites of the sample syllabus, they sit in independent branches, and the search roots both in 9 probes.
 
+> **Recording the demo?** [`DEMO-SCRIPT.md`](DEMO-SCRIPT.md) has the full 2:00 shot list,
+> narration, and production notes.
+
 ### The scripted answers
 
 Answering inconsistently lands on *different* gaps — the propagation is doing its job, but the frozen fixtures only cover the rehearsed ones. Follow this exactly:
