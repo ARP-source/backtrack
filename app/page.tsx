@@ -69,6 +69,7 @@ export default function Page() {
   const [forming, setForming] = useState(false);
   const [classes, setClasses] = useState<StoredClass[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [demo, setDemo] = useState(false);
 
   const stateRef = useRef<DiagnosticState | null>(null);
   const [version, setVersion] = useState(0);
@@ -86,13 +87,23 @@ export default function Page() {
   const labelOf = useCallback((id: string) => idx?.byId.get(id)?.label ?? id, [idx]);
 
   useEffect(() => {
-    fetch("/api/sample").then((r) => r.text()).then(setSample).catch(() => {});
     try {
       const raw = localStorage.getItem(STORE);
       const d = raw && JSON.parse(raw);
       if (d?.theme) setTheme(d.theme);
       if (Array.isArray(d?.classes)) setClasses(d.classes);
     } catch {}
+
+    // ?demo=1 goes straight into the frozen run — this is what gets recorded.
+    const wantsDemo = new URLSearchParams(window.location.search).get("demo") === "1";
+    fetch("/api/sample")
+      .then((r) => r.text())
+      .then((text) => {
+        setSample(text);
+        if (wantsDemo) start(text, true);
+      })
+      .catch(() => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -108,16 +119,17 @@ export default function Page() {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
 
-  async function start(syllabus: string, demo: boolean, existingId?: string) {
+  async function start(syllabus: string, demoRun: boolean, existingId?: string) {
     setBusy(true);
     setError(null);
     try {
       const res = await fetch("/api/frontier", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ syllabus, demo }),
+        body: JSON.stringify({ syllabus, demo: demoRun }),
       });
       if (!res.ok) throw new Error(`Could not read that syllabus (${res.status})`);
+      setDemo(demoRun);
       const json: FrontierResponse = await res.json();
       if (!json.nodes?.length) throw new Error("No prerequisites could be mapped from that syllabus");
 
@@ -127,11 +139,25 @@ export default function Page() {
       setPlans([]);
       setVersion((v) => v + 1);
 
+      // Reuse the class for an identical syllabus rather than creating another. This is
+      // right on its own terms — pasting the same syllabus twice is one class — and it also
+      // stops React's development double-invoke of the mount effect from duplicating the
+      // ?demo=1 entry on every load.
       let id = existingId ?? null;
       if (!id) {
         const meta = parseClass(syllabus);
-        id = `c${Date.now().toString(36)}`;
-        setClasses((cs) => [...cs, { id: id!, code: meta.code, name: meta.name, syllabus, gaps: 0, done: 0 }]);
+        const trimmed = syllabus.trim();
+        const existing = classes.find((c) => c.syllabus.trim() === trimmed);
+        if (existing) {
+          id = existing.id;
+        } else {
+          id = `c${Date.now().toString(36)}`;
+          setClasses((cs) =>
+            cs.some((c) => c.syllabus.trim() === trimmed)
+              ? cs
+              : [...cs, { id: id!, code: meta.code, name: meta.name, syllabus: trimmed, gaps: 0, done: 0 }]
+          );
+        }
       }
       setActiveId(id);
       setPhase(2);
@@ -199,7 +225,7 @@ export default function Page() {
       const res = await fetch("/api/crash-course", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ gaps: findings.map((f) => ({ nodeId: f.node.id, misconception: f.misconception })) }),
+        body: JSON.stringify({ demo, gaps: findings.map((f) => ({ nodeId: f.node.id, misconception: f.misconception })) }),
       });
       const json = await res.json();
       setPlans(json.plans ?? []);
@@ -224,6 +250,7 @@ export default function Page() {
   }
 
   function restart() {
+    setDemo(false);
     stateRef.current = null;
     setData(null);
     setPlans([]);
@@ -333,7 +360,7 @@ export default function Page() {
         <Findings findings={findings} probeCount={state.steps.length} onContinue={buildCourse} busy={busy} />
       )}
 
-      {phase === 4 && <CrashCourse plans={plans} onRestart={restart} onReopen={reopen} />}
+      {phase === 4 && <CrashCourse plans={plans} demo={demo} onRestart={restart} onReopen={reopen} />}
 
       {error && (
         <div

@@ -34,7 +34,12 @@ export async function POST(req: Request) {
     });
 
   let source = "none";
-  if (nearMisses.length > 0) {
+  // Fuzzy matching is pure and offline; only adjudication would reach the network, so in
+  // demo mode an unresolved near-miss simply does not pass.
+  if (body?.demo === true && nearMisses.length > 0) {
+    graded = graded.map((g) => (g.verdict === "near" ? { ...g, verdict: "wrong" } : g));
+    source = "fixture";
+  } else if (nearMisses.length > 0) {
     const res = await adjudicate(nearMisses);
     source = res.source;
     const byId = new Map(res.value.verdicts.map((v) => [v.blankId, v]));

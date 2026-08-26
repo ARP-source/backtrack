@@ -12,10 +12,12 @@ export type Outcome = { nodeId: string; total: number; correct: number; missed: 
 type Props = {
   segment: Segment;
   misconception?: string;
+  /** Replay frozen notes and skip near-miss adjudication — no network. */
+  demo?: boolean;
   onOutcome: (outcomes: Outcome[]) => void;
 };
 
-export default function GuidedNotes({ segment, misconception, onOutcome }: Props) {
+export default function GuidedNotes({ segment, misconception, demo, onOutcome }: Props) {
   const [note, setNote] = useState<Note | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [graded, setGraded] = useState<Graded[] | null>(null);
@@ -32,7 +34,7 @@ export default function GuidedNotes({ segment, misconception, onOutcome }: Props
     fetch("/api/notes", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ nodeId: segment.nodeId, misconception, segment }),
+      body: JSON.stringify({ nodeId: segment.nodeId, misconception, segment, demo }),
     })
       .then((r) => r.json())
       .then((j) => {
@@ -45,7 +47,7 @@ export default function GuidedNotes({ segment, misconception, onOutcome }: Props
     return () => {
       cancelled = true;
     };
-  }, [segment, misconception]);
+  }, [segment, misconception, demo]);
 
   async function check() {
     if (!note) return;
@@ -54,7 +56,7 @@ export default function GuidedNotes({ segment, misconception, onOutcome }: Props
       const res = await fetch("/api/grade", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ blanks: note.blanks, answers, lines: note.lines }),
+        body: JSON.stringify({ blanks: note.blanks, answers, lines: note.lines, demo }),
       });
       const j = await res.json();
       setGraded(j.graded ?? []);

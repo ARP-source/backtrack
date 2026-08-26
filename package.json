@@ -14,7 +14,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "build:probes": "tsx --env-file-if-exists=.env.local scripts/build-probes.ts"
+    "build:probes": "tsx --env-file-if-exists=.env.local scripts/build-probes.ts",
+    "freeze:demo": "tsx --env-file-if-exists=.env.local scripts/freeze-demo.ts",
+    "demo:check": "tsx scripts/demo-check.ts"
   },
   "dependencies": {
     "@google/genai": "^2.18.0",

@@ -7,12 +7,13 @@ import { BLUR2 } from "@/lib/palette";
 
 type Props = {
   plans: GapPlan[];
+  demo?: boolean;
   onRestart: () => void;
   /** Fires when notes show a node was not actually fixed — the DAG reopens it. */
   onReopen: (nodeId: string) => void;
 };
 
-export default function CrashCourse({ plans, onRestart, onReopen }: Props) {
+export default function CrashCourse({ plans, demo, onRestart, onReopen }: Props) {
   const [gapIdx, setGapIdx] = useState(0);
   const [segIdx, setSegIdx] = useState(0);
   const [extra, setExtra] = useState<Record<string, Segment[]>>({});
@@ -206,6 +207,7 @@ export default function CrashCourse({ plans, onRestart, onReopen }: Props) {
             key={`${seg.videoId}-${seg.start}`}
             segment={seg}
             misconception={plan.misconception}
+            demo={demo}
             onOutcome={handleOutcome}
           />
         </div>

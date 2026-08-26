@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getDag, getIndex, getProbes, getSampleSyllabus } from "@/lib/server-data";
+import { getDag, getIndex, getProbes, getSampleSyllabus, getDemo } from "@/lib/server-data";
 import { mapSyllabus, computeFrontier, fallbackMapping } from "@/lib/syllabus";
 import { probeFor } from "@/lib/probes";
 import { createState } from "@/lib/diagnostic";
@@ -11,6 +11,12 @@ export async function POST(req: Request) {
   const body = await req.json().catch(() => ({}));
   const demo = body?.demo === true;
   const syllabus = String(body?.syllabus ?? "").trim() || getSampleSyllabus();
+
+  // Demo mode replays the frozen run verbatim: no mapping call, no graph rebuild.
+  if (demo) {
+    const frozen = getDemo();
+    if (frozen) return NextResponse.json({ ...frozen.frontier, source: "fixture", note: "demo mode — frozen run" });
+  }
 
   const dag = getDag();
   const idx = getIndex();

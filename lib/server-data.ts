@@ -20,6 +20,16 @@ let _idx: DagIndex | null = null;
 let _chunks: { meta: VideoMetaMap; chunks: TranscriptChunk[] } | null = null;
 let _probes: ProbeBook | null = null;
 let _syllabus: string | null = null;
+let _demo: DemoFixture | null = null;
+
+/** The frozen rehearsed run. Demo mode replays this and never touches the network. */
+export type DemoFixture = {
+  recordedWith: string;
+  rehearsed: string[];
+  frontier: Record<string, unknown>;
+  plans: unknown[];
+  notes: Record<string, unknown>;
+};
 
 export function getDag(): Dag {
   return (_dag ??= read<Dag>("dag.json"));
@@ -35,6 +45,17 @@ export function getChunks() {
 
 export function getProbes(): ProbeBook {
   return (_probes ??= read<ProbeBook>("probes.json"));
+}
+
+export function getDemo(): DemoFixture | null {
+  if (_demo) return _demo;
+  try {
+    _demo = read<DemoFixture>("demo.json");
+  } catch {
+    // Not frozen yet — callers fall back to the live path.
+    _demo = null;
+  }
+  return _demo;
 }
 
 export function getSampleSyllabus(): string {

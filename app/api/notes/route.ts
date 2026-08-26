@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getIndex, getChunks } from "@/lib/server-data";
+import { getIndex, getChunks, getDemo } from "@/lib/server-data";
 import { generateNote, fallbackNote } from "@/lib/notes";
 
 export const runtime = "nodejs";
@@ -39,6 +39,14 @@ export async function POST(req: Request) {
 
   const start = Number(seg.start) || 0;
   const end = Number(seg.end) || start + 90;
+
+  // Demo mode: every clip the rehearsed run can reach — including the write-back's
+  // replacement — already has its note frozen.
+  if (body?.demo === true) {
+    const frozen = getDemo();
+    const hit = frozen?.notes?.[`${seg.videoId}:${Math.round(start)}`];
+    if (hit) return NextResponse.json({ note: hit, source: "fixture" });
+  }
   const text = textForSpan(seg.videoId, start, end);
 
   // No transcript for the span means nothing to build blanks from — fall back rather than

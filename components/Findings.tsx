@@ -43,7 +43,7 @@ export default function Findings({ findings, probeCount, onContinue, busy }: Pro
         >
           {n === 0
             ? "Nothing upstream is broken."
-            : `${word} gap${n === 1 ? "" : "s"}, ${n === 1 ? "and it sits" : "all"} upstream of this course.`}
+            : `${word} gap${n === 1 ? "" : "s"}, ${n === 1 ? "and it sits" : "and all of them sit"} upstream of this course.`}
         </h1>
 
         <p
@@ -60,7 +60,9 @@ export default function Findings({ findings, probeCount, onContinue, busy }: Pro
         >
           {n === 0
             ? "Everything this course assumes came back solid. That is a real result — you can start without backfilling anything."
-            : `${n === 1 ? "It" : "None of these"} will not be taught again here. ${n === 1 ? "It was" : "Each was"} assumed before week one, and ${n === 1 ? "it surfaces" : "each surfaces"} on a date we can name.`}
+            : n === 1
+              ? "It will not be taught again here. It was assumed before week one, and it surfaces on a date we can name."
+              : "None of these will be taught again here. Each was assumed before week one, and each surfaces on a date we can name."}
         </p>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
