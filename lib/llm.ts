@@ -1,10 +1,10 @@
 /**
  * The only place that talks to a model provider.
  *
- * Every call gets: zod-validated output, one retry, disk cache keyed by input hash, and a
- * deterministic fixture fallback. A missing key, a thrown error, a rate limit, or output
- * that fails validation twice all resolve to the fixture and keep rendering. Nothing
- * downstream needs a try/catch, and nothing downstream knows which provider this is.
+ * Every call gets: zod-validated output, retries, disk cache keyed by input hash, and a
+ * deterministic fixture fallback. A missing key, a thrown error, an unresolved rate limit,
+ * or output that fails validation twice all resolve to the fixture and keep rendering.
+ * Nothing downstream needs a try/catch, and nothing downstream knows which provider it is.
  */
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -15,6 +15,10 @@ import type { z } from "zod";
 export const MODEL = process.env.GEMINI_MODEL ?? "gemini-3.6-flash";
 
 const CACHE_DIR = ".llm-cache";
+
+/** How long to pause before retrying a throttled call. Long enough for a per-minute
+ *  window to roll, short enough that the page is not left hanging. */
+const RETRY_PAUSE_MS = Number(process.env.BACKTRACK_RETRY_PAUSE_MS ?? 4000);
 
 export type LLMSource = "cache" | "live" | "fixture";
 
@@ -103,7 +107,8 @@ export async function callLLM<T>(call: LLMCall<T>): Promise<LLMResult<T>> {
   }
 
   let lastError = "";
-  for (let attempt = 0; attempt < 2; attempt++) {
+  let pausedAlready = false;
+  for (let attempt = 0; attempt < 3; attempt++) {
     try {
       const raw = await generate(call.prompt, call.responseSchema);
       const parsed = call.schema.safeParse(JSON.parse(raw));
@@ -112,10 +117,25 @@ export async function callLLM<T>(call: LLMCall<T>): Promise<LLMResult<T>> {
         return { value: parsed.data, source: "live", ms: Date.now() - started };
       }
       lastError = parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; ");
+      if (attempt >= 1) break;
     } catch (e) {
       lastError = String((e as Error).message ?? e).slice(0, 200);
-      // A rate limit will not resolve on an immediate retry — fall back now.
-      if (/\b429\b|RESOURCE_EXHAUSTED|quota/i.test(lastError)) break;
+      // 429 covers two very different things. A per-minute rate limit clears in seconds, so
+      // pausing and retrying usually works. An exhausted daily quota does not clear today,
+      // and retrying only makes the failure slower — fall back immediately instead.
+      const quotaSpent = /exceeded your current quota|billing|daily limit/i.test(lastError);
+      const throttled = !quotaSpent && /\b429\b|\b503\b|RESOURCE_EXHAUSTED|overloaded|high demand/i.test(lastError);
+      if (throttled) {
+        // Free-tier limits are per-minute, so an IMMEDIATE retry is useless but a paused
+        // one usually succeeds. Building several gaps at once bursts straight through the
+        // limit; without this the run silently degrades to similarity-only clips. Pause
+        // once, then give up rather than leave the page hanging.
+        if (pausedAlready) break;
+        pausedAlready = true;
+        await new Promise((r) => setTimeout(r, RETRY_PAUSE_MS));
+        continue;
+      }
+      if (attempt >= 1) break;
     }
   }
 
